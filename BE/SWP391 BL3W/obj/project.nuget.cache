@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n9GBQ9kI/1c7jqZ742tNSRWchTPker/gQenxNNMNUGYDv8odLHWddbq8nCAtFA1Uprmmx6QjmYedCsXDjjaYnw==",
+  "dgSpecHash": "Cmeh5LFIG3LdndFCQUkAozwZPgIiiX6LwqvhasIKnk+ZWtxh3z4HJo6cgtToQtpYLSBPodqrPlruQkPeJquqoA==",
   "success": true,
-  "projectFilePath": "D:\\Dev\\Project C#\\SWP391 BL3W\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
+  "projectFilePath": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
