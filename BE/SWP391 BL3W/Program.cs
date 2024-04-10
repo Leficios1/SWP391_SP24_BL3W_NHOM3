@@ -1,3 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using SWP391_BL3W.Database;
+using SWP391_BL3W.Repository;
+using SWP391_BL3W.Repository.Interface;
+using SWP391_BL3W.Services;
+using SWP391_BL3W.Services.Interface;
+
 namespace SWP391_BL3W
 {
     public class Program
@@ -14,6 +21,13 @@ namespace SWP391_BL3W
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddCors(o => o.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+            builder.Services.AddDbContext<SWPContext>(options => {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ElectricStore"));
+            });
+            builder.Services.AddAutoMapper(typeof(Program));
+            //Register Service And Repo
+            builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 
