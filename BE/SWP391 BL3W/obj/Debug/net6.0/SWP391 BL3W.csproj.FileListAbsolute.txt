@@ -201,3 +201,5 @@ D:\Dev\Project C#\swp391\BE\SWP391 BL3W\obj\Debug\net6.0\SWP391 BL3W.genruntimec
 D:\Dev\Project C#\swp391\BE\SWP391 BL3W\obj\Debug\net6.0\ref\SWP391 BL3W.dll
 D:\Dev\Project C#\swp391\BE\SWP391 BL3W\bin\Debug\net6.0\AutoMapper.dll
 D:\Dev\Project C#\swp391\BE\SWP391 BL3W\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Dev\Project C#\swp391\BE\SWP391 BL3W\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Dev\Project C#\swp391\BE\SWP391 BL3W\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
