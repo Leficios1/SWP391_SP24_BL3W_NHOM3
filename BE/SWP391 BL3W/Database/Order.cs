@@ -15,7 +15,7 @@ namespace SWP391_BL3W.Database
         //Navitation 
         public User User { get; set; }
         public ICollection<OrderDetails> OrdersDetails { get; set; }
-        public int PaymentId { get; set; }
-        public Payment paymentId { get; set; }
+        [Required]
+        public string PaymentName { get; set; }
     }
 }

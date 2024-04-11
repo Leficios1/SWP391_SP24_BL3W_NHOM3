@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SWP391_BL3W.DTO;
+using SWP391_BL3W.DTO.Request;
+using SWP391_BL3W.DTO.Response;
 
 namespace SWP391_BL3W.Services.Interface
 {

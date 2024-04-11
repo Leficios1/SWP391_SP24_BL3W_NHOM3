@@ -1,4 +1,5 @@
-﻿namespace SWP391_BL3W.DTO
+﻿namespace SWP391_BL3W.DTO.Request
+
 {
     public class CreateUserDTO
     {
