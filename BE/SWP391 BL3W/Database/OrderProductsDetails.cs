@@ -8,9 +8,11 @@ namespace SWP391_BL3W.Database
     {
         [Key]
         public int Id {  get; set; }
-        [Required]
+        //Fk
         public int OrderDetailsId {  get; set; }
-        [Required]
         public int ProductsDetailsId { get; set; }
+        //Navigation
+        public OrderDetails OrderDetail { get; set; }
+        public ProductsDetails ProductDetail { get; set; }
     }
 }

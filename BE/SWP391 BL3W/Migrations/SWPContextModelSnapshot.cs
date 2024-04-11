@@ -117,6 +117,28 @@ namespace SWP391_BL3W.Migrations
                     b.ToTable("CategoryBlog");
                 });
 
+            modelBuilder.Entity("SWP391_BL3W.Database.Image", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Image");
+                });
+
             modelBuilder.Entity("SWP391_BL3W.Database.Order", b =>
                 {
                     b.Property<int>("OrderId")
@@ -394,6 +416,17 @@ namespace SWP391_BL3W.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("SWP391_BL3W.Database.Image", b =>
+                {
+                    b.HasOne("SWP391_BL3W.Database.Products", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("SWP391_BL3W.Database.Order", b =>
                 {
                     b.HasOne("SWP391_BL3W.Database.User", "User")
@@ -418,17 +451,21 @@ namespace SWP391_BL3W.Migrations
 
             modelBuilder.Entity("SWP391_BL3W.Database.OrderProductsDetails", b =>
                 {
-                    b.HasOne("SWP391_BL3W.Database.OrderDetails", null)
+                    b.HasOne("SWP391_BL3W.Database.OrderDetails", "OrderDetail")
                         .WithMany("OrderProductsDetails")
                         .HasForeignKey("OrderDetailsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SWP391_BL3W.Database.ProductsDetails", null)
+                    b.HasOne("SWP391_BL3W.Database.ProductsDetails", "ProductDetail")
                         .WithMany("OrderProductsDetails")
                         .HasForeignKey("ProductsDetailsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("OrderDetail");
+
+                    b.Navigation("ProductDetail");
                 });
 
             modelBuilder.Entity("SWP391_BL3W.Database.Products", b =>
@@ -508,6 +545,8 @@ namespace SWP391_BL3W.Migrations
                     b.Navigation("Carts");
 
                     b.Navigation("Details");
+
+                    b.Navigation("Images");
 
                     b.Navigation("Reviews");
                 });
