@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SWP391_BL3W.Database
 {
     [Table("Image")]
-    public class Image
+    public class Images
     {
         [Key]
         public int Id { get; set; }
