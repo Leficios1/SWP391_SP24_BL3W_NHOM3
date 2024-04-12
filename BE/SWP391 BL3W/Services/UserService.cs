@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SWP391_BL3W.Database;
-using SWP391_BL3W.DTO;
+using SWP391_BL3W.DTO.Request;
+using SWP391_BL3W.DTO.Response;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System.Net;

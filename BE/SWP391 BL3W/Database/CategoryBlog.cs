@@ -3,15 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SWP391_BL3W.Database
 {
-    [Table("Payment")]
-    public class Payment
+    [Table("CategoryBlog")]
+    public class CategoryBlog
     {
         [Key]
-        public int PaymentId { get; set; }
+        public int Id {  get; set; }
         [Required]
-        public string PaymentMethod { get; set; }
+        public string Name { get; set; }
         //Navigation
-        public ICollection<Order> Orders { get; set; }
-
+        public ICollection<Blog>blogs { get; set; }
     }
 }

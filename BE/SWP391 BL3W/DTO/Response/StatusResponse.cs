@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace SWP391_BL3W.DTO
+namespace SWP391_BL3W.DTO.Response
 {
     public class StatusResponse<T>
     {

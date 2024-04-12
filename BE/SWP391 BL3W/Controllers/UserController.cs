@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SWP391_BL3W.DTO;
+using SWP391_BL3W.DTO.Request;
+using SWP391_BL3W.DTO.Response;
 using SWP391_BL3W.Services.Interface;
 
 namespace SWP391_BL3W.Controllers

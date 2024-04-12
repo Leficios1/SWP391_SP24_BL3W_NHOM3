@@ -14,7 +14,7 @@ namespace SWP391_BL3W
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            Extensions.ServiceCollectionExtensions.Register(builder.Services);
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -25,9 +25,6 @@ namespace SWP391_BL3W
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ElectricStore"));
             });
             builder.Services.AddAutoMapper(typeof(Program));
-            //Register Service And Repo
-            builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
-            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 
