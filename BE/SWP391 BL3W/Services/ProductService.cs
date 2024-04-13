@@ -86,7 +86,7 @@ namespace SWP391_BL3W.Services
             var response = new StatusResponse<ProductsResponseDTO>();
             try
             {
-                int pageSize = size ?? 10;
+                int pageSize = size ?? 15;
                 int pageNumber = page ?? 1;
                 List<Products> allProducts = await _context.Products.ToListAsync();
                 int totalItems = allProducts.Count;
@@ -189,14 +189,46 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
-        public Task<StatusResponse<ProductsResponseDTO>> search(string? name)
+        public Task<StatusResponse<ProductsResponseDTO>> search(int?page, int? size, string name, int? watt, int? volt, string? producer)
         {
-            throw new NotImplementedException();
+            var response = new StatusResponse<ProductsResponseDTO>();
+            try
+            {
+                int pageSize = size ?? 15;
+                int pageNumber = page ?? 1;
+
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
         }
 
-        public Task<StatusResponse<ProductDetailsResponseDTO>> updateProduct(ProductDetailsResponseDTO dto)
+        public async Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto)
         {
-            throw new NotImplementedException();
+            var response = new StatusResponse<UpdateProductsDTO>();
+            try
+            {
+                var existingProduct = await _context.Products.Where(x => x.Id == dto.Id).FirstOrDefaultAsync();
+                if (existingProduct == null)
+                {
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Not Found Products!!";
+                    return response;
+                }
+                _mapper.Map(dto, existingProduct);
+                await _context.SaveChangesAsync();
+                response.Data = dto;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful";
+            }catch(Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge=ex.Message;
+            }
+            return response;
         }
     }
 }

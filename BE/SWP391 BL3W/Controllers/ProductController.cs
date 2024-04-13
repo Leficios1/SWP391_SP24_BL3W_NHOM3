@@ -40,5 +40,12 @@ namespace SWP391_BL3W.Controllers
             var response = await _productService.create(dto);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
+
+        [HttpPut("update")]
+        public async Task<IActionResult> update(UpdateProductsDTO dto)
+        {
+            var response = await _productService.updateProduct(dto);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
     }
 }
