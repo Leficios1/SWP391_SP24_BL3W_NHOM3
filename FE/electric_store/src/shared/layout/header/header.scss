@@ -1,0 +1,22 @@
+.sub-header-item {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    box-sizing: border-box;
+
+    a{
+        display: inline-block;
+        width: 100%;
+
+        &:hover{
+            color: black;
+        }
+    }
+
+    &:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+}
