@@ -3,8 +3,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../../core/constants/color_constants.dart';
 import '../../utils/asset_helper.dart';
 import '../../utils/image_helper.dart';
-import '../../utils/local_storage_helper.dart';
-
 import 'main_app.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,13 +22,19 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void checkUserStatus() async {
-    final ignoreIntroScreen =
-        LocalStorageHelper.getValue('ignoreIntroScreen') as bool?;
+    // final ignoreIntroScreen =
+    //     LocalStorageHelper.getValue('ignoreIntroScreen') as bool?;
 
     await Future.delayed(const Duration(seconds: 3));  
         // Chuyển đến màn hình MainApp
+
+
+        // ignore: use_build_context_synchronously
         Navigator.of(context).pushNamed(MainApp.routeName);
+        //TODO Thêm chức năng kiểm tra đã đăng nhập chưa để chuyển trang bằng router
   }
+
+    
 
   @override
   Widget build(BuildContext context) {

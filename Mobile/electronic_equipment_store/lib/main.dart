@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,13 +21,9 @@ void main() async {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   
   runApp(  
-    // MultiProvider(
-    //   providers: [
-        
-    //   ],
-    //   child:
+        // TODO Thêm Provider để quản lý stage
           const MyApp(),
-    // ),
+ 
     );
 }
 
@@ -42,7 +37,7 @@ class MyApp extends StatelessWidget {
       title: 'FRS app',
       theme: ThemeData(
         textTheme: TextTheme(bodyLarge: TextStyles.defaultStyle),
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
             color: ColorPalette.primaryColor, size: kDefaultIconSize18),
         scaffoldBackgroundColor: ColorPalette.backgroundScaffoldColor,
         colorScheme: ColorScheme.fromSeed(
