@@ -29,6 +29,10 @@ const Header: React.FC = () => {
     }
 
 
+    const styleNavLink: React.CSSProperties = {
+        color:"white"
+    }
+
     return (
         <Row style={Header}>
             <Col span={24}>
@@ -59,23 +63,23 @@ const Header: React.FC = () => {
                         <Row style={SubHeader}>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink to={"/"}>Trang chủ</NavLink>
+                                    <NavLink style={styleNavLink} to={"/"}>Trang chủ</NavLink>
                                 </div>
                             </Col>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink to={"/"}>Giới thiệu</NavLink>
+                                    <NavLink style={styleNavLink} to={"/"}>Giới thiệu</NavLink>
                                 </div>
                             </Col>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink to={"/"}>Đồ gia dụng</NavLink>
+                                    <NavLink style={styleNavLink} to={"/"}>Đồ gia dụng</NavLink>
                                 </div>
 
                             </Col>
                             <Col span={6}>
                             <div className="sub-header-item">
-                                    <NavLink to={"/"}>Liên hệ</NavLink>
+                                    <NavLink style={styleNavLink} to={"/"}>Liên hệ</NavLink>
                                 </div>
                             </Col>
                         </Row>

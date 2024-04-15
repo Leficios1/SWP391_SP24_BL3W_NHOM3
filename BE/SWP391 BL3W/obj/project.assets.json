@@ -2893,24 +2893,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "D:\\VSStudio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Fstore\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
+      "projectUniqueName": "C:\\Users\\Fstore\\Desktop\\Khoi_khong_hoc_do\\SWP301m\\Project\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
       "projectName": "SWP391 BL3W",
-      "projectPath": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\obj\\",
+      "projectPath": "C:\\Users\\Fstore\\Desktop\\Khoi_khong_hoc_do\\SWP301m\\Project\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
+      "packagesPath": "C:\\Users\\Fstore\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Fstore\\Desktop\\Khoi_khong_hoc_do\\SWP301m\\Project\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\VSStudio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Fstore\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2982,7 +2977,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

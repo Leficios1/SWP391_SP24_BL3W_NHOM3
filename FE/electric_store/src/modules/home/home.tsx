@@ -53,7 +53,7 @@ const Home = () => {
                                     style={{ width: "100%" }}
                                     cover={<img alt="example" src={product.avatar} />}
                                 >
-                                    <Meta title="Europe Street beat" description="www.instagram.com" />
+                                    <Meta title={product.name} description={product.description} />
                                 </Card>
                             </Col>
                         )
