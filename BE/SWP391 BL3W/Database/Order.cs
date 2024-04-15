@@ -7,6 +7,7 @@ namespace SWP391_BL3W.Database
     public class Order
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderId { get; set; }
         //Fk
         public int UserId { get; set; }
@@ -16,8 +17,11 @@ namespace SWP391_BL3W.Database
         public string? statusMessage { get; set; }
         //Navitation 
         public User User { get; set; }
-        public ICollection<OrderDetails> OrdersDetails { get; set; }
+        public ICollection<OrderDetail> OrdersDetail { get; set; }
         [Required]
         public string PaymentName { get; set; }
+        public string? NameCustomer { get; set; }
+        public string? AddressCustomer { get; set; }
+        public string? PhoneCustomer { get; set; }
     }
 }
