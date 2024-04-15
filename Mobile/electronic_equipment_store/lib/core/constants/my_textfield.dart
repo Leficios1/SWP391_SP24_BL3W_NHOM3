@@ -5,6 +5,7 @@ import 'dismension_constants.dart';
 import 'textstyle_constants.dart';
 
 class MyTextField extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
   final String hintText;
   final bool obscureText;
@@ -42,9 +43,9 @@ class MyTextField extends StatelessWidget {
         labelStyle: TextStyles.defaultStyle.setColor(ColorPalette.textHide),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(kDefaultCircle14),
-          borderSide: BorderSide(color: ColorPalette.textHide),
+          borderSide: const BorderSide(color: ColorPalette.textHide),
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: ColorPalette.primaryColor),
         ),
         fillColor: Colors.white,

@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: routes,
       debugShowCheckedModeBanner: false,
-      title: 'FRS app',
+      title: 'ES app',
       theme: ThemeData(
         textTheme: TextTheme(bodyLarge: TextStyles.defaultStyle),
         iconTheme: const IconThemeData(

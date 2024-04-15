@@ -3,8 +3,6 @@ import 'package:electronic_equipment_store/core/constants/dismension_constants.d
 import 'package:electronic_equipment_store/core/constants/textstyle_constants.dart';
 import 'package:flutter/material.dart';
 
-
-
 class ButtonWidget extends StatefulWidget {
   const ButtonWidget(
       {super.key,
@@ -12,15 +10,13 @@ class ButtonWidget extends StatefulWidget {
       this.onTap,
       this.height,
       this.width,
-      this.size,
-      this.color});
+      this.size});
 
   final String title;
   final Function()? onTap;
   final double? height;
   final double? width;
   final double? size;
-  final Color? color;
 
   @override
   State<ButtonWidget> createState() => _ButtonWidgetState();
@@ -53,7 +49,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
         width: widget.width,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(kDefaultCircle14),
-            color: widget.color ?? ColorPalette.primaryColor,
+            color: ColorPalette.primaryColor,
             boxShadow: glowing
                 ? [
                     const BoxShadow(

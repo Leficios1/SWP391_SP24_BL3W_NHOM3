@@ -3,40 +3,40 @@ import 'color_constants.dart';
 
 
 class FontFamilyRoboto {
-  static final String roboto = 'Roboto';
+  static const String roboto = 'Roboto';
 }
 
 class TextStyles {
   TextStyles(this.context);
   BuildContext? context;
 
-  static TextStyle defaultStyle = TextStyle(
+  static TextStyle defaultStyle = const TextStyle(
       fontSize: 14,
       color: ColorPalette.textColor,
       fontWeight: FontWeight.w400,
       height: 16 / 14,
       fontFamily: FontFamilyRoboto.roboto);
-  static TextStyle h1 = TextStyle(
+  static TextStyle h1 = const TextStyle(
       fontFamily: FontFamilyRoboto.roboto,
       fontSize: 109.66,
       color: ColorPalette.textColor);
-  static TextStyle h2 = TextStyle(
+  static TextStyle h2 = const TextStyle(
       fontFamily: FontFamilyRoboto.roboto,
       fontSize: 67.77,
       color: ColorPalette.textColor);
-  static TextStyle h3 = TextStyle(
+  static TextStyle h3 = const TextStyle(
       fontFamily: FontFamilyRoboto.roboto,
       fontSize: 41.89,
       color: ColorPalette.textColor);
-  static TextStyle h4 = TextStyle(
+  static TextStyle h4 = const TextStyle(
       fontFamily: FontFamilyRoboto.roboto,
       fontSize: 25.89,
       color: ColorPalette.textColor);
-  static TextStyle h5 = TextStyle(
+  static TextStyle h5 = const TextStyle(
       fontFamily: FontFamilyRoboto.roboto,
       fontSize: 16,
       color: ColorPalette.textColor);
-  static TextStyle h6 = TextStyle(
+  static TextStyle h6 = const TextStyle(
       fontFamily: FontFamilyRoboto.roboto,
       fontSize: 9.89,
       color: ColorPalette.textColor);

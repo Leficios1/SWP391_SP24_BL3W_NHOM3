@@ -53,7 +53,7 @@ void showCustomDialog(BuildContext context, String title, String content,
                         Navigator.pop(context);
                       },
                     )
-                  : SizedBox(),
+                  : const SizedBox(),
             ],
           ),
         ),
