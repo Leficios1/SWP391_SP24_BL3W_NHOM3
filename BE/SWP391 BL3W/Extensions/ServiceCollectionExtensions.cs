@@ -3,6 +3,7 @@ using SWP391_BL3W.Repository;
 using SWP391_BL3W.Services;
 using SWP391_BL3W.Services.Interface;
 
+
 namespace SWP391_BL3W.Extensions
 {
     public static class ServiceCollectionExtensions
@@ -19,6 +20,7 @@ namespace SWP391_BL3W.Extensions
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IBlogService, BlogService>();
 
             return services;
         }

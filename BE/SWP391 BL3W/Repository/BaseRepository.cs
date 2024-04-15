@@ -145,6 +145,16 @@ namespace SWP391_BL3W.Repository
             throw new NotImplementedException();
         }
 
+        public Task<Blog> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Blog>> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         ////
         ///
 

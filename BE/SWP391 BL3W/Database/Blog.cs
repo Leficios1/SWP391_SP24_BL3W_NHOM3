@@ -18,7 +18,11 @@ namespace SWP391_BL3W.Database
         public string ImageUrl {  get; set; }
         //Fk
         public int UserId { get; set; }
+
+        public int CategoryBlogID { get; set; }
         //Navigation
         public User User { get; set; }
+        public CategoryBlog CategoryBlog { get; set; }
+
     }
 }
