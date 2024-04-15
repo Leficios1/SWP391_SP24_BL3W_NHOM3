@@ -7,6 +7,7 @@ import Footer from './shared/layout/footer';
 import Home from './modules/home/home';
 import AppRoutes from './routers/routes';
 
+
 function App() {
   return (
     <>
