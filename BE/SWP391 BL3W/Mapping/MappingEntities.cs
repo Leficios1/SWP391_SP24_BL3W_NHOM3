@@ -21,8 +21,8 @@ namespace SWP391_BL3W.Mapping
             CreateMap<UpdateProductsDTO,Product>().ReverseMap();
             CreateMap<ProductDTO, Product>().ReverseMap();
 
-            /*CreateMap<OrderResquestDTO, Order>().ForMember(dest => dest.OrdersDetails, opt => opt.MapFrom(x => x.OrderDetails)).ReverseMap();
-            CreateMap<OrderDetailDTO, OrderDetails>().ReverseMap();*/
+            CreateMap<OrderResquestDTO, Order>().ForMember(dest => dest.OrdersDetail, opt => opt.MapFrom(x => x.OrderDetails)).ReverseMap();
+            CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
 
             CreateMap<BlogsDTO, Blog>().ReverseMap();
         }
