@@ -1,13 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using SWP391_BL3W.Database;
+using SWP391_BL3W.DTO.Request;
 using SWP391_BL3W.DTO.Response;
 using SWP391_BL3W.Repository.Interface;
+using SWP391_BL3W.Services.Interface;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Xml;
 
-namespace SWP391_BL3W.Services.Interface
+namespace SWP391_BL3W.Services
 {
     public class AuthService : IAuthService
     {
@@ -19,11 +22,11 @@ namespace SWP391_BL3W.Services.Interface
             _configuration = configuration;
         }
 
-        public async Task<TokenResponse> LoginAccount(string email, string password)
+        public async Task<TokenResponse> LoginAccount(AuthRequestDTO dto)
         {
             try
             {
-                var checkUser = await _userRepo.Get().Include(x => x.Role).Where(x => x.Password == password && x.Email.ToLower().Trim() == email.ToLower().Trim()).FirstOrDefaultAsync();
+                var checkUser = await _userRepo.Get().Include(x => x.Role).Where(x => x.Password == dto.Password && x.Email.ToLower().Trim() == dto.Email.ToLower().Trim()).FirstOrDefaultAsync();
 
                 if (checkUser == null)
                 {

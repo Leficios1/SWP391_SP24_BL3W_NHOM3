@@ -12,11 +12,19 @@ namespace SWP391_BL3W.Mapping
             CreateMap<CreateUserDTO, User>().ReverseMap();
             CreateMap<UserResponseDto, User>().ReverseMap();
 
-            CreateMap<CreateProductDTO, Products>()
+            CreateMap<CreateProductDTO, Product>()
             .ForMember(dest => dest.CategoryID, opt => opt.MapFrom(src => src.CategoryID))
             .ForMember(dest => dest.Category, opt => opt.Ignore())
             .ForMember(dest => dest.Details, opt => opt.MapFrom(src => src.Details));
-            CreateMap<ProductDetailDTO, ProductsDetails>();
+            CreateMap<ProductDetailDTO, ProductsDetail>();
+
+            CreateMap<UpdateProductsDTO,Product>().ReverseMap();
+            CreateMap<ProductDTO, Product>().ReverseMap();
+
+            CreateMap<OrderResquestDTO, Order>().ForMember(dest => dest.OrdersDetail, opt => opt.MapFrom(x => x.OrderDetails)).ReverseMap();
+            CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
+
+            CreateMap<BlogsDTO, Blog>().ReverseMap();
         }
     }
 }
