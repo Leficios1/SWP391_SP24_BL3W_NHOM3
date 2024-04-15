@@ -88,14 +88,80 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
-        public Task<StatusResponse<OrderResponseDTO>> getAllOrderAsync(int? page, int? size)
+        public async Task<StatusResponse<OrderGetAllRespnseDTO>> getAllOrderAsync(int? page, int? size)
         {
-            throw new NotImplementedException();
+            var response = new StatusResponse<OrderGetAllRespnseDTO>();
+            try
+            {
+                int pageSize = size ?? 15;
+                int pageNumber = page ?? 1;
+
+                List<Order> allOrders = await _context.Orders
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                int totalItems = await _context.Orders.CountAsync();
+                int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+                // Chuyển đổi danh sách đơn hàng sang dạng OrderResponseDTO
+                var orderResponseDTOs = allOrders.Select(order => new OrderDTO
+                {
+                    Id = order.OrderId,
+                    OrderDate = order.OrderDate,
+                    TotalPrice = order.TotalPrice,
+                    status = order.status,
+                    statusMessage = order.statusMessage,
+                    PaymentName = order.PaymentName,
+                    NameCustomer = order.NameCustomer,
+                    AddressCustomer = order.AddressCustomer,
+                    PhoneCustomer = order.PhoneCustomer,
+                }).ToList();
+
+                var responseDTO = new OrderGetAllRespnseDTO
+                {
+                    Orders = orderResponseDTOs,
+                    TotalPages = totalPages,
+                    CurrentPage = pageNumber,
+                    PageSize = pageSize,
+                    TotalItems = totalItems
+                };
+
+                response.Data = responseDTO;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Get all orders with pagination successfully.";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+                response.Data = null;
+            }
+            return response;
         }
 
-        public Task<StatusResponse<OrderResponseDTO>> getOrderbyUserId(int userId)
+        public async Task<StatusResponse<List<OrderResponseDTO>>> getOrderbyUserId(int userId)
         {
-            throw new NotImplementedException();
+            var response = new StatusResponse<List<OrderResponseDTO>>();
+            try
+            {
+                var orders = await _context.Orders
+                    .Where(o => o.UserId == userId)
+                    .ToListAsync();
+
+                var orderResponseDTOs = _mapper.Map<List<Order>, List<OrderResponseDTO>>(orders);
+                response.Data = orderResponseDTOs;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Get orders by user id successfully.";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+                response.Data = null;
+                return response;
+            }
+            return response;
         }
     }
 }

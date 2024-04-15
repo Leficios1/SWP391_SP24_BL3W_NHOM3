@@ -14,7 +14,6 @@ namespace SWP391_BL3W.DTO.Response
         public string? AddressCustomer { get; set; }
         public string? PhoneCustomer { get; set; }
         public int UserId { get; set; }
-        public string UserName { get; set; }
 
     }
 }
