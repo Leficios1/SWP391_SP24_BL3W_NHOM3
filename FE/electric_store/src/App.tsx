@@ -6,17 +6,22 @@ import Header from './shared/layout/header/header';
 import Footer from './shared/layout/footer';
 import Home from './modules/home/home';
 import AppRoutes from './routers/routes';
-
+import Login from './modules/login/login';
+import ErrorPage from './shared/error/error';
+import { useAppSelector } from './config/store';
+import { useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <div className='app-container'>
-          <AppRoutes />
-        </div>
-        <Footer />
+        <ToastContainer position="top-right" autoClose={1500} closeButton={true} limit={3} newestOnTop />
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='*' element={<AppRoutes />} />
+        </Routes>
       </BrowserRouter>
     </>
   );

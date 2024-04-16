@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import getStore from './config/store';
+import { Provider, useSelector } from 'react-redux';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(
 
-  <App />
+const store = getStore()
+
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
 
 );
 

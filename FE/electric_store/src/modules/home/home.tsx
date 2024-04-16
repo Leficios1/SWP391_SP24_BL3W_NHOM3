@@ -1,8 +1,11 @@
-import { Card, Col, Pagination, Row, Skeleton } from "antd"
+import { Card, Col, FloatButton, Pagination, Popover, Row, Skeleton } from "antd"
 import Meta from "antd/es/card/Meta";
 import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../config/store";
+import { ShoppingCartOutlined } from "@ant-design/icons";
+
 
 const Home = () => {
 
@@ -47,7 +50,7 @@ const Home = () => {
                 {isLoading ? <Skeleton /> :
                     product.map((product: any) => {
                         return (
-                            <Col md={6} onClick={() => toDetailProductPage(product.id)}>
+                            <Col key={product.id} md={6} onClick={() => toDetailProductPage(product.id)}>
                                 <Card
                                     hoverable
                                     style={{ width: "100%" }}
@@ -66,6 +69,22 @@ const Home = () => {
                     <Pagination defaultCurrent={6} total={50} />
                 </Col>
             </Row>
+
+
+            <Popover
+                placement="topLeft"
+                trigger={["click"]}
+                open={true}
+                title="Giỏ hàng"
+                content={<div>
+                    123123
+                </div>}
+            >
+                <FloatButton
+
+                    icon={<ShoppingCartOutlined />}
+                />
+            </Popover>
         </>
     )
 }

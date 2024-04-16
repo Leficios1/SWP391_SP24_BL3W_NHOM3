@@ -1,11 +1,21 @@
-import { ShoppingCartOutlined } from "@ant-design/icons"
-import { Button, Col, Input, Row } from "antd"
+import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons"
+import { Button, Col, Dropdown, Input, MenuProps, Row } from "antd"
 import Search from "antd/es/input/Search"
-import React from "react"
+import React, { useEffect } from "react"
 import "./header.scss"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
+import Cookies from "universal-cookie"
+import { useAppDispatch, useAppSelector } from "../../../config/store"
+import { login, logout } from "../../reducer/authentication.reducer"
+import { useDispatch } from "react-redux"
 
 const Header: React.FC = () => {
+
+
+
+    const cookie = new Cookies();
+    const isAuthenticated = useAppSelector(state => state.authentication.isAuthenticated);
+    const navigate = useNavigate()
 
     const Header: React.CSSProperties = {
         width: "100%",
@@ -30,8 +40,32 @@ const Header: React.FC = () => {
 
 
     const styleNavLink: React.CSSProperties = {
-        color:"white"
+        color: "white"
     }
+
+    const items: MenuProps['items'] = [
+        {
+            label: <span>Profile</span>,
+            icon: "",
+            key: '0',
+        },
+        {
+            label: <span>Change password</span>,
+            key: '1',
+        },
+        {
+            type: 'divider',
+        },
+        {
+            label: 'Log out',
+            key: '3',
+            onClick: () => {
+                logout()
+                window.document.location.reload()
+            }
+
+        },
+    ];
 
     return (
         <Row style={Header}>
@@ -54,9 +88,26 @@ const Header: React.FC = () => {
                             Hotline: 029474738
                         </p>
                     </Col>
-                    <Col md={3} style={{ margin: "auto" }}>
-                        <ShoppingCartOutlined style={{ fontSize: 25, color: "orange" }} />
+
+
+                    {/* <Col md={2} style={{ margin: "auto" }}> */}
+
+                    {/* <ShoppingCartOutlined style={{ fontSize: 25, color: "orange" }} /> */}
+                    {/* </Col> */}
+                    <Col md={3} style={{ margin: "auto", textAlign: "center" }}>
+
+                        {
+                            cookie.get("jwt-token") != null ?
+                                <Dropdown menu={{ items }} trigger={["click"]}>
+                                    <UserOutlined style={{ cursor: "crosshair", fontSize: 25, color: "orange" }} />
+                                </Dropdown>
+                                :
+                                <NavLink to={"/login"}>
+                                    Đăng nhập
+                                </NavLink>
+                        }
                     </Col>
+
                 </Row>
                 <Row >
                     <Col span={24}>
@@ -78,7 +129,7 @@ const Header: React.FC = () => {
 
                             </Col>
                             <Col span={6}>
-                            <div className="sub-header-item">
+                                <div className="sub-header-item">
                                     <NavLink style={styleNavLink} to={"/"}>Liên hệ</NavLink>
                                 </div>
                             </Col>
