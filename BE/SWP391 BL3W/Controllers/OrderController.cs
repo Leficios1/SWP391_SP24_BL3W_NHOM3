@@ -22,6 +22,20 @@ namespace SWP391_BL3W.Controllers
             _context = context;
         }
 
+        [HttpGet("getAll")]
+        public async Task<IActionResult> getAll (int? page, int? size)
+        {
+            var response = await _orderService.getAllOrderAsync(size, page);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
+        [HttpGet("GetById/{id}")]
+        public async Task<IActionResult> getOrderById([FromRoute] int id)
+        {
+            var response = await _orderService.getOrderbyUserId(id);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
         [HttpPost("create")]
         public async Task<IActionResult> create(OrderResquestDTO dto)
         {
