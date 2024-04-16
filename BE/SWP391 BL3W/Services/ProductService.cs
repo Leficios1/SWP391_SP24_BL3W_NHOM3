@@ -201,15 +201,15 @@ namespace SWP391_BL3W.Services
                 query = query.Where(p => p.Name.ToUpper().Contains(name));
                 if (watt.HasValue)
                 {
-                    query = query.Where(p => p.Details.Any(d => d.Name.Equals("Watt") && d.Value == watt.ToString()));
+                    query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Watt".ToUpper()) && d.Value == watt.ToString()));
                 }
                 if (volt.HasValue)
                 {
-                    query = query.Where(p => p.Details.Any(d => d.Name == "Volt" && d.Value == volt.ToString()));
+                    query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Volt".ToUpper()) && d.Value == volt.ToString()));
                 }
                 if (!string.IsNullOrEmpty(producer))
                 {
-                    query = query.Where(p => p.Details.Any(d => d.Name == "Producer" && d.Value.Contains(producer)));
+                    query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Producer".ToUpper()) && d.Value.Contains(producer)));
                 }
                 if (query == null)
                 {
