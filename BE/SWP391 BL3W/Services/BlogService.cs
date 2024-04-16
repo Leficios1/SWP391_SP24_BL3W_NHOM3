@@ -39,7 +39,7 @@ namespace SWP391_BL3W.Services
                     var blogEntity = _mapper.Map<BlogsDTO, Blog>(dto);
                     await _baseRepository.AddAsync(blogEntity);
                     await _baseRepository.SaveChangesAsync();
-
+                    await transaction.CommitAsync();
                     var createdDto = _mapper.Map<Blog, BlogsDTO>(blogEntity);
 
            
@@ -66,7 +66,7 @@ namespace SWP391_BL3W.Services
             using (var transaction = _context.Database.BeginTransaction())
             try
             {
-                var blogEntity = await _baseRepository.GetByIdAsync(id);
+                var blogEntity = await _baseRepository.GetById(id);
 
                 if (blogEntity == null)
                 {
@@ -79,7 +79,7 @@ namespace SWP391_BL3W.Services
 
                 _baseRepository.Delete(blogEntity);
                 await _baseRepository.SaveChangesAsync();
-
+                    await transaction.CommitAsync();
 
                     var responseDTO = new BlogsDTO
                     {
@@ -147,9 +147,30 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
-        public Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync()
+        public async Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync()
         {
-            throw new NotImplementedException();
+            var response = new StatusResponse<BlogsResponseDTO>();
+            try
+            {
+                List<Blog> allBlogs = await _context.Blogs.ToListAsync();
+
+                var blogsDtoList = allBlogs.Select(blog => _mapper.Map<Blog, BlogsDTO>(blog)).ToList();
+
+                response.Data = new BlogsResponseDTO
+                {
+                    Blogs = blogsDtoList,
+                    TotalItems = blogsDtoList.Count
+                };
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Get all blogs successfully.";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = $"Error: {ex.Message}";
+            }
+
+            return response;
         }
 
         public async Task<StatusResponse<BlogDetailsResponseDTO>> GetBlogByIdAsync(int id)
@@ -226,6 +247,7 @@ namespace SWP391_BL3W.Services
                 
                 _baseRepository.Update(existedBlogs);
                 await _baseRepository.SaveChangesAsync();
+              
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Update Successful";
                 return response;

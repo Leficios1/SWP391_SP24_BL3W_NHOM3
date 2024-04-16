@@ -25,15 +25,15 @@ namespace SWP391_BL3W.DTO.Response
         [Range(1, 1000)]
         public int CategoryBlogID { get; set; }*/
         public int Id { get; set; }
-       
+
         public string Title { get; set; }
-        
+
         public string Content { get; set; }
-       
+
         public string ImageUrl { get; set; }
-        
+
         public int UserId { get; set; }
-       
+
         public int CategoryBlogID { get; set; }
 
     }
