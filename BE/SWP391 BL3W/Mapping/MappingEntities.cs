@@ -25,6 +25,7 @@ namespace SWP391_BL3W.Mapping
             CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
 
             CreateMap<BlogsDTO, Blog>().ReverseMap();
+            CreateMap<OrderResponseDTO, Order>().ReverseMap();
         }
     }
 }

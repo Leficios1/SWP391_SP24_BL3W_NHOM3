@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using SWP391_BL3W.Configuration.CROS;
 using SWP391_BL3W.Database;
 using SWP391_BL3W.Repository;
 using SWP391_BL3W.Repository.Interface;
@@ -78,6 +79,8 @@ namespace SWP391_BL3W
             });
 
             var app = builder.Build();
+
+            app.ConfigureCors(builder.Configuration);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
