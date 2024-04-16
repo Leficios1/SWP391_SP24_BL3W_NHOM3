@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 using SWP391_BL3W.Database;
 using SWP391_BL3W.DTO.Request;
 using SWP391_BL3W.DTO.Response;
@@ -17,8 +18,7 @@ namespace SWP391_BL3W.Controllers
     {
         private readonly IBlogService _blogService;
         private readonly IMapper _mapper;
-
-        public BlogController(BlogService blogService, IMapper mapper)
+        public BlogController(IBlogService blogService, IMapper mapper)
         {
             _blogService = blogService;
             _mapper = mapper;
@@ -27,11 +27,10 @@ namespace SWP391_BL3W.Controllers
 
         // GET: api/Blog
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Blog>>> GetBlog()
+        public async Task<ActionResult<IEnumerable<BlogsResponseDTO>>> GetBlog()
         {
             var blogs = await _blogService.GetAllBlogsAsync();
-            var blogResponseDTOs = _mapper.Map<IEnumerable<BlogsResponseDTO>>(blogs);
-            return Ok(blogResponseDTOs);
+            return Ok(blogs);
         }
 
         // GET: api/Blog/5
@@ -45,17 +44,18 @@ namespace SWP391_BL3W.Controllers
                 return NotFound();
             }
 
-            var blogResponseDTO = _mapper.Map<BlogsResponseDTO>(blogPost);
+            var blogResponseDTO = blogPost.Data;
             return Ok(blogResponseDTO);
         }
 
         // POST: api/Blog
         [HttpPost]
-        public async Task<ActionResult<BlogsResponseDTO>> CreateBlog(BlogsDTO blogsRequestDTO)
+        public async Task<ActionResult<BlogsDTO>> CreateBlog(BlogsDTO blogsRequestDTO)
         {
             var blog = _mapper.Map<Blog>(blogsRequestDTO);
+            blog.Id = 0;
             await _blogService.CreateBlogAsync(blogsRequestDTO);
-            var blogResponseDTO = _mapper.Map<BlogsResponseDTO>(blog);
+            var blogResponseDTO = _mapper.Map<BlogsDTO>(blog);
             return CreatedAtAction(nameof(GetBlog), new { id = blogsRequestDTO.Id }, blogResponseDTO);
         }
 
@@ -69,7 +69,7 @@ namespace SWP391_BL3W.Controllers
                 return NotFound();
             }
 
-            _mapper.Map(dto, existingBlog);
+            _mapper.Map(dto, existingBlog.Data);
             await _blogService.UpdateBlogAsync(id, dto);
 
             return NoContent();

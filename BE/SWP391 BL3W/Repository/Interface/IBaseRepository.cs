@@ -29,7 +29,6 @@ namespace SWP391_BL3W.Repository.Interface
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null);
         public Task<TEntity?> FindOne(Expression<Func<TEntity, bool>>? filter = null, string includeProperties = "");
         public Task<bool> AddHashKey(TEntity entity, CancellationToken cancellationToken = default);
-        Task<Blog> GetByIdAsync(int id);
-        Task<IEnumerable<Blog>> GetAllAsync();
+
     }
 }
