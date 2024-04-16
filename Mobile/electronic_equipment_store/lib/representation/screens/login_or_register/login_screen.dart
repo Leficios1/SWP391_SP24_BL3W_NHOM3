@@ -1,14 +1,18 @@
+import 'dart:convert';
+
 import 'package:electronic_equipment_store/core/constants/my_textformfield.dart';
+import 'package:electronic_equipment_store/models/user_model.dart';
+import 'package:electronic_equipment_store/representation/screens/customer/customer_main_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/login_or_register/forgot_password_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
+import 'package:electronic_equipment_store/services/api_service.dart';
 import 'package:electronic_equipment_store/utils/dialog_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hive/hive.dart';
 import '../../../core/constants/color_constants.dart';
 import '../../../core/constants/dismension_constants.dart';
 import '../../../core/constants/textstyle_constants.dart';
-
-
 
 class LoginScreen extends StatefulWidget {
   final Function()? onTap;
@@ -29,7 +33,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-   
   }
 
   void signInClicked() async {
@@ -50,7 +53,31 @@ class _LoginScreenState extends State<LoginScreen> {
             );
           },
         );
-        //TODO login function
+        try {
+          final response = await ApiService.logIn(
+              emailController.text, passwordController.text);
+          // ignore: use_build_context_synchronously
+          Navigator.pop(context);
+          if (response != null) {
+            Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
+            //     final userModel = UserModel.fromJson(response);
+            //     var box = Hive.box('userBox');
+            //     box.put('user', json.encode(userModel.toJson()));
+            //     final authProvider =
+            //         Provider.of<AuthProvider>(context, listen: false);
+            //     authProvider.setUser(userModel);
+            //     if (userModel.role.roleName == 'Customer') {
+            //       Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
+            //     } else if (userModel.role.roleName == "ProductOwner") {
+            //       Navigator.of(context).pushNamed(ProductOwnerMainScreen.routeName);
+            //     }
+          } else {
+            showCustomDialog(context, 'Lỗi', 'Đăng nhập thất bại.', true);
+          }
+        } catch (e) {
+          // showCustomDialog(context, 'Lỗi', e.toString(), true);
+          print(e.toString());
+        }
       }
     }
   }
@@ -121,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 5),
 
-                  // Enter your account detail 
+                  // Enter your account detail
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -213,9 +240,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ],
                   ),
-                  
-                  const SizedBox(height: 20),
 
+                  const SizedBox(height: 20),
 
                   // Dont't have an account? register now
                   Row(

@@ -1,13 +1,13 @@
-import 'role_model.dart';
 
 class UserModel {
   int userID;
   String name;
   String email;
+  String? password;
   String? phone;
   String? address;
   DateTime? dateOfBirth;
-  RoleModel role;
+  int roleId;
   String? avatarUrl;
   String? gender;
   bool status;
@@ -20,7 +20,7 @@ class UserModel {
     this.phone,
     this.address,
     this.dateOfBirth,
-    required this.role,
+    required this.roleId,
     this.avatarUrl,
     this.gender,
     required this.status,
@@ -34,10 +34,20 @@ class UserModel {
       phone: json['phone'],
       address: json['address'],
       dateOfBirth: json['dateOfBirth'],
-      role: RoleModel.fromJson(json['role']),
+      roleId: json['roleId'],
       avatarUrl: json['avatarUrl'],
       gender: json['gender'],
       status: json['status'],
     );
+  }
+
+  Map<dynamic, dynamic> toJson() {
+    return {
+      'userID': userID,
+      'password': password,
+      'email': email,
+      'status': status,
+      'role': roleId,
+    };
   }
 }

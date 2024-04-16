@@ -424,7 +424,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                     );
-                                    // print(products[index].productID);
                                     setState(() {});
                                   },
                                   child: ProductCard(

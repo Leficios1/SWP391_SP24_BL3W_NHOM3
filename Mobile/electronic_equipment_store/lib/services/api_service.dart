@@ -1,12 +1,35 @@
+import 'dart:convert';
 import 'package:electronic_equipment_store/models/category_model.dart';
 import 'package:electronic_equipment_store/models/feedback_model.dart';
 import 'package:electronic_equipment_store/models/product_detail_model.dart';
 import 'package:electronic_equipment_store/models/product_image_model.dart';
 import 'package:electronic_equipment_store/models/product_model.dart';
-import 'package:electronic_equipment_store/models/role_model.dart';
 import 'package:electronic_equipment_store/models/user_model.dart';
+import 'package:http/http.dart' as http;
 
 class ApiService {
+
+//Not Authorize
+  static Future<Map<String, dynamic>?> logIn(
+      String email, String password) async {
+    final url = Uri.parse(
+        'https://localhost:7152/api/Auth/login');
+    final response = await http.post(
+      url,
+      headers: {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+      },
+      body: jsonEncode({'email': email, 'password': password}),
+    );
+
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      return null;
+    }
+  }
+
 
   static Future<List<CategoryModel>?> getAllCategory() async {
     List<CategoryModel> categorys = [
@@ -87,8 +110,8 @@ class ApiService {
   static Future<List<FeedbackModel>> getFeedbackByProductID(int productID) async {
     try {
       List<FeedbackModel> feedbacks = [
-        FeedbackModel(feedBackID: 1, ratingPoint: 3, description: 'tạm được', createdDate: DateTime(2024, 4, 14, 12, 30, 0), userModel: UserModel(userID: 001, name: "Trần Văn Phê", email: "email", role: RoleModel(roleID: 001, roleName: "roleName"), status: true)),
-        FeedbackModel(feedBackID: 1, ratingPoint: 5, description: 'xịn đêý', createdDate: DateTime(2024, 4, 14, 12, 30, 0), userModel: UserModel(userID: 002, name: "Nguyễn Văn Pha", email: "email", role: RoleModel(roleID: 001, roleName: "roleName"), status: true))
+        FeedbackModel(feedBackID: 1, ratingPoint: 3, description: 'tạm được', createdDate: DateTime(2024, 4, 14, 12, 30, 0), userModel: UserModel(userID: 001, name: "Trần Văn Phê", email: "email", roleId: 2, status: true)),
+        FeedbackModel(feedBackID: 1, ratingPoint: 5, description: 'xịn đêý', createdDate: DateTime(2024, 4, 14, 12, 30, 0), userModel: UserModel(userID: 002, name: "Nguyễn Văn Pha", email: "email", roleId: 2, status: true))
       ];
       return feedbacks;
     } catch (e) {
