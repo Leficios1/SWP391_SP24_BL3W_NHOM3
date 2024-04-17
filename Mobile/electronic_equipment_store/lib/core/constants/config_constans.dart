@@ -1,0 +1,1 @@
+const String apiLink = "https://10.0.2.2:7152/api/Auth/login";

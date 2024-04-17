@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:electronic_equipment_store/core/constants/config_constans.dart';
 import 'package:electronic_equipment_store/models/category_model.dart';
 import 'package:electronic_equipment_store/models/feedback_model.dart';
 import 'package:electronic_equipment_store/models/product_detail_model.dart';
@@ -12,16 +13,15 @@ class ApiService {
 //Not Authorize
   static Future<Map<String, dynamic>?> logIn(
       String email, String password) async {
-    final url = Uri.parse(
-        'https://localhost:7152/api/Auth/login');
+    final url = Uri.parse('$apiLink/Auth/login');
     final response = await http.post(
       url,
       headers: {
         'accept': '*/*',
         'Content-Type': 'application/json',
       },
-      body: jsonEncode({'email': email, 'password': password}),
-    );
+      body: jsonEncode({'email': email, 'password': password}),);
+
 
     if (response.statusCode == 200) {
       return json.decode(response.body);

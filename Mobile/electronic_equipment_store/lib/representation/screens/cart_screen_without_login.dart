@@ -3,17 +3,15 @@ import 'package:flutter/material.dart';
 import '../../../utils/asset_helper.dart';
 import '../../../utils/image_helper.dart';
 
-class CartScreen extends StatefulWidget {
-  const CartScreen({super.key});
+class CartScreenWithOutLogin extends StatefulWidget {
+  const CartScreenWithOutLogin({super.key});
   static const String routeName = '/main_cart_screen';
   @override
-  State<CartScreen> createState() => _CartScreenState();
+  State<CartScreenWithOutLogin> createState() => _CartScreenWithOutLoginState();
 }
 
-class _CartScreenState extends State<CartScreen>
+class _CartScreenWithOutLoginState extends State<CartScreenWithOutLogin>
     with SingleTickerProviderStateMixin {
-
-
   @override
   void initState() {
     super.initState();

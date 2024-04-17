@@ -1,3 +1,4 @@
+import 'package:electronic_equipment_store/representation/screens/customer/customer_main_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/login_or_register/forgot_password_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/login_or_register/login_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/main_app.dart';
@@ -11,4 +12,5 @@ final Map<String, WidgetBuilder> routes = {
         onTap: () {},
       ),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
+  CustomerMainScreen.routeName: (context) => CustomerMainScreen(),
 };

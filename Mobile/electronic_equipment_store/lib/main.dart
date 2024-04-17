@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:electronic_equipment_store/core/constants/color_constants.dart';
 import 'package:electronic_equipment_store/core/constants/dismension_constants.dart';
 import 'package:electronic_equipment_store/core/constants/textstyle_constants.dart';
@@ -19,12 +21,23 @@ void main() async {
 
   // ẩn status bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  
+  // Vô hiệu hóa kiểm tra chứng chỉ SSL
+  if (Platform.isAndroid) {
+    // For Android
+    HttpOverrides.global = MyHttpOverrides();
+  }
   runApp(  
         // TODO Thêm Provider để quản lý stage
           const MyApp(),
  
     );
+}
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+  }
 }
 
 class MyApp extends StatelessWidget {

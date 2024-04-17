@@ -26,7 +26,6 @@ class _SplashScreenState extends State<SplashScreen> {
     //     LocalStorageHelper.getValue('ignoreIntroScreen') as bool?;
 
     await Future.delayed(const Duration(seconds: 3));  
-        // Chuyển đến màn hình MainApp
 
 
         // ignore: use_build_context_synchronously
