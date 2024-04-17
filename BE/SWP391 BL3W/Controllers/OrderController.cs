@@ -42,5 +42,11 @@ namespace SWP391_BL3W.Controllers
             var response = await _orderService.create(dto);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
+        [HttpPut("updateStatus/{id}/{status}")]
+        public async Task<IActionResult> updateStatusOrder([FromRoute] int id,[FromRoute] int status)
+        {
+            var response = await _orderService.updateOrderAsync(id, status);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
     }
 }

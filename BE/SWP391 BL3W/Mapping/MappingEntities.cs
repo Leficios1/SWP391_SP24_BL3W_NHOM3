@@ -32,6 +32,8 @@ namespace SWP391_BL3W.Mapping
             CreateMap<CartResponseDTO, Cart>().ReverseMap();
             CreateMap<CartResponsev2DTO, Cart>().ReverseMap();
             CreateMap<ProductCartDTO, Product>().ReverseMap();
+            CreateMap<Product, ProductsResponseDTO>().ReverseMap();
+
         }
     }
 }
