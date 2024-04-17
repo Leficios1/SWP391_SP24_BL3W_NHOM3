@@ -7,31 +7,49 @@ import { Button, Col, Divider, Image, Row, Skeleton, Table, TableProps, Typograp
 import { formatCurrencyVN } from "../../shared/utils/formatCurrency";
 import "./productdetail.scss"
 import { CarTwoTone, GoldTwoTone, HeartTwoTone, PhoneTwoTone } from "@ant-design/icons";
+import { useAppDispatch, useAppSelector } from "../../config/store";
+import { getProductDetail } from "../product/product.reducer";
+import { IProductDetailProps, IProductProps } from "../../shared/models";
+import { IAddingCartProps } from "../../shared/models/cart";
+import Cookies from "universal-cookie";
+import { IAccountProps } from "../../shared/reducer/authentication.reducer";
+import { createProductToCart } from "../cart/cart.reducer";
 
+interface DataType {
+    key: string;
+    name: string;
+    value: string
+}
 
 const ProductDetail: React.FC = () => {
 
-    const [data, setData] = useState<any>({})
-    const [isLoading, setIsLoading] = useState(false) //test only
-    const { id } = useParams()
+
+    const params = useParams()
+    const id = params.id!
+    const dispatch = useAppDispatch();
+    const productdetail = useAppSelector(state => state.product.dataDetail) as IProductDetailProps
+    const isLoading = useAppSelector(state => state.product.loading)
+    const [quantity, setQuantity] = useState<number>(1);
+    const cookie = new Cookies();
+    const account = cookie.get("account") as IAccountProps;
+
 
     useEffect(() => {
-        setIsLoading(true)
-        axios(`https://65387970a543859d1bb17924.mockapi.io/api/v1/products/${id}`)
-            .then((res) => {
-                if (res.status === 200) {
-                    setIsLoading(false)
-                    setData(res.data)
-                }
-            })
+        dispatch(getProductDetail(id))
     }, [])
 
 
-    interface DataType {
-        key: string;
-        name: string;
-        value: string
+    const plusQuantity = () => {
+        setQuantity((quantity) => quantity + 1)
     }
+    const minusQuantity = () => {
+        if (quantity === 1) {
+
+        } else {
+            setQuantity(quantity => quantity - 1)
+        }
+    }
+
     const columns: TableProps<DataType>['columns'] = [
         {
             title: 'Nội dung',
@@ -47,49 +65,39 @@ const ProductDetail: React.FC = () => {
         },
     ]
 
-    const data12: DataType[] = [
-        {
-            key: '1',
-            name: 'John Brown',
-            value: "fsd"
-        },
-        {
-            key: '2',
-            name: 'Jim Green',
-            value: "42",
-        },
-        {
-            key: '3',
-            name: 'Joe Black',
-            value: "32",
-        },
-        {
-            key: '5',
-            name: 'Joe Black',
-            value: "32",
-        },
-        {
-            key: '5',
-            name: 'Joe Black',
-            value: "32",
-        },
-        {
-            key: '6',
-            name: 'Joe Black',
-            value: "32",
-        },
-    ];
+
+    const data: DataType[] = productdetail?.data?.details?.map((detail) => {
+        return {
+            key: detail.id,
+            name: detail.name,
+            value: detail.value
+        }
+    })
+
+    const onClickBuy = () => {
+        const product_add_to_cart = {
+            productId: productdetail.data.products.id,
+            quantity: quantity,
+            userId: account.id
+        }
+
+        dispatch(createProductToCart(product_add_to_cart))
+
+    }
 
     return (
         <Row style={{ marginTop: "30px" }} gutter={[30, 10]}>
             {isLoading ? <Skeleton /> :
+
                 <>
                     {/* Image part */}
                     <Col md={12}>
                         <Row style={{ width: "100%" }}>
                             <Image
+                                style={{ objectFit: "contain" }}
+                                height={"500px"}
                                 width={"100%"}
-                                src={data.avatar}
+                                src={productdetail?.data?.images[0]?.url}
                             />
                         </Row>
                     </Col>
@@ -97,25 +105,25 @@ const ProductDetail: React.FC = () => {
                     <Col md={12}>
                         <Row>
                             <Col md={24} style={{ marginBottom: "10px" }}>
-                                <h1>{data.name}</h1>
+                                <h1>{productdetail?.data?.products.name}</h1>
                             </Col>
 
                             <Col md={12}>
-                                <p>Mã sản phẩm: <span style={{ color: "red" }}><strong>{data.id}</strong> </span></p>
+                                <p>Mã sản phẩm: <span style={{ color: "red" }}><strong>{productdetail?.data?.products.id}</strong> </span></p>
                             </Col>
                             <Col md={12}>
-                                <p>Tình trạng: <span style={{ color: "red" }}><strong>Còn hàng</strong></span></p>
+                                <p>Tình trạng: <span style={{ color: "red" }}><strong>{productdetail?.data.products.quantity > 0 ? "Còn hàng" : "Hết hàng"} </strong></span></p>
                             </Col>
                             <Col md={24} style={{ marginTop: "10px" }}>
-                                <p>Giá tiền: <span style={{ color: "red" }}><strong>{formatCurrencyVN(Number(data.price))}</strong></span></p>
+                                <p>Giá tiền: <span style={{ color: "red" }}><strong>{formatCurrencyVN(Number(productdetail?.data?.products.price))}</strong></span></p>
                             </Col>
                             <Col md={24} style={{ marginTop: "10px" }}>
                                 <Row>
                                     <span style={{ display: "inline-block", textAlign: "center", paddingTop: "4px", marginRight: "10px" }}>Chọn số lượng: </span>
                                     <Row style={{ border: "1px solid grey", borderRadius: "30px" }}>
-                                        <button className="btnQuantityPlus">-</button>
-                                        <span style={{ display: "inline-block", width: "50px", textAlign: "center", margin: "auto 0" }}>1</span>
-                                        <button className="btnQuantityMinus">+</button>
+                                        <button className="btnQuantityPlus" onClick={() => minusQuantity()}>-</button>
+                                        <span style={{ display: "inline-block", width: "50px", textAlign: "center", margin: "auto 0" }}>{quantity}</span>
+                                        <button className="btnQuantityMinus" onClick={() => plusQuantity()}>+</button>
                                     </Row>
 
                                 </Row>
@@ -123,7 +131,7 @@ const ProductDetail: React.FC = () => {
                             <Col md={24} style={{ marginTop: "20px" }}>
                                 <Row gutter={[20, 0]}>
                                     <Col md={12}>
-                                        <Button style={{ height: "80px", backgroundColor: "orange", color: "white" }} shape="round" size="large">
+                                        <Button onClick={() => onClickBuy()} style={{ height: "80px", backgroundColor: "orange", color: "white" }} shape="round" size="large">
                                             <h4>THÊM VÀO GIỎ HÀNG</h4>
                                             <p style={{ fontSize: "13px" }}>Giao hàng thu tiền tận nơi</p>
                                         </Button>
@@ -196,23 +204,12 @@ const ProductDetail: React.FC = () => {
                                 <Row>
                                     <Col span={24}>
                                         <h2>Mô tả sản phẩm</h2>
-                                        <p>fjdsklafjsdkfjslakjflksadf
-                                            sadfasdfsadf
-                                            sadfsa
-                                            fjdsklafjsdkfjslakjflksadfdfsdafsdfhsaf
-                                            sfjsdfkjsdalkfjdsalkfs
-                                            fsdajlfksadjflksadfsd
-                                            fsdajkfldsajfsd
-                                            fdsajklfjsdlf
-                                            ằoeiflskdafsda
-                                            fpeofovnsad
-                                            fdsajfoidsaf
-                                            fjweifjdsa
-                                            fofi
+                                        <p>
+                                            {productdetail?.data?.products.description}
                                         </p>
                                     </Col>
                                     <Col span={24}>
-                                        <Table columns={columns} dataSource={data12} pagination={false}></Table>
+                                        <Table columns={columns} dataSource={data} pagination={false}></Table>
                                     </Col>
                                 </Row>
                             </Col>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -12,6 +12,9 @@ import { useAppSelector } from './config/store';
 import { useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FloatButton, Popover } from 'antd';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import { Cart } from './entities/cart/Cart';
 
 function App() {
   return (

@@ -3,38 +3,37 @@ import Meta from "antd/es/card/Meta";
 import axios from "axios";
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../config/store";
+import { useAppDispatch, useAppSelector } from "../../config/store";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { getAllproduct, reset } from "../../entities/product/product.reducer";
+import { IAllProductProps } from "../../shared/models/product";
 
 
 const Home = () => {
 
-    const [product, setProduct] = useState([]); //test only
-    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
+    const products = useAppSelector(state => state.product.data) as IAllProductProps;
+    const isLoading = useAppSelector(state => state.product.loading);
+
 
     const BannerStyle: React.CSSProperties = {
         margin: "20px 0px"
     }
 
-    const fetchProduct = () => {
-        setIsLoading(true)
-        axios("https://65387970a543859d1bb17924.mockapi.io/api/v1/products")
-            .then((res) => {
-                if (res.status === 200) {
-                    setIsLoading(false)
-                    setProduct(res.data);
-                }
 
-            })
-    }
 
-    const toDetailProductPage = (id: string) => {
+    const toDetailProductPage = (id: string | number) => {
+        dispatch(reset())
         navigate(`chi-tiet-san-pham/${id}`)
     }
 
+    const onChangePagination = (page: number, pageSize: number = 15) => {
+        dispatch(getAllproduct({ page: page, size: pageSize }))
+    }
+
     useEffect(() => {
-        fetchProduct()
+        dispatch(getAllproduct({ page: 1, size: 15 }))
     }, [])
 
 
@@ -48,13 +47,13 @@ const Home = () => {
 
             <Row gutter={[50, 50]} className="products">
                 {isLoading ? <Skeleton /> :
-                    product.map((product: any) => {
+                    products?.data?.products?.map((product) => {
                         return (
-                            <Col key={product.id} md={6} onClick={() => toDetailProductPage(product.id)}>
+                            <Col key={product.id} md={6} onClick={() => toDetailProductPage(product.id!)}>
                                 <Card
                                     hoverable
                                     style={{ width: "100%" }}
-                                    cover={<img alt="example" src={product.avatar} />}
+                                    cover={<img style={{objectFit:"contain"}} height={"200px"} alt="example" src={product.imageUrl} />}
                                 >
                                     <Meta title={product.name} description={product.description} />
                                 </Card>
@@ -66,25 +65,9 @@ const Home = () => {
 
             <Row style={{ marginTop: "30px" }}>
                 <Col style={{ textAlign: "center" }} span={24}>
-                    <Pagination defaultCurrent={6} total={50} />
+                    <Pagination defaultCurrent={6} total={products?.data?.totalItems} onChange={onChangePagination} />
                 </Col>
             </Row>
-
-
-            <Popover
-                placement="topLeft"
-                trigger={["click"]}
-                open={true}
-                title="Giỏ hàng"
-                content={<div>
-                    123123
-                </div>}
-            >
-                <FloatButton
-
-                    icon={<ShoppingCartOutlined />}
-                />
-            </Popover>
         </>
     )
 }

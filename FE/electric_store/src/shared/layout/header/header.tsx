@@ -6,7 +6,7 @@ import "./header.scss"
 import { Link, NavLink, useNavigate } from "react-router-dom"
 import Cookies from "universal-cookie"
 import { useAppDispatch, useAppSelector } from "../../../config/store"
-import { login, logout } from "../../reducer/authentication.reducer"
+import { logout } from "../../reducer/authentication.reducer"
 import { useDispatch } from "react-redux"
 
 const Header: React.FC = () => {
