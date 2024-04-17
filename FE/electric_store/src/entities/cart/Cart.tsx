@@ -35,48 +35,50 @@ export const Cart: React.FC<CartProps> = (props) => {
     }
 
     return (
-        <List
-            style={{ width: "450px" }}
-            className="demo-loadmore-list"
-            loading={isLoading}
-            itemLayout="horizontal"
-            dataSource={dataCart.data} // thay vao thong tin chi tiet product trong cart
-            renderItem={(item) => (
-                <>
-                    <List.Item
-                        actions={[<Input type="number" min={1} defaultValue={item.quantity} style={{ width: "55px" }} />, <a style={{ color: "red" }} href=""><DeleteOutlined /></a>]}
-                    >
-                        <Skeleton loading={isLoading} avatar title={false} active>
-                            <List.Item.Meta
-                                avatar={<Avatar style={{objectFit:"contain"}} size={"large"} shape="square" src={"https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/436236475_367064762998301_2947837601073851886_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d6JSIeIapM0Ab5W60pu&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBUGJADhWusjYmBtKt-kdqKRh5F2sKKH4U6GxC_C4XXPg&oe=6624A57E"} />}
-                                title={<a href="https://ant.design">{"hom nay"}</a>}
-                                description={
-                                    <div style={descriptionStyle}>
-                                        Ant Design, a design l design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Teanguage for background applications
-                                    </div>
-                                }
-                            />
-                        </Skeleton>
-                    </List.Item>
-                    <List.Item
-                        actions={[<Input type="number" min={1} defaultValue={item.quantity} style={{ width: "55px" }} />, <a style={{ color: "red" }} href=""><DeleteOutlined /></a>]}
-                    >
-                        <Skeleton loading={isLoading} avatar title={false} active>
-                            <List.Item.Meta
-                                avatar={<Avatar size={"large"} shape="square" src={"https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/436236475_367064762998301_2947837601073851886_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d6JSIeIapM0Ab5W60pu&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBUGJADhWusjYmBtKt-kdqKRh5F2sKKH4U6GxC_C4XXPg&oe=6624A57E"} />}
-                                title={<a href="https://ant.design">{"hom nay"}</a>}
-                                description={
-                                    <div style={descriptionStyle}>
-                                        Ant Design, a design l design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Teanguage for background applications
-                                    </div>
-                                }
-                            />
-                        </Skeleton>
-                    </List.Item>
-                </>
-            )}
-        />
+        dataCart?.data ?
+            <List
+                style={{ width: "450px" }}
+                className="demo-loadmore-list"
+                loading={isLoading}
+                itemLayout="horizontal"
+                dataSource={dataCart.data} // thay vao thong tin chi tiet product trong cart
+                renderItem={(item) => (
+                    <>
+                        <List.Item
+                            actions={[<Input type="number" min={1} defaultValue={item.quantity} style={{ width: "55px" }} />, <a style={{ color: "red" }} href=""><DeleteOutlined /></a>]}
+                        >
+                            <Skeleton loading={isLoading} avatar title={false} active>
+                                <List.Item.Meta
+                                    avatar={<Avatar style={{ objectFit: "contain" }} size={"large"} shape="square" src={"https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/436236475_367064762998301_2947837601073851886_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d6JSIeIapM0Ab5W60pu&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBUGJADhWusjYmBtKt-kdqKRh5F2sKKH4U6GxC_C4XXPg&oe=6624A57E"} />}
+                                    title={<a href="https://ant.design">{"hom nay"}</a>}
+                                    description={
+                                        <div style={descriptionStyle}>
+                                            Ant Design, a design l design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Teanguage for background applications
+                                        </div>
+                                    }
+                                />
+                            </Skeleton>
+                        </List.Item>
+                        <List.Item
+                            actions={[<Input type="number" min={1} defaultValue={item.quantity} style={{ width: "55px" }} />, <a style={{ color: "red" }} href=""><DeleteOutlined /></a>]}
+                        >
+                            <Skeleton loading={isLoading} avatar title={false} active>
+                                <List.Item.Meta
+                                    avatar={<Avatar size={"large"} shape="square" src={"https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/436236475_367064762998301_2947837601073851886_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d6JSIeIapM0Ab5W60pu&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBUGJADhWusjYmBtKt-kdqKRh5F2sKKH4U6GxC_C4XXPg&oe=6624A57E"} />}
+                                    title={<a href="https://ant.design">{"hom nay"}</a>}
+                                    description={
+                                        <div style={descriptionStyle}>
+                                            Ant Design, a design l design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Teanguage for background applications
 
+                                        </div>
+                                    }
+                                />
+                            </Skeleton>
+                        </List.Item>
+                    </>
+                )}
+            />
+            : <List style={{ width: "450px" }}></List>
     )
 }
 

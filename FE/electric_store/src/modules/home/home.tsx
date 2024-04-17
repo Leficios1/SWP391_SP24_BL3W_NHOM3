@@ -21,6 +21,15 @@ const Home = () => {
         margin: "20px 0px"
     }
 
+    const descriptionStyle: React.CSSProperties = {
+        overflow: "hidden",
+        display: "-webkit-box",
+        textOverflow: "ellipsis",
+        height: "50px",
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: "vertical",
+    }
+
 
 
     const toDetailProductPage = (id: string | number) => {
@@ -53,9 +62,13 @@ const Home = () => {
                                 <Card
                                     hoverable
                                     style={{ width: "100%" }}
-                                    cover={<img style={{objectFit:"contain"}} height={"200px"} alt="example" src={product.imageUrl} />}
+                                    cover={<img style={{ objectFit: "contain" }} height={"200px"} alt="example" src={product.imageUrl} />}
                                 >
-                                    <Meta title={product.name} description={product.description} />
+                                    <Meta title={product.name}
+                                        description={<div style={descriptionStyle}>
+                                            {product.description}
+                                        </div>
+                                        } />
                                 </Card>
                             </Col>
                         )
@@ -65,7 +78,7 @@ const Home = () => {
 
             <Row style={{ marginTop: "30px" }}>
                 <Col style={{ textAlign: "center" }} span={24}>
-                    <Pagination defaultCurrent={6} total={products?.data?.totalItems} onChange={onChangePagination} />
+                    <Pagination defaultCurrent={1} total={products?.data?.totalItems} onChange={onChangePagination} />
                 </Col>
             </Row>
         </>

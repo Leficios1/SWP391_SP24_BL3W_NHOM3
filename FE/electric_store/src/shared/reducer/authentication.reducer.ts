@@ -56,7 +56,7 @@ export const login: (username: string, password: string) => AppThunk = (email: s
 }
 
 export const signup = createAsyncThunk("authentication/signup", async (formSignUp: ISignUpProps) => {
-    const requestUrl = axios.post(`${AUTH.USER.CREATEUSER}`, formSignUp)
+    const requestUrl = await axios.post(`${AUTH.USER.CREATEUSER}`, formSignUp)
     return requestUrl
 })
 
@@ -80,6 +80,13 @@ export const AuthenticationSlice = createSlice({
             return {
                 ...initialState
             }
+        },
+        reset() {
+            return {
+                ...initialState,
+                message: "",
+                loading:false
+            }
         }
     },
     extraReducers(builder) {
@@ -102,16 +109,24 @@ export const AuthenticationSlice = createSlice({
                 }
             ))
 
+
+            .addCase(signup.pending, (state, action) => {
+                return {
+                    ...state,
+                    loading: true
+                }
+            })
             .addCase(signup.fulfilled, (state, action) => {
                 return {
                     ...state,
                     loading: false,
-                    message:"Tạo tài khoản thành công"
+                    message: "Tạo tài khoản thành công"
                 }
             })
 
 
-            .addMatcher(isPending(getAccount, signup), (state, action) => {
+
+            .addMatcher(isPending(getAccount), (state, action) => {
                 return {
                     ...state,
                     loading: true
@@ -131,6 +146,6 @@ export const AuthenticationSlice = createSlice({
     }
 })
 
-export const { logoutSession } = AuthenticationSlice.actions
+export const { logoutSession, reset } = AuthenticationSlice.actions
 
 export default AuthenticationSlice.reducer

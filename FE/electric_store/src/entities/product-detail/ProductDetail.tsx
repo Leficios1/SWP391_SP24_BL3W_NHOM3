@@ -91,18 +91,19 @@ const ProductDetail: React.FC = () => {
 
                 <>
                     {/* Image part */}
-                    <Col md={12}>
+                    <Col md={11}>
                         <Row style={{ width: "100%" }}>
                             <Image
+                                alt="ảnh sản phẩm"
                                 style={{ objectFit: "contain" }}
                                 height={"500px"}
                                 width={"100%"}
-                                src={productdetail?.data?.images[0]?.url}
+                                src={productdetail?.data?.images[0]?.url ?? "/assets/imagebroke.png"}
                             />
                         </Row>
                     </Col>
                     {/* Add to cart part */}
-                    <Col md={12}>
+                    <Col md={13}>
                         <Row>
                             <Col md={24} style={{ marginBottom: "10px" }}>
                                 <h1>{productdetail?.data?.products.name}</h1>
@@ -128,23 +129,23 @@ const ProductDetail: React.FC = () => {
 
                                 </Row>
                             </Col>
-                            <Col md={24} style={{ marginTop: "20px" }}>
-                                <Row gutter={[20, 0]}>
+                            <Col md={24} style={{ marginTop: "40px" }}>
+                                <Row gutter={[20, 0]} style={{ textAlign: "center" }}>
                                     <Col md={12}>
-                                        <Button onClick={() => onClickBuy()} style={{ height: "80px", backgroundColor: "orange", color: "white" }} shape="round" size="large">
+                                        <Button className="addingtocart" onClick={() => onClickBuy()} style={{ height: "70px", backgroundColor: "orange", color: "white" }} shape="round" size="large">
                                             <h4>THÊM VÀO GIỎ HÀNG</h4>
                                             <p style={{ fontSize: "13px" }}>Giao hàng thu tiền tận nơi</p>
                                         </Button>
                                     </Col>
                                     <Col md={12}>
-                                        <Button style={{ height: "80px", backgroundColor: "red", color: "white" }} shape="round" size="large">
+                                        <Button className="buydirectly" style={{ height: "70px", backgroundColor: "red", color: "white" }} shape="round" size="large">
                                             <h4>MUA ONLINE NGAY</h4>
                                             <p style={{ fontSize: "13px" }}>Thủ tục online đơn giản</p>
                                         </Button>
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col md={24} style={{ marginTop: "20px" }}>
+                            <Col md={24} style={{ marginTop: "40px" }}>
                                 <Row gutter={[20, 0]} style={{ borderRadius: "8px", boxSizing: "border-box", padding: "20px", border: "1px dashed grey", textAlign: "center" }}>
                                     <Col md={8}>
                                         <div style={{ marginBottom: "16px" }}>
@@ -198,23 +199,22 @@ const ProductDetail: React.FC = () => {
 
                     <Divider type="horizontal" plain />
 
-                    <Col md={24} style={{ marginTop: "" }}>
+                    <Col md={24} style={{ marginTop: "20px" }}>
                         <Row>
-                            <Col span={14}>
-                                <Row>
-                                    <Col span={24}>
+                            <Col span={24}>
+                                <Row gutter={[20, 0]}>
+                                    <Col span={16} style={{ textAlign: "left" }}>
                                         <h2>Mô tả sản phẩm</h2>
                                         <p>
                                             {productdetail?.data?.products.description}
                                         </p>
                                     </Col>
-                                    <Col span={24}>
-                                        <Table columns={columns} dataSource={data} pagination={false}></Table>
+                                    <Col span={8}>
+                                        <Table bordered={true} columns={columns} dataSource={data} pagination={false}></Table>
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col span={10}>
-                            </Col>
+
                         </Row>
                     </Col>
                 </>

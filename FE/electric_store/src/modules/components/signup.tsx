@@ -1,14 +1,15 @@
 import { Button, Form, Input, Select } from "antd"
-import React from "react"
+import React, { useEffect } from "react"
 import { ISignUpProps } from "../../shared/models/auth"
 import { useAppDispatch, useAppSelector } from "../../config/store"
-import { signup } from "../../shared/reducer/authentication.reducer"
+import { reset, signup } from "../../shared/reducer/authentication.reducer"
 import { toast } from "react-toastify"
 
 const SignUpComponent: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const message = useAppSelector(state => state.authentication.message) as string
+    const isLoading = useAppSelector(state => state.authentication.loading)
 
     const onSubmitSignUpForm = (form: ISignUpProps) => {
         const newForm = {
@@ -18,13 +19,19 @@ const SignUpComponent: React.FC = () => {
         }
 
         dispatch(signup(newForm))
-        if (message.includes("Tạo tài khoản thành công")) {
-            toast.success(message)
-            window.document.location.replace("/login")
-        }
+
+
+
 
     }
 
+    useEffect(() => {
+        if (message.includes("Tạo tài khoản thành công")) {
+            toast.success(message)
+            dispatch(reset())
+            window.document.location.replace("/login")
+        }
+    }, [message])
 
 
 
@@ -50,11 +57,7 @@ const SignUpComponent: React.FC = () => {
                 label="Mật khẩu"
                 rules={[
                     { required: true, message: "Vui lòng nhập mật khẩu" },
-                    {
-                        validator(rule, value, callback) {
 
-                        },
-                    }
                 ]}
             >
                 <Input type="password" placeholder="Mật khẩu" />
@@ -109,7 +112,7 @@ const SignUpComponent: React.FC = () => {
                     ]}
                 />
             </Form.Item>
-            <Button style={{ width: "100%", height: "auto" }} size="large" htmlType="submit">Đăng ký</Button>
+            <Button loading={isLoading} style={{ width: "100%", height: "auto" }} size="large" htmlType="submit">Đăng ký</Button>
         </Form>
     )
 }
