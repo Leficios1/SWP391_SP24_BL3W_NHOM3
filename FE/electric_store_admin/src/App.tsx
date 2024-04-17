@@ -16,6 +16,7 @@ import {
 } from "@tanstack/react-query";
 import Staffs from "./pages/staffs/Staffs";
 import Staff from "./pages/staff/Staff";
+import { Editable } from "./components/editableTable/Editable";
 
 
 
@@ -68,7 +69,7 @@ function App() {
         },
         {
           path: "/users/:id",
-          element: <User />,
+          element: <Editable />,
         },
         {
           path: "/staff/:id",
@@ -77,6 +78,10 @@ function App() {
         {
           path: "/products/:id",
           element: <Product />,
+        },
+        {
+          path: "/editable",
+          element: <Editable />,
         },
       ],
     },
