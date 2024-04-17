@@ -15,16 +15,18 @@ namespace SWP391_BL3W.Services
         private readonly IMapper _mapper;
         private readonly IBaseRepository<Product> _baseRepository;
         private readonly SWPContext _context;
-        private readonly IBaseRepository<ProductsDetail> _category;
+        private readonly IBaseRepository<ProductsDetail> _productsDetailRepository;
         private readonly IBaseRepository<Images> _image;
+        private readonly IBaseRepository<Category> _categoryRepository;
 
-        public ProductService(IMapper mapper, IBaseRepository<Product> baseRepository, SWPContext context, IBaseRepository<ProductsDetail> category, IBaseRepository<Images> images)
+        public ProductService(IMapper mapper, IBaseRepository<Product> baseRepository, SWPContext context, IBaseRepository<ProductsDetail> productDetail, IBaseRepository<Images> images, IBaseRepository<Category> category)
         {
             _mapper = mapper;
             _baseRepository = baseRepository;
             _context = context;
-            _category = category;
+            _productsDetailRepository = productDetail;
             _image = images;
+            _categoryRepository = category;
         }
 
         public async Task<StatusResponse<CreateProductDTO>> create(CreateProductDTO dto)
@@ -244,11 +246,6 @@ namespace SWP391_BL3W.Services
                 response.Errormessge = ex.Message;
             }
             return response;
-        }
-
-        public Task<List<StatusResponse<ProductsResponseDTO>>> searchProductsByCategory(string category)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto)

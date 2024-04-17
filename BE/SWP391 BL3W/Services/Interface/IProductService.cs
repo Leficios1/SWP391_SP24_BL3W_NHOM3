@@ -11,6 +11,5 @@ namespace SWP391_BL3W.Services.Interface
         public Task<StatusResponse<ProductDetailsResponseDTO>> getProductDetailbyId(int id);
         public Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto);
         public Task<StatusResponse<ProductsResponseDTO>> search(int? page, int? size, string name, int? watt, int? volt, string? producer);
-        public Task<List<StatusResponse<ProductsResponseDTO>>>  searchProductsByCategory (string category);
     }
 }
