@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SWP391 BL3W")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d7f039f09bb9c3fb36d02055b7f3a1af2a25e93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SWP391 BL3W")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWP391 BL3W")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
