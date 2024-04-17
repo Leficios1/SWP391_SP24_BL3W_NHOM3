@@ -5,7 +5,7 @@ namespace SWP391_BL3W.Services.Interface
 {
     public interface ICartService
     {
-        public Task<StatusResponse<bool>> AddProductToCartByUserId(int userId, int productId);
+        public Task<StatusResponse<bool>> AddProductToCartByUserId(CartRequestDTO dto);
         public Task<StatusResponse<bool>> UpdateQuantityByProductIdAndUserId(int userId, int productId, int quantity);
 
         public Task<StatusResponse<bool>> CompletedPaymentCartToOrder(int userId, PaymentDTO paymentDTO);

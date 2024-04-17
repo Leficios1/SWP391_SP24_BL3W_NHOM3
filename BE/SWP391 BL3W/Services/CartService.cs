@@ -5,6 +5,7 @@ using SWP391_BL3W.DTO.Response;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System.Net;
+using System.Xml;
 
 namespace SWP391_BL3W.Services
 {
@@ -24,26 +25,26 @@ namespace SWP391_BL3W.Services
             _orderDetailsRepo = orderDetailsRepo;
             _productsRepo = productsRepo;
         }
-        public async Task<StatusResponse<bool>> AddProductToCartByUserId(int userId, int productId)
+        public async Task<StatusResponse<bool>> AddProductToCartByUserId(CartRequestDTO dto)
         {
             var response = new StatusResponse<bool>();
             try
             {
-                var cart = await _cartRepo.Get().Where(x => x.UserId == userId && x.ProductId == productId).FirstOrDefaultAsync();
+                var cart = await _cartRepo.Get().Where(x => x.UserId == dto.UserId && x.ProductId == dto.ProductId).FirstOrDefaultAsync();
                 if (cart == null)
                 {
-                    if (!(await CheckQuantity(1, productId))) throw new Exception("Quanity is not enough to add to cart.");
+                    if (!(await CheckQuantity(1, dto.ProductId))) throw new Exception("Quanity is not enough to add to cart.");
                     await _cartRepo.AddAsync(new Cart()
                     {
-                        ProductId = productId,
-                        Quantity = 1,
-                        UserId = userId
+                        ProductId = dto.ProductId,
+                        Quantity = dto.Quantity,
+                        UserId = dto.UserId
                     });
                 }
                 else
                 {
-                    if (!(await CheckQuantity(cart.Quantity + 1, productId))) throw new Exception("Quanity is not enough to add to cart.");
-                    cart.Quantity += 1;
+                    if (!(await CheckQuantity(cart.Quantity + 1, dto.ProductId))) throw new Exception("Quanity is not enough to add to cart.");
+                    cart.Quantity += dto.Quantity;
                     _cartRepo.Update(cart);
                 }
                 response.Data = true;

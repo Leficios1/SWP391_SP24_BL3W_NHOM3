@@ -246,6 +246,11 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
+        public Task<List<StatusResponse<ProductsResponseDTO>>> searchProductsByCategory(string category)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto)
         {
             var response = new StatusResponse<UpdateProductsDTO>();

@@ -34,9 +34,9 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
         [HttpPost("add-product-into-cart")]
-        public async Task<IActionResult> AddToCart(AddToCartDTO dto)
+        public async Task<IActionResult> AddToCart(CartRequestDTO dto)
         {
-            var response = await _cartService.AddProductToCartByUserId(dto.UserId, dto.ProductId);
+            var response = await _cartService.AddProductToCartByUserId(dto);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
         [HttpDelete("delete-all-carts-by-user-id/{userId}")]
