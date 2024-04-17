@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, isFulfilled, isPending } from "@reduxjs/toolkit";
 import { EntityState } from "../../shared/utils/reducer.utils";
-import { IAddingCartProps } from "../../shared/models/cart";
+import { IAddingCartProps, IDeleteProductProps } from "../../shared/models/cart";
 import { CART } from "./cart.api";
 import axios from "axios";
 
@@ -26,6 +26,11 @@ export const createProductToCart = createAsyncThunk("cart/addingproducttocart", 
     return requestUrl
 })
 
+export const deleteProductInCart = createAsyncThunk("cart/deleteproductincart", async ({ productId, userId }: IDeleteProductProps, thunkApi) => {
+    const requestUrl = await axios.delete(`${CART.CUSTOMER.DELETEPRODUCTINCART}/${productId}/${userId}`);
+    thunkApi.dispatch(getCartByUserId(userId))
+    return requestUrl
+})
 
 
 export const CartSlice = createSlice({
@@ -34,12 +39,20 @@ export const CartSlice = createSlice({
     reducers: {},
     extraReducers(builder) {
         builder.
-            addMatcher(isPending(createProductToCart, getCartByUserId), (state, action) => {
+            addMatcher(isPending(createProductToCart, getCartByUserId, deleteProductInCart), (state, action) => {
                 return {
                     ...state,
                     loading: true,
                 }
             })
+
+            .addMatcher(isFulfilled(deleteProductInCart), (state, action) => {
+                return {
+                    ...state,
+                    loading:false
+                }
+            })
+
 
             .addMatcher(isFulfilled(getCartByUserId), (state, action) => {
                 const { data } = action.payload

@@ -5,13 +5,14 @@ import ProductDetail from "../entities/product-detail/ProductDetail"
 import Login from "../modules/login/login"
 import Header from "../shared/layout/header/header"
 import Footer from "../shared/layout/footer"
-import { FloatButton, Popover } from "antd"
+import { Button, Divider, FloatButton, Popover, Row } from "antd"
 import { Cart, CartWithoutLogin } from "../entities/cart/Cart"
-import { ShoppingCartOutlined } from "@ant-design/icons"
+import { DeleteOutlined, ShoppingCartOutlined } from "@ant-design/icons"
 import { useEffect, useState } from "react"
 import Cookies from "universal-cookie"
 import { useAppDispatch, useAppSelector } from "../config/store"
 import { getCartByUserId } from "../entities/cart/cart.reducer"
+import "./routes.scss"
 
 const AppRoutes = () => {
     const [isOpenCart, setIsOpenCart] = useState<boolean>(false)
@@ -45,8 +46,13 @@ const AppRoutes = () => {
                 placement="topLeft"
                 trigger={["click"]}
                 open={isOpenCart}
-                title="Giỏ hàng"
-                content={account != null ? <Cart dataCart={productsInCart} isLoading={isLoading}/> : <CartWithoutLogin />}
+                title={<Row style={{ justifyContent: "space-between" }}>
+                    <div>Giỏ hàng</div>
+                    <div>
+                        <button className="deleteall" style={{ border: "none", padding: "5px 15px", backgroundColor: "indianred" }}>Xoá tất cả <DeleteOutlined /> </button>
+                    </div>
+                </Row>}
+                content={account != null ? <Cart accountId={account?.id} dataCart={productsInCart} isLoading={isLoading} /> : <CartWithoutLogin />}
             >
                 <FloatButton
                     onClick={() => setIsOpenCart(!isOpenCart)}

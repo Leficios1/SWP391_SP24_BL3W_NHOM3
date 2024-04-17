@@ -1,11 +1,12 @@
 import { Avatar, Button, Col, Image, Input, List, Row, Skeleton } from "antd"
 import React, { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../config/store"
-import { getCartByUserId } from "./cart.reducer"
+import { deleteProductInCart, getCartByUserId } from "./cart.reducer"
 import Cookies from "universal-cookie"
 import { IAccountProps } from "../../shared/reducer/authentication.reducer"
-import { DeleteOutlined } from "@ant-design/icons"
+import { DeleteOutlined, MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons"
 import { Link } from "react-router-dom"
+import { formatCurrencyVN } from "../../shared/utils/formatCurrency"
 
 
 
@@ -13,16 +14,18 @@ interface CartProps {
     dataCart: {
         data: [
 
-            { id: number, productId: number, quantity: number, userId: number }
+            { productId: number, productName: string, imageUrl: string, quantity: number, price: number }
 
         ],
         message: ""
     },
-    isLoading: boolean
+    isLoading: boolean,
+    accountId: string | number
 }
 
 export const Cart: React.FC<CartProps> = (props) => {
-    const { dataCart, isLoading } = props
+    const { dataCart, isLoading, accountId } = props
+    const dispatch = useAppDispatch()
 
 
     const descriptionStyle: React.CSSProperties = {
@@ -34,10 +37,14 @@ export const Cart: React.FC<CartProps> = (props) => {
         WebkitBoxOrient: "vertical",
     }
 
+    const onClickDeleteProduct = (productId: string | number) => {
+        dispatch(deleteProductInCart({ productId, userId: accountId }))
+    }
+
     return (
         dataCart?.data ?
             <List
-                style={{ width: "450px" }}
+                style={{ width: "400px" }}
                 className="demo-loadmore-list"
                 loading={isLoading}
                 itemLayout="horizontal"
@@ -45,31 +52,24 @@ export const Cart: React.FC<CartProps> = (props) => {
                 renderItem={(item) => (
                     <>
                         <List.Item
-                            actions={[<Input type="number" min={1} defaultValue={item.quantity} style={{ width: "55px" }} />, <a style={{ color: "red" }} href=""><DeleteOutlined /></a>]}
+                            key={item.productId}
+                            actions={[
+                                <Row>
+                                    <MinusCircleOutlined style={{ cursor: "pointer" }} />
+                                    <Input type="text" min={1} value={item.quantity} style={{ width: "30px", margin: "0px 3px" }} />
+                                    <PlusCircleOutlined style={{ cursor: "pointer" }} />
+                                </Row>,
+                                <span style={{ color: "red" }} ><DeleteOutlined onClick={() => onClickDeleteProduct(item.productId)} /></span>]}
                         >
                             <Skeleton loading={isLoading} avatar title={false} active>
                                 <List.Item.Meta
-                                    avatar={<Avatar style={{ objectFit: "contain" }} size={"large"} shape="square" src={"https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/436236475_367064762998301_2947837601073851886_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d6JSIeIapM0Ab5W60pu&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBUGJADhWusjYmBtKt-kdqKRh5F2sKKH4U6GxC_C4XXPg&oe=6624A57E"} />}
-                                    title={<a href="https://ant.design">{"hom nay"}</a>}
+                                    avatar={<Avatar style={{ objectFit: "contain" }} size={"large"} shape="square" src={item.imageUrl} />}
+                                    title={<div style={descriptionStyle}>
+                                        {item.productName}
+                                    </div>}
                                     description={
                                         <div style={descriptionStyle}>
-                                            Ant Design, a design l design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Teanguage for background applications
-                                        </div>
-                                    }
-                                />
-                            </Skeleton>
-                        </List.Item>
-                        <List.Item
-                            actions={[<Input type="number" min={1} defaultValue={item.quantity} style={{ width: "55px" }} />, <a style={{ color: "red" }} href=""><DeleteOutlined /></a>]}
-                        >
-                            <Skeleton loading={isLoading} avatar title={false} active>
-                                <List.Item.Meta
-                                    avatar={<Avatar size={"large"} shape="square" src={"https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/436236475_367064762998301_2947837601073851886_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_ohc=d6JSIeIapM0Ab5W60pu&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBUGJADhWusjYmBtKt-kdqKRh5F2sKKH4U6GxC_C4XXPg&oe=6624A57E"} />}
-                                    title={<a href="https://ant.design">{"hom nay"}</a>}
-                                    description={
-                                        <div style={descriptionStyle}>
-                                            Ant Design, a design l design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Te design language for background applications, is refined by Ant UED Teanguage for background applications
-
+                                            {formatCurrencyVN(item.price)}
                                         </div>
                                     }
                                 />
@@ -78,7 +78,7 @@ export const Cart: React.FC<CartProps> = (props) => {
                     </>
                 )}
             />
-            : <List style={{ width: "450px" }}></List>
+            : <List style={{ width: "400px" }}></List>
     )
 }
 

@@ -2,7 +2,8 @@ export interface EntityState<T> {
     loading: boolean,
     data: T,
     message: string,
-    dataDetail: T
+    dataDetail: T,
+    updateSuccess?: boolean
 }
 
 

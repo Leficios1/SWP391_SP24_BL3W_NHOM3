@@ -45,12 +45,13 @@ export const login: (username: string, password: string) => AppThunk = (email: s
 
     if (jwt_token && expiration) {
         cookie.set("jwt-token", jwt_token, {
-            expires: new Date(expiration)
+            expires: new Date(expiration),
+            path: "/"
         })
 
         const account = await dispatch(getAccount(jwt_token));
         const response = account.payload as AxiosResponse
-        cookie.set("account", response.data)
+        cookie.set("account", response.data, { path: "/" })
     }
 
 }
@@ -85,7 +86,7 @@ export const AuthenticationSlice = createSlice({
             return {
                 ...initialState,
                 message: "",
-                loading:false
+                loading: false
             }
         }
     },
