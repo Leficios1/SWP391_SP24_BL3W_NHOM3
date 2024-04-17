@@ -8,7 +8,11 @@
             var corsOrigins = configuration.GetSection("Cors").Get<string[]>();
             if (corsOrigins == null || corsOrigins.Length == 0)
             {
-                throw new InvalidOperationException("CORS origins are not provided or are invalid.");
+                app.UseCors(builder =>
+                builder.AllowAnyOrigin()
+                       .AllowAnyHeader()
+                       .AllowAnyMethod()
+                       .AllowCredentials());
             }
 
 

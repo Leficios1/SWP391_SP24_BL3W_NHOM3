@@ -21,6 +21,7 @@ namespace SWP391_BL3W.Extensions
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<ICartService, CartService>();
 
             return services;
         }

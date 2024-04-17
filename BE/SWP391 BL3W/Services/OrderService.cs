@@ -50,7 +50,7 @@ namespace SWP391_BL3W.Services
                         order.statusMessage = "";
                         order.TotalPrice = dto.OrderDetails.Sum(s => s.Price);
                         await _baseRepository.AddAsync(order);
-                        await _baseRepository.SaveChangesAsync();
+                        //await _baseRepository.SaveChangesAsync();
                         foreach (var exist in dto.OrderDetails)
                         {
                             var product = await _productsRepository.Get().Where(x => x.Id == exist.ProductId).SingleOrDefaultAsync();
@@ -60,13 +60,13 @@ namespace SWP391_BL3W.Services
                                 response.Errormessge = "Quantity is not enough!";
                                 throw new Exception();
                             }
-                            else
+/*                            else
                             {
                                 product.quantity = product.quantity - exist.Quantity;
                                 var orderdetails = _mapper.Map<OrderDetail>(exist);
                                 orderdetails.OrderID = await _baseRepository.Get().OrderByDescending(x => x.OrderId).Select(x => x.OrderId).FirstOrDefaultAsync();
                                 await _orderDetailRepository.AddAsync(orderdetails);
-                            }
+                            }*/
                         }
 
                         await _baseRepository.SaveChangesAsync();
@@ -104,7 +104,6 @@ namespace SWP391_BL3W.Services
                 int totalItems = await _context.Orders.CountAsync();
                 int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
-                // Chuyển đổi danh sách đơn hàng sang dạng OrderResponseDTO
                 var orderResponseDTOs = allOrders.Select(order => new OrderDTO
                 {
                     Id = order.OrderId,

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\OneDrive - FPT Corporation\\Desktop\\SWP391_B3W\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj": {}
+    "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\OneDrive - FPT Corporation\\Desktop\\SWP391_B3W\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj": {
+    "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive - FPT Corporation\\Desktop\\SWP391_B3W\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
+        "projectUniqueName": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
         "projectName": "SWP391 BL3W",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive - FPT Corporation\\Desktop\\SWP391_B3W\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive - FPT Corporation\\Desktop\\SWP391_B3W\\SWP391_SP24_BL3W_Nhom3\\BE\\SWP391 BL3W\\obj\\",
+        "projectPath": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\SWP391 BL3W.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Project C#\\swp391\\BE\\SWP391 BL3W\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VSStudio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

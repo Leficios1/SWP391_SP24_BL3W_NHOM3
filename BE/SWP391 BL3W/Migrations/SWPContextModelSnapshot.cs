@@ -109,6 +109,11 @@ namespace SWP391_BL3W.Migrations
                         {
                             CategoryID = 2,
                             CategoryName = "Bếp điện từ"
+                        },
+                        new
+                        {
+                            CategoryID = 3,
+                            CategoryName = "Điện thoại"
                         });
                 });
 
@@ -410,7 +415,7 @@ namespace SWP391_BL3W.Migrations
                             Id = 1,
                             Address = "HCM",
                             AvatarUrl = "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg",
-                            DateOfBirth = new DateTime(2024, 4, 16, 12, 53, 26, 786, DateTimeKind.Local).AddTicks(4676),
+                            DateOfBirth = new DateTime(2024, 4, 16, 13, 32, 3, 710, DateTimeKind.Local).AddTicks(9010),
                             Email = "admin@gmail.com",
                             Gender = "Male",
                             Name = "admin",

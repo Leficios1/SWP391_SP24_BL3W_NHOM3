@@ -463,12 +463,6 @@ namespace SWP391_BL3W.Database
                           status = true
                       }
             );
-            modelBuilder.Entity<Product>().HasData(
-                new Product
-                {
-
-                }
-                );
         }
     }
 }
