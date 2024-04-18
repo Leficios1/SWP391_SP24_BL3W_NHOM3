@@ -11,8 +11,9 @@ import { DeleteOutlined, ShoppingCartOutlined } from "@ant-design/icons"
 import { useEffect, useState } from "react"
 import Cookies from "universal-cookie"
 import { useAppDispatch, useAppSelector } from "../config/store"
-import { getCartByUserId } from "../entities/cart/cart.reducer"
+import { deleteAllProductInCart, getCartByUserId } from "../entities/cart/cart.reducer"
 import "./routes.scss"
+import Order from "../entities/order/Order"
 
 const AppRoutes = () => {
     const [isOpenCart, setIsOpenCart] = useState<boolean>(false)
@@ -28,6 +29,10 @@ const AppRoutes = () => {
         }
     }, [isOpenCart])
 
+    const onClickDeleteAllProductInCart = () => {
+        dispatch(deleteAllProductInCart(account.id))
+    }
+
     return (
         <>
             <Header />
@@ -36,6 +41,7 @@ const AppRoutes = () => {
                     <Route path="/" >
                         <Route index element={<Home />} />
                         <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
+                        <Route path="/thanh-toan" element={<Order accountId={account.id} />} />
                     </Route>
                     <Route path="*" element={<ErrorPage />} />
 
@@ -44,18 +50,21 @@ const AppRoutes = () => {
             <Footer />
             <Popover
                 placement="topLeft"
-                trigger={["click"]}
-                open={isOpenCart}
+                trigger={["hover"]}
+                // open={isOpenCart}
                 title={<Row style={{ justifyContent: "space-between" }}>
                     <div>Giỏ hàng</div>
-                    <div>
-                        <button className="deleteall" style={{ border: "none", padding: "5px 15px", backgroundColor: "indianred" }}>Xoá tất cả <DeleteOutlined /> </button>
+                    <div onClick={() => onClickDeleteAllProductInCart()}>
+                        {account != null ?
+                            <button className="deleteall" style={{ border: "none", padding: "5px 15px", backgroundColor: "indianred" }}>Xoá tất cả <DeleteOutlined /> </button>
+                            : <></>
+                        }
                     </div>
                 </Row>}
                 content={account != null ? <Cart accountId={account?.id} dataCart={productsInCart} isLoading={isLoading} /> : <CartWithoutLogin />}
             >
                 <FloatButton
-                    onClick={() => setIsOpenCart(!isOpenCart)}
+                    // onClick={() => setIsOpenCart(!isOpenCart)}
                     icon={<ShoppingCartOutlined />}
                 />
             </Popover>

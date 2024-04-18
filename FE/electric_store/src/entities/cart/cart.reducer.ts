@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, isFulfilled, isPending } from "@reduxjs/toolkit";
 import { EntityState } from "../../shared/utils/reducer.utils";
-import { IAddingCartProps, IDeleteProductProps } from "../../shared/models/cart";
+import { IAddingCartProps, IDeleteProductProps, IUpdateQuantityProps } from "../../shared/models/cart";
 import { CART } from "./cart.api";
 import axios from "axios";
 
@@ -33,23 +33,37 @@ export const deleteProductInCart = createAsyncThunk("cart/deleteproductincart", 
 })
 
 
+export const deleteAllProductInCart = createAsyncThunk("cart/deleteallproductincart", async (userId: string | number, thunkApi) => {
+    const requestUrl = await axios.delete(`${CART.CUSTOMER.DELETEALLPRODUCTINCART}/${userId}`);
+    thunkApi.dispatch(getCartByUserId(userId))
+    return requestUrl
+})
+
+export const updateQuantityProduct = createAsyncThunk("cart/updatequantityproduct", async ({ userId, productId, quantity }: IUpdateQuantityProps, thunkApi) => {
+    const requestUrl = await axios.put(`${CART.CUSTOMER.UPDATEQUANTITYPRODUCT}/${userId}/${productId}/${quantity}`);
+    thunkApi.dispatch(getCartByUserId(userId))
+
+    return requestUrl
+})
+
+
 export const CartSlice = createSlice({
     name: "cart",
     initialState: initialState as CartState,
     reducers: {},
     extraReducers(builder) {
         builder.
-            addMatcher(isPending(createProductToCart, getCartByUserId, deleteProductInCart), (state, action) => {
+            addMatcher(isPending(createProductToCart, getCartByUserId, deleteAllProductInCart, deleteProductInCart, updateQuantityProduct), (state, action) => {
                 return {
                     ...state,
                     loading: true,
                 }
             })
 
-            .addMatcher(isFulfilled(deleteProductInCart), (state, action) => {
+            .addMatcher(isFulfilled(deleteProductInCart, updateQuantityProduct, deleteAllProductInCart), (state, action) => {
                 return {
                     ...state,
-                    loading:false
+                    loading: false
                 }
             })
 
