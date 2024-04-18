@@ -1154,18 +1154,6 @@ namespace SWP391_BL3W.Database
                  },
                  new Product
                  {
-                     Id = 51,
-                     Name = "",
-                     Description = "Thịt cá tươi ngon, ăn trong ngày không cần rã đông với ngăn đông mềm -1 độ C Optimal Fresh Zone",
-                     ImageUrl = "https://cdn.tgdd.vn/Products/Images/1943/220325/Slider/samsung-rt22m4032by-sv-140821-0917590.jpg",
-                     quantity = 1000,
-                     price = 5990000,
-                     WarrantyPeriod = 720,
-                     CategoryID = 4,
-
-                 },
-                 new Product
-                 {
                      Id = 52,
                      Name = "Tủ lạnh Samsung Inverter 256 lít RT25M4032BU/SV",
                      Description = "Tủ lạnh Samsung Inverter 256 lít RT25M4032BU/SV được trang bị ngăn đông mềm -1 độ C Optimal Fresh Zone có tác dụng giữ thực phẩm tươi sống còn trọn dưỡng chất, hoàn toàn không đông đá ở nhiệt độ đông mềm lý tưởng -1°C. Như thế, thịt cá hoàn toàn không bị đông đá giúp bạn có thể nấu ăn ngay không cần rã đông, dễ dàng cắt thái và chế biến trong ngày.",
@@ -1331,8 +1319,189 @@ namespace SWP391_BL3W.Database
                      WarrantyPeriod = 720,
                      CategoryID = 4,
 
-                 }
-                 
+                 },
+                  new Product
+                  {
+                      Id = 66,
+                      Name = "Máy giặt Sharp 7.5 Kg ES-Y75HV-S",
+                      Description = "Máy giặt Sharp 7.5 kg ES-Y75HV-S có khối lượng giặt 7.5 kg phù hợp với gia đình có 2 - 3 thành viên, được trang bị 4 chương trình giặt đáp ứng được nhu cầu giặt giũ cơ bản của gia đình.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/310181/Slider/6-1020x570.jpg",
+                      quantity = 1000,
+                      price = 3690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 67,
+                      Name = "Máy giặt Samsung Inverter 9 kg WW90T3040WW/SV",
+                      Description = "Máy giặt Samsung Inverter 9 kg WW90T3040WW/SV tích hợp công nghệ giặt nước nóng Hot Wash giúp dễ dàng đánh bay các vết bẩn cứng đầu khó loại bỏ, đồng thời giúp diệt khuẩn, ngừa dị ứng, cùng các tiện ích đi kèm khác.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/271700/Slider/samsung-inverter-9-kg-ww90t3040ww-sv637802618083819165.jpg",
+                      quantity = 1000,
+                      price = 6490000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 68,
+                      Name = "Máy giặt Panasonic Inverter 9.5 Kg NA-FD95V1BRV",
+                      Description = "Máy giặt Panasonic Inverter 9.5 Kg NA-FD95V1BRV được tích hợp công nghệ nước nóng StainMaster+ có khả năng xử lý các vết bẩn hiệu quả với nhiệt độ nước thích hợp, loại bỏ các vi khuẩn gây hại giúp bảo vệ làn da tốt hơn, đồng thời còn giúp đánh bật các vết bẩn cứng đầu dễ dàng nhờ các chương trình giặt chuyên biệt.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/227973/Slider/vi-vn-tong-quan-panasonic-na-fd95v1brv-1.jpg",
+                      quantity = 1000,
+                      price = 10690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 69,
+                      Name = "Máy giặt Samsung Inverter 8kg WW80T3020WW/SV",
+                      Description = "Máy giặt được trang bị động cơ Digital Inverter với nam châm vĩnh cửu, giảm tối đa ma sát khi máy giặt vận hành, giúp tiết kiệm điện năng, vận hành êm ái hơn so với động cơ thông thường sử dụng chổi than. Đặc biệt, động cơ Digital Inverter có độ bền vượt trội và được bảo hành đến 11 năm.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/248802/Slider/vi-vn-may-giat-samsung-inverter-8kg-ww80t3020ww-sv-01.jpg",
+                      quantity = 1000,
+                      price = 4990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 70,
+                      Name = "Máy giặt Toshiba 7 Kg AW-L805AV (SG)",
+                      Description = "Máy giặt Toshiba 7 Kg AW-L805AV (SG) có màu xám bạc vừa toát lên vẻ sang trọng, hiện đại vừa đảm bảo vệ sinh hơn trong quá trình sử dụng. ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/239156/Slider/toshiba-7-kg-aw-l805av-sg-2-1020x570.jpg",
+                      quantity = 1000,
+                      price = 3990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 71,
+                      Name = "Máy giặt Samsung Inverter 12 kg WA12CG5745BVSV",
+                      Description = "Máy giặt Samsung Inverter 12 kg WA12CG5745BVSV có khả năng đánh bay vết bẩn cứng đầu hiệu quả nhờ công nghệ giặt bong bóng siêu mịn Eco Bubble, công nghệ Digital Inverter tiết kiệm điện năng, vận hành êm ái, giặt sạch siêu tốc 29 phút đảm bảo hiệu quả sạch sâu.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/302751/Slider/may-giat-samsung-12kg-wa12cg5745bvsv638276204008922288.jpg",
+                      quantity = 1000,
+                      price = 8990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 72,
+                      Name = "Máy giặt Panasonic Inverter 10.5 Kg NA-FD10VR1BV",
+                      Description = "Máy giặt Panasonic Inverter 10.5 Kg NA-FD10VR1BV tích hợp công nghệ giặt nước nóng StainMaster Plus với nhiệt độ nước giặt có thể lên đến 60 độ C, máy giặt có công nghệ giặt nước nóng này không chỉ đánh bay các vết bẩn cứng đầu như: Bùn đất, dầu mỡ, nước sốt,... mà còn có thể tiêu diệt các loại vi khuẩn và tác nhân gây dị ứng có trên quần áo, bảo vệ sức khỏe cho cả gia đình bạn.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/212130/Slider/tong-quan-panasonic-na-fd10vr1bv-1-1020x570.jpg",
+                      quantity = 1000,
+                      price = 12090000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 73,
+                      Name = "Máy giặt Aqua 8.8 KG AQW-FR88GT.BK",
+                      Description = "Với kháng sinh kháng khuẩn ABT, mâm giặt được phun một dung dịch đặc biệt, kháng khuẩn đến 99,99% và ngăn nấm mốc phát triển bên trong lồng giặt. Bảo vệ sức khỏe toàn diện cho người sử dụng. Sản phẩm thích hợp cho các gia đình có con nhỏ, người dễ bị kích ứng với vi khuẩn, bụi bẩn.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/242732/Slider/1-1020x570-1.jpg",
+                      quantity = 1000,
+                      price = 5990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 74,
+                      Name = "Máy giặt Samsung Inverter 14 kg WA14CG5745BVSV",
+                      Description = "Máy giặt Samsung Inverter 14kg WA14CG5745BVSV có khả năng đánh bay vết bẩn cứng đầu hiệu quả nhờ công nghệ giặt bong bóng siêu mịn Eco Bubble, công nghệ Digital Inverter tiết kiệm điện năng vận hành êm ái, giặt sạch siêu tốc 29 phút đảm bảo hiệu quả sạch sâu.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800871763098-1020x570.jpg",
+                      quantity = 1000,
+                      price = 10090000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 75,
+                      Name = "Máy giặt Electrolux UltimateCare 100 Inverter 9 kg EWF9025DQWB",
+                      Description = "Máy giặt Electrolux UltimateCare 100 Inverter 9 kg EWF9025DQWB có khả năng tiết kiệm điện nhờ sử dụng công nghệ Inverter. Hơn nữa, máy giặt còn giảm thiểu tác nhân gây dị ứng trên làn da người với công nghệ giặt nước nóng và công nghệ giặt hơi nước tiện lợi.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/316217/electrolux-inverter-9-kg-ewf9025dqwb1.jpg",
+                      quantity = 1000,
+                      price = 7990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 76,
+                      Name = "Máy giặt Aqua Inverter 9 kg AQD- D902G BK",
+                      Description = "Máy giặt Aqua Inverter 9 kg AQD- D902G BK sở hữu động cơ truyền động trực tiếp DD Inverter giúp máy vận hành êm ái và tiết kiệm điện năng. Chương trình giặt thông minh AI tự động cân chỉnh lượng nước và thời gian dựa trên khối lượng giặt giúp tối ưu chu trình giặt giũ.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/274173/Slider/01-1020x571.jpg",
+                      quantity = 1000,
+                      price = 6990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 77,
+                      Name = "Máy giặt LG TurboDrum Inverter 9 kg T2109VSAB",
+                      Description = "Máy giặt LG TurboDrum Inverter 9 kg T2109VSAB thuộc kiểu máy giặt lồng đứng cùng với bảng điều khiển nằm ở phía trước quen thuộc, chất liệu vỏ máy được làm bằng kim loại sơn tĩnh điện bền bỉ và giảm thiểu tình trạng trầy xước trong quá trình sử dụng. ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/230077/Slider/may-giat-lg-t2109vsab637679232549430455.jpg",
+                      quantity = 1000,
+                      price = 5990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 78,
+                      Name = "Máy giặt Samsung AI Inverter 9kg WW90TP44DSB/SV",
+                      Description = "Máy giặt Samsung AI Inverter 9 kg WW90TP44DSB/SV ứng dụng công nghệ AI Wash hiện đại với 4 cảm biến có thể cảm nhận khối lượng và độ bẩn áo quần, từ đó tối ưu lượng nước, lượng nước giặt, nước xả và thời gian giặt sao cho giặt sạch hiệu quả mà không tốn nhiều công sức.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/236158/Slider/01-1020x570.jpg",
+                      quantity = 1000,
+                      price = 9490000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 79,
+                      Name = "Máy giặt Casper 7.5 kg WT-75NG1 ",
+                      Description = "Máy giặt Casper 7.5 kg WT-75NG1 có khả năng tiết kiệm điện và nước hiệu quả nhờ tích hợp công nghệ suy luận ảo Fuzzy Logic hiện đại. Không những thế, mẫu máy giặt Casper này còn lần đầu tiên được trang bị chế độ sấy gió AirDry, giúp rút ngắn thời gian phơi quần áo đáng kể.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/316042/Slider/casper-75-kg-wt-75ng1638356597640417536.png",
+                      quantity = 1000,
+                      price = 3990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK",
+                      Description = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK được thiết kế theo kiểu dáng máy giặt lồng ngang hiện đại, được trang bị công nghệ cân bằng AI DBT giúp máy hoạt động ổn định, êm ái, tăng thêm không gian sống cho gia đình bởi kết cấu máy siêu mỏng, tiết kiệm diện tích. ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/307863/Slider/4-1020x570.jpg",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  }
+
+
 
 
 
