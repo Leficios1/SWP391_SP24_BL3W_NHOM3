@@ -14,10 +14,10 @@ namespace SWP391_BL3W.Controllers
             _vnPayService = vnPayService;
         }
 
-        [HttpGet("vn-pay/{userId}/{orderId}")]
-        public async Task<IActionResult> PayWithUserId([FromRoute] int userId, [FromRoute] int orderId)
+        [HttpGet("vn-pay/{userId}/{returnUrl}/{orderId}")]
+        public async Task<IActionResult> PayWithUserId([FromRoute] int userId,[FromRoute] string returnUrl, [FromRoute] int orderId)
         {
-            var result = await _vnPayService.CallAPIPayByUserId(userId, orderId);
+            var result = await _vnPayService.CallAPIPayByUserId(userId, returnUrl ,orderId);
             return Ok(result);
         }
 

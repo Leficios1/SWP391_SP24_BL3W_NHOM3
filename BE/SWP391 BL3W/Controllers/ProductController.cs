@@ -6,6 +6,7 @@ using SWP391_BL3W.Services.Interface;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SWP391_BL3W.Controllers
 {
@@ -21,6 +22,7 @@ namespace SWP391_BL3W.Controllers
             _productService = productService;
             _mapper = mapper;
         }
+        [Authorize]
         [HttpGet("getAll")]
         public async Task<IActionResult> getAll(int? size, int? page)
         {
