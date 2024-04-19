@@ -1,4 +1,7 @@
-﻿namespace SWP391_BL3W.Configuration.CROS
+﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+
+namespace FAMS.Api.Configurations.Cors
 {
     public static class CorsConfiguration
     {
@@ -8,14 +11,10 @@
             var corsOrigins = configuration.GetSection("Cors").Get<string[]>();
             if (corsOrigins == null || corsOrigins.Length == 0)
             {
-                app.UseCors(builder =>
-                builder.AllowAnyOrigin()
-                       .AllowAnyHeader()
-                       .AllowAnyMethod()
-                       .AllowCredentials());
+                throw new InvalidOperationException("CORS origins are not provided or are invalid.");
             }
 
-
+ 
             foreach (var origin in corsOrigins)
             {
                 Console.WriteLine($"Allowed CORS Origin: {origin}");

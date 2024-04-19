@@ -5,7 +5,7 @@ namespace SWP391_BL3W.Services.Interface
 {
     public interface ICategoryService
     {
-        public Task<List<StatusResponse<Category>>> getAllCategory();
-        public Task<List<StatusResponse<ProductsResponseDTO>>> searchProductsByCategory(string category);
+        public Task<StatusResponse<List<Category>>> getAllCategory();
+        public Task<StatusResponse<List<ProductDTO>>> searchProductsByCategory(int category);
     }
 }

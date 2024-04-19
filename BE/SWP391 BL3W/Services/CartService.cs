@@ -135,7 +135,14 @@ namespace SWP391_BL3W.Services
             var response = new StatusResponse<bool>();
             try
             {
-                var carts = await _cartRepo.Get().Where(x => x.UserId == userId && productId == x.ProductId).ToArrayAsync();
+                var carts = await _cartRepo.Get().Where(x => x.UserId == userId && productId == x.ProductId).SingleOrDefaultAsync();
+                if (carts == null)
+                {
+                    response.Data = false;
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "DM FE";
+                    return response;
+                }
                 _cartRepo.Delete(carts);
                 response.Data = true;
                 response.statusCode = HttpStatusCode.OK;

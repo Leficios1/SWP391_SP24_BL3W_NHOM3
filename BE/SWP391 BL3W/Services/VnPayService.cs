@@ -143,7 +143,7 @@ namespace SWP391_BL3W.Services
                 if (order.status != 0)
                 {
                     if (order.status == 1) throw new Exception("Order is payed.");
-                    if (order.status == -1) throw new Exception("order is canceled");
+                    if (order.status == 3) throw new Exception("order is canceled");
                 }
 
                 if (order.OrdersDetail != null)
