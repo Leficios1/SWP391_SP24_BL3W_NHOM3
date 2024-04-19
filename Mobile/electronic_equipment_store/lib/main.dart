@@ -17,6 +17,7 @@ void main() async {
   await LocalStorageHelper.initLocalStorageHelper();
   await LocalStorageHelper.initSearchBox();
   await Hive.openBox('userBox');
+  await Hive.openBox('tokenBox');
   await initializeDateFormatting('vi_VN', null);
 
   // ẩn status bar

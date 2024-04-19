@@ -33,7 +33,7 @@ class UserModel {
       email: json['email'],
       phone: json['phone'],
       address: json['address'],
-      dateOfBirth: json['dateOfBirth'],
+      dateOfBirth: DateTime.parse(json['dateOfBirth']) ,
       roleId: json['roleId'],
       avatarUrl: json['avatarUrl'],
       gender: json['gender'],
@@ -43,9 +43,14 @@ class UserModel {
 
   Map<dynamic, dynamic> toJson() {
     return {
-      'userID': userID,
-      'password': password,
+      'id': userID,
       'email': email,
+      'password': password,
+      'name': name,
+      'phone' : phone,
+      'address' :address,
+      'dateOfBirth' : dateOfBirth.toString(),
+      'gender' : gender,
       'status': status,
       'role': roleId,
     };

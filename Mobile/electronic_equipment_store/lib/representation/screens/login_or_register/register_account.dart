@@ -16,6 +16,7 @@ class RegisterAccount extends StatefulWidget {
 }
 
 class _RegisterAccountState extends State<RegisterAccount> {
+  TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
@@ -24,7 +25,9 @@ class _RegisterAccountState extends State<RegisterAccount> {
   bool _showConfirmPass = false;
   int? accountID;
   Future<void> createAccount() async {
-    if (emailController.text.isEmpty) {
+    if (nameController.text.isEmpty) {
+      showCustomDialog(context, 'Lỗi', 'Vui lòng nhập "Họ và tên".', true);
+    } else if (emailController.text.isEmpty) {
       showCustomDialog(context, 'Lỗi', 'Vui lòng nhập "Email".', true);
     } else if (validateEmail(emailController.text) != null) {
       showCustomDialog(context, 'Lỗi', 'Email không hợp lệ', true);
@@ -49,7 +52,7 @@ class _RegisterAccountState extends State<RegisterAccount> {
           );
         },
       );
-      // TODO Login Function
+      // TODO Create Function
     }
   }
 
@@ -114,8 +117,6 @@ class _RegisterAccountState extends State<RegisterAccount> {
                 child: Text("Đăng ký", style: TextStyles.h4.bold),
               ),
               const SizedBox(height: 5),
-
-              // Let's create an account for you!
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -124,8 +125,18 @@ class _RegisterAccountState extends State<RegisterAccount> {
                 ),
               ),
               const SizedBox(height: 25),
-
-              // Email
+              MyTextFormField(
+                controller: nameController,
+                hintText: 'Họ và tên',
+                obscureText: false,
+                validator: validateEmail,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                prefixIcon: const Icon(
+                  FontAwesomeIcons.solidUser,
+                  size: kDefaultIconSize18,
+                ),
+              ),
+              const SizedBox(height: 10),
               MyTextFormField(
                 controller: emailController,
                 hintText: 'Email',
@@ -138,8 +149,6 @@ class _RegisterAccountState extends State<RegisterAccount> {
                 ),
               ),
               const SizedBox(height: 10),
-
-              //  Password
               MyTextFormField(
                 controller: passwordController,
                 hintText: 'Mật khẩu',
@@ -162,8 +171,6 @@ class _RegisterAccountState extends State<RegisterAccount> {
                 ),
               ),
               const SizedBox(height: 10),
-
-              // Confirm password
               MyTextFormField(
                 controller: confirmPasswordController,
                 hintText: 'Xác nhận mật khẩu',
@@ -200,7 +207,6 @@ class _RegisterAccountState extends State<RegisterAccount> {
                 ),
               ),
               const SizedBox(height: 25),
-              
               ButtonWidget(
                 title: 'Tiếp tục',
                 size: 22,

@@ -59,24 +59,29 @@ class _LoginScreenState extends State<LoginScreen> {
           // ignore: use_build_context_synchronously
           Navigator.pop(context);
           if (response != null) {
-            Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
-            //     final userModel = UserModel.fromJson(response);
-            //     var box = Hive.box('userBox');
-            //     box.put('user', json.encode(userModel.toJson()));
+            final responseToken =
+                await ApiService.getUserByToken(response['tokenString']);
+                var tokenBox = Hive.box('tokenBox');
+                tokenBox.put('token',response['tokenString']);
+            if (responseToken != null) {
+              final userModel = UserModel.fromJson(responseToken);
+              var userBox = Hive.box('userBox');
+              userBox.put('user', json.encode(userModel.toJson()));
+               if (userModel.roleId == 2) {
+                  // ignore: use_build_context_synchronously
+                  Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
+                }              
+            }
             //     final authProvider =
             //         Provider.of<AuthProvider>(context, listen: false);
             //     authProvider.setUser(userModel);
-            //     if (userModel.role.roleName == 'Customer') {
-            //       Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
-            //     } else if (userModel.role.roleName == "ProductOwner") {
-            //       Navigator.of(context).pushNamed(ProductOwnerMainScreen.routeName);
-            //     }
           } else {
+            // ignore: use_build_context_synchronously
             showCustomDialog(context, 'Lỗi', 'Đăng nhập thất bại.', true);
           }
         } catch (e) {
-          // showCustomDialog(context, 'Lỗi', e.toString(), true);
-          print(e.toString());
+          // ignore: use_build_context_synchronously
+          showCustomDialog(context, 'Lỗi', e.toString(), true);
         }
       }
     }
