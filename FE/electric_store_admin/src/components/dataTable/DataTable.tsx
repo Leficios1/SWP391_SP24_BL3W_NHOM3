@@ -1,11 +1,7 @@
-import {
-  DataGrid,
-  GridColDef,
-  GridToolbar,
-} from "@mui/x-data-grid";
+import React from "react";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import "./dataTable.scss";
 import { Link } from "react-router-dom";
-// import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   columns: GridColDef[];
@@ -13,25 +9,10 @@ type Props = {
   slug: string;
 };
 
-const DataTable = (props: Props) => {
-
-  // TEST THE API
-
-  // const queryClient = useQueryClient();
-  // // const mutation = useMutation({
-  // //   mutationFn: (id: number) => {
-  // //     return fetch(`http://localhost:8800/api/${props.slug}/${id}`, {
-  // //       method: "delete",
-  // //     });
-  // //   },
-  // //   onSuccess: ()=>{
-  // //     queryClient.invalidateQueries([`all${props.slug}`]);
-  // //   }
-  // // });
+const DataTable: React.FC<Props> = ({ columns, rows, slug }) => {
 
   const handleDelete = (id: number) => {
-    //delete the item
-    // mutation.mutate(id)
+    // Xử lý logic xóa item ở đây
   };
 
   const actionColumn: GridColDef = {
@@ -41,7 +22,7 @@ const DataTable = (props: Props) => {
     renderCell: (params) => {
       return (
         <div className="action">
-          <Link to={`/${props.slug}/${params.row.id}`}>
+          <Link to={`/${slug}/${params.row.id}`}>
             <img src="/view.svg" alt="" />
           </Link>
           <div className="delete" onClick={() => handleDelete(params.row.id)}>
@@ -56,8 +37,8 @@ const DataTable = (props: Props) => {
     <div className="dataTable">
       <DataGrid
         className="dataGrid"
-        rows={props.rows}
-        columns={[...props.columns, actionColumn]}
+        rows={rows}
+        columns={[...columns, actionColumn]}
         initialState={{
           pagination: {
             paginationModel: {
@@ -65,19 +46,19 @@ const DataTable = (props: Props) => {
             },
           },
         }}
-        slots={{ toolbar: GridToolbar }}
         slotProps={{
           toolbar: {
+            components: {
+              Toolbar: GridToolbar,
+            },
             showQuickFilter: true,
             quickFilterProps: { debounceMs: 500 },
           },
         }}
-        pageSizeOptions={[5]}
         checkboxSelection
-        disableRowSelectionOnClick
+        disableSelectionOnClick
         disableColumnFilter
-        disableDensitySelector
-        disableColumnSelector
+        disableColumnMenu
       />
     </div>
   );

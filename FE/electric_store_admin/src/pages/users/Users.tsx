@@ -1,12 +1,16 @@
 import { GridColDef } from "@mui/x-data-grid";
 import DataTable from "../../components/dataTable/DataTable";
 import "./Users.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Add from "../../components/add/Add";
 import { userRows } from "../../data";
-// import { useQuery } from "@tanstack/react-query";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootStateOrAny } from "react-redux";
+import { fecthUsers } from "../../API/actions/userActions";
 
-const columns: GridColDef[] = [
+
+/*const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
   {
     field: "img",
@@ -53,19 +57,32 @@ const columns: GridColDef[] = [
     type: "boolean",
   },
 ];
-
+*/
 const Users = () => {
-  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { users, loading, error} = useSelector((state: RootState) => state.user);
 
-  // TEST THE API
+  useEffect(() => {
+    dispatch(fecthUsers());
+  }, [dispatch]);
 
-  // const { isLoading, data } = useQuery({
-  //   queryKey: ["allusers"],
-  //   queryFn: () =>
-  //     fetch("http://localhost:8800/api/users").then(
-  //       (res) => res.json()
-  //     ),
-  // });
+  const columns = [
+    { field: 'id', headerName: 'ID', width: 100 },
+    { field: 'name', headerName: 'Name', width: 200 },
+    { field: 'email', headerName: 'Email', width: 250 },
+    { field: 'phone', headerName: 'Phone', width: 150 },
+    { field: 'dateOfBirth', headerName: 'Date of Birth', width: 150 },
+    { field: 'avatarUrl', headerName: 'Avatar', width: 150, renderCell: (params) => <img src={params.value} alt="Avatar" style={{ width: 50, borderRadius: '50%' }} /> },
+    { field: 'gender', headerName: 'Gender', width: 100 },
+    { field: 'status', headerName: 'Status', width: 100, type: 'boolean' },
+  ];
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="users">
