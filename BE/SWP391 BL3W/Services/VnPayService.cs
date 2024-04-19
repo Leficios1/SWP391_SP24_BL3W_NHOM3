@@ -4,6 +4,7 @@ using SWP391_BL3W.DTO.ModelPaymentOnline;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
 
@@ -122,12 +123,12 @@ namespace SWP391_BL3W.Services
             return payment;
 
         }
-        public async Task<string> CallAPIPayByUserId(int userId, int orderId)
+        public async Task<string> CallAPIPayByUserId(int userId,string returnUrl, int orderId)
         {
             try
             {
 
-                string vnp_ReturnUrl = "/result";
+                string vnp_ReturnUrl = returnUrl;
                 string vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
                 string vnp_TmnCode = "F8V1A5TK";
                 string vnp_HashSecret = "GCLECYOCZYQLDTIUGHGWZAWPNALXPLOJ";
@@ -164,11 +165,11 @@ namespace SWP391_BL3W.Services
                 vnpay.AddRequestData("vnp_CurrCode", "VND");
                 vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress());
                 vnpay.AddRequestData("vnp_Locale", "vn");
-                vnpay.AddRequestData("vnp_OrderInfo", $"Payment for order: {orderId}");
+                vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toán hoá đơn: {orderId}");
                 vnpay.AddRequestData("vnp_OrderType", "order");
-                vnpay.AddRequestData("vnp_ReturnUrl", vnp_ReturnUrl);
+                vnpay.AddRequestData("vnp_ReturnUrl", $"{returnUrl}");
                 vnpay.AddRequestData("vnp_TxnRef", vnp_TxnRef);
-                vnpay.AddRequestData("vnp_ExpireDate", DateTime.Now.AddMinutes(2).ToString("yyyyMMddHHmmss"));
+                vnpay.AddRequestData("vnp_ExpireDate", DateTime.Now.AddMinutes(20).ToString("yyyyMMddHHmmss"));
 
 
                 string paymentUrl = vnpay.CreateRequestUrl(vnp_Url, vnp_HashSecret);
