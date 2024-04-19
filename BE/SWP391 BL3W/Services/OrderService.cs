@@ -162,5 +162,33 @@ namespace SWP391_BL3W.Services
             }
             return response;
         }
+
+        public async Task<StatusResponse<bool>> updateOrderAsync(int orderId, int status)
+        {
+            var response = new StatusResponse<bool>();
+            try
+            {
+                var existOrder = await _baseRepository.GetById(orderId);
+                if (existOrder == null)
+                {
+                    response.Data = false;
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Not Found Order";
+                    return response;
+                }
+                existOrder.status = status;
+                _baseRepository.Update(existOrder);
+                response.Data = true;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful";
+
+            }catch(Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+                response.Data = false;
+            }
+            return response;
+        }
     }
 }

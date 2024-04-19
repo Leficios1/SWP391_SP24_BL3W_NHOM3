@@ -102,6 +102,14 @@ namespace SWP391_BL3W.Services
 
         public async Task<IEnumerable<UserResponseDto>> GetUsers(int? pageNumber, int? pageSize)
         {
+            if(pageNumber == null)
+            {
+                pageNumber = 1;
+            }
+            if(pageSize == null)
+            {
+                pageSize = 15;
+            }
             IQueryable<User> query = _baseRepository.Get()
                 .Include(x => x.Role)
                 .AsNoTracking();
