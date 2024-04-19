@@ -53,24 +53,28 @@ class ApiService {
     return categorys;
   }
 
-  
-  static Future<List<ProductModel>?> getAllProduct() async {
-    final url = Uri.parse('$apiLink/api/Product/getAll');
-    try {
-      final response = await http.get(url);
-      if (response.statusCode == 200) {
-        List<dynamic> data = json.decode(response.body);
-        List<ProductModel> products =
-            data.map((json) => ProductModel.fromJson(json)).toList();
 
+  static Future<List<ProductModel>?> getAllProduct() async {
+  final url = Uri.parse('$apiLink/api/Product/getAll?size=10');
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonResponse = json.decode(response.body);
+      if (jsonResponse.containsKey('data')) {
+        List<dynamic> productList = jsonResponse['data']['products'];
+        List<ProductModel> products = productList.map((json) => ProductModel.fromJson(json)).toList();        
         return products;
       } else {
-        throw Exception('Failed to load all Product');
+        throw Exception('Invalid JSON format: "data" field not found');
       }
-    } catch (e) {
-      throw Exception('Error: $e');
+    } else {
+      throw Exception('Failed to load all Product');
     }
+  } catch (e) {
+    throw Exception('Error: $e');
   }
+}
+
 
 
   // static Future<List<ProductModel>?> getAllProduct() async {

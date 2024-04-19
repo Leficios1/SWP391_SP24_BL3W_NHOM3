@@ -303,6 +303,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                     )
                                   ],
                                 ),
+                                if(productModel.categories != null)
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
@@ -312,7 +313,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                     ),
                                     const SizedBox(height: 5),
                                     for (var category
-                                        in productModel.categories)
+                                        in productModel.categories!)
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,

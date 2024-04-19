@@ -7,8 +7,8 @@ class ProductModel {
   String? productImage;
   int quantity;
   double price;
-  DateTime warrantyPeriod;
-  List<CategoryModel> categories;
+  DateTime? warrantyPeriod;
+  List<CategoryModel>? categories;
 
   ProductModel({
     required this.productID,
@@ -17,18 +17,11 @@ class ProductModel {
     this.productImage,
     required this.quantity,
     required this.price,
-    required this.warrantyPeriod,
-    required this.categories,
+    this.warrantyPeriod,
+    this.categories,
   });
 
-  // String getBrandName() {
-  //   return category.categoryName;
-  // }
-
   factory ProductModel.fromJson(Map<String, dynamic> json) {
-    List<CategoryModel> categoryList = (json['categories'] as List)
-        .map((categoryJson) => CategoryModel.fromJson(categoryJson))
-        .toList();
 
     return ProductModel(
       productID: json['id'],
@@ -37,8 +30,6 @@ class ProductModel {
       productImage: json['imageUrl'],
       quantity: json['quantity'],
       price: json['price'],
-      warrantyPeriod:json['warrantyPeriod'],
-      categories: categoryList,
     );
   }
 }
