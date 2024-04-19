@@ -1,8 +1,8 @@
 export interface EntityState<T> {
     loading: boolean,
-    data: T,
+    data: T | any,
     message: string,
-    dataDetail: T,
+    dataDetail: T | any,
     updateSuccess?: boolean
 }
 

@@ -22,6 +22,17 @@ const Order: React.FC<OrderProps> = (props) => {
         dispatch(getCartByUserId(accountId))
     }, [])
 
+
+    const calculateTotalPrice = () => {
+        let total = 0;
+
+        data.map((product) => {
+            total += (product.price * product.quantity)
+        })
+
+        return total
+    }
+
     return (
         data ?
             data.length == 0
@@ -39,25 +50,28 @@ const Order: React.FC<OrderProps> = (props) => {
                 :
                 <Row gutter={[20, 0]}>
                     <Col md={14}>
-                        <List
-                            style={{ maxHeight: "500px", overflowY: "scroll" }}
-                            className="demo-loadmore-list"
-                            itemLayout="horizontal"
-                            dataSource={data} // thay vao thong tin chi tiet product trong cart
-                            renderItem={(item) => (
-                                <CartDetail accountId={accountId} detail={item} isLoading={isLoading} />
-                            )}
-                        />
-
-
+                        <BillingInformation detailincart={data} totalPrice={calculateTotalPrice()} />
                     </Col>
-                    <Col md={10}>
-                        <BillingInformation />
+                    <Col style={{ marginTop: "30px" }} md={10}>
+                        <Row style={{ height: "auto" }}>
+                            <Col span={24}>
+                                <List
+                                    style={{ maxHeight: "600px", overflowY: "scroll" }}
+                                    className="demo-loadmore-list"
+                                    itemLayout="horizontal"
+                                    dataSource={data} // thay vao thong tin chi tiet product trong cart
+                                    renderItem={(item) => (
+                                        <CartDetail accountId={accountId} detail={item} isLoading={isLoading} />
+                                    )}
+                                />
+
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
 
             : <Skeleton loading={true} paragraph={true} active />
-                )
+    )
 }
 
-                export default Order
+export default Order

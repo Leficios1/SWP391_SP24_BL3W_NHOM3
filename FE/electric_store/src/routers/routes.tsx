@@ -16,12 +16,12 @@ import "./routes.scss"
 import Order from "../entities/order/Order"
 
 const AppRoutes = () => {
-    const [isOpenCart, setIsOpenCart] = useState<boolean>(false)
     const cookie = new Cookies();
     const account = cookie.get("account");
     const dispatch = useAppDispatch()
     const productsInCart = useAppSelector(state => state.cart.dataDetail);
     const isLoading = useAppSelector(state => state.cart.loading);
+    const [isOpenCart, setIsOpenCart] = useState<boolean>(false)
 
     useEffect(() => {
         if (account != null) {
@@ -41,7 +41,7 @@ const AppRoutes = () => {
                     <Route path="/" >
                         <Route index element={<Home />} />
                         <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
-                        <Route path="/thanh-toan" element={<Order accountId={account.id} />} />
+                        <Route path="/thanh-toan" element={<Order accountId={account?.id} />} />
                     </Route>
                     <Route path="*" element={<ErrorPage />} />
 
@@ -64,7 +64,7 @@ const AppRoutes = () => {
                 content={account != null ? <Cart accountId={account?.id} dataCart={productsInCart} isLoading={isLoading} /> : <CartWithoutLogin />}
             >
                 <FloatButton
-                    // onClick={() => setIsOpenCart(!isOpenCart)}
+                    onMouseEnter={() => setIsOpenCart(!isOpenCart)}
                     icon={<ShoppingCartOutlined />}
                 />
             </Popover>
