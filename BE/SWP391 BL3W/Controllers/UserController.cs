@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SWP391_BL3W.DTO.Request;
@@ -28,6 +29,7 @@ namespace SWP391_BL3W.Controllers
         }
 
         [HttpGet("getAllUser")]
+        [Authorize(Roles = "1")]
         public async Task<ActionResult<IEnumerable<UserResponseDto>>> GetUsers(int? pageNumber, int? pageSize)
         {
             var users = await _userService.GetUsers(pageNumber, pageSize);
