@@ -22,6 +22,7 @@ namespace SWP391_BL3W.Database
         public decimal price { get; set; }
         [Required]
         public int WarrantyPeriod {  get; set; }
+        public int? status { get; set; }
         //FK
         public int CategoryID { get; set; }
         public Category Category { get; set; }
