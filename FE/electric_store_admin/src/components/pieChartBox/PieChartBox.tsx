@@ -1,8 +1,19 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import "./pieChartBox.scss";
+import { useEffect, useState } from "react";
+import axios from 'axios';
+
+
+/*const [stage,setStage]=useState([]);
+const getStageData = async()=>{try{
+  const dataC=await axios.get('https://localhost:7152/api/Order/Totalprice');
+  const res=dataC.data.map(Object.values);
+  setStage(res);
+}catch(e){}};
+useEffect(()=>{getStageData();};[]);*/
 
 const data = [
-  { name: "1", value: 400, color: "#0088FE" },
+  { name: "1", value: 200, color: "#0088FE" },
   { name: "2", value: 300, color: "#00C49F" },
   { name: "3", value: 300, color: "#FFBB28" },
   { name: "4", value: 200, color: "#FF8042" },
