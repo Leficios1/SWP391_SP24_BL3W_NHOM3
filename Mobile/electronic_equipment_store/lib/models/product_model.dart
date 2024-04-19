@@ -1,4 +1,3 @@
-import 'package:electronic_equipment_store/models/category_model.dart';
 
 class ProductModel {
   int productID;
@@ -7,8 +6,8 @@ class ProductModel {
   String? productImage;
   int quantity;
   double price;
-  DateTime? warrantyPeriod;
-  List<CategoryModel>? categories;
+  int? warrantyPeriod;
+  int? categoryID;
 
   ProductModel({
     required this.productID,
@@ -18,7 +17,7 @@ class ProductModel {
     required this.quantity,
     required this.price,
     this.warrantyPeriod,
-    this.categories,
+    this.categoryID,
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
@@ -30,6 +29,18 @@ class ProductModel {
       productImage: json['imageUrl'],
       quantity: json['quantity'],
       price: json['price'],
+    );
+  }
+  factory ProductModel.fromJsonGetByID(Map<String, dynamic> json) {
+
+    return ProductModel(
+      productID: json['id'],
+      productName: json['name'],
+      productDecription: json['description'],
+      quantity: json['quantity'],
+      price: json['price'],
+      warrantyPeriod: json['warrantyPeriod'],
+      categoryID: json['categoryID']
     );
   }
 }

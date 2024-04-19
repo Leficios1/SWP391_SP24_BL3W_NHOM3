@@ -40,13 +40,14 @@ class _HomeScreenState extends State<HomeScreen> {
               selectedCategory!.categoryName);
         }
       case 2:
-        return await ApiService.getAllProductOnAvailable();
+        // return await ApiService.getAllProductOnAvailable();
+        //TODO get all product On available
       case 3:
         //TODO get product notAvailable
         return null;
       case 4:
-        //TODO get product by Name
-        return null;
+        return await ApiService.getAllProductByProductName(
+            searchTerm);
     }
     return null;
   }
@@ -61,7 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       });
     } catch (e) {
-      //TODO show dialog báo lỗi.
+      // ignore: avoid_print
+      print('Error loading categories: $e');
     }
   }
 

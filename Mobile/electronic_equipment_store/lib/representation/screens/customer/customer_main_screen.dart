@@ -1,4 +1,10 @@
+import 'package:electronic_equipment_store/representation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import '../../../core/constants/color_constants.dart';
+import '../../../core/constants/dismension_constants.dart';
+
 
 class CustomerMainScreen extends StatefulWidget {
   const CustomerMainScreen({super.key});
@@ -6,12 +12,69 @@ class CustomerMainScreen extends StatefulWidget {
   static const String routeName = '/customer_main_screen';
 
   @override
-  State<CustomerMainScreen> createState() => _CustomerMainScreenState();
+  State<CustomerMainScreen> createState() => _CustomerMainScreen();
 }
 
-class _CustomerMainScreenState extends State<CustomerMainScreen> {
+class _CustomerMainScreen extends State<CustomerMainScreen> {
+  int _currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  // method logout
+  void logout() {
+    // emailController.text = "";
+    // passwordController.text = "";
+    // confirmPasswordController.text = "";
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text("This is Customer Main Screen"));
+    return Scaffold(
+      body: IndexedStack(
+        index: _currentIndex,
+        children: [
+          const HomeScreen(),
+          //TODO work form here
+          // MainCartScreen(),
+          // AccountScreenTrue(),
+        ],
+      ),
+      bottomNavigationBar: SalomonBottomBar(
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        currentIndex: _currentIndex,
+        selectedItemColor: ColorPalette.primaryColor,
+        unselectedItemColor: ColorPalette.textHide,
+        items: [
+          SalomonBottomBarItem(
+            title: const Text('Trang chủ'),
+            icon: const Icon(
+              FontAwesomeIcons.house,
+              size: kDefaultIconSize18,
+            ),
+          ),
+          SalomonBottomBarItem(
+            title: const Text('Giỏ hàng'),
+            icon: const Icon(
+              FontAwesomeIcons.cartShopping,
+              size: kDefaultIconSize18,
+            ),
+          ),
+          SalomonBottomBarItem(
+            title: const Text('Tài khoản'),
+            icon: const Icon(
+              FontAwesomeIcons.solidUser,
+              size: kDefaultIconSize18,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

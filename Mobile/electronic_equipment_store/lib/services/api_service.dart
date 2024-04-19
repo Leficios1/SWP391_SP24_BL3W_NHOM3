@@ -43,14 +43,25 @@ class ApiService {
     }
   }
 
-  //TODOcategory API
   static Future<List<CategoryModel>?> getAllCategory() async {
-    List<CategoryModel> categorys = [
-      CategoryModel(categoryID: 1, categoryName: "đồ điện"),
-      CategoryModel(categoryID: 2, categoryName: "đồ điện 1"),
-      CategoryModel(categoryID: 3, categoryName: "đồ điện 2"),
-    ];
-    return categorys;
+    final url = Uri.parse('$apiLink/api/Category/getall');
+    try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonResponse = json.decode(response.body);
+      if (jsonResponse.containsKey('data')) {
+        List<dynamic> categoryList = jsonResponse['data'];
+        List<CategoryModel> categories = categoryList.map((json) => CategoryModel.fromJson(json)).toList();        
+        return categories;
+      } else {
+        throw Exception('Invalid JSON format: "data" field not found');
+      }
+    } else {
+      throw Exception('Failed to load all Category');
+    }
+  } catch (e) {
+    throw Exception('Error: $e');
+  }
   }
 
 
@@ -75,38 +86,73 @@ class ApiService {
   }
 }
 
+  static Future<ProductModel> getProductByID(int productID) async {
+  final url = Uri.parse('$apiLink/api/Product/getDetailsById/$productID');
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> data = json.decode(response.body);
+      Map<String, dynamic> productData = data['data']['products'];
+      ProductModel productModel = ProductModel.fromJsonGetByID(productData);
+      return productModel;
+    } else {
+      throw Exception('Failed to load product detail');
+    }
+  } catch (e) {
+    throw Exception('Error: $e');
+  }
+}
 
+  
+  
 
-  // static Future<List<ProductModel>?> getAllProduct() async {
+  static Future<List<ProductModel>?> getAllProductByCategoryName(String categoryId) async {
+  final url = Uri.parse('$apiLink/api/Category/get-product-by-category/$categoryId');
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonResponse = json.decode(response.body);
+      if (jsonResponse.containsKey('data')) {
+        List<dynamic> productList = jsonResponse['data'];
+        List<ProductModel> products = productList.map((json) => ProductModel.fromJson(json)).toList();        
+        return products;
+      } else {
+        throw Exception('Invalid JSON format: "data" field not found');
+      }
+    } else {
+      throw Exception('Failed to load Product by Category');
+    }
+  } catch (e) {
+    throw Exception('Error: $e');
+  }
+}
+  static Future<List<ProductModel>?> getAllProductByProductName(String productName) async {
+  final url = Uri.parse('$apiLink/api/Product/search?name=$productName');
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonResponse = json.decode(response.body);
+      if (jsonResponse.containsKey('data')) {
+        List<dynamic> productList = jsonResponse['data']['products'];
+        List<ProductModel> products = productList.map((json) => ProductModel.fromJson(json)).toList();        
+        return products;
+      } else {
+        throw Exception('Invalid JSON format: "data" field not found');
+      }
+    } else {
+      throw Exception('Failed to load all Product by product name');
+    }
+  } catch (e) {
+    throw Exception('Error: $e');
+  }
+}
+
+  // static Future<List<ProductModel>?> getAllProductOnAvailable() async {
   //   try {
   //     List<ProductModel> products = [
   //       ProductModel(
   //           productID: 001,
   //           productName: "Bếp từ 01",
-  //           productDecription: "Bếp dùng điện để tạo ra từ",
-  //           quantity: 8,
-  //           productImage:
-  //               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-  //           price: 1000000,
-  //           warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-  //           categories: <CategoryModel>[
-  //             CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-  //           ]),
-  //       ProductModel(
-  //           productID: 001,
-  //           productName: "Bếp từ 02",
-  //           productDecription: "Bếp dùng điện để tạo ra từ",
-  //           quantity: 8,
-  //           productImage:
-  //               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-  //           price: 10000000,
-  //           warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-  //           categories: <CategoryModel>[
-  //             CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-  //           ]),
-  //       ProductModel(
-  //           productID: 001,
-  //           productName: "Bếp từ 03",
   //           productDecription: "Bếp dùng điện để tạo ra từ",
   //           quantity: 8,
   //           productImage:
@@ -118,7 +164,7 @@ class ApiService {
   //           ]),
   //       ProductModel(
   //           productID: 001,
-  //           productName: "Bếp từ 04",
+  //           productName: "Bếp từ 02",
   //           productDecription: "Bếp dùng điện để tạo ra từ",
   //           quantity: 8,
   //           productImage:
@@ -135,127 +181,14 @@ class ApiService {
   //   }
   // }
 
-  static Future<List<ProductModel>?> getAllProductByCategoryName(
-      String name) async {
-    try {
-      List<ProductModel> products = [
-        ProductModel(
-            productID: 001,
-            productName: "Bếp từ 03",
-            productDecription: "Bếp dùng điện để tạo ra từ",
-            quantity: 8,
-            productImage:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-            price: 100000000,
-            warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-            categories: <CategoryModel>[
-              CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-            ]),
-        ProductModel(
-            productID: 001,
-            productName: "Bếp từ 04",
-            productDecription: "Bếp dùng điện để tạo ra từ",
-            quantity: 8,
-            productImage:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-            price: 1000000000,
-            warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-            categories: <CategoryModel>[
-              CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-            ]),
-      ];
-      return products;
-    } catch (e) {
-      throw Exception('Error: $e');
-    }
-  }
-
-  static Future<List<ProductModel>?> getAllProductOnAvailable() async {
-    try {
-      List<ProductModel> products = [
-        ProductModel(
-            productID: 001,
-            productName: "Bếp từ 01",
-            productDecription: "Bếp dùng điện để tạo ra từ",
-            quantity: 8,
-            productImage:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-            price: 100000000,
-            warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-            categories: <CategoryModel>[
-              CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-            ]),
-        ProductModel(
-            productID: 001,
-            productName: "Bếp từ 02",
-            productDecription: "Bếp dùng điện để tạo ra từ",
-            quantity: 8,
-            productImage:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-            price: 1000000000,
-            warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-            categories: <CategoryModel>[
-              CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-            ]),
-      ];
-      return products;
-    } catch (e) {
-      throw Exception('Error: $e');
-    }
-  }
-
-  static Future<ProductModel> getProductByID(int productID) async {
-    final url =
-        Uri.parse('$apiLink/api/Product/getDetailsById/$productID');
-    try {
-      final response = await http.get(url);
-      if (response.statusCode == 200) {
-        Map<String, dynamic> data = json.decode(response.body);
-        ProductModel productModel = ProductModel.fromJson(data);
-        return productModel;
-      } else {
-        throw Exception('Failed to load product detail');
-      }
-    } catch (e) {
-      throw Exception('Error: $e');
-    }
-  }
-
-  // static Future<ProductModel> getProductByID(int productID) async {
-  //   try {
-  //     return ProductModel(
-  //         productID: 001,
-  //         productName: "Bếp từ 02",
-  //         productDecription: "Bếp dùng điện để tạo ra từ",
-  //         quantity: 8,
-  //         productImage:
-  //             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGrNL4tOiFcrx8XjkSD83ZkR_KCgtmZA8ggnvk-LhGw&s",
-  //         price: 1000000000,
-  //         warrantyPeriod: DateTime(2024, 4, 14, 12, 30, 0),
-  //         categories: <CategoryModel>[
-  //           CategoryModel(categoryID: 001, categoryName: "đồ điẹn")
-  //         ]);
-  //   } catch (e) {
-  //     throw Exception('Error: $e');
-  //   }
-  // }
-
-  static Future<List<ProductDetailModel>> getListProductDetailByProductByID(
-      int productID) async {
-    try {
-      List<ProductDetailModel> productDetails = [
-        ProductDetailModel(
-            productID: 01, name: 'Tên Attribute 1', value: 'Dữ liệu attribute'),
-        ProductDetailModel(
-            productID: 02, name: 'Tên Attribute 2', value: 'Dữ liệu attribute'),
-        ProductDetailModel(
-            productID: 03, name: 'Tên Attribute 3', value: 'Dữ liệu attribute')
-      ];
-      return productDetails;
-    } catch (e) {
-      throw Exception('Error: $e');
-    }
-  }
+  static Future<List<ProductDetailModel>> getListProductDetailByProductByID(int productId) async {
+    List<ProductDetailModel> productlist = [
+        ProductDetailModel(productID: 1, name: 'Thuộc tính 1', value: 'value thuộc tính 1'),
+        ProductDetailModel(productID: 1, name: 'Thuộc tính 2', value: 'value thuộc tính 2'),
+    ];
+    await Future.delayed(const Duration(seconds: 1));
+    return productlist;
+}
 
   static Future<List<FeedbackModel>> getFeedbackByProductID(
       int productID) async {

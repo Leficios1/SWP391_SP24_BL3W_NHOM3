@@ -47,7 +47,7 @@ class _ProductCardState extends State<ProductCard> {
                   child: Image.network(widget.product.productImage!,
                       fit: BoxFit.cover),
                 ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 8),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
@@ -63,7 +63,7 @@ class _ProductCardState extends State<ProductCard> {
                       style: TextStyles.h5.bold,
                     ),
                   ),
-                  const SizedBox(height: 2),
+                  const SizedBox(height: 4),
                   Row(
                     children: [
                       Expanded(
@@ -90,17 +90,17 @@ class _ProductCardState extends State<ProductCard> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 2),
+                  const SizedBox(height: 4),
                   //Price
                     SizedBox(
                       width: 160,
                       child: AutoSizeText.rich(
                         group: autoSizeGroup,
-                        maxLines: 1,
+                        maxLines: 2,
                         TextSpan(
                           children: [
                             TextSpan(
-                                text: 'Mua: ',
+                                text: 'Giá: ',
                                 style: TextStyles.defaultStyle.bold),
                             TextSpan(
                               text:
@@ -110,8 +110,7 @@ class _ProductCardState extends State<ProductCard> {
                         ),
                       ),
                     ),
-                  const SizedBox(height: 2),
-                  const SizedBox(height: 2),
+                  const SizedBox(height: 4),
                   //TODO bổ sung kiểm tra trạng thái của món hàng
                     Text(
                       "CÓ SẴN",

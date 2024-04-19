@@ -303,7 +303,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                     )
                                   ],
                                 ),
-                                if(productModel.categories != null)
+                                if(productModel.categoryID != null)
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
@@ -312,14 +312,12 @@ class _ProductDetailState extends State<ProductDetail> {
                                       style: TextStyles.h5.bold,
                                     ),
                                     const SizedBox(height: 5),
-                                    for (var category
-                                        in productModel.categories!)
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
                                         children: [
-                                          Text(
-                                            category.categoryName,
+                                          Text( 'từ từ rồi làm'
+                                            ,
                                             style: TextStyles.h5,
                                           ),
                                           const SizedBox(height: 5),
