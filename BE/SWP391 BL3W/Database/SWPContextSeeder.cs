@@ -1499,6 +1499,210 @@ namespace SWP391_BL3W.Database
                       WarrantyPeriod = 720,
                       CategoryID = 5,
 
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK",
+                      Description = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK được thiết kế theo kiểu dáng máy giặt lồng ngang hiện đại, được trang bị công nghệ cân bằng AI DBT giúp máy hoạt động ổn định, êm ái, tăng thêm không gian sống cho gia đình bởi kết cấu máy siêu mỏng, tiết kiệm diện tích. ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/307863/Slider/4-1020x570.jpg",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 5,
+
+                  },
+                  new Product
+                  {
+                      Id = 81,
+                      Name = "Nồi cơm điện cao tần Sunhouse 1.5 lít SHD8955",
+                      Description = " ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/131925/sunhouse-mama-shd8955-0-600x600.jpg",
+                      quantity = 1000,
+                      price = 1890000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 82,
+                      Name = "Nồi cơm điện tử Sharp 1.8 lít KS-COM183MV-WH",
+                      Description = " ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/296809/noi-com-dien-tu-sharp-18-lit-ks-com183mv-wh-021122-102925-600x600.jpg",
+                      quantity = 1000,
+                      price = 990000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 83,
+                      Name = "Nồi cơm nắp gài Sunhouse 1.8 lít SHD 8661",
+                      Description = " ",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/72067/sunhouse-mama-shd-8661-220923-113258-600x600.jpg",
+                      quantity = 1000,
+                      price = 1440000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 80,
+                      Name = "",
+                      Description = " ",
+                      ImageUrl = "",
+                      quantity = 1000,
+                      price = 7690000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
                   }
 
 
