@@ -2973,6 +2973,1672 @@ namespace SWP391_BL3W.Database
                     ProductId = 10,
                 }
                 );
+            modelBuilder.Entity<Images>().HasData(
+                new Images
+                {
+                   Id = 1,
+                   Url= "https://cdn.tgdd.vn/Products/Images/1989/73312/Slider/vi-vn-1.jpg"+
+                   "https://cdn.tgdd.vn/Products/Images/1989/73312/Slider/Untitled-1-780x433-1.jpg"+
+                   "https://cdn.tgdd.vn/Products/Images/1989/73312/Slider/Untitled-1-780x433.jpg",
+                   ProductId = 1,
+
+                },
+                new Images
+                {
+                    Id = 2,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/74480/Slider/vi-vn-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/74480/Slider/vi-vn-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/74480/Slider/vi-vn-3.jpg",
+                    ProductId = 2,
+
+                },
+                new Images
+                {
+                    Id = 3,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/210263/Slider/vi-vn-thiet-ke-(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/210263/Slider/vi-vn-dung-tich-(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/210263/Slider/congsuat-780x433.jpg",
+                    ProductId = 3,
+
+                },
+                new Images
+                {
+                    Id = 4,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/68568/Slider/vi-vn-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/68568/Slider/vi-vn-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/68568/Slider/vi-vn-3.jpg",
+                    ProductId = 4,
+
+                },
+                new Images
+                {
+                    Id = 5,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/304876/Slider/binh-dun-sieu-toc-dien-quang-1.8-lit-dq-ekt06-1518-bl638210654167272451.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/304876/Slider/binh-dun-sieu-toc-dien-quang-1.8-lit-dq-ekt06-1518-bl638210654168202480.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/304876/Slider/binh-dun-sieu-toc-dien-quang-1.8-lit-dq-ekt06-1518-bl638210654169122563.jpg",
+                    ProductId = 5,
+
+                },
+                new Images
+                {
+                    Id = 6,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/255619/Slider/vi-vn-sunhouse-18-lit-shd1351-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/255619/Slider/vi-vn-sunhouse-18-lit-shd1351-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/255619/Slider/vi-vn-sunhouse-18-lit-shd1351-4.jpg",
+                    ProductId = 6,
+
+                },
+                new Images
+                {
+                    Id = 7,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/255623/Slider/vi-vn-sunhouse-18-lit-shd1353--(2).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/255623/Slider/vi-vn-sunhouse-18-lit-shd1353--(3).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/255623/Slider/vi-vn-sunhouse-18-lit-shd1353--(4).jpg",
+                    ProductId = 7,
+
+                },
+                new Images
+                {
+                    Id = 8,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/294038/Slider/binh-dun-sieu-toc-sunhouse-mama-18-lit-shd1389638060923030465278.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/294038/Slider/binh-dun-sieu-toc-sunhouse-mama-18-lit-shd1389638060923031375346.jpg " +
+                   "https://cdn.tgdd.vn/Products/Images/1989/294038/Slider/binh-dun-sieu-toc-sunhouse-mama-18-lit-shd1389638060923032445291.jpgv",
+                    ProductId = 8,
+
+                },
+                new Images
+                {
+                    Id = 9,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/322756/binh-dun-sieu-toc-bear-15-lit-bek-e153w2-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/322756/binh-dun-sieu-toc-bear-15-lit-bek-e153w2-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/322756/binh-dun-sieu-toc-bear-15-lit-bek-e153w2-4.jpg",
+                    ProductId = 9,
+
+                },
+                new Images
+                {
+                    Id = 10,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/193481/Slider/vi-vn-thiet-ke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/193481/Slider/cong-suat-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/193481/Slider/vi-vn-dung-tich.jpg",
+                    ProductId = 10,
+
+                },
+                new Images
+                {
+                    Id = 11,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/224396/Slider/vi-vn-thietke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/224396/Slider/-congsuat-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/224396/Slider/vi-vn-dungtich.jpg",
+                    ProductId = 11,
+
+                },
+                new Images
+                {
+                    Id = 12,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/216199/Slider/vi-vn-thietke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/216199/Slider/vi-vn-congsuat.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/216199/Slider/vi-vn-dungtich.jpg",
+                    ProductId = 12,
+
+                },
+                new Images
+                {
+                    Id = 13,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/177836/Slider/vi-vn-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/177836/Slider/Untitled-2-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/177836/Slider/vi-vn-2.jpg",
+                    ProductId = 13,
+
+                },
+                new Images
+                {
+                    Id = 14,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/283616/Slider/sunhouse-mama-17-lit-shd1330637944466480780750.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/283616/Slider/sunhouse-mama-17-lit-shd1330637944466481600801.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/283616/Slider/sunhouse-mama-17-lit-shd1330637944466485200682.jpg",
+                    ProductId = 14,
+
+                },
+                new Images
+                {
+                    Id = 15,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/177647/Slider/Untitled-2-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/177647/Slider/vi-vn-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/177647/Slider/vi-vn-3.jpg",
+                    ProductId = 15,
+
+                },
+                new Images
+                {
+                    Id = 16,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/217362/Slider/vi-vn-thietke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/217362/Slider/a4-780x433.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/217362/Slider/vi-vn-dungtich.jpg",
+                    ProductId = 16,
+
+                },
+                new Images
+                {
+                    Id = 17,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/204621/Slider/vi-vn-binh-dun-sieu-toc-toshiba-kt-17dr1nv-(6).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/204621/Slider/vi-vn-binh-dun-sieu-toc-toshiba-kt-17dr1nv-(4).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/204621/Slider/a2-780x433.png",
+                    ProductId = 17,
+
+                },
+                new Images
+                {
+                    Id = 18,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/203066/Slider/vi-vn-binh-dun-sieu-toc-bluestone-ktb-3417-7.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/203066/Slider/vi-vn-binh-dun-sieu-toc-bluestone-ktb-3417-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/203066/Slider/thumb-780x433.jpg",
+                    ProductId = 18,
+
+                },
+                new Images
+                {
+                    Id = 19,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/320458/binh-dun-sieu-toc-rapido-17-lit-rk1717-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/320458/binh-dun-sieu-toc-rapido-17-lit-rk1717-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/320458/binh-dun-sieu-toc-rapido-17-lit-rk1717-4.jpg",
+                    ProductId = 19,
+
+                },
+                new Images
+                {
+                    Id = 20,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1989/224405/Slider/vi-vn-thietke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/224405/Slider/vi-vn-congsuat.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1989/224405/Slider/vi-vn-dungtich.jpg",
+                    ProductId = 20,
+
+                },
+                new Images
+                {
+                    Id = 21,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/252058/Slider/2KG855i-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/252058/Slider/doi-kangaroo-kg855i637841516149397546.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/252058/Slider/doi-kangaroo-kg855i637841516150627512.jpg",
+                    ProductId = 21,
+
+                },
+                new Images
+                {
+                    Id = 22,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/236629/Slider/doi-hafele-hc-i2712a637709265189907349.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/236629/Slider/doi-hafele-hc-i2712a637709274051416304.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/236629/Slider/doi-hafele-hc-i2712a637709274053406269.jpg",
+                    ProductId = 22,
+
+                },
+                new Images
+                {
+                    Id = 23,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/236229/Slider/hafele-hc-i2732a638283148159663228.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/236229/Slider/hafele-hc-i2732a638283148161073382.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/236229/Slider/hafele-hc-i2732a638277628983499420.jpg",
+                    ProductId = 23,
+
+                },
+                new Images
+                {
+                    Id = 24,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/237344/Slider/doi-pramie-2208638306537136599246.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/237344/Slider/vi-vn-doi-pramie-2208-230721-0436562.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/237344/Slider/doi-pramie-2208-230721-0436578.jpg",
+                    ProductId = 24,
+
+                },
+                new Images
+                {
+                    Id = 25,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/285114/ava-ai-32-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/285114/ava-ai-32-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/285114/ava-ai-32-9.jpg",
+                    ProductId = 25,
+
+                },
+                new Images
+                {
+                    Id = 26,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-1-min.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-2-min.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-3-min.jpg",
+                    ProductId = 26,
+
+                },
+                new Images
+                {
+                    Id = 27,
+                    Url = "https://cdn.tgdd.vn/Products/Images/3305/271886/Slider/-shd-6015-2-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/271886/Slider/-shd-6015-3-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/271886/Slider/-shd-6015-4-780x433.jpg",
+                    ProductId = 27,
+
+                },
+                new Images
+                {
+                    Id = 28,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/317824/Slider/bep-tu-hong-ngoai-lap-am-hafele-hc-h7321b638345157188439325.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/317824/Slider/bep-tu-hong-ngoai-lap-am-hafele-hc-h7321b638345157187419347.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/317824/Slider/bep-tu-hong-ngoai-lap-am-hafele-hc-h7321b638345157186249325.jpg",
+                    ProductId = 28,
+
+                },
+                new Images
+                {
+                    Id = 29,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/252514/hommy-fym20-71-4-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/252514/hommy-fym20-71-3-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/252514/hommy-fym20-71-9.jpg",
+                    ProductId = 29,
+
+                },
+                new Images
+                {
+                    Id = 30,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/234972/Slider/vi-vn-thietkefinal.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/234972/Slider/galanz-ch211e637701457133462016.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/234972/Slider/vi-vn-matbepfinal.jpg",
+                    ProductId = 30,
+
+                },
+                new Images
+                {
+                    Id = 31,
+                    Url = "https://cdn.tgdd.vn/Products/Images/3305/63990/Slider/vi-vn-at-2524hgn-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/63990/Slider/-hong-ngoai-sanaky-at-2524hgn-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/63990/Slider/vi-vn-at-2524hgn-3.jpg",
+                    ProductId = 31,
+
+                },
+                new Images
+                {
+                    Id = 32,
+                    Url = "https://cdn.tgdd.vn/Products/Images/3305/229373/Slider/151020-1117081.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/229373/Slider/151020-1117092.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/229373/Slider/151020-1117113.jpg",
+                    ProductId = 32,
+
+                },
+                new Images
+                {
+                    Id = 33,
+                    Url = "https://cdn.tgdd.vn/Products/Images/3305/236648/Slider/tongcongsuat-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/236648/Slider/3-vung-nau-hafele-hc-r603d-080421-1127511.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/3305/236648/Slider/3-vung-nau-hafele-hc-r603d-080421-1127500.jpg",
+                    ProductId = 33,
+
+                },
+                new Images
+                {
+                    Id = 34,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/318695/bep-tu-4-vung-nau-lap-am-bosch-pvq731f15e-2-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/318695/bep-tu-4-vung-nau-lap-am-bosch-pvq731f15e-3-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/318695/bep-tu-4-vung-nau-lap-am-bosch-pvq731f15e-4-1.jpg",
+                    ProductId = 34,
+
+                },
+                new Images
+                {
+                    Id = 35,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/318692/Slider/bep-tu-3-vung-nau-lap-am-bosch-puj611bb5e638405788887736001.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/318692/Slider/bep-tu-3-vung-nau-lap-am-bosch-puj611bb5e638405788587167004.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1982/318692/Slider/bep-tu-3-vung-nau-lap-am-bosch-puj611bb5e638405788583007035.jpg",
+                    ProductId = 35,
+
+                },
+                new Images
+                {
+                    Id = 36,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/279933/Slider/vi-vn-smart-samsung-4k-55-inch-ua55au7002-02.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/279933/Slider/vi-vn-smart-samsung-4k-55-inch-ua55au7002-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/279933/Slider/vi-vn-smart-samsung-4k-55-inch-ua55au7002-4.jpg",
+                    ProductId = 36,
+
+                },
+                new Images
+                {
+                    Id = 37,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/303514/Slider/vi-vn-google-tivi-qled-tcl-4k-65-inch-65q646-02.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303514/Slider/vi-vn-google-tivi-qled-tcl-4k-65-inch-65q646-03.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303514/Slider/vi-vn-google-tivi-qled-tcl-4k-65-inch-65q646-05.jpg",
+                    ProductId = 37,
+
+                },
+                new Images
+                {
+                    Id = 38,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/273391/Slider/smart-samsung-4k-55-inch-ua55bu8000637890761528510276.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/273391/Slider/smart-samsung-4k-55-inch-ua55bu8000637890761529460408.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/273391/Slider/smart-samsung-4k-55-inch-ua55bu8000637890761530420342.jpg",
+                    ProductId = 38,
+
+                },
+                new Images
+                {
+                    Id = 39,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/278555/Slider/vi-vn-smart-lg-4k-65-inch-65uq8000psc-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/278555/Slider/vi-vn-smart-lg-4k-65-inch-65uq8000psc-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/278555/Slider/vi-vn-smart-lg-4k-65-inch-65uq8000psc-4.jpg",
+                    ProductId = 39,
+
+                },
+                new Images
+                {
+                    Id = 40,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/279935/Slider/smart-samsung-4k-43-inch-ua43au7002638022060998318047.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/279935/Slider/vi-vn-smart-samsung-4k-43-inch-ua43au7002-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/279935/Slider/vi-vn-smart-samsung-4k-43-inch-ua43au7002-5.jpg",
+                    ProductId = 40,
+
+                },
+                new Images
+                {
+                    Id = 41,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/303225/Slider/vi-vn-smart-tivi-qled-4k-55-inch-samsung-qa55q60c-5.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303225/Slider/vi-vn-smart-tivi-qled-4k-55-inch-samsung-qa55q60c-006.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303225/Slider/vi-vn-smart-tivi-qled-4k-55-inch-samsung-qa55q60c-9.jpg",
+                    ProductId = 41,
+
+                },
+                new Images
+                {
+                    Id = 42,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/303231/Slider/vi-vn-smart-tivi-samsung-4k-55-inch-ua55cu8000-2.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303231/Slider/vi-vn-smart-tivi-samsung-4k-55-inch-ua55cu8000-4.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303231/Slider/vi-vn-smart-tivi-samsung-4k-55-inch-ua55cu8000-8.png",
+                    ProductId = 42,
+
+                },
+                new Images
+                {
+                    Id = 43,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/278575/Slider/vi-vn-smart-nanocell-lg-4k-65-inch-65nano76sqa-2.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/278575/Slider/vi-vn-smart-nanocell-lg-4k-65-inch-65nano76sqa-3.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/278575/Slider/vi-vn-smart-nanocell-lg-4k-65-inch-65nano76sqa-4.jpg",
+                    ProductId = 43,
+
+                },
+                new Images
+                {
+                    Id = 44,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/306073/Slider/google-tivi-tcl-43-inch-43s5400638223489862454084.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/306073/Slider/google-tivi-tcl-43-inch-43s5400638223489863354037.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/306073/Slider/google-tivi-tcl-43-inch-43s5400638223489864254065.jpg",
+                    ProductId = 44,
+
+                },
+                new Images
+                {
+                    Id = 45,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/303224/Slider/vi-vn-smart-tivi-qled-4k-65-inch-samsung-qa65q60c-006.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303224/Slider/vi-vn-smart-tivi-qled-4k-65-inch-samsung-qa65q60c-9.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303224/Slider/vi-vn-smart-tivi-qled-4k-65-inch-samsung-qa65q60c-10.jpg",
+                    ProductId = 45,
+
+                },
+                new Images
+                {
+                    Id = 46,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972278342842.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972277412853.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972276662851.jpg",
+                    ProductId = 46,
+
+                },
+                new Images
+                {
+                    Id = 47,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/306075/Slider/google-tivi-tcl-32-inch-32s5400638223490700146555.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/306075/Slider/google-tivi-tcl-32-inch-32s5400638223490701116452.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/306075/Slider/google-tivi-tcl-32-inch-32s5400638223490702106380.jpg",
+                    ProductId = 47,
+
+                },
+                new Images
+                {
+                    Id = 48,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/278576/Slider/vi-vn-smart-nanocell-lg-4k-55-inch-55nano76sqa-2.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/278576/Slider/vi-vn-smart-nanocell-lg-4k-55-inch-55nano76sqa-3.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/278576/Slider/vi-vn-smart-nanocell-lg-4k-55-inch-55nano76sqa-4.jpg",
+                    ProductId = 48,
+
+                },
+                new Images
+                {
+                    Id = 49,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/311367/Slider/smart-tivi-toshiba-43-inch-43v31mp638342996419458470.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/311367/Slider/smart-tivi-toshiba-43-inch-43v31mp638342996422198459.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/311367/Slider/smart-tivi-toshiba-43-inch-43v31mp638342996424168464.png",
+                    ProductId = 49,
+
+                },
+                new Images
+                {
+                    Id = 50,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1942/303230/Slider/vi-vn-smart-tivi-samsung-4k-65-inch-ua65cu8000-2.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303230/Slider/vi-vn-smart-tivi-samsung-4k-65-inch-ua65cu8000-4.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1942/303230/Slider/vi-vn-smart-tivi-samsung-4k-65-inch-ua65cu8000-8.png",
+                    ProductId = 50,
+
+                },
+                new Images
+                {
+                    Id = 51,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/220325/Slider/02-1020x571.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/220325/Slider/03-1020x571.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/220325/Slider/06-1020x571.jpg",
+                    ProductId = 51,
+
+                },
+                new Images
+                {
+                    Id = 52,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/220326/Slider/1-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/220326/Slider/2-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/220326/Slider/4-1020x570-1.jpg",
+                    ProductId = 52,
+
+                },
+                new Images
+                {
+                    Id = 53,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/236609/Slider/aqua-aqr-t150fa-bs-050821-0710241.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/236609/Slider/aqua-aqr-t150fa-bs-100821-0218070.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/236609/Slider/aqua-aqr-t150fa-bs-210821-1005141.jpg",
+                    ProductId = 53,
+
+                },
+                new Images
+                {
+                    Id = 54,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/304189/Slider/tu-lanh-aqua-aqr-t220fa-fb638170798790132815.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/304189/Slider/tu-lanh-aqua-aqr-t220fa-fb638170798792382855.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/304189/Slider/tu-lanh-aqua-aqr-t220fa-fb638170798793442838.jpg",
+                    ProductId = 54,
+
+                },
+                new Images
+                {
+                    Id = 55,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/202857/Slider/2-1020x570.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/202857/Slider/toshiba-gr-b22vu-ukg-050821-1121262.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/202857/Slider/198-1020x570.jpg",
+                    ProductId = 55,
+
+                },
+                new Images
+                {
+                    Id = 56,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/230195/Slider/2-1020x570.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/230195/Slider/3-1020x570-1.png" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/230195/Slider/3-1020x570-1.png",
+                    ProductId = 56,
+
+                },
+                new Images
+                {
+                    Id = 57,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/294558/tu-lanh-lg-gv-b212wb2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/294558/tu-lanh-lg-gv-b212wb3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/294558/tu-lanh-lg-gv-b212wb4.jpg",
+                    ProductId = 57,
+
+                },
+                new Images
+                {
+                    Id = 58,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/306554/samsung-inverter-382-lit-rt38cg6584b1sv-5.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/306554/samsung-inverter-382-lit-rt38cg6584b1sv-6.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/306554/samsung-inverter-382-lit-rt38cg6584b1sv-7.jpg",
+                    ProductId = 58,
+
+                },
+                new Images
+                {
+                    Id = 59,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/220320/Slider/samsung-rt20har8dbu-sv-080821-0639042.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/220320/Slider/RT20HAR8DBUV-2-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/220320/Slider/RT20HAR8DBUV-4-1020x570.jpg",
+                    ProductId = 59,
+
+                },
+                new Images
+                {
+                    Id = 60,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/225858/Slider/samsung-rb27n4010bu-sv-080821-0341071.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/225858/Slider/samsung-rb27n4010bu-sv-210821-0601370.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/225858/Slider/225858-1020x570.png",
+                    ProductId = 60,
+
+                },
+                new Images
+                {
+                    Id = 61,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/307871/Slider/lg-gr-b256jds638216667257173349.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/307871/Slider/lg-gr-b256jds638216667258003283.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/307871/Slider/lg-gr-b256jds638216667258813389.jpg",
+                    ProductId =61,
+
+                },
+                new Images
+                {
+                    Id = 62,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/284851/Slider/tu-lanh-aqua-inverter-456-lit-aqr-m525xa(fb)638007604134225944.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/284851/Slider/tu-lanh-aqua-inverter-456-lit-aqr-m525xa(fb)638007603868094190.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/284851/Slider/tu-lanh-aqua-inverter-456-lit-aqr-m525xa(fb)638007603817113795.jpg",
+                    ProductId = 62,
+
+                },
+                new Images
+                {
+                    Id = 63,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/303228/Slider/tu-lanh-toshiba-inverter-460-lit-gr-rs600wi-pmv-37-sg638164760509272052.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/303228/Slider/tu-lanh-toshiba-inverter-460-lit-gr-rs600wi-pmv-37-sg638164760510222056.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/303228/Slider/tu-lanh-toshiba-inverter-460-lit-gr-rs600wi-pmv-37-sg638164760511042060.jpg",
+                    ProductId = 63,
+
+                },
+                new Images
+                {
+                    Id = 64,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/310574/Slider/aqua-inverter-279-lit-aqr-t300fa-wfb638339343064927731.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/310574/Slider/aqua-inverter-279-lit-aqr-t300fa-wfb638339343066856041.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/310574/Slider/aqua-inverter-279-lit-aqr-t300fa-wfb638339343067926248.jpg",
+                    ProductId = 64,
+
+                },
+                new Images
+                {
+                    Id = 65,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1943/306130/Slider/tu-lanh-aqua-aqr-t400fa-fb638192404755929362-1020x571.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/306130/Slider/tu-lanh-aqua-aqr-t400fa-fb638192404757959374.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1943/306130/Slider/tu-lanh-aqua-aqr-t400fa-fb638192404760909361.jpg",
+                    ProductId = 65,
+
+                },
+                new Images
+                {
+                    Id = 66,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/310181/Slider/sharp-75-kg-es-y75hv-s638301121296906251.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/310181/Slider/sharp-75-kg-es-y75hv-s638301121297826281.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/310181/Slider/sharp-75-kg-es-y75hv-s638301121298706292.jpg",
+                    ProductId = 66,
+
+                },
+                new Images
+                {
+                    Id = 67,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/310181/Slider/sharp-75-kg-es-y75hv-s638301121298706292.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/271700/Slider/samsung-inverter-9-kg-ww90t3040ww-sv637802618087619203.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/271700/Slider/samsung-inverter-9-kg-ww90t3040ww-sv637802618090279194.jpg",
+                    ProductId = 67,
+
+                },
+                new Images
+                {
+                    Id = 68,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/271700/Slider/samsung-inverter-9-kg-ww90t3040ww-sv637802618090279194.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/227973/Slider/vi-vn-giat-nuoc-nong-panasonic-na-fd95v1brv-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/227973/Slider/vi-vn-bot-min-panasonic-na-fd95v1brv-4.jpg",
+                    ProductId = 68,
+
+                },
+                new Images
+                {
+                    Id = 69,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/248802/Slider/vi-vn-may-giat-samsung-inverter-8kg-ww80t3020ww-sv-03.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/248802/Slider/vi-vn-may-giat-samsung-inverter-8kg-ww80t3020ww-sv-04.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/248802/Slider/vi-vn-may-giat-samsung-inverter-8kg-ww80t3020ww-sv-05.jpg",
+                    ProductId = 69,
+
+                },
+                new Images
+                {
+                    Id = 70,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/239156/Slider/vi-vn-toshiba-7-kg-aw-l805av-sg03.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/239156/Slider/toshiba-7-kg-aw-l805av-sg-4-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/239156/Slider/toshiba-7-kg-aw-l805av-sg-3-1020x570.jpg",
+                    ProductId = 70,
+
+                },
+                new Images
+                {
+                    Id = 71,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/302751/Slider/chuong-trinh-giat-may-giat-samsung-12kg-wa12cg5745bvsv-1018x575.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/302751/Slider/may-giat-samsung-12kg-wa12cg5745bvsv638276204011022314.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/302751/Slider/may-giat-samsung-12kg-wa12cg5745bvsv638276204012042319.jpg",
+                    ProductId = 71,
+
+                },
+                new Images
+                {
+                    Id = 72,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/212130/Slider/3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/212130/Slider/vi-vn-giat-nuoc-nong--panasonic-na-fd10vr1bv-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/212130/Slider/vi-vn-bot-min-panasonic-na-fd10vr1bv-4.jpg",
+                    ProductId = 72,
+
+                },
+                new Images
+                {
+                    Id = 73,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800876583179.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800877523143.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800880043169.jpg",
+                    ProductId = 73,
+
+                },
+                new Images
+                {
+                    Id = 74,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800876583179.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800877523143.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800880043169.jpg",
+                    ProductId = 74,
+
+                },
+                new Images
+                {
+                    Id = 75,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/316217/electrolux-inverter-9-kg-ewf9025dqwb2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/316217/electrolux-inverter-9-kg-ewf9025dqwb3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/316217/electrolux-inverter-9-kg-ewf9025dqwb4.jpg",
+                    ProductId = 75,
+
+                },
+                new Images
+                {
+                    Id = 76,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/274173/Slider/aqua-aqd-d902g-bk637828528027737733.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/274173/Slider/aqua-aqd-d902g-bk637828528028857718.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/274173/Slider/06-1020x570.jpg",
+                    ProductId = 76,
+
+                },
+                new Images
+                {
+                    Id = 77,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/230077/Slider/5-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/230077/Slider/7-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/230077/Slider/8-1020x570.jpg",
+                    ProductId = 77,
+
+                },
+                new Images
+                {
+                    Id = 78,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/236158/Slider/3-1020x570-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/236158/Slider/4-1020x570-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/236158/Slider/4-1020x570-1.jpg",
+                    ProductId = 78,
+
+                },
+                new Images
+                {
+                    Id = 79,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/316042/Slider/casper-75-kg-wt-75ng1638349734854518930.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/316042/Slider/casper-75-kg-wt-75ng1638349734855308947.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/316042/Slider/casper-75-kg-wt-75ng1638349734856288998.jpg",
+                    ProductId = 79,
+
+                },
+                new Images
+                {
+                    Id = 80,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1944/307863/Slider/4-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/307863/Slider/5-1018x575.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1944/307863/Slider/may-giat-aqua-inverter-9-5-kg-aqd-a952j-bk638271882394422354.jpg",
+                    ProductId = 80,
+
+                },
+                new Images
+                {
+                    Id = 81,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/131925/Slider/sunhouse-mama-shd8955-210221-1016161.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/131925/Slider/sunhouse-mama-shd8955-210221-1016192.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/131925/Slider/a6-780x433.png",
+                    ProductId = 81,
+
+                },
+                new Images
+                {
+                    Id = 82,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/296809/Slider/noi-com-dien-tu-sharp-18-lit-ks-com183mv-wh638144080436398647.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/296809/Slider/noi-com-dien-tu-sharp-18-lit-ks-com183mv-wh638144080743600911.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/296809/Slider/sharp-18-lit-ks-com183mv-wh-5--2--1020x570.jpg",
+                    ProductId = 82,
+
+                },
+                new Images
+                {
+                    Id = 83,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/296809/Slider/sharp-18-lit-ks-com183mv-wh-5--2--1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/72067/Slider/vi-vn-cong-nghe-nau3d.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/72067/Slider/NO2-780x433-A-780x433.jpg",
+                    ProductId = 83,
+
+                },
+                new Images
+                {
+                    Id = 84,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/152969/Slider/delites-ncg1805-010721-0921571.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/152969/Slider/delites-ncg1805-010721-0921572.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/152969/Slider/delites-ncg1805-010721-0921573.jpg",
+                    ProductId = 84,
+
+                },
+                new Images
+                {
+                    Id = 85,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/152969/Slider/delites-ncg1805-010721-0921573.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/189688/Slider/vi-vn-bluestone-rcb-5520-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/189688/Slider/vi-vn-bluestone-rcb-5520-4.jpg",
+                    ProductId = 85,
+
+                },
+                new Images
+                {
+                    Id = 86,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/189688/Slider/vi-vn-bluestone-rcb-5520-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/203417/Slider/-dung-tich.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/203417/Slider/vi-vn-cong-nghe-nau1d.jpg",
+                    ProductId = 86,
+
+                },
+                new Images
+                {
+                    Id = 87,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/147243/Slider/-delites-ncr1502.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/147243/Slider/n%E1%BB%93i-c%C6%A1m-n%E1%BA%AFp-r%E1%BB%9Di-delites-ncr1502-111120-0416280.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/147243/Slider/-8.jpg",
+                    ProductId = 87,
+
+                },
+                new Images
+                {
+                    Id = 88,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/147243/Slider/-8.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/275584/Slider/hinh-3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/275584/Slider/vi-vn-sunhouse-12-lit-shd8217w-4.jpg",
+                    ProductId = 88,
+
+                },
+                new Images
+                {
+                    Id = 89,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/218094/Slider/vi-vn-thiet-ke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/218094/Slider/vi-vn-dung-tich.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/218094/Slider/vi-vn-chat-lieu-long-noi.jpg",
+                    ProductId = 89,
+
+                },
+                new Images
+                {
+                    Id = 90,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/219451/Slider/vi-vn-noi-com-nap-gai-toshiba-rc-10jh2pv-b-1l-(1).png" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/219451/Slider/vi-vn-cong-nghe-nau1d-in-thuong.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/219451/Slider/vi-vn-bang-dieu-khien.jpg",
+                    ProductId = 90,
+
+                },
+                new Images
+                {
+                    Id = 91,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/240395/Slider/171121-0928471.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/240395/Slider/171121-0928482.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/240395/Slider/171121-0928483.jpg",
+                    ProductId = 91,
+
+                },
+                new Images
+                {
+                    Id = 92,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/92601/Slider/vi-vn-toshiba-rc-18nmfvn-wt-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/92601/Slider/vi-vn-toshiba-rc-18nmfvn-wt-10.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/92601/Slider/vi-vn-cong-nghe-nau3d.jpg",
+                    ProductId = 92,
+
+                },
+                new Images
+                {
+                    Id = 93,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/220502/Slider/-thiet-ke.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/220502/Slider/-dung-tich-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/220502/Slider/vi-vn-cong-nghe-nau1d.jpg",
+                    ProductId = 93,
+
+                },
+                new Images
+                {
+                    Id = 94,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/131916/Slider/sunhouse-mama-shd8903-210221-0720211.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/131916/Slider/sunhouse-mama-shd8903-210221-0720222.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/131916/Slider/sunhouse-mama-shd8903-210221-0720222.jpg",
+                    ProductId = 94,
+
+                },
+                new Images
+                {
+                    Id = 95,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1922/220499/Slider/vi-vn-thietke2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/220499/Slider/vi-vn-dung-tich.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1922/220499/Slider/vi-vn-cong-nghe-nau3d.jpg",
+                    ProductId = 95,
+
+                },
+                new Images
+                {
+                    Id = 96,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/214631/Slider/vi-vn-dalton-ts-15g600x-18.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/214631/Slider/1-780x433-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/214631/Slider/vi-vn-dalton-ts-15g600x-13.jpg",
+                    ProductId = 96,
+
+                },
+                new Images
+                {
+                    Id = 97,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/278796/Slider/keo-karaoke-nanomax-s-820637950311729789327.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/278796/Slider/keo-karaoke-nanomax-s-820637950311732449371.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/278796/Slider/keo-karaoke-nanomax-s-820637950311734499431.jpg",
+                    ProductId = 97,
+
+                },
+                new Images
+                {
+                    Id = 98,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/308043/Slider/vi-vn-loa-keo-karaoke-nanomax-x-2000-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/308043/Slider/vi-vn-loa-keo-karaoke-nanomax-x-2000-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/308043/Slider/vi-vn-loa-keo-karaoke-nanomax-x-2000-4.jpg",
+                    ProductId = 98,
+
+                },
+                new Images
+                {
+                    Id = 99,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/236681/Slider/vi-vn-keo-mobell-mk-2120c--(2).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/236681/Slider/vi-vn-keo-mobell-mk-2120c--(3).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/236681/Slider/vi-vn-keo-mobell-mk-2120c--(4).jpg",
+                    ProductId = 99,
+
+                },
+                new Images
+                {
+                    Id = 100,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/306932/Slider/vi-vn-loa-keo-karaoke-dalton-ts-12g350n-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/306932/Slider/vi-vn-loa-keo-karaoke-dalton-ts-12g350n-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/306932/Slider/vi-vn-loa-keo-karaoke-dalton-ts-12g350n-4.jpg",
+                    ProductId = 100,
+
+                },
+                new Images
+                {
+                    Id = 101,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/306932/Slider/vi-vn-loa-keo-karaoke-dalton-ts-12g350n-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/214636/Slider/060421-1014372-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/214636/Slider/060421-1014340.jpg",
+                    ProductId = 101,
+
+                },
+                new Images
+                {
+                    Id = 102,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/226094/Slider/nanomax-s-1000-060421-1208261.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/226094/Slider/nanomax-s-1000-060421-1208272.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/226094/Slider/nanomax-s-1000-060421-1208283.jpg",
+                    ProductId = 102,
+
+                },
+                new Images
+                {
+                    Id = 103,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/297489/Slider/vi-vn-loa-karaoke-nanomax-s-5000-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/297489/Slider/vi-vn-loa-karaoke-nanomax-s-5000-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/297489/Slider/vi-vn-loa-karaoke-nanomax-s-5000-4.jpg",
+                    ProductId = 103,
+
+                },
+                new Images
+                {
+                    Id = 104,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/297489/Slider/vi-vn-loa-karaoke-nanomax-s-5000-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/278932/Slider/loa-karaoke-dalton-ts-18a8500637923556233422401.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/278932/Slider/loa-karaoke-dalton-ts-18a8500637923556232132456.jpg",
+                    ProductId = 104,
+
+                },
+                new Images
+                {
+                    Id = 105,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/232105/Slider/loa-karaoke-nanomax-s-900-091220-1142290.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/232105/Slider/loa-karaoke-nanomax-s-900-091220-1142311.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/232105/Slider/loa-karaoke-nanomax-s-900-091220-1142322.jpg",
+                    ProductId = 105,
+
+                },
+                new Images
+                {
+                    Id = 106,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/226090/Slider/dalton-ts-12g450x-060421-0220311.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/226090/Slider/dalton-ts-12g450x-060421-0220322.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/226090/Slider/dalton-ts-12g450x-060421-0220333.jpg",
+                    ProductId = 106,
+
+                },
+                new Images
+                {
+                    Id = 107,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/304091/Slider/vi-vn-loa-keo-karaoke-birici-nb-6889-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/304091/Slider/vi-vn-loa-keo-karaoke-birici-nb-6889-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/304091/Slider/vi-vn-loa-keo-karaoke-birici-nb-6889-4.jpg",
+                    ProductId = 107,
+
+                },
+                new Images
+                {
+                    Id = 108,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/220699/Slider/samsung-mx-t70-xv-120421-0325321.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/220699/Slider/samsung-mx-t70-xv-120421-0325332.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/220699/Slider/samsung-mx-t70-xv-120421-0325344.jpg",
+                    ProductId = 108,
+
+                },
+                new Images
+                {
+                    Id = 109,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/210260/Slider/dalton-ts-18a1500-110421-1042071.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/210260/Slider/dalton-ts-18a1500-110421-1042082.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/210260/Slider/dalton-ts-18a1500-110421-1042093.jpg",
+                    ProductId = 109,
+
+                },
+                new Images
+                {
+                    Id = 110,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2162/268876/Slider/loa-keo-karaoke-mobell-mk-5070637780988717215598.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/268876/Slider/loa-keo-karaoke-mobell-mk-5070637780988715785825.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2162/268876/Slider/loa-keo-karaoke-mobell-mk-5070637780988720605323.jpg",
+                    ProductId = 110,
+
+                },
+                new Images
+                {
+                    Id = 111,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/199117/Slider/vi-vn-sunhouse-shd7727-kg--(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/199117/Slider/vi-vn-vi-vn-vi-vn-vi-vn-sunhouse-shd7727-kg--(4).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/199117/Slider/vi-vn-sunhouse-shd7727-kg--(2).jpg",
+                    ProductId = 111,
+
+                },
+                new Images
+                {
+                    Id = 112,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/199117/Slider/vi-vn-sunhouse-shd7727-kg--(2).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/320997/quat-dieu-hoa-daikiosan-dm103-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/320997/quat-dieu-hoa-daikiosan-dm103-2.jpg",
+                    ProductId = 112,
+
+                },
+                new Images
+                {
+                    Id = 113,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/272138/Slider/ava-rpd-80637892556893691639.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/272138/Slider/ava-rpd-80637892556894541546.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/272138/Slider/ava-rpd-80637892556899521529.gif",
+                    ProductId = 113,
+
+                },
+                new Images
+                {
+                    Id = 114,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/320996/quat-dieu-hoa-daikiosan-dm102-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/320996/quat-dieu-hoa-daikiosan-dm102-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/320996/quat-dieu-hoa-daikiosan-dm102-4.jpg",
+                    ProductId = 114,
+
+                },
+                new Images
+                {
+                    Id = 115,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/218312/Slider/vi-vn-may-lam-mat-khong-khi-kangaroo-kg50f62-(8).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/218312/Slider/vi-vn-may-lam-mat-khong-khi-kangaroo-kg50f62-(8).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/218312/Slider/-vi-vn-may-lam-mat-khong-khi-kangaroo-kg50f62-(1)-copy.jpg",
+                    ProductId = 115,
+
+                },
+                new Images
+                {
+                    Id = 116,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/321978/quat-dieu-hoa-sunhouse-shd7745-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321978/quat-dieu-hoa-sunhouse-shd7745-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321978/quat-dieu-hoa-sunhouse-shd7745-4.jpg",
+                    ProductId = 116,
+
+                },
+                new Images
+                {
+                    Id = 117,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/319779/quat-dieu-hoa-delites-rpd-30-12.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/319779/quat-dieu-hoa-delites-rpd-30-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/319779/quat-dieu-hoa-delites-rpd-30-7.jpg",
+                    ProductId = 117,
+
+                },
+                new Images
+                {
+                    Id = 118,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/319781/quat-dieu-hoa-dmax-rpd-90-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/319781/quat-dieu-hoa-dmax-rpd-90-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/319781/quat-dieu-hoa-dmax-rpd-90-4.jpg",
+                    ProductId = 118,
+
+                },
+                new Images
+                {
+                    Id = 119,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/321770/quat-dieu-hoa-kangaroo-kg50f99-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321770/quat-dieu-hoa-kangaroo-kg50f99-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321770/quat-dieu-hoa-kangaroo-kg50f99-4.jpg",
+                    ProductId = 119,
+
+                },
+                new Images
+                {
+                    Id = 120,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/321770/quat-dieu-hoa-kangaroo-kg50f99-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321769/quat-dieu-hoa-kangaroo-kg50f95-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321769/quat-dieu-hoa-kangaroo-kg50f95-4.jpg",
+                    ProductId = 120,
+
+                },
+                new Images
+                {
+                    Id = 121,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/307875/Slider/quat-dieu-hoa-hoa-phat-hpcf1-012638441085709130066.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/307875/Slider/quat-dieu-hoa-hoa-phat-hpcf1-012638441085710240063.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/307875/Slider/quat-dieu-hoa-hoa-phat-hpcf1-012638441085711406269.jpg",
+                    ProductId = 121,
+
+                },
+                new Images
+                {
+                    Id = 122,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/321979/quat-dieu-hoa-sunhouse-shd7775-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321979/quat-dieu-hoa-sunhouse-shd7775-8.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/321979/quat-dieu-hoa-sunhouse-shd7775-9.jpg",
+                    ProductId = 122,
+
+                },
+                new Images
+                {
+                    Id = 123,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/219138/Slider/vi-vn-quat-dieu-hoa-khong-khi-rapido-9000d-(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/219138/Slider/Untitled-2-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/219138/Slider/quat-dieu-hoa-khong-khi-rapido-9000d-190821-0759520.jpg",
+                    ProductId = 123,
+
+                },
+                new Images
+                {
+                    Id = 124,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/320999/quat-dieu-hoa-daikiosan-dm202-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/320999/quat-dieu-hoa-daikiosan-dm202-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/320999/quat-dieu-hoa-daikiosan-dm202-4.jpg",
+                    ProductId = 124,
+
+                },
+                new Images
+                {
+                    Id = 125,
+                    Url = "https://cdn.tgdd.vn/Products/Images/7498/235380/Slider/thietke-780x433.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/235380/Slider/congsuat-780x433-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/7498/235380/Slider/dakho-780x433-1.jpg",
+                    ProductId = 125,
+
+                },
+                new Images
+                {
+                    Id = 126,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/307646/Slider/noi-chien-khong-dau-rapido-smart-70m-7-lit638215750178906564.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/307646/Slider/noi-chien-khong-dau-rapido-smart-70m-7-lit638215750177976576.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/307646/Slider/noi-chien-khong-dau-rapido-smart-70m-7-lit638215750176666568.jpg",
+                    ProductId = 126,
+
+                },
+                new Images
+                {
+                    Id = 127,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/258338/Slider/sunhouse-shd4062-55-lit-1a-min-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/258338/Slider/sunhouse-shd4062-55-lit637926342257456180.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/258338/Slider/sunhouse-shd4062-55-lit637926342256156195-1020x570--2--1020x570.jpg",
+                    ProductId = 127,
+
+                },
+                new Images
+                {
+                    Id = 128,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/304773/Slider/noi-chien-khong-dau-rapido-raf-80m-8-lit638240662592506879.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/304773/Slider/noi-chien-khong-dau-rapido-raf-80m-8-lit638318407391409045.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/304773/Slider/noi-chien-khong-dau-rapido-raf-80m-8-lit638240662590086953.jpg",
+                    ProductId = 128,
+
+                },
+                new Images
+                {
+                    Id = 129,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/240313/Slider/ava-kdf-593d-75lit637956538234543296.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/240313/Slider/tinh-nang-3-(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/240313/Slider/tinh-nang-5-(2).jpg",
+                    ProductId = 129,
+
+                },
+                new Images
+                {
+                    Id = 130,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/240297/Slider/ava-af358t-4-lit637956536037141108.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/240297/Slider/3-1020x573.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/240297/Slider/5-1020x570.jpg",
+                    ProductId = 130,
+
+                },
+                new Images
+                {
+                    Id = 131,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/275125/Slider/vi-vn-sunhouse-shd4035-9-lit-2.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/275125/Slider/vi-vn-sunhouse-shd4035-9-lit-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/275125/Slider/vi-vn-sunhouse-shd4035-9-lit-4--2--1020x570.jpg",
+                    ProductId = 131,
+
+                },
+                new Images
+                {
+                    Id = 132,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/249385/Slider/sunhouse-shd4026-6-lit-2-min-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/249385/Slider/sunhouse-shd4026-6-lit637919474989859767-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/249385/Slider/sunhouse-shd4026-6-lit637919474988859626-1020x570.jpg",
+                    ProductId = 132,
+
+                },
+                new Images
+                {
+                    Id = 133,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/309914/Slider/lo-chien-khong-dau-ferroli-faf-12m-12-lit638296194027111283.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/309914/Slider/lo-chien-khong-dau-ferroli-faf-12m-12-lit638296194028841288.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/309914/Slider/lo-chien-khong-dau-ferroli-faf-12m-12-lit638296194036871330.jpg",
+                    ProductId = 133,
+
+                },
+                new Images
+                {
+                    Id = 134,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/306722/Slider/vi-vn-noi-chien-khong-dau-toshiba-af-74cs2srvn-b-74-lit-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/306722/Slider/vi-vn-noi-chien-khong-dau-toshiba-af-74cs2srvn-b-74-lit-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/306722/Slider/vi-vn-noi-chien-khong-dau-toshiba-af-74cs2srvn-b-74-lit-4.jpg",
+                    ProductId = 134,
+
+                },
+                new Images
+                {
+                    Id = 135,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/306722/Slider/vi-vn-noi-chien-khong-dau-toshiba-af-74cs2srvn-b-74-lit-4.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/217595/Slider/3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/217595/Slider/noi-chien-khong-dau-kangaroo-kg55af1a-2-1020x570.jpg",
+                    ProductId = 135,
+
+                },
+                new Images
+                {
+                    Id = 136,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/233494/Slider/hafele-af-t5a-2-1020x570-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/233494/Slider/3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/233494/Slider/5-1020x570.jpg",
+                    ProductId = 136,
+
+                },
+                new Images
+                {
+                    Id = 137,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/275124/Slider/lo-chien-khong-dau-sunhouse-mama-shd4088-15-lit637928035764079802.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/275124/Slider/lo-chien-khong-dau-sunhouse-mama-shd4088-15-lit-6-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/275124/Slider/lo-chien-khong-dau-sunhouse-mama-shd4088-15-lit637928035762639897.jpg",
+                    ProductId = 137,
+
+                },
+                new Images
+                {
+                    Id = 138,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/235357/Slider/ava-af40155d-5-lit637956537558080659.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/235357/Slider/3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/235357/Slider/tinh-nang-5.jpg",
+                    ProductId = 138,
+
+                },
+                new Images
+                {
+                    Id = 139,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/231967/Slider/philips-hd9200-90-2-1020x570-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/231967/Slider/philips-hd9200-90-24-lit637679047016485840.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/231967/Slider/philips-hd9200-90-24-lit637679047018855747.jpg",
+                    ProductId = 139,
+
+                },
+                new Images
+                {
+                    Id = 140,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/242418/Slider/lo-chien-khong-dau-kangaroo-kg12af1a-12-lit638284018751589262.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/242418/Slider/lo-chien-khong-dau-kangaroo-kg12af1a-12-lit638284018737269189.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/9418/242418/Slider/lo-chien-khong-dau-kangaroo-kg12af1a-12-lit638327078654735616.jpg",
+                    ProductId = 140,
+
+                },
+                new Images
+                {
+                    Id = 141,
+                    Url = "https://cdn.tgdd.vn/Products/Images/9418/242418/Slider/lo-chien-khong-dau-kangaroo-kg12af1a-12-lit638327078654735616.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/73337/Slider/-kdk-m40k-xam-gy-(2).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/73337/Slider/-kdk-m40k-xam-gy-(4).jpg",
+                    ProductId = 141,
+
+                },
+                new Images
+                {
+                    Id = 142,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/73339/Slider/vi-vn-kdk-m40m-(2).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/73339/Slider/vi-vn-kdk-m40m-(3).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/73339/Slider/vi-vn-kdk-m40m-(4).jpg",
+                    ProductId = 142,
+
+                },
+                new Images
+                {
+                    Id = 143,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/268450/Slider/dung-senko-dh1600637981409519551001.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268450/Slider/dung-senko-dh1600637981409520581014.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268450/Slider/dung-senko-dh1600637981409521621105.jpg",
+                    ProductId = 143,
+
+                },
+                new Images
+                {
+                    Id = 144,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/275524/Slider/lung-asia-vy538990638244221087301321.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275524/Slider/lung-asia-vy538990638244221081601265.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275524/Slider/lung-asia-vy538990638244221096181354.jpg",
+                    ProductId = 144,
+
+                },
+                new Images
+                {
+                    Id = 145,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/164540/Slider/-toshiba-f-lsa20-h-vn-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/164540/Slider/-toshiba-f-lsa20-h-vn-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/164540/Slider/-toshiba-f-lsa20-h-vn-2.jpg",
+                    ProductId = 145,
+
+                },
+                new Images
+                {
+                    Id = 146,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/206027/Slider/-artboard-3-(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/206027/Slider/vi-vn-artboard-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/206027/Slider/vi-vn-artboard-1-(1).jpg",
+                    ProductId = 146,
+
+                },
+                new Images
+                {
+                    Id = 147,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/268452/Slider/lung-senko-l1638637962675861153767.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268452/Slider/lung-senko-l1638637962675861983811.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268452/Slider/vi-vn-lung-senko-l1638637962675862923843-copy.jpg",
+                    ProductId = 147,
+
+                },
+                new Images
+                {
+                    Id = 148,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/268453/Slider/lung-senko-lts1636637973831920187882.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268453/Slider/lung-senko-lts1636637973831923127883.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268453/Slider/lung-senko-lts1636637973831922237870.jpg",
+                    ProductId = 148,
+
+                },
+                new Images
+                {
+                    Id = 149,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/275185/Slider/dung-asia-vy539790638366792400586624.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275185/Slider/dung-asia-vy539790638366792399526428.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275185/Slider/dung-asia-vy539790638366792398416416.jpg",
+                    ProductId = 149,
+
+                },
+                new Images
+                {
+                    Id = 150,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/275185/Slider/dung-asia-vy539790638366792398416416.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/322619/quat-lung-asia-vy628890-75w-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/322619/quat-lung-asia-vy628890-75w-4.jpg",
+                    ProductId = 150,
+
+                },
+                new Images
+                {
+                    Id = 151,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/275186/Slider/dung-asia-vy639990638366784521558850.gif" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275186/Slider/dung-asia-vy639990638366784530598927.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275186/Slider/dung-asia-vy639990638366784498602706.jpg",
+                    ProductId = 151,
+
+                },  
+                new Images
+                {
+                    Id = 152,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/275528/vy3777901.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275528/vy3777901.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/275528/vy3777905.jpg",
+                    ProductId = 152,
+
+                },
+                new Images
+                {
+                    Id = 153,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/268448/Slider/ban-senko-b1213637919426805242552.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268448/Slider/ban-senko-b1213637919426806303120.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268448/Slider/ban-senko-b1213637919426807332619.gif",
+                    ProductId = 153,
+
+                },
+                new Images
+                {
+                    Id = 154,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/268462/Slider/quat-treo-senko-tc1622637970270747742066.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268462/Slider/quat-treo-senko-tc1622637970270748552124.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/268462/Slider/quat-treo-senko-tc1622637970270750642154.jpg",
+                    ProductId = 154,
+
+                },
+                new Images
+                {
+                    Id = 155,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1992/207672/Slider/vi-vn-quat-hop-midea-kyt30-15a-trang-1.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/207672/Slider/vi-vn-quat-hop-midea-kyt30-15a-trang-5.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1992/207672/Slider/vi-vn-canh-quat.jpg",
+                    ProductId = 155,
+
+                },
+                new Images
+                {
+                    Id = 156,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/302178/Slider/vi-vn-may-say-thong-hoi-galanz-dv-70q1c-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/302178/Slider/vi-vn-khoi-luong-may-say-thong-hoi-galanz-dv-70q1c-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/302178/Slider/vi-vn-chuong-trinh-say-may-say-thong-hoi-galanz-dv-70q1c-4.jpg",
+                    ProductId = 156,
+
+                },
+                new Images
+                {
+                    Id = 157,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/241930/Slider/vi-vn-may-say-thong-hoi-galanz-7-kg-dv-70t5c-s-100621-1128165.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/241930/Slider/vi-vn-may-say-thong-hoi-galanz-7-kg-dv-70t5c-s-100621-1128178-(1).jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/241930/Slider/vi-vn-may-say-thong-hoi-galanz-7-kg-dv-70t5c-s-100621-1128160.jpg",
+                    ProductId = 157,
+
+                },
+                new Images
+                {
+                    Id = 158,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/241929/Slider/vi-vn-may-say-thong-hoi-galanz-7-kg-dv-70t5c-w-19.png" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/241929/Slider/vi-vn-may-say-thong-hoi-galanz-7-kg-dv-70t5c-w-20.png" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/241929/Slider/vi-vn-may-say-thong-hoi-galanz-7-kg-dv-70t5c-w-21.png",
+                    ProductId = 158,
+
+                },
+                new Images
+                {
+                    Id = 159,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/273320/Slider/may-say-casper-td-72vwd637895253873168169.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/273320/Slider/may-say-casper-td-72vwd637895253874088441.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/273320/Slider/may-say-casper-td-72vwd637895253874968425.jpg",
+                    ProductId = 159,
+
+                },
+                new Images
+                {
+                    Id = 160,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/272144/Slider/2-1028x578.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272144/Slider/3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272144/Slider/4-1020x570.jpg",
+                    ProductId = 160,
+
+                },
+                new Images
+                {
+                    Id = 161,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/310253/may-say-toshiba-td-h80sev-sk-120723-023825.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/310253/may-say-toshiba-td-h80sev-sk-120723-023856.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/310253/may-say-toshiba-td-h80sev-sk-130723-113516.jpg",
+                    ProductId = 161,
+
+                },
+                new Images
+                {
+                    Id = 162,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/272143/Slider/may-say-thong-hoi-electrolux-75-kg-edv754h3wb637895175913318814.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272143/Slider/may-say-thong-hoi-electrolux-75-kg-edv754h3wb637895175914328840.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272143/Slider/may-say-thong-hoi-electrolux-75-kg-edv754h3wb637895175915268944.jpg",
+                    ProductId = 162,
+
+                },
+                new Images
+                {
+                    Id = 163,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/284038/Slider/vi-vn-chuong-trinh-say-may-say-bom-nhiet-electrolux-9-kg-edh903r9wb-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/284038/Slider/vi-vn-khoi-luong-say-may-say-bom-nhiet-electrolux-9-kg-edh903r9wb-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/284038/Slider/vi-vn-say-bom-nhiet-may-say-bom-nhiet-electrolux-9-kg-edh903r9wb-4.jpg",
+                    ProductId = 163,
+
+                },
+                new Images
+                {
+                    Id = 164,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/272145/Slider/may-say-thong-hoi-electrolux-85-kg-edv854n3sb637895087530263383.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272145/Slider/may-say-thong-hoi-electrolux-85-kg-edv854n3sb637895087531273334.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272145/Slider/may-say-thong-hoi-electrolux-85-kg-edv854n3sb637895087532343348.jpg",
+                    ProductId = 164,
+
+                },
+                new Images
+                {
+                    Id = 165,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/284036/Slider/vi-vn-khoi-luong-say-may-say-bom-nhiet-electrolux-8-kg-edh804h5wb-2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/284036/Slider/vi-vn-say-bom-nhiet-may-say-bom-nhiet-electrolux-8-kg-edh804h5wb-3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/284036/Slider/vi-vn-chuong-trinh-say-may-say-bom-nhiet-electrolux-8-kg-edh804h5wb-4.jpg",
+                    ProductId = 165,
+
+                },
+                new Images
+                {
+                    Id = 166,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/307973/Slider/may-say-bom-nhiet-lg-%20inverter-105-kg-dvhp50b638221620147203825.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/307973/Slider/may-say-bom-nhiet-lg-%20inverter-105-kg-dvhp50b638221620148293832.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/307973/Slider/may-say-bom-nhiet-lg-%20inverter-105-kg-dvhp50b638221620149193805.jpg",
+                    ProductId = 166,
+
+                },
+                new Images
+                {
+                    Id = 167,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/272142/Slider/may-say-thong-hoi-electrolux-85-kg-eds854n3sb637809701392682546.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272142/Slider/may-say-thong-hoi-electrolux-85-kg-eds854n3sb637809701392682546.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/272142/Slider/may-say-thong-hoi-electrolux-85-kg-eds854n3sb637809701396132621.jpg",
+                    ProductId = 167,
+
+                },
+                new Images
+                {
+                    Id = 168,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/310251/may-say-ngung-tu-toshiba-8-kg-td-k90mev-sk-110723-110955.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/310251/may-say-ngung-tu-toshiba-8-kg-td-k90mev-sk-110723-111058.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/310251/may-say-ngung-tu-toshiba-8-kg-td-k90mev-sk-110723-111131.jpg",
+                    ProductId = 168,
+
+                },
+                new Images
+                {
+                    Id = 169,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/227250/Slider/190820-0745148.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/227250/Slider/190820-0745116.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/227250/Slider/190820-0745083.jpg",
+                    ProductId = 169,
+
+                },
+                new Images
+                {
+                    Id = 170,
+                    Url = "https://cdn.tgdd.vn/Products/Images/2202/230073/Slider/231120-0344524.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/230073/Slider/231120-0344545.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/2202/230073/Slider/231120-0344492.jpg",
+                    ProductId = 170,
+
+                },
+                new Images
+                {
+                    Id = 171,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299620/Slider/lo-vi-song-electrolux-emm23k22b-23-lit638181856450686028.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299620/Slider/lo-vi-song-electrolux-emm23k22b-23-lit638181856449736008.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299620/Slider/lo-vi-song-electrolux-emm23k22b-23-lit638181856448716035.jpg",
+                    ProductId = 171,
+
+                },
+                new Images
+                {
+                    Id = 172,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299620/Slider/lo-vi-song-electrolux-emm23k22b-23-lit638181856450686028.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299620/Slider/lo-vi-song-electrolux-emm23k22b-23-lit638181856449736008.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299620/Slider/lo-vi-song-electrolux-emm23k22b-23-lit638181856448716035.jpg",
+                    ProductId = 172,
+
+                },
+                new Images
+                {
+                    Id = 173,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299616/Slider/lo-vi-song-electrolux-emm20k22w-20-lit638114533255389572.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299616/Slider/lo-vi-song-electrolux-emm20k22w-20-lit638114533254489493.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299616/Slider/lo-vi-song-electrolux-emm20k22w-20-lit638114533251179393.jpg",
+                    ProductId = 173,
+
+                },
+                new Images
+                {
+                    Id = 174,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/303492/Slider/lo-vi-song-panasonic-nn-st34nbyue-25-lit638199362669326069.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/303492/Slider/lo-vi-song-panasonic-nn-st34nbyue-25-lit638199362667866005.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/303492/Slider/lo-vi-song-panasonic-nn-st34nbyue-25-lit638199362667026013.jpg",
+                    ProductId = 174,
+
+                },
+                new Images
+                {
+                    Id = 175,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/242774/Slider/bluestone-mob-7733-25-lit637688001563014937.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/242774/Slider/3-1020x570.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/242774/Slider/4-1020x570.jpg",
+                    ProductId = 175,
+
+                },
+                new Images
+                {
+                    Id = 176,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082498421640.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082497591644.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082496741625.jpg",
+                    ProductId = 176,
+
+                },
+                new Images
+                {
+                    Id = 177,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/2-min.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/4.jpg",
+                    ProductId = 177,
+
+                },
+                new Images
+                {
+                    Id = 178,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882448995926.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882450315945.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882451896008.jpg",
+                    ProductId = 178,
+
+                },
+                new Images
+                {
+                    Id = 179,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053426432333.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053425522315.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053424072423.jpg",
+                    ProductId = 179,
+
+                },
+                new Images
+                {
+                    Id = 180,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/2.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/3.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/4.jpg",
+                    ProductId = 180,
+
+                }, new Images
+                {
+                    Id = 181,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-1102501.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-1102512.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-0653220.jpg",
+                    ProductId = 181,
+
+                },
+                new Images
+                {
+                    Id = 182,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642354.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642396.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642322.jpg",
+                    ProductId = 182,
+
+                },
+                new Images
+                {
+                    Id = 183,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742187747662.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742188627552.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742189537562.jpg",
+                    ProductId = 183,
+
+                },
+                new Images
+                {
+                    Id = 184,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333812797881.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333811900019.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333810992534.jpg",
+                    ProductId = 184,
+                },
+                new Images
+                {
+                    Id = 185,
+                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777980886164.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777979636127.jpg" +
+                   "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777978286125.jpg",
+                    ProductId = 185,
+
+                }
+                
+                );
         }
     }
 }
