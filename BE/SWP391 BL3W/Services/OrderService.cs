@@ -59,6 +59,7 @@ namespace SWP391_BL3W.Services
                         }
                         var order = _mapper.Map<Order>(dto);
                         order.statusMessage = "";
+                        order.UserId = dto.UserId;
                         decimal totalPrice = 0;
                         foreach (var exist in dto.OrderDetails)
                         {
