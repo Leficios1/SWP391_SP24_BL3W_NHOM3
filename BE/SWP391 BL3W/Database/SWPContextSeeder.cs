@@ -1144,10 +1144,10 @@ namespace SWP391_BL3W.Database
                  {
                      Id = 51,
                      Name = "Tủ lạnh Samsung Inverter 236 lít RT22M4032BY/SV",
-                     Description = "",
-                     ImageUrl = "",
+                     Description = "Thịt cá tươi ngon, ăn trong ngày không cần rã đông với ngăn đông mềm -1 độ C Optimal Fresh Zone",
+                     ImageUrl = "https://cdn.tgdd.vn/Products/Images/1943/220325/TimerThumb/Frame-1-600x600.png ",
                      quantity = 1000,
-                     price = 6890000,
+                     price = 5990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
 
@@ -1323,7 +1323,7 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 66,
-                      Name = "Máy giặt Sharp 7.5 Kg ES-Y75HV-S",
+                      Name = "Máy    Sharp 7.5 Kg ES-Y75HV-S",
                       Description = "Máy giặt Sharp 7.5 kg ES-Y75HV-S có khối lượng giặt 7.5 kg phù hợp với gia đình có 2 - 3 thành viên, được trang bị 4 chương trình giặt đáp ứng được nhu cầu giặt giũ cơ bản của gia đình.",
                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/310181/Slider/6-1020x570.jpg",
                       quantity = 1000,
@@ -1502,18 +1502,6 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
-                      Name = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK",
-                      Description = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK được thiết kế theo kiểu dáng máy giặt lồng ngang hiện đại, được trang bị công nghệ cân bằng AI DBT giúp máy hoạt động ổn định, êm ái, tăng thêm không gian sống cho gia đình bởi kết cấu máy siêu mỏng, tiết kiệm diện tích. ",
-                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1944/307863/Slider/4-1020x570.jpg",
-                      quantity = 1000,
-                      price = 7690000,
-                      WarrantyPeriod = 720,
-                      CategoryID = 5,
-
-                  },
-                  new Product
-                  {
                       Id = 81,
                       Name = "Nồi cơm điện cao tần Sunhouse 1.5 lít SHD8955",
                       Description = "Nồi cơm điện cao tần Sunhouse kiểu dáng đơn giản, chắc chắn, lớp vỏ sáng bóng tạo nên nét sang trọng riêng của một nồi cơm điện tử",
@@ -1599,11 +1587,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 88,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm nắp gài Sunhouse 1.2 lít SHD8217W",
+                      Description = "Nồi cơm nắp gài Sunhouse 1.2 lít SHD8217W thiết kế gọn nhẹ, điều chỉnh bằng nút gạt đơn giản, công nghệ 1D nấu cơm chín nhanh, giúp phục vụ những bữa cơm nóng hổi cho gia đình.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/275584/Slider/vi-vn-sunhouse-12-lit-shd8217w-1.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 540000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1611,11 +1599,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 89,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm nắp rời Delites 1.8 lít RC-10W003",
+                      Description = "Nồi cơm điện Delites sang trọng với vỏ kim loại phủ màu nâu đồng bắt mắt, sang trọng, tạo điểm nhấn trong không gian dùng\r\n",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/218094/Slider/vi-vn-noi-com-nap-roi-delites-18-lit-rc-10w003a-780x433-a-780x433.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 430000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1623,11 +1611,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 90,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm nắp gài Toshiba 1 lít RC-10JH2PV(B)",
+                      Description = "Nồi cơm điện có dung tích 1 lít thích hợp để nấu cơm cho 2 - 4 người dùng",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/219451/Slider/Untitled-1-780x433(8)-a-780x433.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 550000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1635,11 +1623,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 91,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm nắp gài AVA 1 lít JRC-100P",
+                      Description = "Nồi cơm điện nắp gài thiết kế màu sắc nhã nhặn, kiểu dáng sang trọng phù hợp với mọi gian bếp trong gia đình",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/240395/Slider/171121-0928470.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 490000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1647,11 +1635,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 92,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm điện tử Toshiba 1.8 lít RC-18NMFVN(WT)",
+                      Description = "Nồi cơm điện Toshiba RC-18NMFVN(WT) thiết kế chắc chắn, màu trắng sang trọng",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/92601/toshiba-rc-18nmfvn-wt-250823-102810-600x600.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 2890000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1659,11 +1647,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 93,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm nắp gài Toshiba 1.8 lít RC-18JH2PV(B)",
+                      Description = "Nồi cơm nắp gài Toshiba 1.8 lít RC-18JH2PV(B) thiết kế hiện đại, màu sắc trẻ trung phù hợp mọi căn bếp",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/220502/Slider/noi-com-nap-gai-toshiba-rc-18jh2pv-b-18l637834603189310546.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 650000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1671,11 +1659,11 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 94,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm điện tử Sunhouse mama 1.8 lít SHD8903 ",
+                      Description = "Nồi cơm điện Sunhouse mama SHD8903 thiết kế gọn gàng, vỏ nồi bằng thép không gỉ bóng đẹp, bắt mắt, có tính thẩm mỹ cao",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/131916/sunhouse-mama-shd8903-thumb-600x600-2.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 1290000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
@@ -1683,33 +1671,1307 @@ namespace SWP391_BL3W.Database
                   new Product
                   {
                       Id = 95,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
+                      Name = "Nồi cơm điện tử Toshiba 1.8 lít RC-18DR2PV(K)",
+                      Description = "Nồi cơm điện tử Toshiba 1.8 lít RC-18DR2PV(K) thiết kế quai xách dễ cầm, màu sắc sang trọng với dung tích phù hợp cho gia đình 4 - 6 người",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/220499/noi-com-dien-tu-toshiba-rc-18dr2pv-k-18l-thumb-600x600-1.jpg",
                       quantity = 1000,
-                      price = 7690000,
+                      price = 2290000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
 
                   },
-                  new Product
-                  {
-                      Id = 80,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
-                      quantity = 1000,
-                      price = 7690000,
-                      WarrantyPeriod = 720,
-                      CategoryID = 6,
+                   new Product
+                   {
+                       Id = 96,
+                       Name = "Loa kéo Karaoke Dalton TS-15G600X 600W",
+                       Description = "Loa kéo Karaoke Dalton TS-15G600X 600W có thiết kế đẹp mắt với tông màu đen chủ đạo mạnh mẽ phù hợp với nhiều không gian. Thân loa karaoke làm bằng gỗ cao cấp cho chất âm tốt hơn cũng như tạo sự sang trọng cho loa.\r\n\r\n",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/214631/dalton-ts-15g600x-270223-020348-600x600.jpg",
+                       quantity = 1000,
+                       price = 7690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
-                  }
+                   },
+                   new Product
+                   {
+                       Id = 97,
+                       Name = "Loa kéo Nanomax S-820",
+                       Description = "Mang tiệc tùng trở nên sống động với loa di động Nanomax S-820. Với công suất âm thanh mạnh mẽ lên đến 400W, kết nối Bluetooth và thiết kế dễ mang đi, loa này hoàn hảo cho các buổi hát karaoke hoặc các sự kiện ngoài trời.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/278796/loa-keo-karaoke-nanomax-s-820-400w-270223-021529-600x600.jpg",
+                       quantity = 1000,
+                       price = 3770000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
+                   },
+                   new Product
+                   {
+                       Id = 98,
+                       Name = "Loa kéo Nanomax X-2000",
+                       Description = "Nâng cao trải nghiệm âm thanh của bạn với loa karaoke Nanomax X-2000. Với thiết kế mạnh mẽ và công suất lên đến 1000W, loa này mang đến âm thanh rõ ràng cho các bữa tiệc, sự kiện hoặc các buổi biểu diễn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/308043/loa-karaoke-nanomax-x-2000-010623-041107-600x600.jpg",
+                       quantity = 1000,
+                       price = 7890000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
+                   },
+                   new Product
+                   {
+                       Id = 99,
+                       Name = "Loa kéo Mobell MK-2120C",
+                       Description = "Kích động đám đông với loa karaoke di động Mobell MK-2120C. Với kích thước nhỏ gọn và âm thanh mạnh mẽ lên đến 30W, loa này lý tưởng cho các buổi tụ tập nhỏ, buổi hát karaoke hoặc các chuyến phiêu lưu ngoài trời.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/236681/loa-keo-karaoke-mobell-mk-2120c-30w-040723-111711-600x600.jpg",
+                       quantity = 1000,
+                       price = 1440000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
+                   },
+                   new Product
+                   {
+                       Id = 100,
+                       Name = "Loa kéo Dalton TS-12G350N",
+                       Description = "Trải nghiệm chất lượng âm thanh cao cấp với loa karaoke Dalton TS-12G350N. Với công suất 350W và thiết kế bền bỉ, loa này được thiết kế để mang lại hiệu suất âm thanh xuất sắc cho các buổi tiệc karaoke hoặc sự kiện.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/306932/loa-keo-karaoke-dalton-ts-12g350n-100523-094658-600x600.jpg",
+                       quantity = 1000,
+                       price = 5160000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
+                   },
+                   new Product
+                   {
+                       Id = 101,
+                       Name = "Loa kéo Dalton TS-18G850X",
+                       Description = "Đưa trải nghiệm âm thanh của bạn lên một tầm cao mới với loa karaoke Dalton TS-18G850X. Với công suất 850W đáng kinh ngạc và âm thanh chuyên nghiệp, loa này hoàn hảo cho các DJ, người biểu diễn hoặc bất kỳ ai đòi hỏi chất lượng âm thanh hàng đầu.    ",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/214636/dalton-ts-18g850x-270223-020450-600x600.jpg",
+                       quantity = 1000,
+                       price = 9590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
+                   },
+                   new Product
+                   {
+                       Id = 102,
+                       Name = "Loa kéo Nanomax S-1000",
+                       Description = "Tạo ấn tượng với loa karaoke di động Nanomax S-1000. Với công suất 1000W và thiết kế sang trọng, loa này mang đến âm thanh rõ ràng, động đạc cho các buổi karaoke, tiệc hoặc sự kiện của bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/226094/nanomax-s-1000-270223-020825-600x600.jpg",
+                       quantity = 1000,
+                       price = 5390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
 
+                   },
+                   new Product
+                   {
+                       Id = 103,
+                       Name = "Loa kéo Nanomax S-5000",
+                       Description = "Sẵn sàng để làm náo động buổi tiệc với loa karaoke Nanomax S-5000. Với công suất khủng lên đến 5000W và các tính năng tiên tiến, loa này hoàn hảo cho các buổi tụ tập lớn, sự kiện hoặc các buổi biểu diễn chuyên nghiệp.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/297489/loa-karaoke-nanomax-s-5000-270223-022010-600x600.jpg",
+                       quantity = 1000,
+                       price = 9350000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 104,
+                       Name = "Loa điện Dalton TS-18A8500",
+                       Description = "Trải nghiệm chất lượng âm thanh không giới hạn với loa karaoke điện Dalton TS-18A8500. Với công suất 18.500W ấn tượng và các linh kiện cao cấp, loa này được thiết kế để mang lại âm thanh sâu lắng cho các buổi hòa nhạc, sự kiện hoặc địa điểm.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/278932/loa-dien-karaoke-dalton-ts-18a8500-3000w-270223-023623-600x600.jpg",
+                       quantity = 1000,
+                       price = 16790000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 105,
+                       Name = "Loa kéo Nanomax S-900",
+                       Description = "Thưởng thức âm thanh mạnh mẽ mọi nơi với loa karaoke di động Nanomax S-900. Với kích thước nhỏ gọn và công suất 420W, loa này hoàn hảo cho các buổi tiệc trong nhà, sự kiện ngoài trời hoặc các buổi karaoke cùng bạn bè.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/232105/loa-keo-karaoke-nanomax-s-900-420w-270223-021046-600x600.jpg",
+                       quantity = 1000,
+                       price = 4510000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 106,
+                       Name = "Loa kéo Dalton TS-12G450X",
+                       Description = "Bắt đầu bữa tiệc với loa karaoke Dalton TS-12G450X. Với công suất 450W và thiết kế bền bỉ, loa này mang đến âm thanh rõ ràng, không méo mó cho các buổi karaoke, sự kiện hoặc các chuyến phiêu lưu ngoài trời.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/226090/loa-karaoke-dalton-ts-12g450x-270223-020754-600x600.jpg",
+                       quantity = 1000,
+                       price = 5500000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 107,
+                       Name = "Loa kéo Birici NB-6889",
+                       Description = "Nâng cao trải nghiệm âm thanh của bạn với loa karaoke di động Birici NB-6889. Với thiết kế thời trang và công suất 1500W mạnh mẽ, loa này hoàn hảo cho các buổi tiệc, sự kiện hoặc các buổi biểu diễn chuyên nghiệp.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/304091/loa-keo-karaoke-birici-nb-6889-150323-022702-600x600.jpg",
+                       quantity = 1000,
+                       price = 11490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 108,
+                       Name = "Loa tháp Samsung MX-T70/XV",
+                       Description = "Đắm chìm trong âm thanh chất lượng cao với loa tháp Samsung MX-T70/XV. Với công suất 1500W và thiết kế mềm mại, loa này mang đến âm thanh sắc nét, rõ ràng cho các buổi tiệc, sự kiện hoặc giải trí tại nhà.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/220699/loa-thap-samsung-mx-t70-xv-100323-044545-600x600.jpg",
+                       quantity = 1000,
+                       price = 7790000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 109,
+                       Name = "Loa điện Dalton TS - 18A1500",
+                       Description = "Trải nghiệm chất lượng âm thanh vượt trội với loa karaoke điện Dalton TS-18A1500. Với công suất 15.000W và các thành phần cao cấp, loa này hoàn hảo cho các buổi hòa nhạc, sự kiện hoặc địa điểm nơi âm thanh chất lượng cao là cần thiết.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/210260/dalton-ts-18a1500-270223-022539-600x600.jpg",
+                       quantity = 1000,
+                       price = 10390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 110,
+                       Name = "Loa kéo Mobell MK-5070",
+                       Description = "Sẵn sàng cho bữa tiệc với loa karaoke di động Mobell MK-5070. Với thiết kế nhỏ gọn và công suất 400W mạnh mẽ, loa này mang lại âm thanh ấn tượng cho các buổi hát karaoke, sự kiện ngoài trời hoặc các buổi tụ tập với bạn bè.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2162/268876/loa-keo-karaoke-mobell-mk-5070-400w-270223-021421-600x600.jpg",
+                       quantity = 1000,
+                       price = 3470000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 7,
+
+                   },
+                   new Product
+                   {
+                       Id = 111,
+                       Name = "Sunhouse SHD7727 150W",
+                       Description = "Quạt điều hòa Sunhouse SHD7727 với công suất 150W mang đến không gian mát mẻ và thoải mái cho căn phòng của bạn. Thiết kế hiện đại, hiệu suất cao và tiết kiệm năng lượng làm cho nó trở thành lựa chọn hoàn hảo cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/199117/sunhouse-shd7727-kg-040923-021104-600x600.jpg",
+                       quantity = 1000,
+                       price = 3990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 112,
+                       Name = "Daikiosan DM103 175W Mẫu mới",
+                       Description = "Quạt điều hòa Daikiosan DM103 với công suất 175W, kiểu dáng mới, thiết kế thông minh và hiệu suất làm mát hiệu quả. Được thiết kế để đem lại sự thoải mái và tiết kiệm năng lượng cho mọi không gian sống.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/320997/quat-dieu-hoa-daikiosan-dm103-1a-1-600x600.jpg",
+                       quantity = 1000,
+                       price = 3990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 113,
+                       Name = "AVA RPD-80 130W",
+                       Description = "Quạt điều hòa AVA RPD-80 với công suất 130W mang đến không khí mát mẻ và dễ chịu cho mọi phòng. Thiết kế hiện đại, tiết kiệm năng lượng và hiệu suất cao làm cho nó trở thành lựa chọn lý tưởng cho gia đình của bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/272138/ava-rpd-80-040923-025403-600x600.jpg",
+                       quantity = 1000,
+                       price = 2690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 114,
+                       Name = "Daikiosan DM102 110W Mẫu mới",
+                       Description = "Quạt điều hòa Daikiosan DM102 với công suất 110W, kiểu dáng mới, hiệu suất cao và tiết kiệm năng lượng. Với khả năng làm mát hiệu quả, nó sẽ giúp bạn cảm thấy thoải mái trong mùa hè oi bức.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/320996/quat-dieu-hoa-daikiosan-dm102-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 2990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 115,
+                       Name = "Kangaroo KG50F62 100W",
+                       Description = "Máy làm mát không khí Kangaroo KG50F62 với công suất 100W mang lại không gian mát mẻ và thoải mái cho gia đình bạn. Với thiết kế nhỏ gọn, hiệu suất cao và tiết kiệm năng lượng, nó là lựa chọn lý tưởng cho các căn phòng nhỏ.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/218312/may-lam-mat-khong-khi-kangaroo-kg50f62-040923-021617-600x600.jpg",
+                       quantity = 1000,
+                       price = 1990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 116,
+                       Name = "Sunhouse SHD7745 125W Mẫu mới",
+                       Description = "Quạt điều hòa Sunhouse SHD7745 với công suất 125W và thiết kế mới mang lại không gian mát mẻ và thoải mái cho căn phòng của bạn. Với hiệu suất cao và tiết kiệm năng lượng, nó là sự lựa chọn hoàn hảo cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/321978/quat-dieu-hoa-sunhouse-shd7745-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 2390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 117,
+                       Name = "Delites RPD-30 40W Mẫu mới",
+                       Description = "Quạt điều hòa Delites RPD-30 với công suất 40W, thiết kế mới và hiệu suất làm mát hiệu quả. Với khả năng tạo ra không gian mát mẻ và dễ chịu, nó sẽ làm cho mùa hè của bạn trở nên dễ chịu hơn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/319779/quat-dieu-hoa-delites-rpd-30-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 1590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 118,
+                       Name = "Dmax RPD-90 200W Mẫu mới",
+                       Description = "Quạt điều hòa Dmax RPD-90 với công suất 200W, thiết kế mới và hiệu suất làm mát cao. Với khả năng tạo ra không gian mát mẻ và thoải mái, nó là lựa chọn lý tưởng cho mọi không gian sống.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/319781/quat-dieu-hoa-dmax-rpd-90-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 3590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 119,
+                       Name = "Kangaroo KG50F99 165W Mẫu mới",
+                       Description = "Máy làm mát không khí Kangaroo KG50F99 với công suất 165W mang lại không gian mát mẻ và dễ chịu cho gia đình bạn. Với hiệu suất cao và tiết kiệm năng lượng, nó là lựa chọn lý tưởng cho các căn phòng lớn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/321770/quat-dieu-hoa-kangaroo-kg50f99-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 3990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 120,
+                       Name = "Kangaroo KG50F95 120W Mẫu mới",
+                       Description = "Máy làm mát không khí Kangaroo KG50F95 với công suất 120W và thiết kế mới mang lại không gian mát mẻ và dễ chịu cho gia đình bạn. Với hiệu suất cao và tiết kiệm năng lượng, nó là lựa chọn lý tưởng cho mọi không gian sống.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/321769/quat-dieu-hoa-kangaroo-kg50f95-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 3470000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 121,
+                       Name = "Hòa Phát HPCF1-012 165W",
+                       Description = "Quạt điều hòa Hòa Phát HPCF1-012 với công suất 165W mang đến không gian mát mẻ và thoải mái cho mọi căn phòng. Với thiết kế hiện đại và tiết kiệm năng lượng, nó là sự lựa chọn tuyệt vời cho mùa hè.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/307875/quat-dieu-hoa-hoa-phat-hpcf1-012-040923-031050-600x600.jpg",
+                       quantity = 1000,
+                       price = 3550000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 122,
+                       Name = "Sunhouse SHD7775 200W Mẫu mới",
+                       Description = "Quạt điều hòa Sunhouse SHD7775 với công suất 200W và thiết kế mới mang lại không gian mát mẻ và dễ chịu cho mọi phòng. Với hiệu suất cao và tiết kiệm năng lượng, nó là sự lựa chọn lý tưởng cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/321979/quat-dieu-hoa-sunhouse-shd7775-0-1-600x600.jpg",
+                       quantity = 1000,
+                       price = 4250000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 123,
+                       Name = "Rapido 9000D 200W",
+                       Description = "Quạt điều hòa Rapido 9000D với công suất 200W mang lại không gian mát mẻ và thoải mái cho mọi phòng. Với thiết kế hiện đại và hiệu suất cao, nó là lựa chọn lý tưởng cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/219138/quat-dieu-hoa-rapido-9000d-040923-023847-600x600.jpg",
+                       quantity = 1000,
+                       price = 4290000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 124,
+                       Name = "Daikiosan DM202 210W Mẫu mới",
+                       Description = "Quạt điều hòa Daikiosan DM202 với công suất 210W, kiểu dáng mới và hiệu suất làm mát cao. Với khả năng tạo ra không gian mát mẻ và thoải mái, nó là lựa chọn lý tưởng cho mọi không gian ",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/320999/quat-dieu-hoa-daikiosan-dm202-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 4590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 125,
+                       Name = "Rapido 6000D 80W",
+                       Description = "Quạt điều hòa Rapido 6000D với công suất 80W mang lại không gian mát mẻ và dễ chịu cho mọi phòng. Với thiết kế nhỏ gọn và hiệu suất cao, nó là lựa chọn lý tưởng cho các căn phòng nhỏ.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/7498/235380/rapido-6000d-040923-024256-600x600.jpg",
+                       quantity = 1000,
+                       price = 2750000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 8,
+
+                   },
+                   new Product
+                   {
+                       Id = 126,
+                       Name = "Nồi chiên không dầu Rapido SMART-7.0M 7 lít",
+                       Description = "Nồi chiên không dầu Rapido SMART-7.0M với dung tích 7 lít là giải pháp hoàn hảo cho những bữa ăn ngon và lành mạnh. Với công nghệ tiên tiến, bạn có thể thưởng thức món ăn yêu thích mà không cần dầu mỡ, giúp giảm lượng calo và chất béo trong khẩu phần ăn hàng ngày.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/307646/noi-chien-khong-dau-rapido-smart-70m-7-lit-240523-094953-600x600.jpg",
+                       quantity = 1000,
+                       price = 1190000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 127,
+                       Name = "Nồi chiên không dầu Sunhouse SHD4062 6 lít",
+                       Description = "Nồi chiên không dầu Sunhouse SHD4062 với dung tích 6 lít mang lại sự tiện lợi và hiệu quả cho việc nấu ăn hàng ngày. Với công nghệ chiên không dầu, bạn có thể tận hưởng món ăn giòn ngon mà không cần lo lắng về sức khỏe.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/258338/Sunhouse-SHD4062-0-min-600x600.jpg",
+                       quantity = 1000,
+                       price = 1490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 128,
+                       Name = "Nồi chiên không dầu Rapido RAF-8.0M 8 lít",
+                       Description = "Nồi chiên không dầu Rapido RAF-8.0M với dung tích 8 lít là lựa chọn lý tưởng cho việc chế biến các món ăn ngon mà không cần dầu mỡ. Với thiết kế thông minh và hiệu suất cao, bạn có thể thưởng thức những bữa ăn giòn ngon mà không cần lo lắng về sức khỏe.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/304773/noi-chien-khong-dau-rapido-raf-80m-8-lit-310323-110541-600x600.jpg",
+                       quantity = 1000,
+                       price = 1290000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 129,
+                       Name = "Nồi chiên không dầu AVA KDF-593D 7.5 lít",
+                       Description = "Nồi chiên không dầu AVA KDF-593D với dung tích 7.5 lít là giải pháp hoàn hảo cho những bữa ăn lành mạnh và ngon miệng. Với công nghệ chiên không dầu tiên tiến, bạn có thể thưởng thức món ăn giòn ngon mà không cần dầu mỡ, giúp bảo vệ sức khỏe của gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/240313/ava-kdf-593d-0-600x600-1.jpg",
+                       quantity = 1000,
+                       price = 1290000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 130,
+                       Name = "Nồi chiên không dầu AVA AF358T 4 lít",
+                       Description = "Nồi chiên không dầu AVA AF358T với dung tích 4 lít là lựa chọn hoàn hảo cho việc chế biến những món ăn ngon mà không cần dầu mỡ. Với công nghệ tiên tiến, bạn có thể thưởng thức những bữa ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/240297/Ava-AF358T-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 131,
+                       Name = "Nồi chiên không dầu Sunhouse SHD4035 9 lít",
+                       Description = "Nồi chiên không dầu Sunhouse SHD4035 với dung tích 9 lít là giải pháp tiện lợi và hiệu quả cho việc nấu ăn hàng ngày. Với công nghệ chiên không dầu, bạn có thể chế biến những món ăn giòn ngon mà không cần dầu mỡ, giúp bảo vệ sức khỏe và làm đẹp da dạng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/275125/275125-600x600-1.jpg",
+                       quantity = 1000,
+                       price = 1790000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 132,
+                       Name = "Nồi chiên không dầu Sunhouse SHD4026 6 lít",
+                       Description = "Nồi chiên không dầu Sunhouse SHD4026 với dung tích 6 lít là lựa chọn hoàn hảo cho việc nấu ăn hàng ngày một cách lành mạnh và tiện lợi. Với công nghệ tiên tiến, bạn có thể thưởng thức những món ăn giòn ngon mà không cần dầu mỡ, giữ cho sức khỏe của gia đình bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/249385/Sunhouse-SHD4026-0-min-600x600.jpg",
+                       quantity = 1000,
+                       price = 1390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 133,
+                       Name = "Lò chiên không dầu Ferroli FAF-12M 12 lít",
+                       Description = "Lò chiên không dầu Ferroli FAF-12M với dung tích 12 lít là giải pháp tiện lợi và hiệu quả cho việc nấu ăn hàng ngày. Với công nghệ chiên không dầu, bạn có thể thưởng thức món ăn giòn ngon mà không cần dầu mỡ, giúp bảo vệ sức khỏe của gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/309914/lo-chien-khong-dau-ferroli-faf-12m-12-lit-170823-112904-600x600.jpg",
+                       quantity = 1000,
+                       price = 1490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 134,
+                       Name = "Nồi chiên không dầu Toshiba AF-74CS2SRVN(B) 7.4 lít",
+                       Description = "Nồi chiên không dầu Toshiba AF-74CS2SRVN(B) với dung tích 7.4 lít là lựa chọn lý tưởng cho việc chế biến những món ăn ngon mà không cần dầu mỡ. Với công nghệ chiên không dầu, bạn có thể thưởng thức món ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/306722/noi-chien-khong-dau-toshiba-af-74cs2srvn-b-74-lit-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 2390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 135,
+                       Name = "Nồi chiên không dầu Kangaroo KG55AF1A 5.2 lít",
+                       Description = "Nồi chiên không dầu Kangaroo KG55AF1A với dung tích 5.2 lít là giải pháp hoàn hảo cho việc chế biến những bữa ăn lành mạnh và ngon miệng. Với công nghệ chiên không dầu tiên tiến, bạn có thể thưởng thức món ăn giòn ngon mà không cần dầu mỡ, giúp bảo vệ sức khỏe của gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/217595/Kangaroo-KG55AF1A-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 1290000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 136,
+                       Name = "Nồi chiên không dầu Hafele AF-T5A (535.43.712) 5 lít",
+                       Description = "Nồi chiên không dầu Hafele AF-T5A với dung tích 5 lít là lựa chọn hoàn hảo cho việc chế biến những món ăn ngon mà không cần dầu mỡ. Với công nghệ tiên tiến, bạn có thể thưởng thức những bữa ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/233494/Hafele-AF-T5A-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 1990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 137,
+                       Name = "SẢN PHẨM CAO CẤP\r\nSẢN PHẨM CAO CẤP\r\nLò chiên không dầu Sunhouse Mama SHD4088 15 lít",
+                       Description = "Lò chiên không dầu Sunhouse Mama SHD4088 với dung tích lớn 15 lít là lựa chọn lý tưởng cho việc chế biến những bữa ăn ngon mà không cần dầu mỡ. Với công nghệ chiên không dầu, bạn có thể thưởng thức món ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/275124/275124-600x600-1.jpg",
+                       quantity = 1000,
+                       price = 2690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 138,
+                       Name = "Nồi chiên không dầu AVA AF40155D 5 lít",
+                       Description = "Nồi chiên không dầu AVA AF40155D với dung tích 5 lít là lựa chọn lý tưởng cho việc chế biến những món ăn ngon mà không cần dầu mỡ. Với công nghệ tiên tiến, bạn có thể thưởng thức những bữa ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/235357/AVA-AF40155D-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 139,
+                       Name = "Nồi chiên không dầu Philips HD9200/90 2.4 lít",
+                       Description = "Nồi chiên không dầu Philips HD9200/90 với dung tích 2.4 lít là giải pháp hoàn hảo cho việc chế biến những món ăn ngon mà không cần dầu mỡ. Với công nghệ chiên không dầu, bạn có thể thưởng thức món ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/231967/Philips-HD9200-90-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 1490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 140,
+                       Name = "Lò chiên không dầu Kangaroo KG12AF1A 12 lít",
+                       Description = "Lò chiên không dầu Kangaroo KG12AF1A với dung tích 12 lít là lựa chọn lý tưởng cho việc chế biến những món ăn ngon mà không cần dầu mỡ. Với công nghệ tiên tiến, bạn có thể thưởng thức những bữa ăn giòn ngon mà không lo lắng về calo và chất béo.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/9418/242418/lo-chien-khong-dau-kangaroo-kg12af1a-12-lit-170423-120402-600x600.jpg",
+                       quantity = 1000,
+                       price = 2690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 9,
+
+                   },
+                   new Product
+                   {
+                       Id = 141,
+                       Name = "Quạt đứng KDK 3 cánh M40K GY 50W",
+                       Description = "Quạt đứng KDK M40K GY với 3 cánh và công suất 50W mang đến không gian mát mẻ và thoải mái cho không gian sống của bạn. Với thiết kế đẹp mắt và hiệu suất cao, quạt KDK là sự lựa chọn hoàn hảo cho ngôi nhà của bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/73337/kdk-m40k-xam-gy-290823-020333-600x600.jpg",
+                       quantity = 1000,
+                       price = 3690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 142,
+                       Name = "Quạt treo tường KDK 3 cánh M40M 51W",
+                       Description = "Quạt treo tường KDK M40M với 3 cánh và công suất 51W mang đến không gian mát mẻ và thoải mái cho không gian sống của bạn. Với thiết kế tiện lợi và hiệu suất ổn định, quạt KDK là sự lựa chọn hoàn hảo cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/73339/kdk-m40m-290823-020422-600x600.jpg",
+                       quantity = 1000,
+                       price = 2770000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 143,
+                       Name = "Quạt đứng Senko 3 cánh DH1600 47W",
+                       Description = "Quạt đứng Senko DH1600 với 3 cánh và công suất 47W là lựa chọn hoàn hảo cho việc làm mát không gian sống hoặc làm việc của bạn. Với thiết kế hiện đại và tính năng tiện ích, quạt Senko làm cho mọi không gian trở nên thoải mái và dễ chịu.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/268450/268450-600x600.jpg",
+                       quantity = 1000,
+                       price = 570000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 144,
+                       Name = "Quạt lửng Asia 5 cánh VY538990 55W",
+                       Description = "Quạt lửng Asia VY538990 với 5 cánh và công suất 55W là giải pháp làm mát hiệu quả cho không gian sống của bạn. Thiết kế đơn giản và hiệu suất ổn định, quạt Asia mang đến sự thoải mái và mát mẻ cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/275524/lung-asia-vy538990-290823-034344-600x600.jpg",
+                       quantity = 1000,
+                       price = 470000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 145,
+                       Name = "Quạt đứng Toshiba 5 cánh F-LSA20(H)VN 60W",
+                       Description = "Quạt đứng Toshiba F-LSA20(H)VN với 5 cánh và công suất 60W là sự lựa chọn hoàn hảo cho việc làm mát trong không gian sống hoặc làm việc. Thiết kế đẹp mắt và hiệu suất cao, quạt Toshiba mang đến không khí thoải mái và dễ chịu.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/164540/toshiba-f-lsa20-h-vn-290823-022101-600x600.jpg",
+                       quantity = 1000,
+                       price = 1470000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 146,
+                       Name = "Quạt đứng Toshiba 5 cánh F-LSA10(W)VN 50W",
+                       Description = "Quạt đứng Toshiba F-LSA10(W)VN với 5 cánh và công suất 50W là giải pháp làm mát hiệu quả cho không gian sống của bạn. Thiết kế đơn giản và hiệu suất ổn định, quạt Toshiba làm cho không gian của bạn trở nên thoải mái và dễ chịu.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/206027/quat-dung-toshiba-f-lsa10-w-vn-trang-290823-023754-600x600.jpg",
+                       quantity = 1000,
+                       price = 990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 147,
+                       Name = "Quạt lửng Senko 3 cánh L1638 47W",
+                       Description = "Quạt lửng Senko L1638 với 3 cánh và công suất 47W là lựa chọn hoàn hảo cho việc làm mát không gian sống hoặc làm việc của bạn. Thiết kế đẹp mắt và hiệu suất cao, quạt Senko mang đến không khí mát mẻ và thoải mái cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/268452/lung-senko-l1638-290823-034304-600x600.jpg",
+                       quantity = 1000,
+                       price = 4390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 148,
+                       Name = "Quạt lửng Senko 7 cánh LTS1636 65W",
+                       Description = "Quạt lửng Senko LTS1636 với 7 cánh và công suất 65W là giải pháp làm mát hiệu quả cho không gian sống của bạn. Thiết kế đẹp mắt và hiệu suất ổn định, quạt Senko mang đến không khí thoải mái và dễ chịu cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/268453/lung-senko-lts1636-290823-034352-600x600.jpg",
+                       quantity = 1000,
+                       price = 490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 149,
+                       Name = "Quạt đứng Asia 5 cánh VY539790 55W",
+                       Description = "Quạt đứng Asia VY539790 với 5 cánh và công suất 55W là sự lựa chọn hoàn hảo cho việc làm mát trong không gian sống hoặc làm việc. Thiết kế đơn giản và hiệu suất ổn định, quạt Asia mang đến không khí thoải mái và dễ chịu.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/275185/dung-asia-vy539790-290823-035045-600x600.jpg",
+                       quantity = 1000,
+                       price = 590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 150,
+                       Name = "Quạt lửng Asia 5 cánh VY628890 75W",
+                       Description = "Quạt lửng Asia VY628890 với 5 cánh và công suất 75W là giải pháp làm mát hiệu quả cho không gian sống của bạn. Thiết kế đơn giản và hiệu suất ổn định, quạt Asia mang đến không khí mát mẻ và thoải mái cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/322619/quat-lung-asia-vy628890-75w-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 151,
+                       Name = "Quạt đứng Asia 6 cánh VY639990 80W",
+                       Description = "Quạt đứng Asia VY639990 với 6 cánh và công suất 80W là lựa chọn hoàn hảo cho việc làm mát không gian sống hoặc làm việc của bạn. Thiết kế đẹp mắt và hiệu suất cao, quạt Asia mang đến không khí mát mẻ và dễ chịu cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/275186/dung-asia-vy639990-290823-035003-600x600.jpg",
+                       quantity = 1000,
+                       price = 790000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 152,
+                       Name = "Quạt treo tường Asia 3 cánh VY377790 55W",
+                       Description = "Quạt treo tường Asia VY377790 với 3 cánh và công suất 55W là sự lựa chọn hoàn hảo cho việc làm mát trong không gian sống hoặc làm việc. Thiết kế đơn giản và hiệu suất ổn định, quạt Asia mang đến không khí mát mẻ và dễ chịu cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/275528/treo-asia-vy377790-290823-033942-600x600.jpg",
+                       quantity = 1000,
+                       price = 690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 153,
+                       Name = "Quạt bàn Senko 3 cánh B1213 40W",
+                       Description = "Quạt bàn Senko B1213 với 3 cánh và công suất 40W là lựa chọn hoàn hảo cho việc làm mát không gian làm việc hoặc nơi làm việc của bạn. Thiết kế đơn giản và hiệu suất ổn định, quạt Senko làm cho không gian của bạn trở nên thoải mái và dễ chịu.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/268448/ban-senko-b1213-290823-033550-600x600.jpg",
+                       quantity = 1000,
+                       price = 350000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 154,
+                       Name = "Quạt treo tường Senko 7 cánh TC1622 65W",
+                       Description = "Quạt treo tường Senko TC1622 với 7 cánh và công suất 65W là giải pháp làm mát hiệu quả cho không gian sống của bạn. Thiết kế đẹp mắt và hiệu suất ổn định, quạt Senko mang đến không khí mát mẻ và dễ chịu cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/268462/quat-treo-tuong-senko-7-canh-tc1622-65w-290823-035015-600x600.jpg",
+                       quantity = 1000,
+                       price = 499000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 155,
+                       Name = "Quạt hộp Midea 5 cánh KYT30-15A 40W",
+                       Description = "Quạt hộp Midea KYT30-15A với 5 cánh và công suất 40W là sự lựa chọn hoàn hảo cho việc làm mát trong không gian sống hoặc làm việc. Thiết kế đơn giản và hiệu suất ổn định, quạt Midea mang đến không khí mát mẻ và dễ chịu cho mọi không gian.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1992/207672/midea-kyt30-15a-thumb.jpg",
+                       quantity = 1000,
+                       price = 550000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 10,
+
+                   },
+                   new Product
+                   {
+                       Id = 156,
+                       Name = "Máy sấy thông hơi Galanz 7 Kg DV-70Q1C",
+                       Description = "Máy sấy thông hơi Galanz DV-70Q1C với dung tích 7 kg là giải pháp hoàn hảo cho việc làm khô quần áo một cách nhanh chóng và hiệu quả. Thiết kế hiện đại và tính năng thông minh giúp tiết kiệm thời gian và năng lượng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/302178/may-say-thong-hoi-galanz-dv-70q1c-260323-083916-600x600.jpg",
+                       quantity = 1000,
+                       price = 4390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 157,
+                       Name = "Máy sấy thông hơi Galanz 7 Kg DV-70T5C(S)",
+                       Description = "Máy sấy thông hơi Galanz DV-70T5C(S) với dung tích 7 kg là lựa chọn đáng tin cậy để làm khô quần áo một cách nhanh chóng và hiệu quả. Thiết kế hiện đại và tính năng thông minh giúp tiết kiệm thời gian và năng lượng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/241930/may-say-thong-hoi-galanz-7-kg-dv-70t5c-s-300x300.jpg",
+                       quantity = 1000,
+                       price = 4800000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 158,
+                       Name = "Máy sấy thông hơi Galanz 7 Kg DV-70T5C(W)",
+                       Description = "Máy sấy thông hơi Galanz DV-70T5C(W) với dung tích 7 kg là sự kết hợp hoàn hảo giữa hiệu suất và tính tiện ích. Thiết kế thông minh và tính năng tiên tiến giúp làm khô quần áo một cách dễ dàng và hiệu quả.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/241929/may-say-thong-hoi-galanz-7-kg-dv-70t5c-w-270922-022611-600x600.jpg",
+                       quantity = 1000,
+                       price = 4700000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 159,
+                       Name = "Máy sấy thông hơi Casper 7.2 Kg TD-72VWD",
+                       Description = "Máy sấy thông hơi Casper TD-72VWD với dung tích 7.2 kg là giải pháp làm khô quần áo hiệu quả và tiết kiệm năng lượng. Thiết kế hiện đại và tính năng thông minh giúp làm khô quần áo một cách dễ dàng và nhanh chóng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/273320/may-say-casper-td-72vwd-fix-thumb-600x600.jpg",
+                       quantity = 1000,
+                       price = 4990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 160,
+                       Name = "Máy sấy thông hơi Electrolux 8.5 Kg EDV854J3WB",
+                       Description = "Máy sấy thông hơi Electrolux EDV854J3WB với dung tích 8.5 kg là lựa chọn hoàn hảo cho việc làm khô quần áo một cách nhanh chóng và hiệu quả. Thiết kế hiện đại và tính năng tiên tiến giúp tiết kiệm thời gian và năng lượng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/272144/may-say-thong-hoi-electrolux-85-kg-edv854j3wb-1.-1-600x600.jpg",
+                       quantity = 1000,
+                       price = 9890000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 161,
+                       Name = "Máy sấy thông hơi Toshiba 7 Kg TD-H80SEV(SK)",
+                       Description = "Máy sấy thông hơi Toshiba TD-H80SEV(SK) với dung tích 7 kg là sự kết hợp hoàn hảo giữa hiệu suất và tính tiện ích. Thiết kế thông minh và tính năng tiên tiến giúp làm khô quần áo một cách dễ dàng và hiệu quả.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/310253/may-say-toshiba-td-h80sev-sk-070823-044325-600x600.jpg",
+                       quantity = 1000,
+                       price = 5690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 162,
+                       Name = "Máy sấy thông hơi Electrolux 7.5 Kg EDV754H3WB",
+                       Description = "Máy sấy thông hơi Electrolux EDV754H3WB với dung tích 7.5 kg là giải pháp làm khô quần áo hiệu quả và tiết kiệm năng lượng. Thiết kế hiện đại và tính năng thông minh giúp làm khô quần áo một cách dễ dàng và nhanh chóng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/272143/may-say-thong-hoi-electrolux-75-kg-edv754h3wb-170223-031343-600x600.jpg",
+                       quantity = 1000,
+                       price = 7990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 163,
+                       Name = "Máy sấy bơm nhiệt Electrolux 9 Kg EDH903R9WB",
+                       Description = "Máy sấy bơm nhiệt Electrolux EDH903R9WB với dung tích 9 kg là lựa chọn hoàn hảo cho việc làm khô quần áo một cách nhanh chóng và hiệu quả. Thiết kế hiện đại và tính năng tiên tiến giúp tiết kiệm thời gian và năng lượng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/284038/may-say-bom-nhiet-electrolux-9-kg-edh903r9wb-061122-103202-600x600.jpg",
+                       quantity = 1000,
+                       price = 21990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 164,
+                       Name = "Máy sấy thông hơi Electrolux 8.5 Kg EDV854N3SB",
+                       Description = "Máy sấy thông hơi Electrolux EDV854N3SB với dung tích 8.5 kg là sự kết hợp hoàn hảo giữa hiệu suất và tính tiện ích. Thiết kế thông minh và tính năng tiên tiến giúp làm khô quần áo một cách dễ dàng và hiệu quả.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/272145/may-say-thong-hoi-electrolux-85-kg-edv854n3sb-170223-034851-600x600.jpg",
+                       quantity = 1000,
+                       price = 10490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 165,
+                       Name = "Máy sấy bơm nhiệt Electrolux 8 Kg EDH804H5WB",
+                       Description = "Máy sấy bơm nhiệt Electrolux EDH804H5WB với dung tích 8 kg là lựa chọn hoàn hảo cho việc làm khô quần áo một cách nhanh chóng và hiệu quả. Thiết kế hiện đại và tính năng tiên tiến giúp tiết kiệm thời gian và năng lượng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/284036/may-say-bom-nhiet-electrolux-8-kg-edh804h5wb-041122-052059-600x600.jpg",
+                       quantity = 1000,
+                       price = 17990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 166,
+                       Name = "Máy sấy bơm nhiệt LG 10.5 Kg DVHP50B",
+                       Description = "Máy sấy bơm nhiệt LG DVHP50B với dung tích 10.5 kg là giải pháp làm khô quần áo hiệu quả và tiết kiệm năng lượng. Thiết kế hiện đại và tính năng thông minh giúp làm khô quần áo một cách dễ dàng và nhanh chóng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/307973/may-say-bom-nhiet-lg-inverter-105-kg-dvhp50b-0.-600x600.jpg",
+                       quantity = 1000,
+                       price = 20970000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 167,
+                       Name = "Máy sấy thông hơi Electrolux 8.5 Kg EDS854N3SB",
+                       Description = "Máy sấy thông hơi Electrolux EDS854N3SB với dung tích 8.5 kg là lựa chọn hoàn hảo cho việc làm khô quần áo một cách nhanh chóng và hiệu quả. Thiết kế hiện đại và tính năng tiên tiến giúp tiết kiệm thời gian và năng lượng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/272142/may-say-thong-hoi-electrolux-85-kg-eds854n3sb-160222-072932-600x600.jpg",
+                       quantity = 1000,
+                       price = 10990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 168,
+                       Name = "Máy sấy ngưng tụ Toshiba 8 Kg TD-K90MEV(SK)",
+                       Description = "Máy sấy ngưng tụ Toshiba TD-K90MEV(SK) với dung tích 8 kg là giải pháp tiện lợi và hiệu quả cho việc làm khô quần áo. Thiết kế thông minh và tính năng tiên tiến giúp làm khô quần áo một cách dễ dàng và hiệu quả.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/310251/product-310251-070723-035006-600x600.jpg",
+                       quantity = 1000,
+                       price = 9900000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 169,
+                       Name = "Máy sấy thông hơi Beko 8 Kg DA8112RX0W",
+                       Description = "Máy sấy thông hơi Beko DA8112RX0W với dung tích 8 kg là sự kết hợp hoàn hảo giữa hiệu suất và tính tiện ích. Thiết kế hiện đại và tính năng tiên tiến giúp làm khô quần áo một cách dễ dàng và hiệu quả.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/227250/may-say-beko-da8112rx0w-1-300x300.jpg",
+                       quantity = 1000,
+                       price = 6990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 170,
+                       Name = "Máy sấy ngưng tụ Candy 10 Kg CSO C10TE-S",
+                       Description = "Máy sấy ngưng tụ Candy CSO C10TE-S với dung tích 10 kg là giải pháp làm khô quần áo hiệu quả và tiết kiệm năng lượng. Thiết kế hiện đại và tính năng thông minh giúp làm khô quần áo một cách dễ dàng và nhanh chóng.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/2202/230073/may-say-candy-cso-c10te-s-300x300.jpg",
+                       quantity = 1000,
+                       price = 7190000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 11,
+
+                   },
+                   new Product
+                   {
+                       Id = 171,
+                       Name = "Electrolux 23 lít EMM23D22B",
+                       Description = "Lò vi sóng Electrolux EMM23D22B có dung tích 23 lít, thiết kế hiện đại với nhiều chức năng thông minh, giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Với công suất 800W, sản phẩm này đảm bảo bạn có thể chuẩn bị các món ăn ngon mỗi ngày.\r\nElectrolux 23 lít EMM23K22B:",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299619/299619-600x600.jpg",
+                       quantity = 1000,
+                       price = 2390000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 172,
+                       Name = "Electrolux 23 lít EMM23K22B",
+                       Description = "Lò vi sóng Electrolux EMM23K22B với dung tích 23 lít, công suất 800W, và nhiều tính năng tiện ích. Thiết kế sang trọng và hiện đại, sản phẩm này là sự lựa chọn hoàn hảo cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299620/lo-vi-song-electrolux-emm23k22b-23-lit-140423-115410-600x600.jpg",
+                       quantity = 1000,
+                       price = 2365000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 173,
+                       Name = "Electrolux 20 lít EMM20K22W",
+                       Description = "Lò vi sóng Electrolux EMM20K22W với dung tích 20 lít, công suất 700W, và các tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế trang nhã và hiện đại, phù hợp với mọi không gian bếp.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299616/299616-600x600.jpg",
+                       quantity = 1000,
+                       price = 1890000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 174,
+                       Name = "Panasonic 25 lít NN-ST34NBYUE",
+                       Description = "Lò vi sóng Panasonic NN-ST34NBYUE với dung tích 25 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình có nhu cầu sử dụng thường xuyên.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/303492/303492-min-600x600.jpg",
+                       quantity = 1000,
+                       price = 3590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 175,
+                       Name = "BlueStone 25 lít MOB-7733",
+                       Description = "Lò vi sóng BlueStone MOB-7733 có dung tích 25 lít, công suất 900W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/242774/bluestone-mob-7733-25-lit-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 2799000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 176,
+                       Name = "Panasonic 25 lít NN-SM33NBYUE",
+                       Description = "Lò vi sóng Panasonic NN-SM33NBYUE với dung tích 25 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/303491/303491-min-600x600.jpg",
+                       quantity = 1000,
+                       price = 3070000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 177,
+                       Name = "Panasonic 20 lít NN-ST25JWYUE",
+                       Description = "Lò vi sóng Panasonic NN-ST25JWYUE có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/197818/panasonic-nn-st25jwyue-310723-025041-600x600.jpg",
+                       quantity = 1000,
+                       price = 2870000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 178,
+                       Name = "BlueStone 20 lít MOB-7708B",
+                       Description = "Lò vi sóng BlueStone MOB-7708B với dung tích 20 lít, công suất 700W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/242766/bluestone-mob-7708b-20-lit-260723-103853-600x600.jpg",
+                       quantity = 1000,
+                       price = 1849000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 179,
+                       Name = "Electrolux 30 lít EMG30D22BM",
+                       Description = "Lò vi sóng Electrolux EMG30D22BM có dung tích lớn 30 lít, công suất 1000W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/305855/lo-vi-song-electrolux-emg30d22bm-30-lit-240423-095632-600x600.jpg",
+                       quantity = 1000,
+                       price = 4740000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 180,
+                       Name = "Samsung 23 lít MS23K3513AS/SV-N",
+                       Description = "Lò vi sóng Samsung MS23K3513AS/SV-N với dung tích 23 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là lựa chọn phù hợp cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/203059/lo-vi-song-samsung-ms23k3513as-sv-n-23-lit-310723-031206-600x600.jpg",
+                       quantity = 1000,
+                       price = 1690000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 181,
+                       Name = "Sharp 20 lít R-205VN(S)",
+                       Description = "Lò vi sóng Sharp R-205VN(S) với dung tích 20 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/69080/sharp-r-205vn-s-20-lit-020223-111427-600x600.jpg",
+                       quantity = 1000,
+                       price = 1590000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 182,
+                       Name = "Sharp 20 lít R-209VN-SK",
+                       Description = "Lò vi sóng Sharp R-209VN-SK có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và đẳng cấp, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/235256/235256%20(1)-600x600.jpg",
+                       quantity = 1000,
+                       price = 1670000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 183,
+                       Name = "Electrolux 20 lít EMG20K38GWP",
+                       Description = " Lò vi sóng Electrolux EMG20K38GWP với dung tích 20 lít, công suất 800W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/203563/lo-vi-song-electrolux-emg20k38gwp-310723-031401-600x600.jpg",
+                       quantity = 1000,
+                       price = 1990000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 184,
+                       Name = "Sharp 21 lít R-211TV-BK",
+                       Description = " Lò vi sóng Sharp R-211TV-BK với dung tích 21 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/316809/lo-vi-song-sharp-r-211tv-bk-21-lit-0-600x600.jpg",
+                       quantity = 1000,
+                       price = 1890000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   },
+                   new Product
+                   {
+                       Id = 185,
+                       Name = "Electrolux 23 lít EMG23D22B",
+                       Description = " Lò vi sóng Electrolux EMG23D22B có dung tích lớn 23 lít, công suất 800W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
+                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299618/299618-600x600-1.jpg",
+                       quantity = 1000,
+                       price = 2490000,
+                       WarrantyPeriod = 720,
+                       CategoryID = 12,
+
+                   }
+                );
+            modelBuilder.Entity<ProductsDetail>().HasData(
+                new ProductsDetail
+                {
+                    Id = 1,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 1,
+                },
+                new ProductsDetail
+                {
+                    Id = 2,
+                    Name = "Watt",
+                    Value = "30",
+                    ProductId = 1,
+                },
+                new ProductsDetail
+                {
+                    Id = 3,
+                    Name = "Producer",
+                    Value = "Panasonic",
+                    ProductId = 1,
+                },
+                new ProductsDetail
+                {
+                    Id = 4,
+                    Name = "Volt",
+                    Value = "110",
+                    ProductId = 2,
+                },
+                new ProductsDetail
+                {
+                    Id = 5,
+                    Name = "Watt",
+                    Value = "50",
+                    ProductId = 2,
+                },
+                new ProductsDetail
+                {
+                    Id = 6,
+                    Name = "Producer",
+                    Value = "Samsung",
+                    ProductId = 2,
+                },
+                new ProductsDetail
+                {
+                    Id = 7,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 3,
+                },
+                new ProductsDetail
+                {
+                    Id = 8,
+                    Name = "Watt",
+                    Value = "50",
+                    ProductId = 3,
+                },
+                new ProductsDetail
+                {
+                    Id = 9,
+                    Name = "Producer",
+                    Value = "Lucky Goldstar",
+                    ProductId = 3,
+                },
+                new ProductsDetail
+                {
+                    Id = 10,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 4,
+                },
+                new ProductsDetail
+                {
+                    Id = 11,
+                    Name = "Watt",
+                    Value = "60",
+                    ProductId = 4,
+                },
+                new ProductsDetail
+                {
+                    Id = 12,
+                    Name = "Producer",
+                    Value = "Sony",
+                    ProductId = 4,
+                },
+                new ProductsDetail
+                {
+                    Id = 13,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 5,
+                },
+                new ProductsDetail
+                {
+                    Id = 14,
+                    Name = "Watt",
+                    Value = "55",
+                    ProductId = 5,
+                },
+                new ProductsDetail
+                {
+                    Id = 15,
+                    Name = "Producer",
+                    Value = "Panasonic",
+                    ProductId = 5,
+                },
+                new ProductsDetail
+                {
+                    Id = 16,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 6,
+                },
+                new ProductsDetail
+                {
+                    Id = 17,
+                    Name = "Watt",
+                    Value = "50",
+                    ProductId = 6,
+                },
+                new ProductsDetail
+                {
+                    Id = 18,
+                    Name = "Producer",
+                    Value = "Philips",
+                    ProductId = 6,
+                },
+                new ProductsDetail
+                {
+                    Id = 19,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 7,
+                },
+                new ProductsDetail
+                {
+                    Id = 20,
+                    Name = "Watt",
+                    Value = "55",
+                    ProductId = 7,
+                },
+                new ProductsDetail
+                {
+                    Id = 21,
+                    Name = "Producer",
+                    Value = "Electrolux",
+                    ProductId = 7,
+                },
+                new ProductsDetail
+                {
+                    Id = 22,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 8,
+                },
+                new ProductsDetail
+                {
+                    Id = 23,
+                    Name = "Watt",
+                    Value = "40",
+                    ProductId = 8,
+                },
+                new ProductsDetail
+                {
+                    Id = 24,
+                    Name = "Producer",
+                    Value = "Whirlpool",
+                    ProductId = 8,
+                },
+                new ProductsDetail
+                {
+                    Id = 25,
+                    Name = "Volt",
+                    Value = "110",
+                    ProductId = 9,
+                },
+                new ProductsDetail
+                {
+                    Id = 26,
+                    Name = "Watt",
+                    Value = "60",
+                    ProductId = 9,
+                },
+                new ProductsDetail
+                {
+                    Id = 27,
+                    Name = "Producer",
+                    Value = "Beko",
+                    ProductId = 9,
+                },
+                new ProductsDetail
+                {
+                    Id = 28,
+                    Name = "Volt",
+                    Value = "220",
+                    ProductId = 10,
+                },
+                new ProductsDetail
+                {
+                    Id = 29,
+                    Name = "Watt",
+                    Value = "60",
+                    ProductId = 10,
+                },
+                new ProductsDetail
+                {
+                    Id = 30,
+                    Name = "Producer",
+                    Value = "Sharp",
+                    ProductId = 10,
+                }
                 );
         }
     }

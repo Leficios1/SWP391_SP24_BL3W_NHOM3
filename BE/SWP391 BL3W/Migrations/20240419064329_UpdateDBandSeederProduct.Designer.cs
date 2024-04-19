@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SWP391_BL3W.Database;
 
@@ -11,9 +12,10 @@ using SWP391_BL3W.Database;
 namespace SWP391_BL3W.Migrations
 {
     [DbContext(typeof(SWPContext))]
-    partial class SWPContextModelSnapshot : ModelSnapshot
+    [Migration("20240419064329_UpdateDBandSeederProduct")]
+    partial class UpdateDBandSeederProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2233,7 +2235,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 171,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Electrolux EMM23D22B có dung tích 23 lít, thiết kế hiện đại với nhiều chức năng thông minh, giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Với công suất 800W, sản phẩm này đảm bảo bạn có thể chuẩn bị các món ăn ngon mỗi ngày.\r\nElectrolux 23 lít EMM23K22B:",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299619/299619-600x600.jpg",
                             Name = "Electrolux 23 lít EMM23D22B",
                             WarrantyPeriod = 720,
@@ -2244,7 +2246,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 172,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Electrolux EMM23K22B với dung tích 23 lít, công suất 800W, và nhiều tính năng tiện ích. Thiết kế sang trọng và hiện đại, sản phẩm này là sự lựa chọn hoàn hảo cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299620/lo-vi-song-electrolux-emm23k22b-23-lit-140423-115410-600x600.jpg",
                             Name = "Electrolux 23 lít EMM23K22B",
                             WarrantyPeriod = 720,
@@ -2255,7 +2257,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 173,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Electrolux EMM20K22W với dung tích 20 lít, công suất 700W, và các tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế trang nhã và hiện đại, phù hợp với mọi không gian bếp.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299616/299616-600x600.jpg",
                             Name = "Electrolux 20 lít EMM20K22W",
                             WarrantyPeriod = 720,
@@ -2266,7 +2268,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 174,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Panasonic NN-ST34NBYUE với dung tích 25 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình có nhu cầu sử dụng thường xuyên.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/303492/303492-min-600x600.jpg",
                             Name = "Panasonic 25 lít NN-ST34NBYUE",
                             WarrantyPeriod = 720,
@@ -2277,7 +2279,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 175,
                             CategoryID = 12,
-                            Description = "Lò vi sóng BlueStone MOB-7733 có dung tích 25 lít, công suất 900W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/242774/bluestone-mob-7733-25-lit-0-600x600.jpg",
                             Name = "BlueStone 25 lít MOB-7733",
                             WarrantyPeriod = 720,
@@ -2288,7 +2290,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 176,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Panasonic NN-SM33NBYUE với dung tích 25 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/303491/303491-min-600x600.jpg",
                             Name = "Panasonic 25 lít NN-SM33NBYUE",
                             WarrantyPeriod = 720,
@@ -2299,7 +2301,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 177,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Panasonic NN-ST25JWYUE có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/197818/panasonic-nn-st25jwyue-310723-025041-600x600.jpg",
                             Name = "Panasonic 20 lít NN-ST25JWYUE",
                             WarrantyPeriod = 720,
@@ -2310,7 +2312,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 178,
                             CategoryID = 12,
-                            Description = "Lò vi sóng BlueStone MOB-7708B với dung tích 20 lít, công suất 700W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/242766/bluestone-mob-7708b-20-lit-260723-103853-600x600.jpg",
                             Name = "BlueStone 20 lít MOB-7708B",
                             WarrantyPeriod = 720,
@@ -2321,7 +2323,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 179,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Electrolux EMG30D22BM có dung tích lớn 30 lít, công suất 1000W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/305855/lo-vi-song-electrolux-emg30d22bm-30-lit-240423-095632-600x600.jpg",
                             Name = "Electrolux 30 lít EMG30D22BM",
                             WarrantyPeriod = 720,
@@ -2332,7 +2334,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 180,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Samsung MS23K3513AS/SV-N với dung tích 23 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là lựa chọn phù hợp cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/203059/lo-vi-song-samsung-ms23k3513as-sv-n-23-lit-310723-031206-600x600.jpg",
                             Name = "Samsung 23 lít MS23K3513AS/SV-N",
                             WarrantyPeriod = 720,
@@ -2343,7 +2345,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 181,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Sharp R-205VN(S) với dung tích 20 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/69080/sharp-r-205vn-s-20-lit-020223-111427-600x600.jpg",
                             Name = "Sharp 20 lít R-205VN(S)",
                             WarrantyPeriod = 720,
@@ -2354,7 +2356,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 182,
                             CategoryID = 12,
-                            Description = "Lò vi sóng Sharp R-209VN-SK có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và đẳng cấp, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/235256/235256%20(1)-600x600.jpg",
                             Name = "Sharp 20 lít R-209VN-SK",
                             WarrantyPeriod = 720,
@@ -2365,7 +2367,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 183,
                             CategoryID = 12,
-                            Description = " Lò vi sóng Electrolux EMG20K38GWP với dung tích 20 lít, công suất 800W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/203563/lo-vi-song-electrolux-emg20k38gwp-310723-031401-600x600.jpg",
                             Name = "Electrolux 20 lít EMG20K38GWP",
                             WarrantyPeriod = 720,
@@ -2376,7 +2378,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 184,
                             CategoryID = 12,
-                            Description = " Lò vi sóng Sharp R-211TV-BK với dung tích 21 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/316809/lo-vi-song-sharp-r-211tv-bk-21-lit-0-600x600.jpg",
                             Name = "Sharp 21 lít R-211TV-BK",
                             WarrantyPeriod = 720,
@@ -2387,7 +2389,7 @@ namespace SWP391_BL3W.Migrations
                         {
                             Id = 185,
                             CategoryID = 12,
-                            Description = " Lò vi sóng Electrolux EMG23D22B có dung tích lớn 23 lít, công suất 800W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
+                            Description = "",
                             ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299618/299618-600x600-1.jpg",
                             Name = "Electrolux 23 lít EMG23D22B",
                             WarrantyPeriod = 720,
@@ -2428,209 +2430,6 @@ namespace SWP391_BL3W.Migrations
                             Name = "Volt",
                             ProductId = 1,
                             Value = "220"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Watt",
-                            ProductId = 1,
-                            Value = "30"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Producer",
-                            ProductId = 1,
-                            Value = "Panasonic"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Volt",
-                            ProductId = 2,
-                            Value = "110"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Watt",
-                            ProductId = 2,
-                            Value = "50"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Producer",
-                            ProductId = 2,
-                            Value = "Samsung"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Volt",
-                            ProductId = 3,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Watt",
-                            ProductId = 3,
-                            Value = "50"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "Producer",
-                            ProductId = 3,
-                            Value = "Lucky Goldstar"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "Volt",
-                            ProductId = 4,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Name = "Watt",
-                            ProductId = 4,
-                            Value = "60"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Name = "Producer",
-                            ProductId = 4,
-                            Value = "Sony"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Name = "Volt",
-                            ProductId = 5,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Name = "Watt",
-                            ProductId = 5,
-                            Value = "55"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Name = "Producer",
-                            ProductId = 5,
-                            Value = "Panasonic"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Name = "Volt",
-                            ProductId = 6,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Name = "Watt",
-                            ProductId = 6,
-                            Value = "50"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Name = "Producer",
-                            ProductId = 6,
-                            Value = "Philips"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Name = "Volt",
-                            ProductId = 7,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Name = "Watt",
-                            ProductId = 7,
-                            Value = "55"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Name = "Producer",
-                            ProductId = 7,
-                            Value = "Electrolux"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Name = "Volt",
-                            ProductId = 8,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            Name = "Watt",
-                            ProductId = 8,
-                            Value = "40"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            Name = "Producer",
-                            ProductId = 8,
-                            Value = "Whirlpool"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            Name = "Volt",
-                            ProductId = 9,
-                            Value = "110"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            Name = "Watt",
-                            ProductId = 9,
-                            Value = "60"
-                        },
-                        new
-                        {
-                            Id = 27,
-                            Name = "Producer",
-                            ProductId = 9,
-                            Value = "Beko"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Name = "Volt",
-                            ProductId = 10,
-                            Value = "220"
-                        },
-                        new
-                        {
-                            Id = 29,
-                            Name = "Watt",
-                            ProductId = 10,
-                            Value = "60"
-                        },
-                        new
-                        {
-                            Id = 30,
-                            Name = "Producer",
-                            ProductId = 10,
-                            Value = "Sharp"
                         });
                 });
 
@@ -2755,7 +2554,7 @@ namespace SWP391_BL3W.Migrations
                             Id = 1,
                             Address = "HCM",
                             AvatarUrl = "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg",
-                            DateOfBirth = new DateTime(2024, 4, 19, 14, 7, 55, 495, DateTimeKind.Local).AddTicks(3833),
+                            DateOfBirth = new DateTime(2024, 4, 19, 13, 43, 29, 159, DateTimeKind.Local).AddTicks(8177),
                             Email = "admin@gmail.com",
                             Gender = "Male",
                             Name = "admin",
