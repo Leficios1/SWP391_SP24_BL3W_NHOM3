@@ -1516,7 +1516,7 @@ namespace SWP391_BL3W.Database
                   {
                       Id = 81,
                       Name = "Nồi cơm điện cao tần Sunhouse 1.5 lít SHD8955",
-                      Description = " ",
+                      Description = "Nồi cơm điện cao tần Sunhouse kiểu dáng đơn giản, chắc chắn, lớp vỏ sáng bóng tạo nên nét sang trọng riêng của một nồi cơm điện tử",
                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/131925/sunhouse-mama-shd8955-0-600x600.jpg",
                       quantity = 1000,
                       price = 1890000,
@@ -1528,7 +1528,7 @@ namespace SWP391_BL3W.Database
                   {
                       Id = 82,
                       Name = "Nồi cơm điện tử Sharp 1.8 lít KS-COM183MV-WH",
-                      Description = " ",
+                      Description = "Nồi cơm điện tử Sharp 1.8 lít KS-COM183MV-WH với nhiều chế độ cài sẵn, công nghệ nhiệt 3D nấu cơm ngon, hẹn giờ đến 24 giờ, bảng điều khiển tiếng Việt dễ hiểu,... là công cụ đắc lực trong căn bếp gia đình.",
                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/296809/noi-com-dien-tu-sharp-18-lit-ks-com183mv-wh-021122-102925-600x600.jpg",
                       quantity = 1000,
                       price = 990000,
@@ -1540,7 +1540,7 @@ namespace SWP391_BL3W.Database
                   {
                       Id = 83,
                       Name = "Nồi cơm nắp gài Sunhouse 1.8 lít SHD 8661",
-                      Description = " ",
+                      Description = "Nồi cơm điện Sunhouse Mama có kiểu dáng thon gọn, màu đỏ trắng nổi bật, vỏ nồi bóng loáng, sang trọng tăng tính thẩm mỹ cho mọi không gian",
                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/72067/sunhouse-mama-shd-8661-220923-113258-600x600.jpg",
                       quantity = 1000,
                       price = 1440000,
@@ -1550,7 +1550,55 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 84,
+                      Name = "Nồi cơm nắp gài Delites 1.8 lít NCG1805",
+                      Description = "Nồi cơm điện Delites với mẫu mã trẻ trung rất phù hợp nhiều sở thích người dùng",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/152969/delites-ncg1805-250823-101131-600x600.jpg",
+                      quantity = 1000,
+                      price = 400000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 85,
+                      Name = "Nồi cơm nắp gài BlueStone 1.8 lít RCB-5520",
+                      Description = "Nồi cơm điện nắp gài BlueStone 1.8 lít RCB-5520 trang bị công nghệ 1D nấu cơm chín nhanh, lòng nồi hợp kim nhôm phủ chống dính bền tốt, điều chỉnh bằng nút gạt dễ sử dụng,... là sản phẩm tiện lợi hỗ trợ chế biến những bữa cơm thơm ngon cho gia đình.",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/189688/bluestone-rcb-5520-050124-113008-600x600.jpg",
+                      quantity = 1000,
+                      price = 700000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 86,
+                      Name = "Nồi cơm nắp gài Sunhouse 1 lít SHD8208C",
+                      Description = "Nồi cơm nắp gài Sunhouse 1 lít SHD8208C kiểu dáng nhỏ gọn, thanh lịch, màu sắc tươi sáng",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/203417/Slider/Untitled-1-780x433-1a-780x433.jpg",
+                      quantity = 1000,
+                      price = 490000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 87,
+                      Name = "Nồi cơm nắp rời Delites 1.5 lít NCR1502",
+                      Description = "Nồi cơm điện Delites NCR1502 màu sắc hiện đại, sang trọng, kiểu dáng trẻ trung bắt mắt, sản phẩm đẹp cho không gian dùng thêm đẹp\r\n",
+                      ImageUrl = "https://cdn.tgdd.vn/Products/Images/1922/147243/Slider/no%CC%82%CC%80i6-780x433a-780x433.jpg",
+                      quantity = 1000,
+                      price = 349000,
+                      WarrantyPeriod = 720,
+                      CategoryID = 6,
+
+                  },
+                  new Product
+                  {
+                      Id = 88,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1562,7 +1610,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 89,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1574,7 +1622,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 90,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1586,7 +1634,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 91,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1598,7 +1646,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 92,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1610,7 +1658,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 93,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1622,7 +1670,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
+                      Id = 94,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
@@ -1634,55 +1682,7 @@ namespace SWP391_BL3W.Database
                   },
                   new Product
                   {
-                      Id = 80,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
-                      quantity = 1000,
-                      price = 7690000,
-                      WarrantyPeriod = 720,
-                      CategoryID = 6,
-
-                  },
-                  new Product
-                  {
-                      Id = 80,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
-                      quantity = 1000,
-                      price = 7690000,
-                      WarrantyPeriod = 720,
-                      CategoryID = 6,
-
-                  },
-                  new Product
-                  {
-                      Id = 80,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
-                      quantity = 1000,
-                      price = 7690000,
-                      WarrantyPeriod = 720,
-                      CategoryID = 6,
-
-                  },
-                  new Product
-                  {
-                      Id = 80,
-                      Name = "",
-                      Description = " ",
-                      ImageUrl = "",
-                      quantity = 1000,
-                      price = 7690000,
-                      WarrantyPeriod = 720,
-                      CategoryID = 6,
-
-                  },
-                  new Product
-                  {
-                      Id = 80,
+                      Id = 95,
                       Name = "",
                       Description = " ",
                       ImageUrl = "",
