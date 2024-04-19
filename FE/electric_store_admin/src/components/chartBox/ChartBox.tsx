@@ -12,6 +12,8 @@ type Props = {
   chartData: object[];
 };
 
+
+
 const ChartBox = (props: Props) => {
   return (
     <div className="chartBox">
