@@ -7,6 +7,10 @@ const Footer: React.FC = () => {
         marginTop:"30px",
         width: "100%",
         backgroundColor: "#e6d5b7",
+        position:"relative",
+        bottom:0,
+        left:0,
+        right:0
     }
 
     const FooterContainer: React.CSSProperties = {

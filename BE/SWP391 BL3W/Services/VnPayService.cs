@@ -127,7 +127,7 @@ namespace SWP391_BL3W.Services
             try
             {
 
-                string vnp_ReturnUrl = "https://localhost:3000";
+                string vnp_ReturnUrl = "http://localhost:3000";
                 string vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
                 string vnp_TmnCode = "F8V1A5TK";
                 string vnp_HashSecret = "GCLECYOCZYQLDTIUGHGWZAWPNALXPLOJ";
@@ -218,6 +218,11 @@ namespace SWP391_BL3W.Services
         public async Task GetInformationByReturnUrl(string url)
         {
 
+        }
+
+        public Task<string> CallAPIPayByUserId(int userId, string returnUrl, int orderId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

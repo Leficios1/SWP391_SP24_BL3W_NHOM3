@@ -32,9 +32,9 @@ export const initialState = {
 
 export type AuthenticationState = Readonly<typeof initialState>
 
-export const getAccount = createAsyncThunk("authentication/get_account", async (jwt_token: string) => await axios.get<IAccountProps>(`https://localhost:7152/api/Auth/login/get-user-by-token/${jwt_token}`))
+export const getAccount = createAsyncThunk("authentication/get_account", async (jwt_token: string) => await axios.get<IAccountProps>(`https://localhost:7156/api/Auth/login/get-user-by-token/${jwt_token}`))
 
-export const authenticate = createAsyncThunk("authentication/login", async (auth: ILoginProps) => await axios.post("https://localhost:7152/api/Auth/login", auth))
+export const authenticate = createAsyncThunk("authentication/login", async (auth: ILoginProps) => await axios.post("https://localhost:7156/api/Auth/login", auth))
 
 export const login: (username: string, password: string) => AppThunk = (email: string, password: string) => async dispatch => {
     const cookie = new Cookies()

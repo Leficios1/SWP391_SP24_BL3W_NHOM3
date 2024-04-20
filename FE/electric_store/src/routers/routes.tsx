@@ -14,6 +14,8 @@ import { useAppDispatch, useAppSelector } from "../config/store"
 import { deleteAllProductInCart, getCartByUserId } from "../entities/cart/cart.reducer"
 import "./routes.scss"
 import Order from "../entities/order/Order"
+import { Product } from "../entities/product/product"
+import Profile from "../entities/profile/Profile"
 
 const AppRoutes = () => {
     const cookie = new Cookies();
@@ -40,6 +42,8 @@ const AppRoutes = () => {
                 <Routes>
                     <Route path="/" >
                         <Route index element={<Home />} />
+                        <Route path="/do-gia-dung" element={<Product />} />
+                        <Route path="/ho-so" element={<Profile />} />
                         <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
                         <Route path="/thanh-toan" element={<Order accountId={account?.id} />} />
                     </Route>

@@ -3,12 +3,14 @@ import authentication from "./authentication.reducer";
 import product from "../../entities/product/product.reducer";
 import cart from "../../entities/cart/cart.reducer";
 import order from "../../entities/order/order.reducer";
+import profile from "../../entities/profile/profile.reducer";
 
 const rootReducer: ReducersMapObject = {
     authentication,
     product,
     cart,
-    order
+    order,
+    profile
 }
 
 

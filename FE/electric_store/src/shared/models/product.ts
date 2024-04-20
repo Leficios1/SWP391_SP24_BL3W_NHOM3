@@ -44,10 +44,10 @@ export interface IAllProductProps {
 }
 
 export interface IProductSearch {
-    page: number,
-    size: number,
-    name: string,
-    watt: number,
-    volt: number,
-    producer: string
+    page?: number,
+    size?: number,
+    name?: string,
+    watt?: number,
+    volt?: number,
+    producer?: string
 }

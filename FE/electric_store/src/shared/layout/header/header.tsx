@@ -40,7 +40,9 @@ const Header: React.FC = () => {
 
 
     const styleNavLink: React.CSSProperties = {
-        color: "white"
+        color: "white",
+        width:"100%",
+        height:"100%"
     }
 
     const items: MenuProps['items'] = [
@@ -48,6 +50,9 @@ const Header: React.FC = () => {
             label: <span>Profile</span>,
             icon: "",
             key: '0',
+            onClick:() => {
+                navigate("/ho-so")
+            }
         },
         {
             label: <span>Change password</span>,
@@ -119,18 +124,18 @@ const Header: React.FC = () => {
                             </Col>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink style={styleNavLink} to={"/"}>Giới thiệu</NavLink>
+                                    <NavLink style={styleNavLink} to={"/blog"}>Giới thiệu</NavLink>
                                 </div>
                             </Col>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink style={styleNavLink} to={"/"}>Đồ gia dụng</NavLink>
+                                    <NavLink style={styleNavLink} to={"/do-gia-dung"}>Đồ gia dụng</NavLink>
                                 </div>
 
                             </Col>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink style={styleNavLink} to={"/"}>Liên hệ</NavLink>
+                                    <NavLink style={styleNavLink} to={"/contact"}>Liên hệ</NavLink>
                                 </div>
                             </Col>
                         </Row>

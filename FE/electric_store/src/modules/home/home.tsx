@@ -42,7 +42,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        dispatch(getAllproduct({ page: 1, size: 15 }))
+        dispatch(getAllproduct({ page: 1, size: 10 }))
     }, [])
 
 

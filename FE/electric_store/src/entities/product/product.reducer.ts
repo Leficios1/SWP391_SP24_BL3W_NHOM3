@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, isFulfilled, isPending } from "@reduxjs/toolkit";
-import { IAllProductProps, IProductProps } from "../../shared/models/product";
+import { IAllProductProps, IProductProps, IProductSearch } from "../../shared/models/product";
 import { EntityState, IQueryParams } from "../../shared/utils/reducer.utils";
 import { PRODUCT } from "./product.api";
 import axios from "axios";
@@ -24,6 +24,11 @@ export const getAllproduct = createAsyncThunk("product/getAll", async ({ size, p
 export const getProductDetail = createAsyncThunk("product/getDetail", async (id: string | number) => {
     const requestURL = `${PRODUCT.CUSTOMER.GETPRODUCTDETAIL}/${id}`
     return await axios.get<IProductProps>(requestURL)
+})
+
+
+export const getProductsBySearch = createAsyncThunk("product/getdetailbysearch", async ({ name, page, producer, size, volt, watt }: IProductSearch) => {
+    // const requestUrl = `${PRODUCT.CUSTOMER.GETPRODUCTBYSEARCH}?${name ? "${fdsf}" : ""}               `; de khi nao them field roi lam tiep
 })
 
 
