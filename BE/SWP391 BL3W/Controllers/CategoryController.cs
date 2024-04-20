@@ -17,7 +17,7 @@ namespace SWP391_BL3W.Controllers
         {
             _categoryService = categoryService;
         }
-
+        
         [HttpGet("getall")]
         public async Task<IActionResult> GetAll()
         {

@@ -43,7 +43,7 @@ namespace SWP391_BL3W.Controllers
             var response = await _productService.search(page, size, name, watt, volt, producer);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
-
+        [Authorize(Roles = "1 , 3")]
         [HttpPost("create")]
         public async Task<IActionResult> create(CreateProductDTO dto)
         {
@@ -51,6 +51,7 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
+        [Authorize(Roles = "1 , 3")]
         [HttpPut("update")]
         public async Task<IActionResult> update(UpdateProductsDTO dto)
         {

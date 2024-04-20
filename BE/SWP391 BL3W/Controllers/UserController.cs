@@ -20,7 +20,7 @@ namespace SWP391_BL3W.Controllers
             _userService = userService;
             _mapper = mapper;
         }
-
+        [Authorize]
         [HttpGet("getById")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -43,6 +43,7 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
+        [Authorize]
         [HttpPut("update")]
         public async Task<IActionResult> updateUser(UpdateUserDTO DTO)
         {
@@ -50,6 +51,7 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
+        [Authorize]
         [HttpPut("change-avatar/{id}")]
         public async Task<IActionResult> EditAvatar([FromRoute] int id, [FromBody] string link)
         {

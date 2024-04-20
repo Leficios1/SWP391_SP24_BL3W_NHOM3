@@ -10,7 +10,7 @@
         public string? AvatarUrl { get; set; }
         public string? Gender { get; set; }
         public bool status { get; set; }
-
+        public int RoleId { get; set; }
 
     }
 }
