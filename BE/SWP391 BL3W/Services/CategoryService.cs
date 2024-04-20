@@ -42,21 +42,43 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
-        public async Task<StatusResponse<List<ProductDTO>>> searchProductsByCategory(int categoryId)
+        public async Task<StatusResponse<ProductsResponseDTO>> SearchProductsByCategory(int? size, int? page, int categoryId)
         {
-            var response = new StatusResponse<List<ProductDTO>>();
+            var response = new StatusResponse<ProductsResponseDTO>();
             try
             {
-                var existingProducts = await _productRepository.Get().Where(x => x.CategoryID == categoryId).ToListAsync();
-                if (existingProducts == null)
+                int pageSize = size ?? 15;
+                int pageNumber = page ?? 1;
+
+                var query = _productRepository.Get().Where(x => x.CategoryID == categoryId);
+
+                int totalItems = await query.CountAsync();
+
+                var existingProducts = await query
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                if (existingProducts == null || existingProducts.Count == 0)
                 {
                     response.Data = null;
                     response.statusCode = HttpStatusCode.BadRequest;
-                    response.Errormessge = $"Products with categoryID {categoryId} doesn't exist!";
+                    response.Errormessge = $"Products with categoryID {categoryId} don't exist!";
                     return response;
                 }
+
                 var productDtos = _mapper.Map<List<Product>, List<ProductDTO>>(existingProducts);
-                response.Data = productDtos;
+
+                var productsResponseDto = new ProductsResponseDTO
+                {
+                    Products = productDtos,
+                    TotalPages = (int)Math.Ceiling((double)totalItems / pageSize),
+                    CurrentPage = pageNumber,
+                    PageSize = pageSize,
+                    TotalItems = totalItems
+                };
+
+                response.Data = productsResponseDto;
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Search products by category successfully.";
             }
@@ -68,5 +90,6 @@ namespace SWP391_BL3W.Services
             }
             return response;
         }
+
     }
 }

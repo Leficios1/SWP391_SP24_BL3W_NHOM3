@@ -600,7 +600,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 67,
-                            ProductId = 0,
+                            ProductId = 23,
                             Url = "https://cdn.tgdd.vn/Products/Images/1982/236229/Slider/hafele-hc-i2732a638283148159663228.jpg"
                         },
                         new
@@ -6087,7 +6087,7 @@ namespace SWP391_BL3W.Migrations
                             Id = 1,
                             Address = "HCM",
                             AvatarUrl = "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg",
-                            DateOfBirth = new DateTime(2024, 4, 20, 15, 57, 50, 765, DateTimeKind.Local).AddTicks(815),
+                            DateOfBirth = new DateTime(2024, 4, 20, 16, 2, 43, 437, DateTimeKind.Local).AddTicks(4996),
                             Email = "admin@gmail.com",
                             Gender = "Male",
                             Name = "admin",

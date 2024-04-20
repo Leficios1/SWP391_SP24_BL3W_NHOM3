@@ -3436,7 +3436,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 67,
                     Url = "https://cdn.tgdd.vn/Products/Images/1982/236229/Slider/hafele-hc-i2732a638283148159663228.jpg",
-
+                    ProductId = 23,
                 },
                 new Images
                 {
@@ -3499,7 +3499,6 @@ namespace SWP391_BL3W.Database
                     Id = 76,
                     Url = "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-1-min.jpg",
                     ProductId = 26,
-                 
                 },
                 new Images
                 {
@@ -3625,7 +3624,6 @@ namespace SWP391_BL3W.Database
                     Id = 94,
                     Url = "https://cdn.tgdd.vn/Products/Images/3305/229373/Slider/151020-1117081.jpg",
                     ProductId = 32,
-
                 },
                 new Images
                 {

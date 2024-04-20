@@ -141,6 +141,8 @@ namespace SWP391_BL3W.Services
                 existedUser.status = user.Status;
                 _baseRepository.Update(existedUser);
                 await _baseRepository.SaveChangesAsync();
+                var map = _mapper.Map<UserResponseDto>(existedUser);
+                response.Data = map;
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Update Successful";
                 return response;
