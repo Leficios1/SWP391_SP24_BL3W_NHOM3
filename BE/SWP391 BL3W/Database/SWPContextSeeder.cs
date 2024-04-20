@@ -3143,7 +3143,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 25,
                     Url = "https://cdn.tgdd.vn/Products/Images/1989/322756/binh-dun-sieu-toc-bear-15-lit-bek-e153w2-2.jpg",
-
+                    ProductId = 9,
                 },
                 new Images
                 {
@@ -3435,7 +3435,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 67,
                     Url = "https://cdn.tgdd.vn/Products/Images/1982/236229/Slider/hafele-hc-i2732a638283148159663228.jpg",
-
+                    ProductId = 23,
                 },
                 new Images
                 {
@@ -3496,8 +3496,8 @@ namespace SWP391_BL3W.Database
                 new Images
                 {
                     Id = 76,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-1-min.jpg"
-
+                    Url = "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-1-min.jpg",
+                    ProductId = 26,
                 },
                 new Images
                 {
@@ -3622,7 +3622,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 94,
                     Url = "https://cdn.tgdd.vn/Products/Images/3305/229373/Slider/151020-1117081.jpg",
-
+                    ProductId = 32,
                 },
                 new Images
                 {
@@ -3782,7 +3782,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 117,
                     Url = "https://cdn.tgdd.vn/Products/Images/1942/278555/Slider/vi-vn-smart-lg-4k-65-inch-65uq8000psc-4.jpg",
-
+                    ProductId = 39,
                 },
                 new Images
                 {
@@ -3921,13 +3921,13 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 137,
                     Url = "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972277412853.jpg",
-
+                    ProductId = 46,
                 },
                 new Images
                 {
                     Id = 138,
                     Url = "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972276662851.jpg",
-
+                    ProductId = 46,
                 },
                 new Images
                 {
@@ -3982,6 +3982,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 146,
                     Url = "https://cdn.tgdd.vn/Products/Images/1942/311367/Slider/smart-tivi-toshiba-43-inch-43v31mp638342996422198459.png",
+                    ProductId = 49,
                 },
                 new Images
                 {
@@ -4498,7 +4499,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 220,
                     Url = "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800876583179.jpg",
-
+                    ProductId = 74,
                 },
                 new Images
                 {
@@ -6844,10 +6845,9 @@ namespace SWP391_BL3W.Database
                     ProductId = 185,
 
                 }
-
+                );
             
 
-                );
 
         }
     }
