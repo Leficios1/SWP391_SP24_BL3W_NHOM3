@@ -58,7 +58,7 @@ namespace SWP391_BL3W.Services
                             orderDetailDto.ExpiredWarranty = DateTime.Now.AddDays(product.WarrantyPeriod);
                         }
                         var order = _mapper.Map<Order>(dto);
-                        order.statusMessage = "";
+                        //order.statusMessage = "";
                         order.UserId = dto.UserId;
                         decimal totalPrice = 0;
                         foreach (var exist in dto.OrderDetails)
@@ -92,9 +92,9 @@ namespace SWP391_BL3W.Services
                                 //await _orderDetailRepository.AddAsync(orderdetails);
                             }
                         }
-                        var map = _mapper.Map<OrderResponseDTO>(dto);
-                        map.TotalPrice = totalPrice;
                         await _baseRepository.SaveChangesAsync();
+                        var map = _mapper.Map<OrderResponseDTO>(order);
+                        map.TotalPrice = totalPrice;
                         response.Errormessge = "Create SuccessFul!";
                         response.statusCode = HttpStatusCode.OK;
                         response.Data = map;
