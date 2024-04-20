@@ -15,8 +15,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FloatButton, Popover } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Cart } from './entities/cart/Cart';
+import axios from 'axios';
 
 function App() {
+
+
   return (
     <>
       <BrowserRouter>

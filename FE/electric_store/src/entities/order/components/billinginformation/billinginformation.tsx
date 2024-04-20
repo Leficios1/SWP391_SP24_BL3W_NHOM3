@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./billinginformation.scss"
 import { Button, Checkbox, Col, Divider, Form, GetProp, Input, Row, Tabs, TabsProps } from "antd"
 import Cookies from "universal-cookie"
@@ -9,7 +9,10 @@ import dayjs from "dayjs"
 import { ExtraInformation, IOrderProps } from "../../../../shared/models/order"
 import { ICartDetail } from "../../../cart/components/cartdetail"
 import { useAppDispatch } from "../../../../config/store"
-import { createsubmitpayment } from "../../order.reducer"
+import { createsubmitpayment, getPaymentVnpay } from "../../order.reducer"
+import { AxiosResponse } from "axios"
+import { deleteAllProductInCart } from "../../../cart/cart.reducer"
+import { toast } from "react-toastify"
 
 interface BillingInformationProps {
     totalPrice: number,
@@ -58,7 +61,7 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
             key: 'banking',
             label: 'Chuyển khoản',
             children: <div>
-                <Button htmlType="submit" autoFocus shape="default" >Vui lòng nhấn nút để sang trang thanh toán</Button>
+                <Button htmlType="submit" shape="default">Vui lòng nhấn nút để sang trang thanh toán</Button>
             </div>,
         },
     ];
@@ -73,6 +76,7 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
 
     const onAcceptedSubmit = (formSubmit: ExtraInformation) => {
 
+
         const form = {
             phoneCustomer: formSubmit.phoneCustomer ? formSubmit.phoneCustomer : account.phone,
             nameCustomer: formSubmit.nameCustomer ? formSubmit.nameCustomer : account.name,
@@ -83,8 +87,48 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
             userId: account.id,
         }
 
-        dispatch(createsubmitpayment(form));
+        switch (paymentMethod) {
+            case "bycash": {
+                dispatch(createsubmitpayment(form));
+                break;
+            }
+            case "qrcode": {
+                dispatch(createsubmitpayment(form));
+                break;
+            }
+            case "banking":
+                {
+                    // const result = async () =>
+                    //     await dispatch(createsubmitpayment(form));
+
+                    // const response = result();
+
+                    // console.log(response);
+                    window.document.location.replace("https://www.google.com/") //thay thế link vnpay vao
+
+                }
+                break;
+
+            default:
+                break;
+        }
     }
+
+
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const transactionNo = Number(urlParams.get("vnp_TransactionNo"));
+        console.log(transactionNo);
+        
+
+        if (transactionNo != 0) {
+            // dispatch() 
+            toast.success("Cảm ơn bạn đã thanh toán thành công")
+            window.history.replaceState({}, "", "localhost:3000")
+            dispatch(deleteAllProductInCart(account.id))
+        }
+    },[])
+
 
     return (
         <Form

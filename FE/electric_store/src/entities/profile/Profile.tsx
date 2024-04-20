@@ -29,7 +29,7 @@ const Profile: React.FC = () => {
     const message = useAppSelector(state => state.profile.message) as string;
 
     const dataDetail = useAppSelector(state => state.profile.dataDetail);
-    const dataAccount = dataDetail.data as IAccountProps
+    const dataAccount = dataDetail?.data! as IAccountProps
 
 
 
@@ -82,21 +82,21 @@ const Profile: React.FC = () => {
                                 <Form.Item
                                     label="Tên"
                                     name="name"
-                                    initialValue={dataAccount.name}
+                                    initialValue={dataAccount?.name}
                                 >
                                     <Input type="text" disabled={edit} />
                                 </Form.Item>
                                 <Form.Item
                                     label="Email"
                                     name="email"
-                                    initialValue={dataAccount.email}
+                                    initialValue={dataAccount?.email}
                                 >
                                     <Input type="email" disabled={edit} />
                                 </Form.Item>
                                 <Form.Item
                                     label="Số điện thoại"
                                     name="phone"
-                                    initialValue={dataAccount.phone}
+                                    initialValue={dataAccount?.phone}
                                 >
                                     <Input type="text" disabled={edit} />
                                 </Form.Item>
@@ -104,12 +104,12 @@ const Profile: React.FC = () => {
                                     label="Ngày sinh"
                                     name="dateOfBirth"
                                 >
-                                    <DatePicker defaultValue={dayjs(dayjs(dataAccount.dateOfBirth), dateFormat)} format={dateFormat} disabled={edit} />
+                                    <DatePicker defaultValue={dayjs(dayjs(dataAccount?.dateOfBirth), dateFormat)} format={dateFormat} disabled={edit} />
                                 </Form.Item>
                                 <Form.Item
                                     label="Giới tính"
                                     name="gender"
-                                    initialValue={dataAccount.gender}
+                                    initialValue={dataAccount?.gender}
                                 >
                                     <Select
                                         disabled={edit}
