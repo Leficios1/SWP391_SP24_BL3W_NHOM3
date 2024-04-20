@@ -34,7 +34,7 @@ export const createsubmitpayment = createAsyncThunk("order/submitpayment", async
 
 
 export const getPaymentVnpay = createAsyncThunk("order/submitpayment", async (form: FormPaymentVnPayProps) => {
-    const requestUrl = await axios.get(`${url}/Payment/vn-pay/${form.userId}/${form.device}/${form.orderId}`)
+    const requestUrl = await axios.get(`${url}/Payment/vn-pay/${form.userId}/${form.orderId}/${form.device}`)
     return requestUrl
 })
 

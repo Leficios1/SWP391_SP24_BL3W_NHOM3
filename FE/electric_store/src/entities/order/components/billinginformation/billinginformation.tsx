@@ -98,13 +98,30 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
             }
             case "banking":
                 {
-                    // const result = async () =>
-                    //     await dispatch(createsubmitpayment(form));
+                    const result = async () =>
+                        await dispatch(createsubmitpayment(form));
 
-                    // const response = result();
+                    const response = result();
+                    response
+                        .then((res: any) => {
+                            const data = res.payload.data.data as any
+                            const userId = data.userId
+                            const orderId = data.orderId
 
-                    // console.log(response);
-                    window.document.location.replace("https://www.google.com/") //thay thế link vnpay vao
+                            const result = dispatch(getPaymentVnpay({ userId, device: 1, orderId }))
+                            result.then((res: any) => {
+                                const vnpayLink = res.payload.data
+                                window.document.location.replace(vnpayLink) //thay thế link vnpay vao
+
+                            })
+
+
+                        })
+                        .catch((error) => {
+                            console.log(error);
+
+                        })
+
 
                 }
                 break;
@@ -118,16 +135,17 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const transactionNo = Number(urlParams.get("vnp_TransactionNo"));
-        console.log(transactionNo);
-        
 
         if (transactionNo != 0) {
             // dispatch() 
             toast.success("Cảm ơn bạn đã thanh toán thành công")
-            window.history.replaceState({}, "", "localhost:3000")
+
+
+            // them api vnpay checkpayment vao day nua la xong cook
+            window.history.replaceState({}, "", "http://localhost:3000/thanh-toan")
             dispatch(deleteAllProductInCart(account.id))
         }
-    },[])
+    }, [])
 
 
     return (
