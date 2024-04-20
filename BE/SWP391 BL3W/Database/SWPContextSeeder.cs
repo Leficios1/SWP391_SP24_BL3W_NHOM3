@@ -528,7 +528,7 @@ namespace SWP391_BL3W.Database
                     price = 312000,
                     WarrantyPeriod = 180,
                     CategoryID = 1,
-
+                    status = 1,
                 },
                  new Product
                  {
@@ -545,7 +545,7 @@ namespace SWP391_BL3W.Database
                      price = 80000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -560,7 +560,7 @@ namespace SWP391_BL3W.Database
                      price = 195000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -575,7 +575,7 @@ namespace SWP391_BL3W.Database
                      price = 200000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -590,7 +590,7 @@ namespace SWP391_BL3W.Database
                      price = 200000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -606,7 +606,7 @@ namespace SWP391_BL3W.Database
                      price = 299000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -621,7 +621,7 @@ namespace SWP391_BL3W.Database
                      price = 340000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -633,7 +633,7 @@ namespace SWP391_BL3W.Database
                      price = 490000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -645,7 +645,7 @@ namespace SWP391_BL3W.Database
                      price = 350000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -657,7 +657,7 @@ namespace SWP391_BL3W.Database
                      price = 315000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -669,7 +669,7 @@ namespace SWP391_BL3W.Database
                      price = 550000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -681,7 +681,7 @@ namespace SWP391_BL3W.Database
                      price = 425000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
 
                  new Product
@@ -694,7 +694,7 @@ namespace SWP391_BL3W.Database
                      price = 355000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -706,7 +706,7 @@ namespace SWP391_BL3W.Database
                      price = 510000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -718,7 +718,7 @@ namespace SWP391_BL3W.Database
                      price = 535000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -730,7 +730,7 @@ namespace SWP391_BL3W.Database
                      price = 499000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -742,7 +742,7 @@ namespace SWP391_BL3W.Database
                      price = 1115000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -754,7 +754,7 @@ namespace SWP391_BL3W.Database
                      price = 449000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -766,7 +766,7 @@ namespace SWP391_BL3W.Database
                      price = 320000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -778,7 +778,7 @@ namespace SWP391_BL3W.Database
                      price = 849000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -790,7 +790,7 @@ namespace SWP391_BL3W.Database
                      price = 4990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -802,7 +802,7 @@ namespace SWP391_BL3W.Database
                      price = 8990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -814,7 +814,7 @@ namespace SWP391_BL3W.Database
                      price = 10900000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -826,7 +826,7 @@ namespace SWP391_BL3W.Database
                      price = 6890000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -838,7 +838,7 @@ namespace SWP391_BL3W.Database
                      price = 900000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -850,7 +850,7 @@ namespace SWP391_BL3W.Database
                      price = 29990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -862,7 +862,7 @@ namespace SWP391_BL3W.Database
                      price = 7490000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -874,7 +874,7 @@ namespace SWP391_BL3W.Database
                      price = 890000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -886,7 +886,7 @@ namespace SWP391_BL3W.Database
                      price = 990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -898,7 +898,7 @@ namespace SWP391_BL3W.Database
                      price = 7990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -910,7 +910,7 @@ namespace SWP391_BL3W.Database
                      price = 1390000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -922,7 +922,7 @@ namespace SWP391_BL3W.Database
                      price = 790000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -934,7 +934,7 @@ namespace SWP391_BL3W.Database
                      price = 12390000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -946,7 +946,7 @@ namespace SWP391_BL3W.Database
                      price = 44790000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -958,7 +958,7 @@ namespace SWP391_BL3W.Database
                      price = 11689000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -970,7 +970,7 @@ namespace SWP391_BL3W.Database
                      price = 10400000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -982,7 +982,7 @@ namespace SWP391_BL3W.Database
                      price = 11990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -994,7 +994,7 @@ namespace SWP391_BL3W.Database
                      price = 11690000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1006,7 +1006,7 @@ namespace SWP391_BL3W.Database
                      price = 13490000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1018,7 +1018,7 @@ namespace SWP391_BL3W.Database
                      price = 6990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1030,7 +1030,7 @@ namespace SWP391_BL3W.Database
                      price = 14550000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1042,7 +1042,7 @@ namespace SWP391_BL3W.Database
                      price = 13400000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1054,7 +1054,7 @@ namespace SWP391_BL3W.Database
                      price = 13990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1066,7 +1066,7 @@ namespace SWP391_BL3W.Database
                      price = 5890000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1078,7 +1078,7 @@ namespace SWP391_BL3W.Database
                      price = 17800000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1090,7 +1090,7 @@ namespace SWP391_BL3W.Database
                      price = 11090000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1102,7 +1102,7 @@ namespace SWP391_BL3W.Database
                      price = 3990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1114,7 +1114,7 @@ namespace SWP391_BL3W.Database
                      price = 21090000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1126,7 +1126,7 @@ namespace SWP391_BL3W.Database
                      price = 7350000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1138,7 +1138,7 @@ namespace SWP391_BL3W.Database
                      price = 14490000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1150,7 +1150,7 @@ namespace SWP391_BL3W.Database
                      price = 5990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1162,7 +1162,7 @@ namespace SWP391_BL3W.Database
                      price = 6890000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1174,7 +1174,7 @@ namespace SWP391_BL3W.Database
                      price = 4590000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1186,7 +1186,7 @@ namespace SWP391_BL3W.Database
                      price = 5090000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1198,7 +1198,7 @@ namespace SWP391_BL3W.Database
                      price = 4990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1210,7 +1210,7 @@ namespace SWP391_BL3W.Database
                      price = 6790000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1222,7 +1222,7 @@ namespace SWP391_BL3W.Database
                      price = 5590000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1234,7 +1234,7 @@ namespace SWP391_BL3W.Database
                      price = 14390000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1246,7 +1246,7 @@ namespace SWP391_BL3W.Database
                      price = 6290000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1258,7 +1258,7 @@ namespace SWP391_BL3W.Database
                      price = 9290000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1270,7 +1270,7 @@ namespace SWP391_BL3W.Database
                      price = 14990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1282,7 +1282,7 @@ namespace SWP391_BL3W.Database
                      price = 14990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1294,7 +1294,7 @@ namespace SWP391_BL3W.Database
                      price = 11490000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1306,7 +1306,7 @@ namespace SWP391_BL3W.Database
                      price = 9290000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1318,7 +1318,7 @@ namespace SWP391_BL3W.Database
                      price = 7690000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                   new Product
                   {
@@ -1330,7 +1330,7 @@ namespace SWP391_BL3W.Database
                       price = 3690000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1342,7 +1342,7 @@ namespace SWP391_BL3W.Database
                       price = 6490000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1354,7 +1354,7 @@ namespace SWP391_BL3W.Database
                       price = 10690000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1366,7 +1366,7 @@ namespace SWP391_BL3W.Database
                       price = 4990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1378,7 +1378,7 @@ namespace SWP391_BL3W.Database
                       price = 3990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1390,7 +1390,7 @@ namespace SWP391_BL3W.Database
                       price = 8990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1402,7 +1402,7 @@ namespace SWP391_BL3W.Database
                       price = 12090000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1414,7 +1414,7 @@ namespace SWP391_BL3W.Database
                       price = 5990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1426,7 +1426,7 @@ namespace SWP391_BL3W.Database
                       price = 10090000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1438,7 +1438,7 @@ namespace SWP391_BL3W.Database
                       price = 7990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1450,7 +1450,7 @@ namespace SWP391_BL3W.Database
                       price = 6990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1462,7 +1462,7 @@ namespace SWP391_BL3W.Database
                       price = 5990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1474,7 +1474,7 @@ namespace SWP391_BL3W.Database
                       price = 9490000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1486,7 +1486,7 @@ namespace SWP391_BL3W.Database
                       price = 3990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1498,7 +1498,7 @@ namespace SWP391_BL3W.Database
                       price = 7690000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1510,7 +1510,7 @@ namespace SWP391_BL3W.Database
                       price = 1890000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1522,7 +1522,7 @@ namespace SWP391_BL3W.Database
                       price = 990000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1534,7 +1534,7 @@ namespace SWP391_BL3W.Database
                       price = 1440000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1546,7 +1546,7 @@ namespace SWP391_BL3W.Database
                       price = 400000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1558,7 +1558,7 @@ namespace SWP391_BL3W.Database
                       price = 700000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1570,7 +1570,7 @@ namespace SWP391_BL3W.Database
                       price = 490000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1582,7 +1582,7 @@ namespace SWP391_BL3W.Database
                       price = 349000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1594,7 +1594,7 @@ namespace SWP391_BL3W.Database
                       price = 540000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1606,7 +1606,7 @@ namespace SWP391_BL3W.Database
                       price = 430000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1618,7 +1618,7 @@ namespace SWP391_BL3W.Database
                       price = 550000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1630,7 +1630,7 @@ namespace SWP391_BL3W.Database
                       price = 490000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1642,7 +1642,7 @@ namespace SWP391_BL3W.Database
                       price = 2890000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1654,7 +1654,7 @@ namespace SWP391_BL3W.Database
                       price = 650000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1666,7 +1666,7 @@ namespace SWP391_BL3W.Database
                       price = 1290000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1678,7 +1678,7 @@ namespace SWP391_BL3W.Database
                       price = 2290000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                    new Product
                    {
@@ -1690,7 +1690,7 @@ namespace SWP391_BL3W.Database
                        price = 7690000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1702,7 +1702,7 @@ namespace SWP391_BL3W.Database
                        price = 3770000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1714,7 +1714,7 @@ namespace SWP391_BL3W.Database
                        price = 7890000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1726,7 +1726,7 @@ namespace SWP391_BL3W.Database
                        price = 1440000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1738,7 +1738,7 @@ namespace SWP391_BL3W.Database
                        price = 5160000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1750,7 +1750,7 @@ namespace SWP391_BL3W.Database
                        price = 9590000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1762,7 +1762,7 @@ namespace SWP391_BL3W.Database
                        price = 5390000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1774,7 +1774,7 @@ namespace SWP391_BL3W.Database
                        price = 9350000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1786,7 +1786,7 @@ namespace SWP391_BL3W.Database
                        price = 16790000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1798,7 +1798,7 @@ namespace SWP391_BL3W.Database
                        price = 4510000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1810,7 +1810,7 @@ namespace SWP391_BL3W.Database
                        price = 5500000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1822,7 +1822,7 @@ namespace SWP391_BL3W.Database
                        price = 11490000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1834,7 +1834,7 @@ namespace SWP391_BL3W.Database
                        price = 7790000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1846,7 +1846,7 @@ namespace SWP391_BL3W.Database
                        price = 10390000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1858,7 +1858,7 @@ namespace SWP391_BL3W.Database
                        price = 3470000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1870,7 +1870,7 @@ namespace SWP391_BL3W.Database
                        price = 3990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1882,7 +1882,7 @@ namespace SWP391_BL3W.Database
                        price = 3990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1894,7 +1894,7 @@ namespace SWP391_BL3W.Database
                        price = 2690000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1906,7 +1906,7 @@ namespace SWP391_BL3W.Database
                        price = 2990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1918,7 +1918,7 @@ namespace SWP391_BL3W.Database
                        price = 1990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1930,7 +1930,7 @@ namespace SWP391_BL3W.Database
                        price = 2390000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1942,7 +1942,7 @@ namespace SWP391_BL3W.Database
                        price = 1590000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1954,7 +1954,7 @@ namespace SWP391_BL3W.Database
                        price = 3590000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1966,7 +1966,7 @@ namespace SWP391_BL3W.Database
                        price = 3990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1978,7 +1978,7 @@ namespace SWP391_BL3W.Database
                        price = 3470000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1990,7 +1990,7 @@ namespace SWP391_BL3W.Database
                        price = 3550000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2002,7 +2002,7 @@ namespace SWP391_BL3W.Database
                        price = 4250000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2014,7 +2014,7 @@ namespace SWP391_BL3W.Database
                        price = 4290000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2026,7 +2026,7 @@ namespace SWP391_BL3W.Database
                        price = 4590000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2038,7 +2038,7 @@ namespace SWP391_BL3W.Database
                        price = 2750000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2050,7 +2050,7 @@ namespace SWP391_BL3W.Database
                        price = 1190000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2062,7 +2062,7 @@ namespace SWP391_BL3W.Database
                        price = 1490000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2074,7 +2074,7 @@ namespace SWP391_BL3W.Database
                        price = 1290000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2086,7 +2086,7 @@ namespace SWP391_BL3W.Database
                        price = 1290000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2098,7 +2098,7 @@ namespace SWP391_BL3W.Database
                        price = 990000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2110,7 +2110,7 @@ namespace SWP391_BL3W.Database
                        price = 1790000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2122,7 +2122,7 @@ namespace SWP391_BL3W.Database
                        price = 1390000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2134,7 +2134,7 @@ namespace SWP391_BL3W.Database
                        price = 1490000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2146,7 +2146,7 @@ namespace SWP391_BL3W.Database
                        price = 2390000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2158,7 +2158,7 @@ namespace SWP391_BL3W.Database
                        price = 1290000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2170,7 +2170,7 @@ namespace SWP391_BL3W.Database
                        price = 1990000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2182,7 +2182,7 @@ namespace SWP391_BL3W.Database
                        price = 2690000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2194,7 +2194,7 @@ namespace SWP391_BL3W.Database
                        price = 990000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2206,7 +2206,7 @@ namespace SWP391_BL3W.Database
                        price = 1490000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2218,7 +2218,7 @@ namespace SWP391_BL3W.Database
                        price = 2690000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2230,7 +2230,7 @@ namespace SWP391_BL3W.Database
                        price = 3690000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2242,7 +2242,7 @@ namespace SWP391_BL3W.Database
                        price = 2770000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2254,7 +2254,7 @@ namespace SWP391_BL3W.Database
                        price = 570000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2266,7 +2266,7 @@ namespace SWP391_BL3W.Database
                        price = 470000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2278,7 +2278,7 @@ namespace SWP391_BL3W.Database
                        price = 1470000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2290,7 +2290,7 @@ namespace SWP391_BL3W.Database
                        price = 990000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2302,7 +2302,7 @@ namespace SWP391_BL3W.Database
                        price = 4390000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2314,7 +2314,7 @@ namespace SWP391_BL3W.Database
                        price = 490000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2326,7 +2326,7 @@ namespace SWP391_BL3W.Database
                        price = 590000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2338,7 +2338,7 @@ namespace SWP391_BL3W.Database
                        price = 490000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2350,7 +2350,7 @@ namespace SWP391_BL3W.Database
                        price = 790000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2362,7 +2362,7 @@ namespace SWP391_BL3W.Database
                        price = 690000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2374,7 +2374,7 @@ namespace SWP391_BL3W.Database
                        price = 350000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2386,7 +2386,7 @@ namespace SWP391_BL3W.Database
                        price = 499000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2398,7 +2398,7 @@ namespace SWP391_BL3W.Database
                        price = 550000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2410,7 +2410,7 @@ namespace SWP391_BL3W.Database
                        price = 4390000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2422,7 +2422,7 @@ namespace SWP391_BL3W.Database
                        price = 4800000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2434,7 +2434,7 @@ namespace SWP391_BL3W.Database
                        price = 4700000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2446,7 +2446,7 @@ namespace SWP391_BL3W.Database
                        price = 4990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2458,7 +2458,7 @@ namespace SWP391_BL3W.Database
                        price = 9890000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2470,7 +2470,7 @@ namespace SWP391_BL3W.Database
                        price = 5690000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2482,7 +2482,7 @@ namespace SWP391_BL3W.Database
                        price = 7990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2494,7 +2494,7 @@ namespace SWP391_BL3W.Database
                        price = 21990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2506,7 +2506,7 @@ namespace SWP391_BL3W.Database
                        price = 10490000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2518,7 +2518,7 @@ namespace SWP391_BL3W.Database
                        price = 17990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2530,7 +2530,7 @@ namespace SWP391_BL3W.Database
                        price = 20970000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2542,7 +2542,7 @@ namespace SWP391_BL3W.Database
                        price = 10990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2554,7 +2554,7 @@ namespace SWP391_BL3W.Database
                        price = 9900000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2566,7 +2566,7 @@ namespace SWP391_BL3W.Database
                        price = 6990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2578,7 +2578,7 @@ namespace SWP391_BL3W.Database
                        price = 7190000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2590,7 +2590,7 @@ namespace SWP391_BL3W.Database
                        price = 2390000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2602,7 +2602,7 @@ namespace SWP391_BL3W.Database
                        price = 2365000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2614,7 +2614,7 @@ namespace SWP391_BL3W.Database
                        price = 1890000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2626,7 +2626,7 @@ namespace SWP391_BL3W.Database
                        price = 3590000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2638,7 +2638,7 @@ namespace SWP391_BL3W.Database
                        price = 2799000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2650,7 +2650,7 @@ namespace SWP391_BL3W.Database
                        price = 3070000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2662,7 +2662,7 @@ namespace SWP391_BL3W.Database
                        price = 2870000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2674,7 +2674,7 @@ namespace SWP391_BL3W.Database
                        price = 1849000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2686,7 +2686,7 @@ namespace SWP391_BL3W.Database
                        price = 4740000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2698,7 +2698,7 @@ namespace SWP391_BL3W.Database
                        price = 1690000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2710,7 +2710,7 @@ namespace SWP391_BL3W.Database
                        price = 1590000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2722,7 +2722,7 @@ namespace SWP391_BL3W.Database
                        price = 1670000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2734,7 +2734,7 @@ namespace SWP391_BL3W.Database
                        price = 1990000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2746,7 +2746,7 @@ namespace SWP391_BL3W.Database
                        price = 1890000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2758,7 +2758,7 @@ namespace SWP391_BL3W.Database
                        price = 2490000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    }
                 );
             modelBuilder.Entity<ProductsDetail>().HasData(
