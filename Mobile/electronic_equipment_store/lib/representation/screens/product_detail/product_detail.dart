@@ -536,12 +536,14 @@ class _ProductDetailState extends State<ProductDetail> {
                                                 productModel.productID);
                                         if (productModel.quantity > 0) {
                                           if (productAlreadyInCart) {
+                                            cartProvider.addQuantityProductInCart(productModel,
+                                                quantityUserWantBy);
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(
                                               const SnackBar(
-                                                backgroundColor: Colors.red,
+                                                backgroundColor: Colors.green,
                                                 content: Text(
-                                                    'Sản phẩm đã tồn tại trong giỏ hàng.'),
+                                                    'Sản phẩm đã được cập nhật trong giỏ hàng.'),
                                               ),
                                             );
                                           } else {

@@ -35,13 +35,8 @@ class _AccountScreenState extends State<AccountScreen>
   @override
   Widget build(BuildContext context) {
     return AppBarMain(
-      leading: FractionallySizedBox(
-        widthFactor: 0.8,
-        heightFactor: 0.8,
-        child: ImageHelper.loadFromAsset(
-          AssetHelper.imageLogo,
-        ),
-      ),
+      leading: ImageHelper.loadFromAsset(AssetHelper.imageLogo),
+      titleAppbar: "ELECTRICITY STORE",
       child: Scaffold(
         body: Column(
           children: [

@@ -7,6 +7,7 @@ import 'package:electronic_equipment_store/representation/screens/login_or_regis
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/services/api_service.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
+import 'package:electronic_equipment_store/services/cart_provider.dart';
 import 'package:electronic_equipment_store/utils/dialog_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -72,6 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     // ignore: use_build_context_synchronously
                     Provider.of<AuthProvider>(context, listen: false);
                 authProvider.setUser(userModel);
+                // ignore: use_build_context_synchronously
+                final cartProvider = Provider.of<CartProvider>(context, listen: false);
+                cartProvider.fetchCart();
                if (userModel.roleId == 2) {
                   // ignore: use_build_context_synchronously
                   Navigator.of(context).pushNamed(CustomerMainScreen.routeName);

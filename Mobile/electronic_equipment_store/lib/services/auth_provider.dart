@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
-
 import '../models/user_model.dart';
 
 class AuthProvider with ChangeNotifier {
@@ -18,4 +16,5 @@ class AuthProvider with ChangeNotifier {
     isLoggedIn = false;
     notifyListeners();
   }
+
 }

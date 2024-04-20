@@ -106,14 +106,14 @@ class ApiService {
   
   
 
-  static Future<List<ProductModel>?> getAllProductByCategoryName(String categoryId) async {
+  static Future<List<ProductModel>?> getAllProductByCategoryID(int categoryId) async {
   final url = Uri.parse('$apiLink/api/Category/get-product-by-category/$categoryId');
   try {
     final response = await http.get(url);
     if (response.statusCode == 200) {
       Map<String, dynamic> jsonResponse = json.decode(response.body);
       if (jsonResponse.containsKey('data')) {
-        List<dynamic> productList = jsonResponse['data'];
+        List<dynamic> productList = jsonResponse['data']['products'];
         List<ProductModel> products = productList.map((json) => ProductModel.fromJson(json)).toList();        
         return products;
       } else {

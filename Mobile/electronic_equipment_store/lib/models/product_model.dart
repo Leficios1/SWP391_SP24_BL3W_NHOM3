@@ -1,4 +1,3 @@
-
 class ProductModel {
   int productID;
   String productName;
@@ -11,19 +10,18 @@ class ProductModel {
 
   int? quantityUserWantBuy;
 
-  ProductModel({
-    required this.productID,
-    required this.productName,
-    this.productDecription,
-    this.productImage,
-    required this.quantity,
-    required this.price,
-    this.warrantyPeriod,
-    this.categoryID,
-  });
+  ProductModel(
+      {required this.productID,
+      required this.productName,
+      this.productDecription,
+      this.productImage,
+      required this.quantity,
+      required this.price,
+      this.warrantyPeriod,
+      this.categoryID,
+      this.quantityUserWantBuy});
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
-
     return ProductModel(
       productID: json['id'],
       productName: json['name'],
@@ -34,15 +32,24 @@ class ProductModel {
     );
   }
   factory ProductModel.fromJsonGetByID(Map<String, dynamic> json) {
-
     return ProductModel(
-      productID: json['id'],
-      productName: json['name'],
-      productDecription: json['description'],
-      quantity: json['quantity'],
+        productID: json['id'],
+        productName: json['name'],
+        productDecription: json['description'],
+        quantity: json['quantity'],
+        price: json['price'],
+        warrantyPeriod: json['warrantyPeriod'],
+        categoryID: json['categoryID']);
+  }
+
+  factory ProductModel.fromJsonGetCartByUserID(Map<String, dynamic> json) {
+    return ProductModel(
+      productID: json['productId'],
+      productName: json['productName'],
+      productImage: json['imageUrl'],
+      quantityUserWantBuy: json['quantity'],
       price: json['price'],
-      warrantyPeriod: json['warrantyPeriod'],
-      categoryID: json['categoryID']
+      quantity: 10000,
     );
   }
 }

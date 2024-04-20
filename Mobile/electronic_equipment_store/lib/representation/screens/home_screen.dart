@@ -36,11 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
         return await ApiService.getAllProduct();
       case 1:
         if (selectedCategory != null) {
-          return await ApiService.getAllProductByCategoryName(
-              selectedCategory!.categoryName);
+          return await ApiService.getAllProductByCategoryID(
+              selectedCategory!.categoryID);
         }
       case 2:
-        // return await ApiService.getAllProductOnAvailable();
         //TODO get all product On available
       case 3:
         //TODO get product notAvailable
@@ -96,8 +95,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  final GlobalKey<ScaffoldState> _scaffoldKey =
-      GlobalKey<ScaffoldState>(); // để gọi Drawer
 
   void _openShowModalBottomSheet() {
     showModalBottomSheet(
@@ -256,59 +253,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return AppBarMain(
-      leading: Builder(builder: (context) {
-        return GestureDetector(
-          onTap: () {
-            _scaffoldKey.currentState?.openDrawer();
-          },
-          child: const Icon(
-            FontAwesomeIcons.bars,
-            size: kDefaultIconSize18,
-            color: ColorPalette.primaryColor,
-          ),
-        );
-      }),
-      child: GestureDetector(
-        onTap: () {
-          if (_focusNode.hasFocus) {
-            _focusNode.unfocus();
-          }
-        },
+      leading: ImageHelper.loadFromAsset(AssetHelper.imageLogo),
+      titleAppbar: "ELECTRICITY STORE",
         child: Scaffold(
-          key: _scaffoldKey,
-          drawer: Drawer(
-            elevation: 0,
-            shape:
-                const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-            backgroundColor: ColorPalette.backgroundScaffoldColor,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    DrawerHeader(
-                        child:
-                            ImageHelper.loadFromAsset(AssetHelper.imageLogo)),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: ListTile(
-                    leading: const Icon(
-                      FontAwesomeIcons.rightFromBracket,
-                      size: kDefaultIconSize18,
-                      color: ColorPalette.primaryColor,
-                    ),
-                    title: Text(
-                      'Đăng xuất',
-                      style: TextStyles.defaultStyle.setTextSize(18),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          extendBodyBehindAppBar: true,
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -322,7 +269,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           controller: TextEditingController(text: searchTerm),
                           focusNode: _focusNode,
                           onTap: _handleSearchTap,
-                          // onTap: () {},
                           decoration: InputDecoration(
                             hintText: 'Bạn muốn tìm tên sản phẩm gì?',
                             hintStyle: TextStyles.defaultStyle,
@@ -446,7 +392,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-      ),
     );
   }
 }
