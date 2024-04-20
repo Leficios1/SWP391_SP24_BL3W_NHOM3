@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SWP391_BL3W.Database;
 
@@ -11,9 +12,10 @@ using SWP391_BL3W.Database;
 namespace SWP391_BL3W.Migrations
 {
     [DbContext(typeof(SWPContext))]
-    partial class SWPContextModelSnapshot : ModelSnapshot
+    [Migration("20240420085215_UpdateDBSeederV3")]
+    partial class UpdateDBSeederV3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1518,7 +1520,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 220,
-                            ProductId = 74,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800876583179.jpg"
                         },
                         new
@@ -6087,7 +6089,7 @@ namespace SWP391_BL3W.Migrations
                             Id = 1,
                             Address = "HCM",
                             AvatarUrl = "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg",
-                            DateOfBirth = new DateTime(2024, 4, 20, 15, 57, 50, 765, DateTimeKind.Local).AddTicks(815),
+                            DateOfBirth = new DateTime(2024, 4, 20, 15, 52, 15, 228, DateTimeKind.Local).AddTicks(6025),
                             Email = "admin@gmail.com",
                             Gender = "Male",
                             Name = "admin",

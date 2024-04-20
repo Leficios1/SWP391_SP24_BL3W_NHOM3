@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SWP391_BL3W.Database;
 
@@ -11,9 +12,10 @@ using SWP391_BL3W.Database;
 namespace SWP391_BL3W.Migrations
 {
     [DbContext(typeof(SWPContext))]
-    partial class SWPContextModelSnapshot : ModelSnapshot
+    [Migration("20240420084332_UpdateDBSeeder")]
+    partial class UpdateDBSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -348,7 +350,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 25,
-                            ProductId = 9,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1989/322756/binh-dun-sieu-toc-bear-15-lit-bek-e153w2-2.jpg"
                         },
                         new
@@ -654,7 +656,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 76,
-                            ProductId = 26,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1982/237011/Slider/vi-vn-doi-sunhouse-shb9111mt-1-min.jpg"
                         },
                         new
@@ -762,7 +764,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 94,
-                            ProductId = 32,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/3305/229373/Slider/151020-1117081.jpg"
                         },
                         new
@@ -900,7 +902,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 117,
-                            ProductId = 39,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1942/278555/Slider/vi-vn-smart-lg-4k-65-inch-65uq8000psc-4.jpg"
                         },
                         new
@@ -1020,13 +1022,13 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 137,
-                            ProductId = 46,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972277412853.jpg"
                         },
                         new
                         {
                             Id = 138,
-                            ProductId = 47,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972276662851.jpg"
                         },
                         new
@@ -1074,7 +1076,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 146,
-                            ProductId = 49,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1942/311367/Slider/smart-tivi-toshiba-43-inch-43v31mp638342996422198459.png"
                         },
                         new
@@ -1518,7 +1520,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 220,
-                            ProductId = 74,
+                            ProductId = 0,
                             Url = "https://cdn.tgdd.vn/Products/Images/1944/302750/Slider/may-giat-samsung-14kg-wa14cg5745bvsv638258800876583179.jpg"
                         },
                         new
@@ -6087,7 +6089,7 @@ namespace SWP391_BL3W.Migrations
                             Id = 1,
                             Address = "HCM",
                             AvatarUrl = "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg",
-                            DateOfBirth = new DateTime(2024, 4, 20, 15, 57, 50, 765, DateTimeKind.Local).AddTicks(815),
+                            DateOfBirth = new DateTime(2024, 4, 20, 15, 43, 32, 737, DateTimeKind.Local).AddTicks(9665),
                             Email = "admin@gmail.com",
                             Gender = "Male",
                             Name = "admin",
