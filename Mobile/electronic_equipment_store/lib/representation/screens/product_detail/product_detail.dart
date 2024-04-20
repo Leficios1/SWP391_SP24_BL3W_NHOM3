@@ -8,12 +8,15 @@ import 'package:electronic_equipment_store/representation/screens/product_detail
 import 'package:electronic_equipment_store/representation/screens/widgets/app_bar_main.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/representation/widgets/indicator_widget.dart';
+import 'package:electronic_equipment_store/services/auth_provider.dart';
+import 'package:electronic_equipment_store/services/cart_provider.dart';
 import 'package:electronic_equipment_store/utils/asset_helper.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import '../../../core/constants/color_constants.dart';
 import '../../../core/constants/dismension_constants.dart';
 import '../../../core/constants/textstyle_constants.dart';
@@ -41,7 +44,7 @@ class _ProductDetailState extends State<ProductDetail> {
       TextEditingController(text: '1');
 
   int _currentImage = 0;
-  int quantity = 1;
+  int quantityUserWantBy = 1;
 
   @override
   void initState() {
@@ -193,9 +196,9 @@ class _ProductDetailState extends State<ProductDetail> {
 
   @override
   Widget build(BuildContext context) {
-    // final cartProvider = Provider.of<CartProvider>(context, listen: false);
-    //TODO double check need provider or not
-
+    final cartProvider = Provider.of<CartProvider>(context, listen: false);
+    AuthProvider authProvider =
+        Provider.of<AuthProvider>(context, listen: false);
     final ProductModel productModel = widget.productModel;
     final List<ProductDetailModel> productDetails = widget.productDetails;
     final List<ProductImageModel> productImages = widget.productImageModel;
@@ -303,28 +306,28 @@ class _ProductDetailState extends State<ProductDetail> {
                                     )
                                   ],
                                 ),
-                                if(productModel.categoryID != null)
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      'Phân loại',
-                                      style: TextStyles.h5.bold,
-                                    ),
-                                    const SizedBox(height: 5),
+                                if (productModel.categoryID != null)
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        'Phân loại',
+                                        style: TextStyles.h5.bold,
+                                      ),
+                                      const SizedBox(height: 5),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
                                         children: [
-                                          Text( 'từ từ rồi làm'
-                                            ,
+                                          Text(
+                                            'từ từ rồi làm',
                                             style: TextStyles.h5,
                                           ),
                                           const SizedBox(height: 5),
                                         ],
                                       )
-                                  ],
-                                ),
+                                    ],
+                                  ),
                               ],
                             ),
                             const SizedBox(height: 10),
@@ -450,10 +453,10 @@ class _ProductDetailState extends State<ProductDetail> {
                                     icon: const Icon(Icons.remove),
                                     onPressed: () {
                                       setState(() {
-                                        if (quantity > 1) {
-                                          quantity--;
+                                        if (quantityUserWantBy > 1) {
+                                          quantityUserWantBy--;
                                           _quantityController.text =
-                                              quantity.toString();
+                                              quantityUserWantBy.toString();
                                         }
                                       });
                                     },
@@ -469,9 +472,10 @@ class _ProductDetailState extends State<ProductDetail> {
                                       ),
                                       onChanged: (value) {
                                         setState(() {
-                                          quantity = int.tryParse(value) ?? 1;
+                                          quantityUserWantBy =
+                                              int.tryParse(value) ?? 1;
                                           _quantityController.text =
-                                              quantity.toString();
+                                              quantityUserWantBy.toString();
                                         });
                                       },
                                     ),
@@ -480,9 +484,9 @@ class _ProductDetailState extends State<ProductDetail> {
                                     icon: const Icon(Icons.add),
                                     onPressed: () {
                                       setState(() {
-                                        quantity++;
+                                        quantityUserWantBy++;
                                         _quantityController.text =
-                                            quantity.toString();
+                                            quantityUserWantBy.toString();
                                       });
                                     },
                                   ),
@@ -507,7 +511,7 @@ class _ProductDetailState extends State<ProductDetail> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 12),
                                 child: Text(
-                                  ' ${NumberFormat.currency(locale: 'vi_VN', symbol: 'vnđ').format(productModel.price*quantity)}',
+                                  ' ${NumberFormat.currency(locale: 'vi_VN', symbol: 'vnđ').format(productModel.price * quantityUserWantBy)}',
                                 ),
                               ),
                             ],
@@ -526,7 +530,48 @@ class _ProductDetailState extends State<ProductDetail> {
                                   ButtonWidget(
                                     title: 'Thêm vào giỏ hàng',
                                     onTap: () {
-                                      //TODO Function add to cart
+                                      if (authProvider.isLoggedIn) {
+                                        final productAlreadyInCart =
+                                            cartProvider.isProductInCart(
+                                                productModel.productID);
+                                        if (productModel.quantity > 0) {
+                                          if (productAlreadyInCart) {
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                backgroundColor: Colors.red,
+                                                content: Text(
+                                                    'Sản phẩm đã tồn tại trong giỏ hàng.'),
+                                              ),
+                                            );
+                                          } else {
+                                            cartProvider.addToCart(productModel,
+                                                quantityUserWantBy);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(const SnackBar(
+                                              backgroundColor: Colors.green,
+                                              content: Text(
+                                                  'Sản phẩm đã được thêm vào giỏ hàng.'),
+                                            ));
+                                          }
+                                        } else if (productModel.quantity <= 0) {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(const SnackBar(
+                                            backgroundColor: Colors.red,
+                                            content: Text(
+                                              'Sản phẩm đã hết hàng bạn không thể bỏ vào giỏ hàng.',
+                                            ),
+                                          ));
+                                        }
+                                      } else {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(const SnackBar(
+                                          backgroundColor: Colors.red,
+                                          content: Text(
+                                            'Đăng nhập để sử dụng giỏ hàng.',
+                                          ),
+                                        ));
+                                      }
                                     },
                                     height: 70,
                                     size: 18,

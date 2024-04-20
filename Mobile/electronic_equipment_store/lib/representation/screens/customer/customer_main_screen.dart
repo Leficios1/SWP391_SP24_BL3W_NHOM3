@@ -1,3 +1,5 @@
+import 'package:electronic_equipment_store/representation/screens/cart_screen.dart';
+import 'package:electronic_equipment_store/representation/screens/customer/account/account_screen_customer.dart';
 import 'package:electronic_equipment_store/representation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -35,11 +37,10 @@ class _CustomerMainScreen extends State<CustomerMainScreen> {
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
-        children: [
-          const HomeScreen(),
-          //TODO work form here
-          // MainCartScreen(),
-          // AccountScreenTrue(),
+        children: const [
+          HomeScreen(),
+          MainCartScreen(),
+          AccountScreenTrue(),
         ],
       ),
       bottomNavigationBar: SalomonBottomBar(

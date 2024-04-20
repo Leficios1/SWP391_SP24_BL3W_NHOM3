@@ -12,5 +12,5 @@ final Map<String, WidgetBuilder> routes = {
         onTap: () {},
       ),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
-  CustomerMainScreen.routeName: (context) => CustomerMainScreen(),
+  CustomerMainScreen.routeName: (context) => const CustomerMainScreen(),
 };

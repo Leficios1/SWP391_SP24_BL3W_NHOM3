@@ -9,6 +9,8 @@ class ProductModel {
   int? warrantyPeriod;
   int? categoryID;
 
+  int? quantityUserWantBuy;
+
   ProductModel({
     required this.productID,
     required this.productName,

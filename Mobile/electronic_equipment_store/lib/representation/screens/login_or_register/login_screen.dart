@@ -6,10 +6,12 @@ import 'package:electronic_equipment_store/representation/screens/customer/custo
 import 'package:electronic_equipment_store/representation/screens/login_or_register/forgot_password_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/services/api_service.dart';
+import 'package:electronic_equipment_store/services/auth_provider.dart';
 import 'package:electronic_equipment_store/utils/dialog_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
+import 'package:provider/provider.dart';
 import '../../../core/constants/color_constants.dart';
 import '../../../core/constants/dismension_constants.dart';
 import '../../../core/constants/textstyle_constants.dart';
@@ -29,7 +31,6 @@ bool _showPass = false;
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  // User? user;
   @override
   void initState() {
     super.initState();
@@ -67,14 +68,15 @@ class _LoginScreenState extends State<LoginScreen> {
               final userModel = UserModel.fromJson(responseToken);
               var userBox = Hive.box('userBox');
               userBox.put('user', json.encode(userModel.toJson()));
+              final authProvider =
+                    // ignore: use_build_context_synchronously
+                    Provider.of<AuthProvider>(context, listen: false);
+                authProvider.setUser(userModel);
                if (userModel.roleId == 2) {
                   // ignore: use_build_context_synchronously
                   Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
                 }              
-            }
-            //     final authProvider =
-            //         Provider.of<AuthProvider>(context, listen: false);
-            //     authProvider.setUser(userModel);
+            }               
           } else {
             // ignore: use_build_context_synchronously
             showCustomDialog(context, 'Lỗi', 'Đăng nhập thất bại.', true);

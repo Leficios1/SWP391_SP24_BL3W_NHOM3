@@ -58,12 +58,12 @@ class _ProductCardState extends State<ProductCard> {
                     child: AutoSizeText(
                       overflow: TextOverflow.ellipsis,
                       minFontSize: 16,
-                      maxLines: 1,
+                      maxLines: 2,
                       widget.product.productName,
                       style: TextStyles.h5.bold,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 18),
                   Row(
                     children: [
                       Expanded(
@@ -105,16 +105,22 @@ class _ProductCardState extends State<ProductCard> {
                             TextSpan(
                               text:
                                   NumberFormat.currency(locale: 'vi_VN', symbol: 'vnđ').format(widget.product.price),
+                                  style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
                       ),
                     ),
                   const SizedBox(height: 4),
-                  //TODO bổ sung kiểm tra trạng thái của món hàng
+                  if(widget.product.quantity > 0)
                     Text(
                       "CÓ SẴN",
                       style: TextStyles.h5.bold.setColor(Colors.green),
+                    ),
+                  if(widget.product.quantity == 0)
+                  Text(
+                      "HÊT HÀNG",
+                      style: TextStyles.h5.bold.setColor(Colors.orange),
                     ),
                 ],
               ),
