@@ -4,7 +4,7 @@ namespace SWP391_BL3W.DTO.Response
 {
     public class OrderResponseDTO
     {
-        public int Id { get; set; }
+        public int OrderId { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal TotalPrice { get; set; }
         public int status {  get; set; }

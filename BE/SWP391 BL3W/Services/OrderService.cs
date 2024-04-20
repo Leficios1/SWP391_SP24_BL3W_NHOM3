@@ -92,11 +92,12 @@ namespace SWP391_BL3W.Services
                                 //await _orderDetailRepository.AddAsync(orderdetails);
                             }
                         }
-
+                        var map = _mapper.Map<OrderResponseDTO>(dto);
+                        map.TotalPrice = totalPrice;
                         await _baseRepository.SaveChangesAsync();
                         response.Errormessge = "Create SuccessFul!";
                         response.statusCode = HttpStatusCode.OK;
-                        response.Data = null;
+                        response.Data = map;
                         transaction.Commit();
                     }
                 }

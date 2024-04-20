@@ -122,12 +122,23 @@ namespace SWP391_BL3W.Services
             return payment;
 
         }
-        public async Task<string> CallAPIPayByUserId(int userId,int orderId)
+        public async Task<string> CallAPIPayByUserId(int userId,int WhoAreYou, int orderId)
         {
             try
             {
-
-                string vnp_ReturnUrl = "http://localhost:3000";
+                string vnp_ReturnUrl;
+                switch (WhoAreYou)
+                {
+                    case 1:
+                        vnp_ReturnUrl = "https://localhost:3000";
+                        break;
+                    case 2:
+                        vnp_ReturnUrl = "https://localhost:7156/index.html";
+                        break;
+                    default:
+                        vnp_ReturnUrl = "";
+                        break;
+                }
                 string vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
                 string vnp_TmnCode = "F8V1A5TK";
                 string vnp_HashSecret = "GCLECYOCZYQLDTIUGHGWZAWPNALXPLOJ";
