@@ -1,97 +1,39 @@
-import Home from "./pages/home/Home";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Users from "./pages/users/Users";
-import Products from "./pages/products/Products";
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import Menu from "./components/menu/Menu";
-import Login from "./pages/login/Login";
-import "./styles/global.scss";
-import User from "./pages/user/User";
-import Product from "./pages/product/Product";
-import Orders from "./pages/History_order/Orders";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
-import Staffs from "./pages/staffs/Staffs";
-import Staff from "./pages/staff/Staff";
-import { Editable } from "./components/editableTable/Editable";
-
-
-
-
-const queryClient = new QueryClient();
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
+import Login from './pages/login/Login';
+import Layout from './Layout';
+import User from './pages/user/User';
+import Staff from './pages/staff/Staff';
+import Product from './pages/product/Product';
+import Editable from './components/editableTable/Editable';
 
 function App() {
-  const Layout = () => {
-    return (
-      <div className="main">
-        <Navbar />
-        <div className="container">
-          <div className="menuContainer">
-            <Menu />
-          </div>
-          <div className="contentContainer">
-            <QueryClientProvider client={queryClient}>
-              <Outlet />
-            </QueryClientProvider>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  };
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/users",
-          element: <Users />,
-        },
-        {
-          path: "/products",
-          element: <Products />,
-        }, {
-          path: "/staff",
-          element: <Staffs />,
-        },
-        {
-          path: "/orders",
-          element: <Orders />,
-        },
-        {
-          path: "/users/:id",
-          element: <Editable />,
-        },
-        {
-          path: "/staff/:id",
-          element: <Staff />,
-        },
-        {
-          path: "/products/:id",
-          element: <Product />,
-        },
-        {
-          path: "/editable",
-          element: <Editable />,
-        },
-      ],
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-  ]);
+  useEffect(() => {
+    const token = Cookies.get('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
-  return <RouterProvider router={router} />;
+  return (
+    <Router>
+      {isAuthenticated ? (
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/users/:id" element={<User />} />
+            <Route path="/staff/:id" element={<Staff />} />
+            <Route path="/products/:id" element={<Product />} />
+            <Route path="/editable" element={<Editable />} />
+          </Route>
+        </Routes>
+      ) : (
+        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+      )}
+    </Router>
+  );
 }
 
 export default App;

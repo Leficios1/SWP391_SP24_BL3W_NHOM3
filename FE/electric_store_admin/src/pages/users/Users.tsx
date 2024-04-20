@@ -1,16 +1,12 @@
 import { GridColDef } from "@mui/x-data-grid";
 import DataTable from "../../components/dataTable/DataTable";
 import "./Users.scss";
-import { useEffect, useState } from "react";
 import Add from "../../components/add/Add";
 import { userRows } from "../../data";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { RootStateOrAny } from "react-redux";
-import { fecthUsers } from "../../API/actions/userActions";
 
 
-/*const columns: GridColDef[] = [
+
+const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
   {
     field: "img",
@@ -57,14 +53,14 @@ import { fecthUsers } from "../../API/actions/userActions";
     type: "boolean",
   },
 ];
-*/
+
 const Users = () => {
-  const dispatch = useDispatch();
+  /*const dispatch = useDispatch();
   const { users, loading, error} = useSelector((state: RootState) => state.user);
 
   useEffect(() => {
     dispatch(fecthUsers());
-  }, [dispatch]);
+  }, [dispatch]);*/
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 100 },
@@ -76,13 +72,7 @@ const Users = () => {
     { field: 'gender', headerName: 'Gender', width: 100 },
     { field: 'status', headerName: 'Status', width: 100, type: 'boolean' },
   ];
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
 
   return (
     <div className="users">
