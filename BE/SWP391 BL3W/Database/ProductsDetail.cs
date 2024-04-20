@@ -14,6 +14,10 @@ namespace SWP391_BL3W.Database
         public string Name { get; set; } = null!;
         [Required]
         public string Value { get; set; } = null!;
+        //Fk
+        public int ProductId { get; set; }
+
+        [ForeignKey("ProductId")]
         public Product Product { get; set; }
 
         //Navigation

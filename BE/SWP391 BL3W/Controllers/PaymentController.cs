@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SWP391_BL3W.Services.Interface;
 
@@ -13,12 +14,15 @@ namespace SWP391_BL3W.Controllers
         {
             _vnPayService = vnPayService;
         }
-        [HttpGet("vn-pay/{userId}/{orderId}")]
-        public async Task<IActionResult> PayWithUserId([FromRoute] int userId, [FromRoute] int orderId)
+        [Authorize]
+        [HttpGet("vn-pay/{userId}/{orderId}/{WhoAreYou}")]
+        public async Task<IActionResult> PayWithUserId([FromRoute] int userId,[FromRoute] int WhoAreYou, [FromRoute] int orderId)
         {
-            var result = await _vnPayService.CallAPIPayByUserId(userId, orderId);
+            var result = await _vnPayService.CallAPIPayByUserId(userId, WhoAreYou, orderId);
             return Ok(result);
         }
+
+        [Authorize]
         [HttpGet("vn-pay/check-payment")]
         public async Task<IActionResult> Check([FromQuery] string url, [FromQuery] int userId)
         {

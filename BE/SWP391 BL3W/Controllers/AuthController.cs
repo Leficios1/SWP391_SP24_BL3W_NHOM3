@@ -28,7 +28,7 @@ namespace SWP391_BL3W.Controllers
             var result = await _authService.GetUserByToken(token);
             return Ok(result);
         }
-        [Authorize(Roles = "1")]
+        [Authorize(Roles = "1, 2")]
         [HttpGet("test")]
         public async Task<IActionResult> HelloWord()
         {
