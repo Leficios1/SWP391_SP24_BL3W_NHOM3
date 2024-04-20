@@ -22,13 +22,14 @@ namespace SWP391_BL3W.Controllers
             _productService = productService;
             _mapper = mapper;
         }
-        [Authorize]
+
         [HttpGet("getAll")]
         public async Task<IActionResult> getAll(int? size, int? page)
         {
             var response = await _productService.getAll(size, page);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
+
         [HttpGet("getDetailsById/{id}")]
         public async Task<IActionResult> getProductsDetailsById ([FromRoute] int id)
         {
