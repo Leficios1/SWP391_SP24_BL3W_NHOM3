@@ -19,12 +19,26 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 //import Staffs from './Staffs';
 //import Orders from './Orders';
 import Layout from "./Layout";
+import { useState, useEffect } from "react";
 
+
+// const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+//   const token = Cookies.get('token');
+
+//   return token ? children : <Navigate to="/login" />;
+// };
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const token = Cookies.get('token');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  return token ? children : <Navigate to="/login" />;
+  useEffect(() => {
+    const token = Cookies.get('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
 function App() {

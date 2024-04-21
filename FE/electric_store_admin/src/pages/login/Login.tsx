@@ -22,7 +22,11 @@ const LoginForm = () => {
       });
       if(response.data.tokenString){
         Cookies.set('token',response.data.tokenString);
-        //axios.defaults.withCredentials = true;
+        axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.tokenString}`;
+        console.log('Login successful');
+        console.log(response.data.tokenString);
+       // setIsAuthenticated(true);
+        axios.defaults.withCredentials = true;
         navigate('/');
       }
     } catch (error) {

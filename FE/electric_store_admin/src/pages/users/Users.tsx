@@ -11,79 +11,136 @@ import { useQuery } from "@tanstack/react-query";
 // get thi chi co header 
 // body la minh muon post cai gi len 
 import Cookies from "js-cookie";
+import { useEffect, useState } from "react";
 
 
 
 
-const fetchUsers = async () => {
-  const { data } = await axios.get("https://epplus.azurewebsites.net/api/User/getAllUser?pageNumber=1&pageSize=10",{
+// const fetchUsers = async () => {
+//   const { data } = await axios.get("https://epplus.azurewebsites.net/api/User/getAllUser?pageNumber=1&pageSize=10",{
   
-    headers: {
-      'accept': 'text/plain',
-      'Authorization': `Bearer ${Cookies.get('token')}`
+//     headers: {
+//       'accept': 'text/plain',
+//       'Authorization': `Bearer ${Cookies.get('token')}`
     
-  }
-});
-  
-  return data;
-}
+//   }
+
+// });return data;
+// }
 
 
-const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 50, type: "number" },
-  {
-    field: "name",
-    headerName: "Name",
-    width: 100,
-    type: "string",
-  },
-  {
-    field: "email",    
-    headerName: "Email",
-    width: 150,
-    type: "string",
-  },
-  {
-    field: "phone",
-    headerName: "Phone",
-    width: 150,
-    type: "string",
-  },
-  {
-    field: "dateOfBirth",
-    headerName: "Date of Birth",
-    width: 250,
-    type: "date",
-  },
-  {
-    field: "avatarUrl",
-    headerName: "Avatar URL",
-    width: 130,
-    type: "string",
-  },
-  {
-    field: "gender",
-    headerName: "Gender",
-    width: 100,
-    type: "string",
-  },
-  {
-    field: "status",
-    headerName: "Status",
-    width: 80,
-    type: "boolean",
-  },
-];
+// const columns: GridColDef[] = [
+//   { field: "id", headerName: "ID", width: 50, type: "number" },
+//   {
+//     field: "name",
+//     headerName: "Name",
+//     width: 100,
+//     type: "string",
+//   },
+//   {
+//     field: "email",    
+//     headerName: "Email",
+//     width: 150,
+//     type: "string",
+//   },
+//   {
+//     field: "phone",
+//     headerName: "Phone",
+//     width: 150,
+//     type: "string",
+//   },
+//   {
+//     field: "dateOfBirth",
+//     headerName: "Date of Birth",
+//     width: 250,
+//     type: "date",
+//   },
+//   {
+//     field: "avatarUrl",
+//     headerName: "Avatar URL",
+//     width: 130,
+//     type: "string",
+//   },
+//   {
+//     field: "gender",
+//     headerName: "Gender",
+//     width: 100,
+//     type: "string",
+//   },
+//   {
+//     field: "status",
+//     headerName: "Status",
+//     width: 80,
+//     type: "boolean",
+//   },
+// ];
 
 const Users = () => {
-  console.log(Cookies.get('token'));
-  const { data, isLoading, error} = useQuery(['users'], fetchUsers);
-  if (isLoading) return 'Loading...';
-  if (error) return console.log(error);
+  // console.log(Cookies.get('token'));
+  // const { data, isLoading, error} = useQuery(['users'], fetchUsers);
+  // if (isLoading) return console.log("Loading...");
+  // if (error) return console.log(error);
+  const [open, setOpen] = useState(false);
+  const [userRows, setUserRows] = useState([]);
 
-
-
-
+  const columns: GridColDef[] = [
+    { field: "id", headerName: "ID", width: 50, type: "number" },
+    {
+      field: "name",
+      headerName: "Name",
+      width: 100,
+      type: "string",
+    },
+    {
+      field: "email",    
+      headerName: "Email",
+      width: 150,
+      type: "string",
+    },
+    {
+      field: "phone",
+      headerName: "Phone",
+      width: 150,
+      type: "string",
+    },
+    {
+      field: "dateOfBirth",
+      headerName: "Date of Birth",
+      width: 250,
+      type: "date",
+    },
+    {
+      field: "avatarUrl",
+      headerName: "Avatar URL",
+      width: 130,
+      type: "string",
+    },
+    {
+      field: "gender",
+      headerName: "Gender",
+      width: 100,
+      type: "string",
+    },
+    {
+      field: "status",
+      headerName: "Status",
+      width: 80,
+      type: "boolean",
+    },
+  ];
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const { data } = await axios.get("https://epplus.azurewebsites.net/api/User/getAllUser?pageNumber=1&pageSize=10",{
+      
+        headers: {
+          'accept': 'text/plain',
+          'Authorization': `Bearer ${Cookies.get('token')}`
+        
+      }
+    
+    });return data;
+    }
+  }, []);
   return (
     <div className="users">
       <div className="info">
