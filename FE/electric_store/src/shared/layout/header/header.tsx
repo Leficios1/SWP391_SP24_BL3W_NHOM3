@@ -8,7 +8,7 @@ import Cookies from "universal-cookie"
 import { useAppDispatch, useAppSelector } from "../../../config/store"
 import { logout } from "../../reducer/authentication.reducer"
 import { useDispatch } from "react-redux"
-import { getProductsBySearch } from "../../../entities/product/product.reducer"
+import { getProductByName, getProductsBySearch } from "../../../entities/product/product.reducer"
 import { IProductDetailProps, IProductProps } from "../../models"
 import { formatCurrencyVN } from "../../utils/formatCurrency"
 
@@ -19,8 +19,8 @@ const Header: React.FC = () => {
     const cookie = new Cookies();
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
-    const dataSearch = useAppSelector(state => state.product.dataSearch);
-    const data = dataSearch?.data.products as IProductProps[]
+    const dataSearchName = useAppSelector(state => state.product.dataSearchName);
+    const data = dataSearchName?.data.products as IProductProps[]
 
     const [nameSearch, setNameSearch] = useState<string>("")
 
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
     ];
 
     const detailProductPage = (value: number | string) => {
-        navigate(`chi-tiet-san-pham/${value}?name=${nameSearch}`)
+        window.document.location.replace(`/chi-tiet-san-pham/${Number(value)}`)
     }
 
     const renderItem = (producId: number | string, nameProduct: string, price: number, image: string) => {
@@ -105,14 +105,14 @@ const Header: React.FC = () => {
 
     const onSearchProduct = (search: string) => {
         setNameSearch(search)
-        dispatch(getProductsBySearch({ page: 1, size: 5, name: search }))
+        dispatch(getProductByName(search))
     }
 
 
 
 
     const options = [
-        dataSearch != undefined ?
+        dataSearchName != undefined ?
             {
                 label: (
                     <div>
@@ -136,9 +136,9 @@ const Header: React.FC = () => {
 
 
 
-    useEffect(() => {
-        dispatch(getProductsBySearch({ page: 1, size: 5 }))
-    }, [])
+    // useEffect(() => {
+    //     dispatch(getProductsBySearch({ page: 1, size: 5 }))
+    // }, [])
 
 
 

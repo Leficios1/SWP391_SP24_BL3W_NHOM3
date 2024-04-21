@@ -32,6 +32,11 @@ export const getProductsBySearch = createAsyncThunk("product/getdetailbysearch",
     return requestUrl
 })
 
+export const getProductByName = createAsyncThunk("product/getDetailbynaem", async (name: string) => {
+    const requestURL = `${PRODUCT.CUSTOMER.GETPRODUCTBYNAME}/${name}?page=1&size=6`
+    return await axios.get<IAllProductProps>(requestURL)
+})
+
 
 export const ProductSlice = createSlice({
     name: "product",
@@ -54,6 +59,13 @@ export const ProductSlice = createSlice({
                 return {
                     ...state,
                     loadingSearch: true
+                }
+
+            })
+            .addMatcher(isPending(getProductByName), (state) => {
+                return {
+                    ...state,
+                    loadingSearchName: true
                 }
 
             })
@@ -80,6 +92,14 @@ export const ProductSlice = createSlice({
                     ...state,
                     dataSearch: data,
                     loadingSearch: false
+                }
+            })
+            .addMatcher(isFulfilled(getProductByName), (state, action) => {
+                const { data } = action.payload
+                return {
+                    ...state,
+                    dataSearchName: data,
+                    loadingSearchName: false
                 }
             })
     }
