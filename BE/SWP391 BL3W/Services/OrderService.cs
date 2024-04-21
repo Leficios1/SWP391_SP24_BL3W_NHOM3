@@ -46,9 +46,32 @@ namespace SWP391_BL3W.Services
                     }
                     else
                     {
+                        foreach (var orderDetailDto in dto.OrderDetails)
+                        {
+                            var product = await _productsRepository.GetById(orderDetailDto.ProductId);
+                            if (product == null)
+                            {
+                                response.statusCode = HttpStatusCode.BadRequest;
+                                response.Errormessge = $"Product with ID {orderDetailDto.ProductId} not found!";
+                                return response;
+                            }
+                            orderDetailDto.ExpiredWarranty = DateTime.Now.AddDays(product.WarrantyPeriod);
+                        }
                         var order = _mapper.Map<Order>(dto);
                         order.statusMessage = "";
-                        order.TotalPrice = dto.OrderDetails.Sum(s => s.Price);
+                        decimal totalPrice = 0;
+                        foreach (var exist in dto.OrderDetails)
+                        {
+                            var product = await _productsRepository.GetById(exist.ProductId);
+                            if (product == null)
+                            {
+                                response.statusCode = HttpStatusCode.NotFound;
+                                response.Errormessge = $"Product with ID {exist.ProductId} not found!";
+                                return response;
+                            }
+                            totalPrice += product.price * exist.Quantity;
+                        }
+                        order.TotalPrice = totalPrice;
                         await _baseRepository.AddAsync(order);
                         //await _baseRepository.SaveChangesAsync();
                         foreach (var exist in dto.OrderDetails)
@@ -58,15 +81,15 @@ namespace SWP391_BL3W.Services
                             {
                                 response.statusCode = HttpStatusCode.BadRequest;
                                 response.Errormessge = "Quantity is not enough!";
-                                throw new Exception();
+                                return response;
                             }
-/*                            else
+                            else
                             {
                                 product.quantity = product.quantity - exist.Quantity;
                                 var orderdetails = _mapper.Map<OrderDetail>(exist);
                                 orderdetails.OrderID = await _baseRepository.Get().OrderByDescending(x => x.OrderId).Select(x => x.OrderId).FirstOrDefaultAsync();
-                                await _orderDetailRepository.AddAsync(orderdetails);
-                            }*/
+                                //await _orderDetailRepository.AddAsync(orderdetails);
+                            }
                         }
 
                         await _baseRepository.SaveChangesAsync();
@@ -139,6 +162,73 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
+        public async Task<StatusResponse<List<BestSellerReponseDTO>>> getBestSellerProductByCategory()
+        {
+            var response = new StatusResponse<List<BestSellerReponseDTO>>();
+            try
+            {
+                var startDate = DateTime.Today.AddYears(-1);
+
+                var ordersWithinYear = await _baseRepository.Get()
+                    .Include(o => o.OrdersDetail)
+                    .ThenInclude(od => od.Product)
+                    .Where(o => o.OrderDate >= startDate)
+                    .ToListAsync();
+
+                if (ordersWithinYear == null || !ordersWithinYear.Any())
+                {
+                    response.statusCode = HttpStatusCode.BadRequest;
+                    response.Errormessge = "No orders found within the past year.";
+                    return response;
+                }
+
+                var categoryQuantities = new Dictionary<int, int>();
+                foreach (var order in ordersWithinYear)
+                {
+                    foreach (var orderDetail in order.OrdersDetail)
+                    {
+                        var categoryId = orderDetail.Product.CategoryID;
+                        var quantity = orderDetail.Quantity;
+                        if (categoryQuantities.ContainsKey(categoryId))
+                        {
+                            categoryQuantities[categoryId] += quantity;
+                        }
+                        else
+                        {
+                            categoryQuantities[categoryId] = quantity;
+                        }
+                    }
+                }
+
+                var top4Categories = categoryQuantities.OrderByDescending(kv => kv.Value).Take(4);
+
+                var bestSellingCategories = new List<BestSellerReponseDTO>();
+                foreach (var kv in top4Categories)
+                {
+                    var category = await _context.Categories.FindAsync(kv.Key);
+                    if (category != null)
+                    {
+                        bestSellingCategories.Add(new BestSellerReponseDTO
+                        {
+                            categoryName = category.CategoryName,
+                            productBestSeller = kv.Value
+                        });
+                    }
+                }
+
+                response.Data = bestSellingCategories;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Retrieved best-selling categories within the past year successfully.";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
+
+
         public async Task<StatusResponse<List<OrderResponseDTO>>> getOrderbyUserId(int userId)
         {
             var response = new StatusResponse<List<OrderResponseDTO>>();
@@ -162,6 +252,116 @@ namespace SWP391_BL3W.Services
             }
             return response;
         }
+
+        public async Task<StatusResponse<List<OrderDetailResponseDTO>>> getOrderdetailByOrderId(int orderId)
+        {
+            var response = new StatusResponse<List<OrderDetailResponseDTO>>();
+            try
+            {
+                var orderDetails = await _orderDetailRepository.Get().Where(x => x.OrderID == orderId).ToListAsync();
+                if (orderDetails == null || !orderDetails.Any())
+                {
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Order details not found for the specified order ID.";
+                    return response;
+                }
+
+                var orderDetailDTOs = new List<OrderDetailResponseDTO>();
+                foreach (var orderDetail in orderDetails)
+                {
+                    var product = await _productsRepository.GetById(orderDetail.ProductId);
+                    if (product != null)
+                    {
+                        var orderDetailDTO = new OrderDetailResponseDTO
+                        {
+                            product = new ProductResponseDTO
+                            {
+                                Id = product.Id,
+                                Name = product.Name,
+                                ImageUrl = product.ImageUrl,
+                            },
+                            Quantity = orderDetail.Quantity,
+                            Price = orderDetail.Price,
+                            ExpiredWarranty = orderDetail.ExpiredWarranty
+                        };
+                        orderDetailDTOs.Add(orderDetailDTO);
+                    }
+                }
+
+                response.Data = orderDetailDTOs;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Retrieved order details successfully.";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
+
+
+        public async Task<StatusResponse<DashBoardOrderResponeDTO>> getTotalPriceByOrderDate(DateTime orderDate, int type)
+        {
+            var response = new StatusResponse<DashBoardOrderResponeDTO>();
+            try
+            {
+                int totalOrder = 0;
+                decimal totalPrice = 0;
+
+                switch (type)
+                {
+                    case 1:
+                        totalOrder = await _context.Orders
+                            .Where(o => o.OrderDate.Date == orderDate.Date)
+                            .CountAsync();
+                        totalPrice = await _context.Orders
+                            .Where(o => o.OrderDate.Date == orderDate.Date)
+                            .SumAsync(o => o.TotalPrice);
+                        break;
+                    case 2:
+                        DateTime weekStartDate = orderDate.Date.AddDays(-7);
+                        totalOrder = await _context.Orders
+                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date)
+                            .CountAsync();
+                        totalPrice = await _context.Orders
+                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date)
+                            .SumAsync(o => o.TotalPrice);
+                        break;
+                    case 3: 
+                        DateTime monthStartDate = new DateTime(orderDate.Year, orderDate.Month, 1);
+                        DateTime monthEndDate = monthStartDate.AddMonths(1).AddDays(-1);
+                        totalOrder = await _context.Orders
+                            .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate)
+                            .CountAsync();
+                        totalPrice = await _context.Orders
+                            .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate)
+                            .SumAsync(o => o.TotalPrice);
+                        break;
+                    default:
+                        response.statusCode = HttpStatusCode.BadRequest;
+                        response.Errormessge = "Invalid type. Type must be 1 (daily), 2 (weekly), or 3 (monthly).";
+                        return response;
+                }
+
+                var dashboardDTO = new DashBoardOrderResponeDTO
+                {
+                    TotalOrder = totalOrder,
+                    Totalprice = totalPrice
+                };
+
+                response.Data = dashboardDTO;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Get total order and total price by order date successfully.";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
+
 
         public async Task<StatusResponse<bool>> updateOrderAsync(int orderId, int status)
         {

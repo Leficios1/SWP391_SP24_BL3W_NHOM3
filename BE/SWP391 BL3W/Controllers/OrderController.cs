@@ -36,6 +36,27 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
+        [HttpGet("Totalprice")]
+        public async Task<IActionResult> totalPriceByOderDate(DateTime ordertime, int type)
+        {
+            var response = await _orderService.getTotalPriceByOrderDate(ordertime, type);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
+        [HttpGet("bestsellerbycategy")]
+        public async Task<IActionResult> getBestSellerByCategory()
+        {
+            var response = await _orderService.getBestSellerProductByCategory();
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+        
+        [HttpGet("getorderdetailsbyorderid/{id}")]
+        public async Task<IActionResult> getOrderDetailsByOrderId([FromRoute]int id)
+        {
+            var response = await _orderService.getOrderdetailByOrderId(id);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
         [HttpPost("create")]
         public async Task<IActionResult> create(OrderResquestDTO dto)
         {

@@ -1,9 +1,10 @@
+using FAMS.Api.Configurations.Cors;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SWP391_BL3W.Configuration.CROS;
 using SWP391_BL3W.Database;
+using SWP391_BL3W.Middlewares;
 using SWP391_BL3W.Repository;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services;
@@ -80,6 +81,7 @@ namespace SWP391_BL3W
 
             var app = builder.Build();
 
+            app.UseMiddleware<GlobalExceptionMiddleware>();
             app.ConfigureCors(builder.Configuration);
 
             // Configure the HTTP request pipeline.
@@ -91,11 +93,13 @@ namespace SWP391_BL3W
 
             app.UseHttpsRedirection();
 
+            app.UseRouting();
+
             app.UseAuthentication();
             app.UseAuthorization();
 
-
-            app.MapControllers();
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+/*            app.MapControllers();*/
 
             app.Run();
         }
