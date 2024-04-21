@@ -28,6 +28,7 @@ namespace SWP391_BL3W
 
             builder.Services.AddCors(o => o.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             builder.Services.AddDbContext<SWPContext>(options => {
+                //options.UseSqlServer("data source=35.186.148.127;initial catalog=electronicDb;user id=sa;password=yourStrong1@Password;trustservercertificate=true;multipleactiveresultsets=true;");
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ElectricStore"));
             });
             builder.Services.AddAutoMapper(typeof(Program));
@@ -62,7 +63,7 @@ namespace SWP391_BL3W
                     BearerFormat = "JWT",
                     Scheme = "bearer"
                 });
-
+               
                 opt.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
@@ -80,16 +81,25 @@ namespace SWP391_BL3W
             });
 
             var app = builder.Build();
-
-            app.UseMiddleware<GlobalExceptionMiddleware>();
+            
+            /* app.UseMiddleware<GlobalExceptionMiddleware>();*/
             app.ConfigureCors(builder.Configuration);
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            
+            
+                app.UseDeveloperExceptionPage();
+            
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(options =>
+                {
+
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                    options.RoutePrefix = string.Empty;
+
+                });
+
 
             app.UseHttpsRedirection();
 

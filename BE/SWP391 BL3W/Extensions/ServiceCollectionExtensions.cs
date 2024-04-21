@@ -23,7 +23,7 @@ namespace SWP391_BL3W.Extensions
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<ICategoryService, CategoryService>();
-
+            services.AddScoped<IPaymentOnlineService, VnPayService>();
             return services;
         }
     }

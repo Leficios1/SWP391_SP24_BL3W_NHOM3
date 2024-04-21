@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SWP391_BL3W.DTO.Request;
@@ -19,7 +20,7 @@ namespace SWP391_BL3W.Controllers
             _userService = userService;
             _mapper = mapper;
         }
-
+        [Authorize]
         [HttpGet("getById")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -28,6 +29,7 @@ namespace SWP391_BL3W.Controllers
         }
 
         [HttpGet("getAllUser")]
+        [Authorize(Roles = "1")]
         public async Task<ActionResult<IEnumerable<UserResponseDto>>> GetUsers(int? pageNumber, int? pageSize)
         {
             var users = await _userService.GetUsers(pageNumber, pageSize);
@@ -41,6 +43,7 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
+        [Authorize]
         [HttpPut("update")]
         public async Task<IActionResult> updateUser(UpdateUserDTO DTO)
         {
@@ -48,6 +51,7 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
+        [Authorize]
         [HttpPut("change-avatar/{id}")]
         public async Task<IActionResult> EditAvatar([FromRoute] int id, [FromBody] string link)
         {

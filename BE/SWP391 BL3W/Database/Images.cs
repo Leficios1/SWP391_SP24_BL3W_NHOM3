@@ -16,6 +16,7 @@ namespace SWP391_BL3W.Database
         // FK
         public int ProductId { get; set; }
         // Navigation
+        [ForeignKey("ProductId")]
         public Product Product { get; set; }
     }
 }

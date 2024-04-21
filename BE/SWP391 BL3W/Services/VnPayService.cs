@@ -122,12 +122,23 @@ namespace SWP391_BL3W.Services
             return payment;
 
         }
-        public async Task<string> CallAPIPayByUserId(int userId, int orderId)
+        public async Task<string> CallAPIPayByUserId(int userId,int WhoAreYou, int orderId)
         {
             try
             {
-
-                string vnp_ReturnUrl = "/result";
+                string vnp_ReturnUrl;
+                switch (WhoAreYou)
+                {
+                    case 1:
+                        vnp_ReturnUrl = "https://localhost:3000";
+                        break;
+                    case 2:
+                        vnp_ReturnUrl = "https://localhost:7156/index.html";
+                        break;
+                    default:
+                        vnp_ReturnUrl = "";
+                        break;
+                }
                 string vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
                 string vnp_TmnCode = "F8V1A5TK";
                 string vnp_HashSecret = "GCLECYOCZYQLDTIUGHGWZAWPNALXPLOJ";
@@ -143,7 +154,7 @@ namespace SWP391_BL3W.Services
                 if (order.status != 0)
                 {
                     if (order.status == 1) throw new Exception("Order is payed.");
-                    if (order.status == -1) throw new Exception("order is canceled");
+                    if (order.status == 3) throw new Exception("order is canceled");
                 }
 
                 if (order.OrdersDetail != null)
@@ -168,7 +179,7 @@ namespace SWP391_BL3W.Services
                 vnpay.AddRequestData("vnp_OrderType", "order");
                 vnpay.AddRequestData("vnp_ReturnUrl", vnp_ReturnUrl);
                 vnpay.AddRequestData("vnp_TxnRef", vnp_TxnRef);
-                vnpay.AddRequestData("vnp_ExpireDate", DateTime.Now.AddMinutes(2).ToString("yyyyMMddHHmmss"));
+                vnpay.AddRequestData("vnp_ExpireDate", DateTime.Now.AddMinutes(20).ToString("yyyyMMddHHmmss"));
 
 
                 string paymentUrl = vnpay.CreateRequestUrl(vnp_Url, vnp_HashSecret);
