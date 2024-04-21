@@ -1170,7 +1170,7 @@ namespace SWP391_BL3W.Migrations
                         new
                         {
                             Id = 138,
-                            ProductId = 46,
+                            ProductId = 47,
                             Url = "https://cdn.tgdd.vn/Products/Images/1942/308371/Slider/google-tivi-sony-4k-43-inch-kd-43x77l638239972276662851.jpg"
                         },
                         new
@@ -3844,7 +3844,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Electrolux 1.7 lít EEK3505",
                             WarrantyPeriod = 180,
                             price = 312000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3855,7 +3856,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Delites 1.5 lít ST15S01",
                             WarrantyPeriod = 180,
                             price = 80000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3866,7 +3868,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Delites 1.8 lít ST18S05",
                             WarrantyPeriod = 180,
                             price = 195000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3877,7 +3880,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Sunhouse 1.8 lít SHD1182",
                             WarrantyPeriod = 180,
                             price = 200000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3888,7 +3892,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Điện Quang 1.8 lít ĐQ EKT06 1518 BL",
                             WarrantyPeriod = 180,
                             price = 200000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3899,7 +3904,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Sunhouse 1.8 lít SHD1351 ",
                             WarrantyPeriod = 180,
                             price = 299000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3910,7 +3916,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Sunhouse 1.8 lít SHD1353",
                             WarrantyPeriod = 180,
                             price = 340000m,
-                            quantity = 500
+                            quantity = 500,
+                            status = 1
                         },
                         new
                         {
@@ -3921,7 +3928,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Sunhouse Mama 1.8 lít SHD1389 ",
                             WarrantyPeriod = 180,
                             price = 490000m,
-                            quantity = 100
+                            quantity = 100,
+                            status = 1
                         },
                         new
                         {
@@ -3932,7 +3940,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Bear 1.5 lít BEK-E153W2",
                             WarrantyPeriod = 180,
                             price = 350000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3943,7 +3952,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Delites 1.8 lít ST18S04",
                             WarrantyPeriod = 180,
                             price = 315000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3954,7 +3964,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Toshiba 1.7 lít KT-17SH2NV",
                             WarrantyPeriod = 180,
                             price = 550000m,
-                            quantity = 80
+                            quantity = 80,
+                            status = 1
                         },
                         new
                         {
@@ -3965,7 +3976,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc thủy tinh Sunhouse 1.7 lít SHD1217 Đen",
                             WarrantyPeriod = 180,
                             price = 425000m,
-                            quantity = 200
+                            quantity = 200,
+                            status = 1
                         },
                         new
                         {
@@ -3976,7 +3988,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Delites 1.8 lít ST18DB01 ",
                             WarrantyPeriod = 180,
                             price = 355000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -3987,7 +4000,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Sunhouse Mama 1.7 lít SHD1330",
                             WarrantyPeriod = 180,
                             price = 510000m,
-                            quantity = 150
+                            quantity = 150,
+                            status = 1
                         },
                         new
                         {
@@ -3998,7 +4012,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Delites 1.7 lít FD-625",
                             WarrantyPeriod = 180,
                             price = 535000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4009,7 +4024,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Sunhouse 1.7 lít SHD1382B",
                             WarrantyPeriod = 180,
                             price = 499000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4020,7 +4036,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Toshiba 1.7 lít KT-17DR1NV",
                             WarrantyPeriod = 180,
                             price = 1115000m,
-                            quantity = 60
+                            quantity = 60,
+                            status = 1
                         },
                         new
                         {
@@ -4031,7 +4048,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc BlueStone 1.7 lít KTB-3417",
                             WarrantyPeriod = 180,
                             price = 449000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4042,7 +4060,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Rapido 1.7 lít RK1717",
                             WarrantyPeriod = 180,
                             price = 320000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4053,7 +4072,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bình đun siêu tốc Toshiba 1.5 lít KT-15DS1NV",
                             WarrantyPeriod = 180,
                             price = 849000m,
-                            quantity = 500
+                            quantity = 500,
+                            status = 1
                         },
                         new
                         {
@@ -4064,7 +4084,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ đôi lắp âm Kangaroo KG855i",
                             WarrantyPeriod = 720,
                             price = 4990000m,
-                            quantity = 750
+                            quantity = 750,
+                            status = 1
                         },
                         new
                         {
@@ -4075,7 +4096,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ đôi lắp âm Hafele HC-I2712A (536.61.716)",
                             WarrantyPeriod = 720,
                             price = 8990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4086,7 +4108,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ đôi lắp âm Hafele HC-I2732A",
                             WarrantyPeriod = 720,
                             price = 10900000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4097,7 +4120,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ đôi lắp âm Pramie 2208",
                             WarrantyPeriod = 720,
                             price = 6890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4108,7 +4132,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ AVA AI-32",
                             WarrantyPeriod = 720,
                             price = 900000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4119,7 +4144,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ đôi lắp âm Sunhouse SHB9111MT",
                             WarrantyPeriod = 720,
                             price = 29990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4130,7 +4156,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp hồng ngoại Sunhouse SHD 6015(EMC)",
                             WarrantyPeriod = 720,
                             price = 7490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4141,7 +4168,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ hồng ngoại lắp âm Hafele HC-H7321B",
                             WarrantyPeriod = 720,
                             price = 890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4152,7 +4180,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ AVA FYM20-71",
                             WarrantyPeriod = 720,
                             price = 990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4163,7 +4192,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ Galanz CH211E",
                             WarrantyPeriod = 720,
                             price = 7990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4174,7 +4204,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp hồng ngoại Sanaky SNK-2524HGN",
                             WarrantyPeriod = 720,
                             price = 1390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4185,7 +4216,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp hồng ngoại Rapido RC2000ES",
                             WarrantyPeriod = 720,
                             price = 790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4196,7 +4228,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp hồng ngoại 3 vùng nấu lắp âm Hafele HC-R603D",
                             WarrantyPeriod = 720,
                             price = 12390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4207,7 +4240,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ 4 vùng nấu lắp âm tích hợp hút mùi Bosch PVQ731F15E",
                             WarrantyPeriod = 720,
                             price = 44790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4218,7 +4252,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Bếp từ 3 vùng nấu lắp âm Bosch PUJ611BB5E",
                             WarrantyPeriod = 720,
                             price = 11689000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4229,7 +4264,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi Samsung 4K 55 inch UA55AU7002",
                             WarrantyPeriod = 720,
                             price = 10400000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4240,7 +4276,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Google Tivi QLED TCL 4K 65 inch 65Q646",
                             WarrantyPeriod = 720,
                             price = 11990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4251,7 +4288,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi Samsung 4K Crystal UHD 55 inch UA55BU8000",
                             WarrantyPeriod = 720,
                             price = 11690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4262,7 +4300,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi LG 4K 65 inch 65UQ8000PSC",
                             WarrantyPeriod = 720,
                             price = 13490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4273,7 +4312,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi Samsung 4K 43 inch UA43AU7002",
                             WarrantyPeriod = 720,
                             price = 6990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4284,7 +4324,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi QLED 4K 55 inch Samsung QA55Q60C",
                             WarrantyPeriod = 720,
                             price = 14550000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4295,7 +4336,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi Samsung 4K 55 inch UA55CU8000",
                             WarrantyPeriod = 720,
                             price = 13400000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4306,7 +4348,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi NanoCell LG 4K 65 inch 65NANO76SQA",
                             WarrantyPeriod = 720,
                             price = 13990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4317,7 +4360,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Google Tivi TCL 43 inch 43S5400",
                             WarrantyPeriod = 720,
                             price = 5890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4328,7 +4372,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi QLED 4K 65 inch Samsung QA65Q60C",
                             WarrantyPeriod = 720,
                             price = 17800000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4339,7 +4384,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Google Tivi Sony 4K 43 inch KD-43X77L",
                             WarrantyPeriod = 720,
                             price = 11090000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4350,7 +4396,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Google Tivi TCL 32 inch 32S5400",
                             WarrantyPeriod = 720,
                             price = 3990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4361,7 +4408,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi NanoCell LG 4K 55 inch 55NANO76SQA",
                             WarrantyPeriod = 720,
                             price = 21090000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4372,7 +4420,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi Toshiba 43 inch 43V31MP",
                             WarrantyPeriod = 720,
                             price = 7350000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4383,7 +4432,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Smart Tivi Samsung 4K 65 inch UA65CU8000",
                             WarrantyPeriod = 720,
                             price = 14490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4394,7 +4444,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Samsung Inverter 236 lít RT22M4032BY/SV",
                             WarrantyPeriod = 720,
                             price = 5990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4405,7 +4456,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Samsung Inverter 256 lít RT25M4032BU/SV",
                             WarrantyPeriod = 720,
                             price = 6890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4416,7 +4468,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Aqua 130 lít AQR-T150FA(BS)",
                             WarrantyPeriod = 720,
                             price = 4590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4427,7 +4480,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Aqua Inverter 189 lít AQR-T220FA(FB)",
                             WarrantyPeriod = 720,
                             price = 5090000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4438,7 +4492,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Toshiba Inverter 180 lít GR-B22VU UKG ",
                             WarrantyPeriod = 720,
                             price = 4990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4449,7 +4504,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Panasonic Inverter 170 lít NR-BA190PPVN",
                             WarrantyPeriod = 720,
                             price = 6790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4460,7 +4516,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh LG Inverter 217 Lít GV-B212WB",
                             WarrantyPeriod = 720,
                             price = 5590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4471,7 +4528,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Samsung Inverter 382 lít RT38CG6584B1SV",
                             WarrantyPeriod = 720,
                             price = 14390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4482,7 +4540,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Samsung Inverter 208 lít RT20HAR8DBU/SV",
                             WarrantyPeriod = 720,
                             price = 6290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4493,7 +4552,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Samsung Inverter 280 lít RB27N4010BU/SV",
                             WarrantyPeriod = 720,
                             price = 9290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4504,7 +4564,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh LG Inverter 519 lít Side By Side GR-B256JDS",
                             WarrantyPeriod = 720,
                             price = 14990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4515,7 +4576,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Aqua Inverter 456 lít Multi Door AQR-M525XA(FB)",
                             WarrantyPeriod = 720,
                             price = 14990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4526,7 +4588,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Toshiba Inverter 460 lít Side By Side GR-RS600WI-PMV(37)-SG",
                             WarrantyPeriod = 720,
                             price = 11490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4537,7 +4600,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Aqua Inverter 347 lít AQR-T400FA(WFB)",
                             WarrantyPeriod = 720,
                             price = 9290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4548,7 +4612,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Tủ lạnh Aqua Inverter 279 lít AQR-T300FA(WFB)",
                             WarrantyPeriod = 720,
                             price = 7690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4559,7 +4624,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy    Sharp 7.5 Kg ES-Y75HV-S",
                             WarrantyPeriod = 720,
                             price = 3690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4570,7 +4636,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Samsung Inverter 9 kg WW90T3040WW/SV",
                             WarrantyPeriod = 720,
                             price = 6490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4581,7 +4648,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Panasonic Inverter 9.5 Kg NA-FD95V1BRV",
                             WarrantyPeriod = 720,
                             price = 10690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4592,7 +4660,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Samsung Inverter 8kg WW80T3020WW/SV",
                             WarrantyPeriod = 720,
                             price = 4990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4603,7 +4672,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Toshiba 7 Kg AW-L805AV (SG)",
                             WarrantyPeriod = 720,
                             price = 3990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4614,7 +4684,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Samsung Inverter 12 kg WA12CG5745BVSV",
                             WarrantyPeriod = 720,
                             price = 8990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4625,7 +4696,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Panasonic Inverter 10.5 Kg NA-FD10VR1BV",
                             WarrantyPeriod = 720,
                             price = 12090000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4636,7 +4708,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Aqua 8.8 KG AQW-FR88GT.BK",
                             WarrantyPeriod = 720,
                             price = 5990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4647,7 +4720,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Samsung Inverter 14 kg WA14CG5745BVSV",
                             WarrantyPeriod = 720,
                             price = 10090000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4658,7 +4732,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Electrolux UltimateCare 100 Inverter 9 kg EWF9025DQWB",
                             WarrantyPeriod = 720,
                             price = 7990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4669,7 +4744,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Aqua Inverter 9 kg AQD- D902G BK",
                             WarrantyPeriod = 720,
                             price = 6990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4680,7 +4756,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt LG TurboDrum Inverter 9 kg T2109VSAB",
                             WarrantyPeriod = 720,
                             price = 5990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4691,7 +4768,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Samsung AI Inverter 9kg WW90TP44DSB/SV",
                             WarrantyPeriod = 720,
                             price = 9490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4702,7 +4780,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Casper 7.5 kg WT-75NG1 ",
                             WarrantyPeriod = 720,
                             price = 3990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4713,7 +4792,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy giặt Aqua Inverter 9.5 kg AQD-A952J BK",
                             WarrantyPeriod = 720,
                             price = 7690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4724,7 +4804,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm điện cao tần Sunhouse 1.5 lít SHD8955",
                             WarrantyPeriod = 720,
                             price = 1890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4735,7 +4816,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm điện tử Sharp 1.8 lít KS-COM183MV-WH",
                             WarrantyPeriod = 720,
                             price = 990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4746,7 +4828,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài Sunhouse 1.8 lít SHD 8661",
                             WarrantyPeriod = 720,
                             price = 1440000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4757,7 +4840,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài Delites 1.8 lít NCG1805",
                             WarrantyPeriod = 720,
                             price = 400000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4768,7 +4852,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài BlueStone 1.8 lít RCB-5520",
                             WarrantyPeriod = 720,
                             price = 700000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4779,7 +4864,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài Sunhouse 1 lít SHD8208C",
                             WarrantyPeriod = 720,
                             price = 490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4790,7 +4876,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp rời Delites 1.5 lít NCR1502",
                             WarrantyPeriod = 720,
                             price = 349000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4801,7 +4888,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài Sunhouse 1.2 lít SHD8217W",
                             WarrantyPeriod = 720,
                             price = 540000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4812,7 +4900,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp rời Delites 1.8 lít RC-10W003",
                             WarrantyPeriod = 720,
                             price = 430000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4823,7 +4912,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài Toshiba 1 lít RC-10JH2PV(B)",
                             WarrantyPeriod = 720,
                             price = 550000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4834,7 +4924,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài AVA 1 lít JRC-100P",
                             WarrantyPeriod = 720,
                             price = 490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4845,7 +4936,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm điện tử Toshiba 1.8 lít RC-18NMFVN(WT)",
                             WarrantyPeriod = 720,
                             price = 2890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4856,7 +4948,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm nắp gài Toshiba 1.8 lít RC-18JH2PV(B)",
                             WarrantyPeriod = 720,
                             price = 650000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4867,7 +4960,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm điện tử Sunhouse mama 1.8 lít SHD8903 ",
                             WarrantyPeriod = 720,
                             price = 1290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4878,7 +4972,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi cơm điện tử Toshiba 1.8 lít RC-18DR2PV(K)",
                             WarrantyPeriod = 720,
                             price = 2290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4889,7 +4984,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Karaoke Dalton TS-15G600X 600W",
                             WarrantyPeriod = 720,
                             price = 7690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4900,7 +4996,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Nanomax S-820",
                             WarrantyPeriod = 720,
                             price = 3770000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4911,7 +5008,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Nanomax X-2000",
                             WarrantyPeriod = 720,
                             price = 7890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4922,7 +5020,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Mobell MK-2120C",
                             WarrantyPeriod = 720,
                             price = 1440000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4933,7 +5032,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Dalton TS-12G350N",
                             WarrantyPeriod = 720,
                             price = 5160000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4944,7 +5044,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Dalton TS-18G850X",
                             WarrantyPeriod = 720,
                             price = 9590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4955,7 +5056,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Nanomax S-1000",
                             WarrantyPeriod = 720,
                             price = 5390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4966,7 +5068,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Nanomax S-5000",
                             WarrantyPeriod = 720,
                             price = 9350000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4977,7 +5080,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa điện Dalton TS-18A8500",
                             WarrantyPeriod = 720,
                             price = 16790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4988,7 +5092,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Nanomax S-900",
                             WarrantyPeriod = 720,
                             price = 4510000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -4999,7 +5104,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Dalton TS-12G450X",
                             WarrantyPeriod = 720,
                             price = 5500000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5010,7 +5116,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Birici NB-6889",
                             WarrantyPeriod = 720,
                             price = 11490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5021,7 +5128,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa tháp Samsung MX-T70/XV",
                             WarrantyPeriod = 720,
                             price = 7790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5032,7 +5140,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa điện Dalton TS - 18A1500",
                             WarrantyPeriod = 720,
                             price = 10390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5043,7 +5152,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Loa kéo Mobell MK-5070",
                             WarrantyPeriod = 720,
                             price = 3470000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5054,7 +5164,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Sunhouse SHD7727 150W",
                             WarrantyPeriod = 720,
                             price = 3990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5065,7 +5176,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Daikiosan DM103 175W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 3990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5076,7 +5188,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "AVA RPD-80 130W",
                             WarrantyPeriod = 720,
                             price = 2690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5087,7 +5200,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Daikiosan DM102 110W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 2990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5098,7 +5212,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Kangaroo KG50F62 100W",
                             WarrantyPeriod = 720,
                             price = 1990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5109,7 +5224,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Sunhouse SHD7745 125W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 2390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5120,7 +5236,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Delites RPD-30 40W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 1590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5131,7 +5248,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Dmax RPD-90 200W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 3590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5142,7 +5260,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Kangaroo KG50F99 165W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 3990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5153,7 +5272,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Kangaroo KG50F95 120W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 3470000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5164,7 +5284,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Hòa Phát HPCF1-012 165W",
                             WarrantyPeriod = 720,
                             price = 3550000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5175,7 +5296,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Sunhouse SHD7775 200W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 4250000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5186,7 +5308,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Rapido 9000D 200W",
                             WarrantyPeriod = 720,
                             price = 4290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5197,7 +5320,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Daikiosan DM202 210W Mẫu mới",
                             WarrantyPeriod = 720,
                             price = 4590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5208,7 +5332,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Rapido 6000D 80W",
                             WarrantyPeriod = 720,
                             price = 2750000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5219,7 +5344,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Rapido SMART-7.0M 7 lít",
                             WarrantyPeriod = 720,
                             price = 1190000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5230,7 +5356,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Sunhouse SHD4062 6 lít",
                             WarrantyPeriod = 720,
                             price = 1490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5241,7 +5368,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Rapido RAF-8.0M 8 lít",
                             WarrantyPeriod = 720,
                             price = 1290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5252,7 +5380,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu AVA KDF-593D 7.5 lít",
                             WarrantyPeriod = 720,
                             price = 1290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5263,7 +5392,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu AVA AF358T 4 lít",
                             WarrantyPeriod = 720,
                             price = 990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5274,7 +5404,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Sunhouse SHD4035 9 lít",
                             WarrantyPeriod = 720,
                             price = 1790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5285,7 +5416,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Sunhouse SHD4026 6 lít",
                             WarrantyPeriod = 720,
                             price = 1390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5296,7 +5428,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Lò chiên không dầu Ferroli FAF-12M 12 lít",
                             WarrantyPeriod = 720,
                             price = 1490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5307,7 +5440,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Toshiba AF-74CS2SRVN(B) 7.4 lít",
                             WarrantyPeriod = 720,
                             price = 2390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5318,7 +5452,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Kangaroo KG55AF1A 5.2 lít",
                             WarrantyPeriod = 720,
                             price = 1290000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5329,7 +5464,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Hafele AF-T5A (535.43.712) 5 lít",
                             WarrantyPeriod = 720,
                             price = 1990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5340,7 +5476,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "SẢN PHẨM CAO CẤP\r\nSẢN PHẨM CAO CẤP\r\nLò chiên không dầu Sunhouse Mama SHD4088 15 lít",
                             WarrantyPeriod = 720,
                             price = 2690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5351,7 +5488,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu AVA AF40155D 5 lít",
                             WarrantyPeriod = 720,
                             price = 990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5362,7 +5500,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Nồi chiên không dầu Philips HD9200/90 2.4 lít",
                             WarrantyPeriod = 720,
                             price = 1490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5373,7 +5512,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Lò chiên không dầu Kangaroo KG12AF1A 12 lít",
                             WarrantyPeriod = 720,
                             price = 2690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5384,7 +5524,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt đứng KDK 3 cánh M40K GY 50W",
                             WarrantyPeriod = 720,
                             price = 3690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5395,7 +5536,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt treo tường KDK 3 cánh M40M 51W",
                             WarrantyPeriod = 720,
                             price = 2770000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5406,7 +5548,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt đứng Senko 3 cánh DH1600 47W",
                             WarrantyPeriod = 720,
                             price = 570000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5417,7 +5560,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt lửng Asia 5 cánh VY538990 55W",
                             WarrantyPeriod = 720,
                             price = 470000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5428,7 +5572,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt đứng Toshiba 5 cánh F-LSA20(H)VN 60W",
                             WarrantyPeriod = 720,
                             price = 1470000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5439,7 +5584,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt đứng Toshiba 5 cánh F-LSA10(W)VN 50W",
                             WarrantyPeriod = 720,
                             price = 990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5450,7 +5596,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt lửng Senko 3 cánh L1638 47W",
                             WarrantyPeriod = 720,
                             price = 4390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5461,7 +5608,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt lửng Senko 7 cánh LTS1636 65W",
                             WarrantyPeriod = 720,
                             price = 490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5472,7 +5620,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt đứng Asia 5 cánh VY539790 55W",
                             WarrantyPeriod = 720,
                             price = 590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5483,7 +5632,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt lửng Asia 5 cánh VY628890 75W",
                             WarrantyPeriod = 720,
                             price = 490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5494,7 +5644,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt đứng Asia 6 cánh VY639990 80W",
                             WarrantyPeriod = 720,
                             price = 790000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5505,7 +5656,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt treo tường Asia 3 cánh VY377790 55W",
                             WarrantyPeriod = 720,
                             price = 690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5516,7 +5668,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt bàn Senko 3 cánh B1213 40W",
                             WarrantyPeriod = 720,
                             price = 350000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5527,7 +5680,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt treo tường Senko 7 cánh TC1622 65W",
                             WarrantyPeriod = 720,
                             price = 499000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5538,7 +5692,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Quạt hộp Midea 5 cánh KYT30-15A 40W",
                             WarrantyPeriod = 720,
                             price = 550000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5549,7 +5704,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Galanz 7 Kg DV-70Q1C",
                             WarrantyPeriod = 720,
                             price = 4390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5560,7 +5716,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Galanz 7 Kg DV-70T5C(S)",
                             WarrantyPeriod = 720,
                             price = 4800000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5571,7 +5728,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Galanz 7 Kg DV-70T5C(W)",
                             WarrantyPeriod = 720,
                             price = 4700000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5582,7 +5740,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Casper 7.2 Kg TD-72VWD",
                             WarrantyPeriod = 720,
                             price = 4990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5593,7 +5752,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Electrolux 8.5 Kg EDV854J3WB",
                             WarrantyPeriod = 720,
                             price = 9890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5604,7 +5764,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Toshiba 7 Kg TD-H80SEV(SK)",
                             WarrantyPeriod = 720,
                             price = 5690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5615,7 +5776,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Electrolux 7.5 Kg EDV754H3WB",
                             WarrantyPeriod = 720,
                             price = 7990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5626,7 +5788,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy bơm nhiệt Electrolux 9 Kg EDH903R9WB",
                             WarrantyPeriod = 720,
                             price = 21990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5637,7 +5800,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Electrolux 8.5 Kg EDV854N3SB",
                             WarrantyPeriod = 720,
                             price = 10490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5648,7 +5812,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy bơm nhiệt Electrolux 8 Kg EDH804H5WB",
                             WarrantyPeriod = 720,
                             price = 17990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5659,7 +5824,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy bơm nhiệt LG 10.5 Kg DVHP50B",
                             WarrantyPeriod = 720,
                             price = 20970000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5670,7 +5836,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Electrolux 8.5 Kg EDS854N3SB",
                             WarrantyPeriod = 720,
                             price = 10990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5681,7 +5848,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy ngưng tụ Toshiba 8 Kg TD-K90MEV(SK)",
                             WarrantyPeriod = 720,
                             price = 9900000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5692,7 +5860,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy thông hơi Beko 8 Kg DA8112RX0W",
                             WarrantyPeriod = 720,
                             price = 6990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5703,7 +5872,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Máy sấy ngưng tụ Candy 10 Kg CSO C10TE-S",
                             WarrantyPeriod = 720,
                             price = 7190000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5714,7 +5884,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Electrolux 23 lít EMM23D22B",
                             WarrantyPeriod = 720,
                             price = 2390000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5725,7 +5896,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Electrolux 23 lít EMM23K22B",
                             WarrantyPeriod = 720,
                             price = 2365000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5736,7 +5908,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Electrolux 20 lít EMM20K22W",
                             WarrantyPeriod = 720,
                             price = 1890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5747,7 +5920,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Panasonic 25 lít NN-ST34NBYUE",
                             WarrantyPeriod = 720,
                             price = 3590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5758,7 +5932,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "BlueStone 25 lít MOB-7733",
                             WarrantyPeriod = 720,
                             price = 2799000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5769,7 +5944,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Panasonic 25 lít NN-SM33NBYUE",
                             WarrantyPeriod = 720,
                             price = 3070000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5780,7 +5956,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Panasonic 20 lít NN-ST25JWYUE",
                             WarrantyPeriod = 720,
                             price = 2870000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5791,7 +5968,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "BlueStone 20 lít MOB-7708B",
                             WarrantyPeriod = 720,
                             price = 1849000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5802,7 +5980,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Electrolux 30 lít EMG30D22BM",
                             WarrantyPeriod = 720,
                             price = 4740000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5813,7 +5992,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Samsung 23 lít MS23K3513AS/SV-N",
                             WarrantyPeriod = 720,
                             price = 1690000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5824,7 +6004,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Sharp 20 lít R-205VN(S)",
                             WarrantyPeriod = 720,
                             price = 1590000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5835,7 +6016,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Sharp 20 lít R-209VN-SK",
                             WarrantyPeriod = 720,
                             price = 1670000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5846,7 +6028,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Electrolux 20 lít EMG20K38GWP",
                             WarrantyPeriod = 720,
                             price = 1990000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5857,7 +6040,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Sharp 21 lít R-211TV-BK",
                             WarrantyPeriod = 720,
                             price = 1890000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         },
                         new
                         {
@@ -5868,7 +6052,8 @@ namespace SWP391_BL3W.Migrations
                             Name = "Electrolux 23 lít EMG23D22B",
                             WarrantyPeriod = 720,
                             price = 2490000m,
-                            quantity = 1000
+                            quantity = 1000,
+                            status = 1
                         });
                 });
 
@@ -6231,7 +6416,7 @@ namespace SWP391_BL3W.Migrations
                             Id = 1,
                             Address = "HCM",
                             AvatarUrl = "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg",
-                            DateOfBirth = new DateTime(2024, 4, 20, 18, 34, 7, 609, DateTimeKind.Local).AddTicks(3669),
+                            DateOfBirth = new DateTime(2024, 4, 21, 15, 20, 26, 450, DateTimeKind.Local).AddTicks(3500),
                             Email = "admin@gmail.com",
                             Gender = "Male",
                             Name = "admin",

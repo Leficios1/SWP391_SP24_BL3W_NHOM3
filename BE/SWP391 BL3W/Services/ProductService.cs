@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SWP391_BL3W.Database;
 using SWP391_BL3W.DTO.Request;
 using SWP391_BL3W.DTO.Response;
+using SWP391_BL3W.Helper;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System.Net;
@@ -191,34 +192,100 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
-        public async Task<StatusResponse<ProductsResponseDTO>> search(int? page, int? size, string name, int? watt, int? volt, string? producer)
+        public async Task<StatusResponse<ProductsResponseDTO>> search(int? page, int? size, string? name, int? categoryId, int? watt, int? volt, string? producer)
         {
             var response = new StatusResponse<ProductsResponseDTO>();
             try
             {
                 int pageSize = size ?? 15;
                 int pageNumber = page ?? 1;
-
                 var query = _context.Products.AsQueryable();
-                query = query.Where(p => p.Name.ToUpper().Contains(name));
-                if (watt.HasValue)
+                if (name == null && categoryId != null)
                 {
-                    query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Watt".ToUpper()) && d.Value == watt.ToString()));
+                    query = query.Where(p => p.CategoryID == categoryId);
+                    if (watt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Watt".ToUpper()) && d.Value == watt.ToString()));
+                    }
+                    if (volt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Volt".ToUpper()) && d.Value == volt.ToString()));
+                    }
+                    if (!string.IsNullOrEmpty(producer))
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Producer".ToUpper()) && d.Value.Contains(producer)));
+                    }
+                    if (query == null)
+                    {
+                        response.statusCode = HttpStatusCode.NotFound;
+                        response.Errormessge = "Not found Product!";
+                        return response;
+                    }
                 }
-                if (volt.HasValue)
+                else if (name != null && categoryId == null)
                 {
-                    query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Volt".ToUpper()) && d.Value == volt.ToString()));
+                    query = query.Where(p => p.Name.ToUpper().Contains(name.ToUpper()));
+                    if (watt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Watt".ToUpper()) && d.Value == watt.ToString()));
+                    }
+                    if (volt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Volt".ToUpper()) && d.Value == volt.ToString()));
+                    }
+                    if (!string.IsNullOrEmpty(producer))
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Producer".ToUpper()) && d.Value.Contains(producer)));
+                    }
+                    if (query == null)
+                    {
+                        response.statusCode = HttpStatusCode.NotFound;
+                        response.Errormessge = "Not found Product!";
+                        return response;
+                    }
                 }
-                if (!string.IsNullOrEmpty(producer))
+                else if (categoryId != null && name != null)
                 {
-                    query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Producer".ToUpper()) && d.Value.Contains(producer)));
+                    query = query.Where(p => p.Name.ToUpper().Contains(name.ToUpper()) && p.CategoryID == categoryId);
+                    if (watt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Watt".ToUpper()) && d.Value == watt.ToString()));
+                    }
+                    if (volt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Volt".ToUpper()) && d.Value == volt.ToString()));
+                    }
+                    if (!string.IsNullOrEmpty(producer))
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Producer".ToUpper()) && d.Value.Contains(producer)));
+                    }
+                    if (query == null)
+                    {
+                        response.statusCode = HttpStatusCode.NotFound;
+                        response.Errormessge = "Not found Product!";
+                        return response;
+                    }
                 }
-                if (query == null)
+                else
                 {
-                    response.Data = null;
-                    response.statusCode = HttpStatusCode.NotFound;
-                    response.Errormessge = "Not found Product!";
-                    return response;
+                    if (watt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Watt".ToUpper()) && d.Value == watt.ToString()));
+                    }
+                    if (volt.HasValue)
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Volt".ToUpper()) && d.Value == volt.ToString()));
+                    }
+                    if (!string.IsNullOrEmpty(producer))
+                    {
+                        query = query.Where(p => p.Details.Any(d => d.Name.ToUpper().Equals("Producer".ToUpper()) && d.Value.Contains(producer)));
+                    }
+                    if (query == null)
+                    {
+                        response.statusCode = HttpStatusCode.NotFound;
+                        response.Errormessge = "Not found Product!";
+                        return response;
+                    }
                 }
                 var totalItems = await query.CountAsync();
                 var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
@@ -248,6 +315,51 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
+        public async Task<StatusResponse<ProductsResponseDTO>> search(int? page, int? size, string name)
+        {
+            int pageSize = size ?? 15;
+            int pageNumber = page ?? 1;
+            var response = new StatusResponse<ProductsResponseDTO>();
+            try
+            {
+                var query = _baseRepository.Get().Where(x => x.Name.ToUpper().Contains(name.ToUpper()));
+
+                var totalItems = query.Count();
+
+                var products = await query.Skip((pageNumber - 1) * pageSize)
+                                          .Take(pageSize)
+                                          .ToListAsync();
+
+                if (products == null)
+                {
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Not Found Product";
+                    return response;
+                }
+
+                var mappedProducts = _mapper.Map<IEnumerable<ProductDTO>>(products);
+                var productResponse = new ProductsResponseDTO
+                {
+                    Products = mappedProducts.ToList(),
+                    TotalItems = totalItems,
+                    PageSize = pageSize,
+                    CurrentPage = pageNumber,
+                    TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
+                };
+
+                response.Data = productResponse;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Products found successfully.";
+            }
+            catch (Exception)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = "Error when searching for products.";
+            }
+            return response;
+        }
+
+
         public async Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto)
         {
             var response = new StatusResponse<UpdateProductsDTO>();
@@ -265,10 +377,11 @@ namespace SWP391_BL3W.Services
                 response.Data = dto;
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Successful";
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 response.statusCode = HttpStatusCode.InternalServerError;
-                response.Errormessge=ex.Message;
+                response.Errormessge = ex.Message;
             }
             return response;
         }

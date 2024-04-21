@@ -12,7 +12,7 @@ namespace SWP391_BL3W.Controllers
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
-        
+
         public CategoryController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
@@ -26,9 +26,9 @@ namespace SWP391_BL3W.Controllers
         }
 
         [HttpGet("get-product-by-category/{id}")]
-        public async Task<IActionResult> GetProductsByCategory([FromRoute] int id)
+        public async Task<IActionResult> GetProductsByCategory([FromRoute] int id, int? size, int? page)
         {
-            var response = await _categoryService.searchProductsByCategory(id);
+            var response = await _categoryService.SearchProductsByCategory(size, page, id);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
     }
