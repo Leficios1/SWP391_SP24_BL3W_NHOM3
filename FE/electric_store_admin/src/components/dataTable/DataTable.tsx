@@ -1,7 +1,11 @@
-import React from "react";
-import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  GridColDef,
+  GridToolbar,
+} from "@mui/x-data-grid";
 import "./dataTable.scss";
 import { Link } from "react-router-dom";
+// import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   columns: GridColDef[];
@@ -9,10 +13,12 @@ type Props = {
   slug: string;
 };
 
-const DataTable: React.FC<Props> = ({ columns, rows, slug }) => {
+const DataTable = (props: Props) => {
+
 
   const handleDelete = (id: number) => {
-    // Xử lý logic xóa item ở đây
+    //delete the item
+    // mutation.mutate(id)
   };
 
   const actionColumn: GridColDef = {
@@ -22,7 +28,7 @@ const DataTable: React.FC<Props> = ({ columns, rows, slug }) => {
     renderCell: (params) => {
       return (
         <div className="action">
-          <Link to={`/${slug}/${params.row.id}`}>
+          <Link to={`/${props.slug}/${params.row.id}`}>
             <img src="/view.svg" alt="" />
           </Link>
           <div className="delete" onClick={() => handleDelete(params.row.id)}>
@@ -37,8 +43,8 @@ const DataTable: React.FC<Props> = ({ columns, rows, slug }) => {
     <div className="dataTable">
       <DataGrid
         className="dataGrid"
-        rows={rows}
-        columns={[...columns, actionColumn]}
+        rows={props.rows}
+        columns={[...props.columns, actionColumn]}
         initialState={{
           pagination: {
             paginationModel: {
@@ -46,19 +52,19 @@ const DataTable: React.FC<Props> = ({ columns, rows, slug }) => {
             },
           },
         }}
+        slots={{ toolbar: GridToolbar }}
         slotProps={{
           toolbar: {
-            components: {
-              Toolbar: GridToolbar,
-            },
             showQuickFilter: true,
             quickFilterProps: { debounceMs: 500 },
           },
         }}
+        pageSizeOptions={[5]}
         checkboxSelection
-        disableSelectionOnClick
+        disableRowSelectionOnClick
         disableColumnFilter
-        disableColumnMenu
+        disableDensitySelector
+        disableColumnSelector
       />
     </div>
   );

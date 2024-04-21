@@ -1,5 +1,5 @@
 import React from "react";
-import "./editable.scss";
+
 
 export const Editable = () =>{
     return <div>
@@ -22,6 +22,7 @@ export const Editable = () =>{
                     </td>
                     <td>This is the main page</td>
                     <td><span>Live</span></td>
+                    <td><span><BsFill></></span></td>
                 </tr>
             </tbody>
         </table>

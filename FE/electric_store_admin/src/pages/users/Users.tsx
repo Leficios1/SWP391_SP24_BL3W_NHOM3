@@ -1,77 +1,87 @@
 import { GridColDef } from "@mui/x-data-grid";
 import DataTable from "../../components/dataTable/DataTable";
 import "./Users.scss";
+// { useState } from "react";
 import Add from "../../components/add/Add";
 import { userRows } from "../../data";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+//import { useQuery } from "@tanstack/react-query";
+// get API ve se co header and body. authorized => bo token =< header> 
+// get thi chi co header 
+// body la minh muon post cai gi len 
+import Cookies from "js-cookie";
 
+
+
+
+const fetchUsers = async () => {
+  const { data } = await axios.get("https://epplus.azurewebsites.net/api/User/getAllUser?pageNumber=1&pageSize=10",{
+  
+    headers: {
+      'accept': 'text/plain',
+      'Authorization': `Bearer ${Cookies.get('token')}`
+    
+  }
+});
+  
+  return data;
+}
 
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 50 },
+  { field: "id", headerName: "ID", width: 50, type: "number" },
   {
-    field: "img",
-    headerName: "Avatar",
+    field: "name",
+    headerName: "Name",
     width: 100,
-    renderCell: (params) => {
-      return <img src={params.row.img || "/noavatar.png"} alt="" />;
-    },
+    type: "string",
   },
   {
-    field: "firstName",
-    type: "string",
-    headerName: "First name",
-    width: 150,
-  },
-  {
-    field: "lastName",
-    type: "string",
-    headerName: "Last name",
-    width: 150,
-  },
-  {
-    field: "email",
-    type: "string",
+    field: "email",    
     headerName: "Email",
-    width: 250,
+    width: 150,
+    type: "string",
   },
   {
     field: "phone",
-    type: "string",
     headerName: "Phone",
-    width: 130,
+    width: 150,
+    type: "string",
   },
   {
-    field: "createdAt",
-    headerName: "Created At",
+    field: "dateOfBirth",
+    headerName: "Date of Birth",
+    width: 250,
+    type: "date",
+  },
+  {
+    field: "avatarUrl",
+    headerName: "Avatar URL",
+    width: 130,
+    type: "string",
+  },
+  {
+    field: "gender",
+    headerName: "Gender",
     width: 100,
     type: "string",
   },
   {
-    field: "verified",
-    headerName: "Verified",
+    field: "status",
+    headerName: "Status",
     width: 80,
     type: "boolean",
   },
 ];
 
 const Users = () => {
-  /*const dispatch = useDispatch();
-  const { users, loading, error} = useSelector((state: RootState) => state.user);
+  console.log(Cookies.get('token'));
+  const { data, isLoading, error} = useQuery(['users'], fetchUsers);
+  if (isLoading) return 'Loading...';
+  if (error) return console.log(error);
 
-  useEffect(() => {
-    dispatch(fecthUsers());
-  }, [dispatch]);*/
 
-  const columns = [
-    { field: 'id', headerName: 'ID', width: 100 },
-    { field: 'name', headerName: 'Name', width: 200 },
-    { field: 'email', headerName: 'Email', width: 250 },
-    { field: 'phone', headerName: 'Phone', width: 150 },
-    { field: 'dateOfBirth', headerName: 'Date of Birth', width: 150 },
-    { field: 'avatarUrl', headerName: 'Avatar', width: 150, renderCell: (params) => <img src={params.value} alt="Avatar" style={{ width: 50, borderRadius: '50%' }} /> },
-    { field: 'gender', headerName: 'Gender', width: 100 },
-    { field: 'status', headerName: 'Status', width: 100, type: 'boolean' },
-  ];
 
 
   return (
