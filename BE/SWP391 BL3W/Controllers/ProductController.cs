@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Net.Http.Json;
 using Microsoft.AspNetCore.Authorization;
+using SWP391_BL3W.Database;
 
 namespace SWP391_BL3W.Controllers
 {
@@ -42,6 +43,14 @@ namespace SWP391_BL3W.Controllers
             var response = await _productService.search(page, size, name, categoryId, watt, volt, producer);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
+
+        [HttpGet("searchbyName/{name}")]
+        public async Task<IActionResult> searchByName(int? page, int? size, [FromRoute] string name)
+        {
+            var response = await _productService.search(page, size, name);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
         [Authorize(Roles = "1 , 3")]
         [HttpPost("create")]
         public async Task<IActionResult> create(CreateProductDTO dto)

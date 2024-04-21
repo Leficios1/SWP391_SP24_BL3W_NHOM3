@@ -315,6 +315,51 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
+        public async Task<StatusResponse<ProductsResponseDTO>> search(int? page, int? size, string name)
+        {
+            int pageSize = size ?? 15;
+            int pageNumber = page ?? 1;
+            var response = new StatusResponse<ProductsResponseDTO>();
+            try
+            {
+                var query = _baseRepository.Get().Where(x => x.Name.ToUpper().Contains(name.ToUpper()));
+
+                var totalItems = query.Count();
+
+                var products = await query.Skip((pageNumber - 1) * pageSize)
+                                          .Take(pageSize)
+                                          .ToListAsync();
+
+                if (products == null)
+                {
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Not Found Product";
+                    return response;
+                }
+
+                var mappedProducts = _mapper.Map<IEnumerable<ProductDTO>>(products);
+                var productResponse = new ProductsResponseDTO
+                {
+                    Products = mappedProducts.ToList(),
+                    TotalItems = totalItems,
+                    PageSize = pageSize,
+                    CurrentPage = pageNumber,
+                    TotalPages = (int)Math.Ceiling((double)totalItems / pageSize)
+                };
+
+                response.Data = productResponse;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Products found successfully.";
+            }
+            catch (Exception)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = "Error when searching for products.";
+            }
+            return response;
+        }
+
+
         public async Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto)
         {
             var response = new StatusResponse<UpdateProductsDTO>();
