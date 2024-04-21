@@ -7,7 +7,7 @@ import axios from "axios";
 
 export const initialState: EntityState<any> = {
     dataDetail: null,
-    data: null,
+    data: [],
     message: "",
     loading: false,
 }
@@ -27,8 +27,9 @@ export const getProductDetail = createAsyncThunk("product/getDetail", async (id:
 })
 
 
-export const getProductsBySearch = createAsyncThunk("product/getdetailbysearch", async ({ name, page, producer, size, volt, watt }: IProductSearch) => {
-    // const requestUrl = `${PRODUCT.CUSTOMER.GETPRODUCTBYSEARCH}?${name ? "${fdsf}" : ""}               `; de khi nao them field roi lam tiep
+export const getProductsBySearch = createAsyncThunk("product/getdetailbysearch", async ({ name, page, producer, size, volt, watt, categoryId }: IProductSearch) => {
+    const requestUrl = await axios.get(`${PRODUCT.CUSTOMER.GETPRODUCTBYSEARCH}?page=${page}&size=${size}${name != null && name != "" ? `&name=${name}` : ``}${categoryId != null ? `&categoryId=${categoryId}` : ``}${watt != null ? `&watt=${watt}` : ``}${volt != null ? `&volt=${volt}` : ``}${producer != null ? `&producer=${producer}` : ``}`);
+    return requestUrl
 })
 
 
@@ -49,12 +50,20 @@ export const ProductSlice = createSlice({
                 state.loading = true
 
             })
+            .addMatcher(isPending(getProductsBySearch), (state) => {
+                return {
+                    ...state,
+                    loadingSearch: true
+                }
+
+            })
             .addMatcher(isFulfilled(getAllproduct), (state, action) => {
                 const { data } = action.payload
                 return {
                     ...state,
                     data: data,
-                    loading: false
+                    loading: false,
+
                 }
             })
             .addMatcher(isFulfilled(getProductDetail), (state, action) => {
@@ -63,6 +72,14 @@ export const ProductSlice = createSlice({
                     ...state,
                     dataDetail: data,
                     loading: false
+                }
+            })
+            .addMatcher(isFulfilled(getProductsBySearch), (state, action) => {
+                const { data } = action.payload
+                return {
+                    ...state,
+                    dataSearch: data,
+                    loadingSearch: false
                 }
             })
     }

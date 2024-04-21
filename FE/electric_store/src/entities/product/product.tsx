@@ -1,22 +1,18 @@
 import { Card, Checkbox, Col, Input, Pagination, RadioProps, Row, Skeleton, Slider } from "antd"
 import React, { ChangeEvent, EventHandler, MouseEvent, MouseEventHandler, useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../../config/store"
 import { IAllProductProps, IProductProps } from "../../shared/models"
 import Meta from "antd/es/card/Meta"
-import { getAllproduct, reset } from "./product.reducer"
+import { getAllproduct, getProductsBySearch, reset } from "./product.reducer"
 import { formatCurrencyVN } from "../../shared/utils/formatCurrency"
 export const Product: React.FC = () => {
 
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
-    const products = useAppSelector(state => state.product.data) as IAllProductProps;
-    const isLoading = useAppSelector(state => state.product.loading);
+    const products = useAppSelector(state => state.product.dataSearch) as IAllProductProps;
+    const isLoading = useAppSelector(state => state.product.loadingSearch);
 
-    const [listproducts, setListProducts] = useState<IProductProps[]>(products.data?.products!)
-
-
-    const [priceFilter, setPriceFilter] = useState<number>(50000)
 
     const [visible, setVisible] = useState<boolean>(false)
     const [visibleWatt, setVisibleWatt] = useState<boolean>(false)
@@ -25,9 +21,13 @@ export const Product: React.FC = () => {
     const [size, setSize] = useState<number>(1);
 
 
-    const [watt, setWatt] = useState<number>(0)
-    const [volt, setVolt] = useState<number>(0)
-    const [producer, setProducer] = useState<string>("")
+    const [watt, setWatt] = useState<number | null>(null)
+    const [volt, setVolt] = useState<number | null>(null)
+    const [producer, setProducer] = useState<string | null>(null)
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const nameSearch = urlParams.get("name");
+
 
     const descriptionStyle: React.CSSProperties = {
         overflow: "hidden",
@@ -40,7 +40,7 @@ export const Product: React.FC = () => {
 
     const toDetailProductPage = (id: string | number) => {
         dispatch(reset())
-        navigate(`chi-tiet-san-pham/${id}`)
+        navigate(`/chi-tiet-san-pham/${id}`)
     }
 
     const onChangePagination = (page: number, pageSize: number = 15) => {
@@ -48,20 +48,13 @@ export const Product: React.FC = () => {
         setSize(pageSize)
     }
 
-    useEffect(() => {
-        dispatch(getAllproduct({ page: 1, size: 10 }))
-    }, [dispatch])
 
     useEffect(() => {
+        dispatch(getProductsBySearch({ page: page, size: 10, watt: watt, name: nameSearch, producer: producer, volt: volt }))
+    }, [dispatch, watt, volt, producer, page, size, nameSearch])
 
-    }, [watt, volt, producer])
 
 
-    const filterByPrice = (price: number) => {
-        const filter = listproducts.filter((product) => 50000 < product.price && product.price <= price)
-        setPriceFilter(price)
-        setListProducts(filter)
-    }
 
 
     const unselectedAttribute = () => {
@@ -76,18 +69,20 @@ export const Product: React.FC = () => {
             volt.checked = false
         })
 
-        dispatch(getAllproduct({ page: 1, size: 10 }))
+        setVisible(false)
+        setVisibleWatt(false)
+        dispatch(getProductsBySearch({ page: page, size: 10, name: nameSearch, producer: producer }))
 
     }
 
     const resetBtnVisible = (e: any) => {
         const value = e.target.value
-        setWatt(value)
+        setVolt(value)
         setVisible(true)
     }
     const resetBtnVisibleWatt = (e: any) => {
         const value = e.target.value
-        setVolt(value)
+        setWatt(value)
         setVisibleWatt(true)
     }
 
@@ -96,21 +91,10 @@ export const Product: React.FC = () => {
         setProducer(value)
     }
 
-
-
-
-
-
     return (
         <Row style={{ marginTop: "50px" }} gutter={[50, 50]}>
             <Col md={5}>
                 <div style={{ boxSizing: "border-box", border: "1px solid rgba(0,0,0,0.1)", padding: "15px" }} >
-                    <Row>
-                        <Col span={24}>
-                            <label>Khoản tiền: {formatCurrencyVN(priceFilter)}</label>
-                            <Slider onChangeComplete={filterByPrice} min={50000} max={1000000} />
-                        </Col>
-                    </Row>
                     <Row style={{ margin: "10px 0px" }}>
                         <Col span={24}>
                             <div style={{ margin: "10px 0px" }}>
@@ -147,7 +131,7 @@ export const Product: React.FC = () => {
                                     </Row>
                                 </Col>
                                 <Col span={24}>
-                                    {visible && visibleWatt ? <button onClick={() => unselectedAttribute()}>Bỏ chọn</button> : <></>}
+                                    {visible || visibleWatt ? <button onClick={() => unselectedAttribute()}>Bỏ chọn</button> : <></>}
                                 </Col>
 
                             </Row>
@@ -159,23 +143,26 @@ export const Product: React.FC = () => {
             <Col md={19}>
                 <Row gutter={[50, 50]} className="products">
                     {isLoading ? <Skeleton /> :
-                        listproducts?.map((product) => {
-                            return (
-                                <Col key={product.id} md={8} onClick={() => toDetailProductPage(product.id!)}>
-                                    <Card
-                                        hoverable
-                                        style={{ width: "100%" }}
-                                        cover={<img style={{ objectFit: "contain" }} height={"200px"} alt="example" src={product.imageUrl} />}
-                                    >
-                                        <Meta title={product.name}
-                                            description={<div style={descriptionStyle}>
-                                                {product.description}
-                                            </div>
-                                            } />
-                                    </Card>
-                                </Col>
-                            )
-                        })
+
+                        products != null ?
+                            products.data?.products?.map((product) => {
+                                return (
+                                    <Col key={product.id} md={8} onClick={() => toDetailProductPage(product.id!)}>
+                                        <Card
+                                            hoverable
+                                            style={{ width: "100%" }}
+                                            cover={<img style={{ objectFit: "contain" }} height={"200px"} alt="example" src={product.imageUrl} />}
+                                        >
+                                            <Meta title={product.name}
+                                                description={<div style={descriptionStyle}>
+                                                    {product.description}
+                                                </div>
+                                                } />
+                                        </Card>
+                                    </Col>
+                                )
+                            })
+                            : <></>
                     }
                 </Row>
 

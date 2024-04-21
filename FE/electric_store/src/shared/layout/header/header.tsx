@@ -1,21 +1,28 @@
 import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons"
-import { Button, Col, Dropdown, Input, MenuProps, Row } from "antd"
+import { AutoComplete, Button, Col, Dropdown, Input, MenuProps, Row } from "antd"
 import Search from "antd/es/input/Search"
-import React, { useEffect } from "react"
+import React, { EventHandler, KeyboardEvent, MouseEvent, useEffect, useState } from "react"
 import "./header.scss"
 import { Link, NavLink, useNavigate } from "react-router-dom"
 import Cookies from "universal-cookie"
 import { useAppDispatch, useAppSelector } from "../../../config/store"
 import { logout } from "../../reducer/authentication.reducer"
 import { useDispatch } from "react-redux"
+import { getProductsBySearch } from "../../../entities/product/product.reducer"
+import { IProductDetailProps, IProductProps } from "../../models"
+import { formatCurrencyVN } from "../../utils/formatCurrency"
 
 const Header: React.FC = () => {
 
 
 
     const cookie = new Cookies();
-    const isAuthenticated = useAppSelector(state => state.authentication.isAuthenticated);
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
+    const dataSearch = useAppSelector(state => state.product.dataSearch);
+    const data = dataSearch?.data.products as IProductProps[]
+
+    const [nameSearch, setNameSearch] = useState<string>("")
 
     const Header: React.CSSProperties = {
         width: "100%",
@@ -41,8 +48,8 @@ const Header: React.FC = () => {
 
     const styleNavLink: React.CSSProperties = {
         color: "white",
-        width:"100%",
-        height:"100%"
+        width: "100%",
+        height: "100%"
     }
 
     const items: MenuProps['items'] = [
@@ -50,7 +57,7 @@ const Header: React.FC = () => {
             label: <span>Profile</span>,
             icon: "",
             key: '0',
-            onClick:() => {
+            onClick: () => {
                 navigate("/ho-so")
             }
         },
@@ -72,6 +79,70 @@ const Header: React.FC = () => {
         },
     ];
 
+    const detailProductPage = (value: number | string) => {
+        navigate(`chi-tiet-san-pham/${value}?name=${nameSearch}`)
+    }
+
+    const renderItem = (producId: number | string, nameProduct: string, price: number, image: string) => {
+        return (
+            {
+                value: nameProduct,
+                label: (
+                    <Row gutter={[20, 10]} onClick={() => detailProductPage(producId)}>
+                        <Col span={6}>
+                            <img style={{ objectFit: "contain", width: "100%" }} src={image} alt="image" />
+                        </Col>
+                        <Col span={18}>
+                            <div>{nameProduct}</div>
+                            <div>Giá tiền: {formatCurrencyVN(price)}</div>
+                        </Col>
+                    </Row>
+                )
+
+            }
+        )
+    }
+
+    const onSearchProduct = (search: string) => {
+        setNameSearch(search)
+        dispatch(getProductsBySearch({ page: 1, size: 5, name: search }))
+    }
+
+
+
+
+    const options = [
+        dataSearch != undefined ?
+            {
+                label: (
+                    <div>
+                        <div>Sản phẩm</div>
+                    </div>
+                ),
+                options: data.map((product: IProductProps) => {
+                    return renderItem(product.id, product.name, product.price, product.imageUrl)
+                })
+            }
+            : {}
+    ]
+
+    const onMouseEnter = (e: KeyboardEvent) => {
+        e.preventDefault();
+        if (e.code == "Enter") {
+            navigate(`/do-gia-dung?name=${nameSearch}`)
+        }
+    }
+
+
+
+
+    useEffect(() => {
+        dispatch(getProductsBySearch({ page: 1, size: 5 }))
+    }, [])
+
+
+
+
     return (
         <Row style={Header}>
             <Col span={24}>
@@ -80,13 +151,16 @@ const Header: React.FC = () => {
                         <img src="/assets/logo.jpg" alt="logoStore" width={"120px"} />
                     </Col>
                     <Col md={12} style={{ margin: "auto 0" }}>
-                        <Search
-                            placeholder="Tìm kiếm ở đây"
-                            allowClear
-                            enterButton="Search"
-                            size="large"
-                        // onSearch={onSearch}
-                        />
+                        <AutoComplete
+                            popupClassName="certain-category-search-dropdown"
+                            popupMatchSelectWidth={500}
+                            style={{ width: "100%" }}
+                            onSearch={onSearchProduct}
+                            options={options}
+                            onKeyUp={onMouseEnter}
+                        >
+                            <Input.Search size="large" placeholder="Tìm kiếm ở đây" />
+                        </AutoComplete>
                     </Col>
                     <Col md={5} style={{ margin: "auto" }}>
                         <p style={{ textAlign: "center" }}>
@@ -142,8 +216,8 @@ const Header: React.FC = () => {
                     </Col>
 
                 </Row>
-            </Col>
-        </Row>
+            </Col >
+        </Row >
     )
 }
 

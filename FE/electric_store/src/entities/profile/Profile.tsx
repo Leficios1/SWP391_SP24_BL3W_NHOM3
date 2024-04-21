@@ -1,4 +1,4 @@
-import { Button, Col, DatePicker, Form, Image, Input, Row, Select, Tabs, TabsProps } from "antd"
+import { Button, Col, DatePicker, Form, Image, Input, Row, Select, Skeleton, Tabs, TabsProps } from "antd"
 import React, { useEffect, useState } from "react"
 import Cookies from "universal-cookie"
 import { IAccountProps } from "../../shared/reducer/authentication.reducer";
@@ -26,7 +26,6 @@ const Profile: React.FC = () => {
     const dateFormat = 'DD/MM/YYYY';
     const dispatch = useAppDispatch()
 
-    const message = useAppSelector(state => state.profile.message) as string;
 
     const dataDetail = useAppSelector(state => state.profile.dataDetail);
     const dataAccount = dataDetail?.data! as IAccountProps
@@ -76,60 +75,65 @@ const Profile: React.FC = () => {
                 <Col span={16}>
                     <Row>
                         <Col span={24}>
-                            <Form
-                                onFinish={formUpdateProfile}
-                            >
-                                <Form.Item
-                                    label="Tên"
-                                    name="name"
-                                    initialValue={dataAccount?.name}
-                                >
-                                    <Input type="text" disabled={edit} />
-                                </Form.Item>
-                                <Form.Item
-                                    label="Email"
-                                    name="email"
-                                    initialValue={dataAccount?.email}
-                                >
-                                    <Input type="email" disabled={edit} />
-                                </Form.Item>
-                                <Form.Item
-                                    label="Số điện thoại"
-                                    name="phone"
-                                    initialValue={dataAccount?.phone}
-                                >
-                                    <Input type="text" disabled={edit} />
-                                </Form.Item>
-                                <Form.Item
-                                    label="Ngày sinh"
-                                    name="dateOfBirth"
-                                >
-                                    <DatePicker defaultValue={dayjs(dayjs(dataAccount?.dateOfBirth), dateFormat)} format={dateFormat} disabled={edit} />
-                                </Form.Item>
-                                <Form.Item
-                                    label="Giới tính"
-                                    name="gender"
-                                    initialValue={dataAccount?.gender}
-                                >
-                                    <Select
-                                        disabled={edit}
-                                        options={[
-                                            { label: "Nam", value: "Male" },
-                                            { label: "Nữ", value: "Female" },
-                                        ]}
-                                    />
-                                </Form.Item>
-
-                                {edit ? <></> :
-                                    <Row>
-                                        <Form.Item>
-                                            <Button htmlType="submit">Cập nhật</Button>
+                            {
+                                dataAccount != undefined ?
+                                    <Form
+                                        onFinish={formUpdateProfile}
+                                    >
+                                        <Form.Item
+                                            label="Tên"
+                                            name="name"
+                                            initialValue={dataAccount?.name}
+                                        >
+                                            <Input type="text" disabled={edit} defaultValue={dataAccount?.name} />
                                         </Form.Item>
-                                        <Button style={{ marginLeft: "10px" }} htmlType="submit" onClick={() => setEdit(!edit)}>Huỷ</Button>
-                                    </Row>
-                                }
+                                        <Form.Item
+                                            label="Email"
+                                            name="email"
+                                            initialValue={dataAccount?.email}
+                                        >
+                                            <Input type="email" disabled={edit} defaultValue={dataAccount?.email} />
+                                        </Form.Item>
+                                        <Form.Item
+                                            label="Số điện thoại"
+                                            name="phone"
+                                            initialValue={dataAccount?.phone}
+                                        >
+                                            <Input type="text" disabled={edit} defaultValue={dataAccount?.phone} />
+                                        </Form.Item>
+                                        <Form.Item
+                                            label="Ngày sinh"
+                                            name="dateOfBirth"
+                                        >
+                                            <DatePicker defaultValue={dayjs(dayjs(dataAccount?.dateOfBirth), dateFormat)} format={dateFormat} disabled={edit} />
+                                        </Form.Item>
+                                        <Form.Item
+                                            label="Giới tính"
+                                            name="gender"
+                                            initialValue={dataAccount?.gender}
+                                        >
+                                            <Select
+                                                disabled={edit} defaultValue={dataAccount?.gender}
+                                                options={[
+                                                    { label: "Nam", value: "Male" },
+                                                    { label: "Nữ", value: "Female" },
+                                                ]}
+                                            />
+                                        </Form.Item>
 
-                            </Form>
+                                        {edit ? <></> :
+                                            <Row>
+                                                <Form.Item>
+                                                    <Button htmlType="submit">Cập nhật</Button>
+                                                </Form.Item>
+                                                <Button style={{ marginLeft: "10px" }} htmlType="submit" onClick={() => setEdit(!edit)}>Huỷ</Button>
+                                            </Row>
+                                        }
+
+                                    </Form>
+                                    : <Skeleton />
+                            }
+
                         </Col>
                     </Row>
                 </Col>

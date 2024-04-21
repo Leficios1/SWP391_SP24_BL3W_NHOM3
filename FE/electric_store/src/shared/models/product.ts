@@ -44,10 +44,11 @@ export interface IAllProductProps {
 }
 
 export interface IProductSearch {
-    page?: number,
-    size?: number,
-    name?: string,
-    watt?: number,
-    volt?: number,
-    producer?: string
+    categoryId?: number | null,
+    page?: number | null,
+    size?: number | null,
+    name?: string | null,
+    watt?: number | null,
+    volt?: number | null,
+    producer?: string | null
 }
