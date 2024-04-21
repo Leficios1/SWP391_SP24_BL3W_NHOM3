@@ -576,7 +576,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                       }
                                     },
                                     height: 70,
-                                    size: 18,
+                                    size: 15,
                                   ),
                                   ButtonWidget(
                                     title: 'Mua Ngay',
@@ -585,8 +585,8 @@ class _ProductDetailState extends State<ProductDetail> {
                                     },
                                     color: Colors.orange,
                                     height: 70,
-                                    width: 180,
-                                    size: 18,
+                                    width: 130,
+                                    size: 15,
                                   )
                                 ],
                               ),

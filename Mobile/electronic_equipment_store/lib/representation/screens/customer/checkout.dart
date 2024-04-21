@@ -1,14 +1,20 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:electronic_equipment_store/core/constants/color_constants.dart';
 import 'package:electronic_equipment_store/core/constants/dismension_constants.dart';
+import 'package:electronic_equipment_store/representation/screens/customer/customer_main_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
+import 'package:electronic_equipment_store/services/authorized_api_service.dart';
 import 'package:electronic_equipment_store/services/cart_provider.dart';
+import 'package:electronic_equipment_store/utils/dialog_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '../../../core/constants/textstyle_constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Checkout extends StatefulWidget {
   const Checkout({super.key});
@@ -20,10 +26,12 @@ class Checkout extends StatefulWidget {
 class _CheckoutState extends State<Checkout> {
   String paymentMethod = 'Tiền mặt';
   bool isEditing = false;
-  TextEditingController nameController = TextEditingController(text: AuthProvider.userModel!.name);
-  TextEditingController phoneController = TextEditingController(text: AuthProvider.userModel!.phone);
-  TextEditingController addressController = TextEditingController(text: AuthProvider.userModel!.address);
-  
+  TextEditingController nameController =
+      TextEditingController(text: AuthProvider.userModel!.name);
+  TextEditingController phoneController =
+      TextEditingController(text: AuthProvider.userModel!.phone);
+  TextEditingController addressController =
+      TextEditingController(text: AuthProvider.userModel!.address);
 
   @override
   Widget build(BuildContext context) {
@@ -139,9 +147,7 @@ class _CheckoutState extends State<Checkout> {
                             setState(() {
                               isEditing = !isEditing;
                             });
-                            if (!isEditing) {
-                              
-                            }
+                            if (!isEditing) {}
                           },
                           icon: Icon(isEditing ? Icons.save : Icons.edit),
                         ),
@@ -374,7 +380,48 @@ class _CheckoutState extends State<Checkout> {
                   title: 'Thanh toán',
                   size: 22,
                   height: 70,
-                  onTap: () {},
+                  onTap: () async {
+                    if (nameController.text.trim() == '') {
+                      showCustomDialog(context, "Làm ơn thêm tên người nhận",
+                          'Bạn chưa có tên người nhận', true);
+                    } else if (phoneController.text.trim() == '') {
+                      showCustomDialog(context, "Làm ơn thêm số điện thoại",
+                          'Bạn chưa có số điện thoại người nhận', true);
+                    } else if (addressController.text.trim() == '') {
+                      showCustomDialog(context, "Làm ơn thêm địa chỉ",
+                          'Bạn chưa có địa chỉ nhận hàng', true);
+                    } else {
+                      int orderId = await AuthorizedApiService.createOrder(
+                          nameController.text.trim(),
+                          phoneController.text.trim(),
+                          addressController.text.trim(),
+                          paymentMethod,
+                          cartProvider.cartItems);
+                      if (paymentMethod == 'Tiền mặt') {
+                        AuthorizedApiService.deleteCart();
+                        //Chuyển trang
+                        // ignore: use_build_context_synchronously
+                        showCustomDialog(context, 'Thành công',
+                            "Bạn đã thanh toán thành công!", false);
+                        await Future.delayed(Duration(seconds: 5));
+                        // ignore: use_build_context_synchronously
+                        Provider.of<CartProvider>(context, listen: false)
+                            .clearCart();
+                        // ignore: use_build_context_synchronously
+                        Navigator.popUntil(context,
+                            ModalRoute.withName(CustomerMainScreen.routeName));
+                      } else if (paymentMethod == 'VnPAY') {
+                        String urlCheckOutByVnPay =
+                            await AuthorizedApiService.checkOutByVnPay(orderId);
+                        if (await canLaunchUrl(Uri.parse(urlCheckOutByVnPay))) {
+                          await launchUrl(Uri.parse(urlCheckOutByVnPay));
+                        } else {
+                          // ignore: use_build_context_synchronously
+                          showCustomDialog(context, 'Lỗi', 'Không thể mở Url thanh toán VNPay : $urlCheckOutByVnPay', true);
+                        }
+                      }
+                    }
+                  },
                 ),
               ],
             ),

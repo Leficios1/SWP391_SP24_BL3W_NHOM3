@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:electronic_equipment_store/core/constants/config_constans.dart';
 import 'package:electronic_equipment_store/models/product_model.dart';
+import 'package:electronic_equipment_store/services/auth_provider.dart';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart' as http;
 
@@ -97,5 +98,62 @@ class AuthorizedApiService {
   } catch (e) {
     throw Exception('Error: $e');
   }
+}
+  static Future<void> deleteCart() async {
+  final String apiUrl = '$apiLink/api/Cart/delete-all-carts-by-user-id/${AuthProvider.userModel!.userID}';
+    final http.Response response = await http.delete(
+      Uri.parse(apiUrl),
+      headers: <String, String>{
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ${getToken()}',
+      },
+    );
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    }
+}
+
+  static Future<int> createOrder(String name, String phone, String address, String paymentMethod, List<ProductModel> listProduct) async {
+    final url = Uri.parse('$apiLink/api/Order/create');
+     final response = await http.post(
+      url,
+      headers: {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ${getToken()}',
+      },
+      body: jsonEncode({
+        'orderDetails' : listProduct.map((product) => product.toJsonCreateOrder()).toList(),
+        'orderDate' : DateTime.now().toIso8601String(),
+        'status' : 0,
+        'statusMessage': 'Waiting',
+        'paymentName' : paymentMethod,
+        'nameCustomer' : name,
+        'addressCustomer': address,
+        'phoneCustomer': phone,
+        'userId': AuthProvider.userModel!.userID
+      }),
+    );
+    if (response.statusCode == 200) {
+      return json.decode(response.body)['data']['orderId'];
+    } else {
+      return 0;
+    }
+  }
+
+  static Future checkOutByVnPay(int orderID) async {
+  final String apiUrl = '$apiLink/api/Payment/vn-pay/${AuthProvider.userModel!.userID}/$orderID/2';
+    final http.Response response = await http.get(
+      Uri.parse(apiUrl),
+      headers: <String, String>{
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ${getToken()}',
+      },
+    );
+    if (response.statusCode == 200) {
+      return response.body;
+    }
 }
 }

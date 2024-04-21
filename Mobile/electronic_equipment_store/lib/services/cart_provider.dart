@@ -16,11 +16,6 @@ class CartProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void removeFromCartAndCheckOut() {
-    _cartItems.clear();
-    notifyListeners();
-  }
-
   void removeProductFromCart(ProductModel product) {
     // Thêm dữ liệu xuông BE
     AuthorizedApiService.deleteProductFromCart(AuthProvider.userModel!.userID, product.productID);

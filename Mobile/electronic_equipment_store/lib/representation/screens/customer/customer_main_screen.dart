@@ -25,16 +25,10 @@ class _CustomerMainScreen extends State<CustomerMainScreen> {
     super.initState();
   }
 
-  // method logout
-  void logout() {
-    // emailController.text = "";
-    // passwordController.text = "";
-    // confirmPasswordController.text = "";
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return 
+    Scaffold(
       body: IndexedStack(
         index: _currentIndex,
         children: const [

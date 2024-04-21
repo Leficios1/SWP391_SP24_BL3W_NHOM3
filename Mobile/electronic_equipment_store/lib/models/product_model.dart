@@ -1,3 +1,5 @@
+import 'package:electronic_equipment_store/core/extensions/date_ext.dart';
+
 class ProductModel {
   int productID;
   String productName;
@@ -51,5 +53,15 @@ class ProductModel {
       price: json['price'],
       quantity: 10000,
     );
+  }
+
+  Map<String, dynamic> toJsonCreateOrder() {
+    DateTime expiredWarranty = DateTime.now();
+    if(warrantyPeriod != null) expiredWarranty = DateExtension.addMonths(expiredWarranty, warrantyPeriod!);
+    return {
+      'productId': productID,
+      'quantity': quantityUserWantBuy,
+      'expiredWarranty': expiredWarranty.toIso8601String(),
+    };
   }
 }

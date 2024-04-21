@@ -66,7 +66,7 @@ class ApiService {
 
 
   static Future<List<ProductModel>?> getAllProduct() async {
-  final url = Uri.parse('$apiLink/api/Product/getAll?size=10');
+  final url = Uri.parse('$apiLink/api/Product/getAll');
   try {
     final response = await http.get(url);
     if (response.statusCode == 200) {
@@ -146,6 +146,48 @@ class ApiService {
     throw Exception('Error: $e');
   }
 }
+  static Future<List<ProductImageModel>> getAllProductImgByProductID(
+      int productID) async {
+    final url = Uri.parse('$apiLink/api/Product/getDetailsById/$productID');
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonResponse = json.decode(response.body);
+      if (jsonResponse.containsKey('data')) {
+        List<dynamic> imageList = jsonResponse['data']['images'];
+        List<ProductImageModel> images = imageList.map((json) => ProductImageModel.fromJson(json)).toList();        
+        return images;
+      } else {
+        throw Exception('Invalid JSON format: "data" field not found');
+      }
+    } else {
+      throw Exception('Failed to load all getAllProductImgByProductID');
+    }
+  } catch (e) {
+    throw Exception('Error: $e');
+  }
+  }
+
+  static Future<List<ProductDetailModel>> getListProductDetailByProductByID(int productId) async {
+    final url = Uri.parse('$apiLink/api/Product/getDetailsById/$productId');
+  try {
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      Map<String, dynamic> jsonResponse = json.decode(response.body);
+      if (jsonResponse.containsKey('data')) {
+        List<dynamic> productDetailList = jsonResponse['data']['details'];
+        List<ProductDetailModel> images = productDetailList.map((json) => ProductDetailModel.fromJson(json)).toList();        
+        return images;
+      } else {
+        throw Exception('Invalid JSON format: "data" field not found');
+      }
+    } else {
+      throw Exception('Failed to load all getAllProductImgByProductID');
+    }
+  } catch (e) {
+    throw Exception('Error: $e');
+  }
+  }
 
   // static Future<List<ProductModel>?> getAllProductOnAvailable() async {
   //   try {
@@ -181,15 +223,6 @@ class ApiService {
   //   }
   // }
 
-  static Future<List<ProductDetailModel>> getListProductDetailByProductByID(int productId) async {
-    List<ProductDetailModel> productlist = [
-        ProductDetailModel(productID: 1, name: 'Thuộc tính 1', value: 'value thuộc tính 1'),
-        ProductDetailModel(productID: 1, name: 'Thuộc tính 2', value: 'value thuộc tính 2'),
-    ];
-    await Future.delayed(const Duration(seconds: 1));
-    return productlist;
-}
-
   static Future<List<FeedbackModel>> getFeedbackByProductID(
       int productID) async {
     try {
@@ -223,26 +256,5 @@ class ApiService {
     }
   }
 
-  static Future<List<ProductImageModel>> getAllProductImgByProductID(
-      int productID) async {
-    try {
-      List<ProductImageModel> feedbacks = [
-        ProductImageModel(
-            productId: 001,
-            imageUrl:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnBZAahOtLnMJU9dl77kTQbvJNJ2f3vbUOoj-YYjSwg&s"),
-        ProductImageModel(
-            productId: 001,
-            imageUrl:
-                "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1603186829771-7L3IUH5V2M3XALW843MY/3-2.jpg"),
-        ProductImageModel(
-            productId: 001,
-            imageUrl:
-                "https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1588782925443-ZNSO01ZWEZNMR6604YNG/image-asset.jpeg"),
-      ];
-      return feedbacks;
-    } catch (e) {
-      throw Exception('Error: $e');
-    }
-  }
+  
 }

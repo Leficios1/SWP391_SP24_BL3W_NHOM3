@@ -16,7 +16,7 @@ class ProductDetailModel {
     return ProductDetailModel(
       productID: json['id'],
       name: json['name'],
-      value: json['description'],
+      value: json['value'],
     );
   }
 
