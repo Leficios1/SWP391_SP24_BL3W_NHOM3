@@ -43,6 +43,8 @@ export const login: (username: string, password: string) => AppThunk = (email: s
     const response = result.payload as AxiosResponse
     const jwt_token = response.data.tokenString
     const expiration = response.data.expiration
+    // const jwt_token = response.data.data.tokenString //deploy
+    // const expiration = response.data.data?.expiration // deploy
 
     if (jwt_token && expiration) {
         cookie.set("jwt-token", jwt_token, {

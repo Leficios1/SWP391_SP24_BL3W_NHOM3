@@ -13,6 +13,7 @@ import { createsubmitpayment, getPaymentVnpay } from "../../order.reducer"
 import { AxiosResponse } from "axios"
 import { deleteAllProductInCart } from "../../../cart/cart.reducer"
 import { toast } from "react-toastify"
+import { useNavigate, useNavigation } from "react-router-dom"
 
 interface BillingInformationProps {
     totalPrice: number,
@@ -28,6 +29,7 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
     const [paymentMethod, setPaymentMethod] = useState<string>("bycash")
     const dispatch = useAppDispatch();
 
+    const navigate = useNavigate()
 
 
     const onChange = (paymentMethod: string) => {
@@ -42,7 +44,6 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
             children: <div>
                 Vui lòng nhớ để ý số điện thoại để nhận đơn hàng bạn nhé. Shop cảm ơn nhiều !
                 <Button htmlType="submit" style={{ margin: '20px' }} size="large">Xác nhận thanh toán</Button>
-
             </div>
         },
         {
@@ -52,6 +53,9 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
                 <p>
                     Nội dung chuyển khoản: Tên + số điện thoai
                 </p>
+
+                <img src={`https://img.vietqr.io/image/vietinbank-100873099247-compact2.jpg?amount=${totalPrice}&addInfo=thanh%20toan%20hoa%20don&accountName=Tran%20Anh%20Khoi`} alt="qrcode" />
+
                 <p>Vui lòng đợi nhân viên gọi xác nhận nhé. Shop cảm ơn!</p>
                 <Button htmlType="submit" style={{ margin: '20px' }} size="large">Xác nhận thanh toán</Button>
 
@@ -90,10 +94,15 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
         switch (paymentMethod) {
             case "bycash": {
                 dispatch(createsubmitpayment(form));
+                dispatch(deleteAllProductInCart(account.id))
+                navigate("/ho-so")
+
                 break;
             }
             case "qrcode": {
                 dispatch(createsubmitpayment(form));
+                dispatch(deleteAllProductInCart(account.id))
+                navigate("/ho-so")
                 break;
             }
             case "banking":
@@ -132,20 +141,6 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
     }
 
 
-    useEffect(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const transactionNo = Number(urlParams.get("vnp_TransactionNo"));
-
-        if (transactionNo != 0) {
-            // dispatch() 
-            toast.success("Cảm ơn bạn đã thanh toán thành công")
-
-
-            // them api vnpay checkpayment vao day nua la xong cook
-            window.history.replaceState({}, "", "http://localhost:3000/thanh-toan")
-            dispatch(deleteAllProductInCart(account.id))
-        }
-    }, [])
 
 
     return (

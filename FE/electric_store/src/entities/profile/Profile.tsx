@@ -1,4 +1,4 @@
-import { Button, Col, DatePicker, Form, Image, Input, Row, Select, Skeleton, Tabs, TabsProps } from "antd"
+import { Button, Col, DatePicker, Form, Image, Input, List, Row, Select, Skeleton, Tabs, TabsProps, Tag } from "antd"
 import React, { useEffect, useState } from "react"
 import Cookies from "universal-cookie"
 import { IAccountProps } from "../../shared/reducer/authentication.reducer";
@@ -6,6 +6,10 @@ import dayjs from "dayjs";
 import { useAppDispatch, useAppSelector } from "../../config/store";
 import { getProfile, reset, updateProfile } from "./profile.reducer";
 import { toast } from "react-toastify";
+import { getHistoryOrder } from "../order/order.reducer";
+import { formatCurrencyVN } from "../../shared/utils/formatCurrency";
+import 'dayjs/locale/vi';
+import "./profile.scss"
 
 export interface UpdateProfileProps {
     id: number | string,
@@ -31,6 +35,11 @@ const Profile: React.FC = () => {
     const dataAccount = dataDetail?.data! as IAccountProps
 
 
+    const dataOrder = useAppSelector(state => state.order.data)
+    const orders = dataOrder?.data
+
+
+
 
     const formUpdateProfile = (form: UpdateProfileProps) => {
         setEdit(!edit)
@@ -43,6 +52,7 @@ const Profile: React.FC = () => {
     }
 
     useEffect(() => {
+        dispatch(getHistoryOrder(account.id))
         dispatch(getProfile(account.id))
     }, [])
 
@@ -142,7 +152,52 @@ const Profile: React.FC = () => {
         {
             label: "Lịch sử mua hàng",
             key: "2",
-            children: `Content of tab 1`,
+            children: <List
+                style={{ height: "500px", maxHeight: "450px", overflowY: "scroll" }}
+                size="large"
+                bordered
+                dataSource={orders}
+                renderItem={(item: any, index: number) =>
+                    <div className="listItem" style={index % 2 == 0 ? { backgroundColor: "rgba(0,0,0,0.04)" } : { backgroundColor: "white" }}>
+                        <List.Item style={{ cursor: "pointer" }}>
+                            <Row >
+                                <Col span={24} style={{ textAlign: "right" }}>
+                                    {item.status == 1 ? <Tag color="blue">Thành công</Tag> : <Tag color="yellow">Đang xử lý</Tag>}
+                                </Col>
+                                <Col span={24}>
+                                    <Row style={{ justifyContent: "space-between" }}>
+                                        <Col span={12} >
+                                            Mã đơn hàng: {item.orderId}
+                                        </Col>
+                                        <Col span={12}>
+                                            {dayjs(item.orderDate).locale('vi').format('dddd, DD/MM/YYYY HH:mm:ss').toLocaleUpperCase()}
+                                        </Col>
+
+                                    </Row>
+                                </Col>
+                                <Col span={24}>
+                                    <Row>
+                                        Tên khách hàng: {item.nameCustomer}
+                                    </Row>
+                                    <Row>
+                                        Địa chỉ: {item.addressCustomer}
+                                    </Row>
+                                    <Row>
+                                        Số điện thoại: {item.phoneCustomer}
+                                    </Row>
+                                </Col>
+                                <Col span={24} style={{ textAlign: "right" }}>
+                                    <h3>Tổng tiền: {formatCurrencyVN(item.totalPrice)}</h3>
+                                </Col>
+
+
+                            </Row>
+                        </List.Item>
+                    </div>
+
+
+                }
+            />,
         },
     ]
 
@@ -151,8 +206,8 @@ const Profile: React.FC = () => {
         <Row style={{ margin: "50px" }}>
             <Col md={24}>
                 <Tabs
+                    defaultActiveKey="2"
                     size="large"
-                    defaultActiveKey="1"
                     tabPosition={"left"}
                     items={item}
                 />

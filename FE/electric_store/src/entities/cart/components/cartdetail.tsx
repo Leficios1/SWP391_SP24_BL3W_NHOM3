@@ -31,7 +31,7 @@ const CartDetail: React.FC<CartDetailProps> = (props) => {
 
     const dispatch = useAppDispatch()
 
-    const descriptionStyle: React.CSSProperties = {
+     const descriptionStyle: React.CSSProperties = {
         overflow: "hidden",
         display: "-webkit-box",
         textOverflow: "ellipsis",

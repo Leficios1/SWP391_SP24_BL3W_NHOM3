@@ -198,7 +198,7 @@ const Header: React.FC = () => {
                             </Col>
                             <Col span={6}>
                                 <div className="sub-header-item">
-                                    <NavLink style={styleNavLink} to={"/blog"}>Giới thiệu</NavLink>
+                                    <NavLink style={styleNavLink} to={"/bai-viet"}>Blog</NavLink>
                                 </div>
                             </Col>
                             <Col span={6}>

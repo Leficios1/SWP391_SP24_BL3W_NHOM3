@@ -1,11 +1,13 @@
 import React, { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../config/store"
-import { getCartByUserId } from "../cart/cart.reducer"
+import { deleteAllProductInCart, getCartByUserId } from "../cart/cart.reducer"
 import { CartProps } from "../cart/Cart"
 import CartDetail, { ICartDetail } from "../cart/components/cartdetail"
 import { Button, Col, List, Popover, Row, Skeleton } from "antd"
 import { Link } from "react-router-dom"
 import BillingInformation from "./components/billinginformation/billinginformation"
+import { checkpayment } from "./order.reducer"
+import { toast } from "react-toastify"
 
 interface OrderProps {
     accountId: string | number
@@ -20,6 +22,21 @@ const Order: React.FC<OrderProps> = (props) => {
 
     useEffect(() => {
         dispatch(getCartByUserId(accountId))
+    }, [])
+
+
+
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const transactionNo = Number(urlParams.get("vnp_TransactionNo"));
+
+        if (transactionNo != 0) {
+            dispatch(checkpayment({ urlpayment: window.location.href, userId: accountId }))
+            dispatch(deleteAllProductInCart(accountId))
+            toast.success("Cảm ơn bạn đã thanh toán thành công")
+            // them api vnpay checkpayment vao day nua la xong cook
+            // window.history.replaceState({}, "", "http://localhost:3000/thanh-toan")
+        }
     }, [])
 
 

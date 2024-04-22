@@ -27,3 +27,7 @@ span {
   background-color: rgb(199 141 55 / 54%);
 
 }
+
+.ant-list-item {
+  display: block;
+}

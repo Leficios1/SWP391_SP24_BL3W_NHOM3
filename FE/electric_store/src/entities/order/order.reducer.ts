@@ -14,6 +14,11 @@ interface FormPaymentVnPayProps {
     orderId: number | string
 }
 
+interface CheckPaymentProps {
+    urlpayment: string,
+    userId: number | string
+}
+
 export const initialState: EntityState<IOrderProps> = {
     data: null,
     dataDetail: null,
@@ -33,10 +38,27 @@ export const createsubmitpayment = createAsyncThunk("order/submitpayment", async
 })
 
 
+export const getHistoryOrder = createAsyncThunk("order/getorderbyid", async (userId: string | number) => {
+    const requestUrl = await axios.get(`${ORDER.CUSTOMER.GETORDERBYUSERID}/${userId}`);
+    return requestUrl
+})
+
+
+//payment
+
 export const getPaymentVnpay = createAsyncThunk("order/submitpayment", async (form: FormPaymentVnPayProps) => {
     const requestUrl = await axios.get(`${url}/Payment/vn-pay/${form.userId}/${form.orderId}/${form.device}`)
     return requestUrl
 })
+
+
+export const checkpayment = createAsyncThunk("order/checkpayment", async ({ urlpayment, userId }: CheckPaymentProps) => {
+    const requestUrl = await axios.get(`${url}/Payment/vn-pay/check-payment?url=${encodeURIComponent(urlpayment)}&userId=${userId}`)
+    return requestUrl
+})
+
+
+
 
 
 export const OrderSLice = createSlice({
@@ -65,7 +87,7 @@ export const OrderSLice = createSlice({
             })
 
 
-            .addMatcher(isPending(getPaymentVnpay), (state, action) => {
+            .addMatcher(isPending(getPaymentVnpay, checkpayment, getHistoryOrder), (state, action) => {
                 return {
                     ...state,
                     loading: true,
@@ -74,11 +96,25 @@ export const OrderSLice = createSlice({
                 }
             })
 
+            .addMatcher(isFulfilled(getHistoryOrder), (state, action) => {
+                return {
+                    ...state,
+                    loading: false,
+                    data: action.payload.data
+                }
+            })
             .addMatcher(isFulfilled(getPaymentVnpay), (state, action) => {
                 return {
                     ...state,
                     loading: false,
                     message: "Tới trang thanh toán"
+                }
+            })
+            .addMatcher(isFulfilled(checkpayment), (state, action) => {
+                return {
+                    ...state,
+                    loading: false,
+                    message: "Thanh toán thành công xin cảm ơn"
                 }
             })
     },
