@@ -18,19 +18,15 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 //import Staffs from './Staffs';
 //import Orders from './Orders';
 import Layout from "./Layout";
-import LoginForm from "./features/auth/Login";
+import Login from "./features/auth/Login";
 
-const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const token = Cookies.get('token');
 
-  return token ? children : <Navigate to="/login" />;
-};
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<LoginForm />} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
           <Route index element={<Home />} />
           <Route path="/users" element={<Users />} />

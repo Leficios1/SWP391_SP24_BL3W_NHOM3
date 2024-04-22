@@ -7,7 +7,7 @@ import { setCredentials, logOut } from '../auth/authSlice'
 
 
 const baseUrl = fetchBaseQuery ({
-    baseUrl: 'https://epplus.azurewebsites.net/api',
+    baseUrl: 'https://epplus.azurewebsites.net/api/auth',
     credentials: 'include',
     prepareHeaders: (headers, {getState}) => {
         const token = getState().auth.token;

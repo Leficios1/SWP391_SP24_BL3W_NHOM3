@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from "./authApiSlice";
 import { setCredentials } from "./authSlice";
 
-const LoginForm = () => {
+const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const userRef = useRef();
@@ -65,7 +65,7 @@ const LoginForm = () => {
     )
     return content
 }
-export default LoginForm;
+export default Login;
 
 
 
