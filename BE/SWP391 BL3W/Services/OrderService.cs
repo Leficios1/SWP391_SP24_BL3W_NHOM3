@@ -55,7 +55,7 @@ namespace SWP391_BL3W.Services
                                 response.Errormessge = $"Product with ID {orderDetailDto.ProductId} not found!";
                                 return response;
                             }
-                            orderDetailDto.ExpiredWarranty = DateTime.Now.AddDays(product.WarrantyPeriod);
+                            orderDetailDto.ExpiredWarranty = DateTime.Now.AddMonths(product.WarrantyPeriod);
                         }
                         var order = _mapper.Map<Order>(dto);
                         //order.statusMessage = "";

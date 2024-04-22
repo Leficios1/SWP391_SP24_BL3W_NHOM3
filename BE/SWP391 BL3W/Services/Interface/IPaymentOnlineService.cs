@@ -1,4 +1,5 @@
 ﻿using SWP391_BL3W.DTO.ModelPaymentOnline;
+using SWP391_BL3W.DTO.Request;
 
 namespace SWP391_BL3W.Services.Interface
 {
@@ -6,6 +7,6 @@ namespace SWP391_BL3W.Services.Interface
     {
 
         public Task<string> CallAPIPayByUserId(int userId, int WhoAreYou, int orderId);
-        public Task<ResponsePayment> GetInformationPayment(int userId, string urlResponse);
+        public Task<ResponsePayment> GetInformationPayment(VNPayRequestDTO dto);
     }
 }
