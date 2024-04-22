@@ -38,7 +38,7 @@ namespace SWP391_BL3W.DTO.Response
     public class ReviewDTO
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string NameUser { get; set; } = null!;
         public string Comment { get; set; }
         public int Rating { get; set; }
     }

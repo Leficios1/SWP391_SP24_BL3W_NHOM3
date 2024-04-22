@@ -19,8 +19,9 @@ namespace SWP391_BL3W.Services
         private readonly IBaseRepository<ProductsDetail> _productsDetailRepository;
         private readonly IBaseRepository<Images> _image;
         private readonly IBaseRepository<Category> _categoryRepository;
+        private readonly IBaseRepository<User> _userRepository;
 
-        public ProductService(IMapper mapper, IBaseRepository<Product> baseRepository, SWPContext context, IBaseRepository<ProductsDetail> productDetail, IBaseRepository<Images> images, IBaseRepository<Category> category)
+        public ProductService(IMapper mapper, IBaseRepository<Product> baseRepository, SWPContext context, IBaseRepository<ProductsDetail> productDetail, IBaseRepository<Images> images, IBaseRepository<Category> category, IBaseRepository<User> user)
         {
             _mapper = mapper;
             _baseRepository = baseRepository;
@@ -28,6 +29,7 @@ namespace SWP391_BL3W.Services
             _productsDetailRepository = productDetail;
             _image = images;
             _categoryRepository = category;
+            _userRepository = user;
         }
 
         public async Task<StatusResponse<CreateProductDTO>> create(CreateProductDTO dto)
@@ -169,13 +171,17 @@ namespace SWP391_BL3W.Services
                         Id = i.Id,
                         Url = i.Url
                     }).ToList(),
-                    Reviews = product.Reviews.Select(r => new ReviewDTO
+                    Reviews = product.Reviews.Select(async r =>
                     {
-                        Id = r.Id,
-                        UserId = r.UserId,
-                        Comment = r.Comment,
-                        Rating = r.Rating
-                    }).ToList()
+                        var userName = await _userRepository.GetById(r.UserId);
+                        return new ReviewDTO
+                        {
+                            Id = r.Id,
+                            NameUser = userName.Name,
+                            Comment = r.Comment,
+                            Rating = r.Rating
+                        };
+                    }).Select(task => task.Result).ToList()
                 };
 
                 response.Data = productDetailsResponseDTO;
