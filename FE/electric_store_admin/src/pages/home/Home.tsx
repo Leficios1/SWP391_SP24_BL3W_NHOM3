@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import BarChartBox from "../../components/barChartBox/BarChartBox";
 import BigChartBox from "../../components/bigChartBox/BigChartBox";
 import ChartBox from "../../components/chartBox/ChartBox";
@@ -14,7 +15,7 @@ import {
 import "./home.scss";
 
 const Home = () => {
-  return (
+    return (
     <div className="home">
       <div className="box box1">
         <TopBox />

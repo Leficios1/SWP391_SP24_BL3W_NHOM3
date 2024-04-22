@@ -12,8 +12,7 @@ import { useQuery } from "@tanstack/react-query";
 // body la minh muon post cai gi len 
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
-
-
+import { useSelector, useDispatch } from "react-redux";
 
 
 // const fetchUsers = async () => {
@@ -79,7 +78,7 @@ const Users = () => {
   // console.log(Cookies.get('token'));
   // const { data, isLoading, error} = useQuery(['users'], fetchUsers);
   // if (isLoading) return console.log("Loading...");
-  // if (error) return console.log(error);
+  // if (error) return console.log(error)
   const [open, setOpen] = useState(false);
   const [userRows, setUserRows] = useState([]);
 
@@ -128,19 +127,19 @@ const Users = () => {
       type: "boolean",
     },
   ];
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const { data } = await axios.get("https://epplus.azurewebsites.net/api/User/getAllUser?pageNumber=1&pageSize=10",{
+  // useEffect(() => {
+  //   const fetchUsers = async () => {
+  //     const { data } = await axios.get("https://epplus.azurewebsites.net/api/User/getAllUser?pageNumber=1&pageSize=10",{
       
-        headers: {
-          'accept': 'text/plain',
-          'Authorization': `Bearer ${Cookies.get('token')}`
+  //       headers: {
+  //         'accept': 'text/plain',
+  //         'Authorization': `Bearer ${Cookies.get('token')}`
         
-      }
+  //     }
     
-    });return data;
-    }
-  }, []);
+  //   });return data;
+  //   }
+  // }, []);
   return (
     <div className="users">
       <div className="info">

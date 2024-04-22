@@ -1,8 +1,7 @@
 import Home from "./pages/home/Home";
-import Users from "./pages/users/Users";
+import Users from "./features/users/Users";
 import Products from "./pages/products/Products";
 import Cookies from "js-cookie";
-import LoginForm from "./pages/login/Login";
 import "./styles/global.scss";
 // import User from "./pages/user/User";
 // import Product from "./pages/product/Product";
@@ -19,26 +18,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 //import Staffs from './Staffs';
 //import Orders from './Orders';
 import Layout from "./Layout";
-import { useState, useEffect } from "react";
-
-
-// const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-//   const token = Cookies.get('token');
-
-//   return token ? children : <Navigate to="/login" />;
-// };
+import LoginForm from "./features/auth/Login";
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const token = Cookies.get('token');
 
-  useEffect(() => {
-    const token = Cookies.get('token');
-    if (token) {
-      setIsAuthenticated(true);
-    }
-  }, []);
-
-  return isAuthenticated ? children : <Navigate to="/login" />;
+  return token ? children : <Navigate to="/login" />;
 };
 
 function App() {
