@@ -28,79 +28,59 @@ namespace SWP391_BL3W.Services
             _context = context;
         }
 
-        public async Task<StatusResponse<BlogsDTO>> CreateBlogAsync(BlogsDTO dto)
+        public async Task<StatusResponse<BlogsDTO>> CreateBlogAsync(BlogRequestDTO dto)
         {
             var response = new StatusResponse<BlogsDTO>();
             using (var transaction = _context.Database.BeginTransaction())
             {
                 try
                 {
-
-                    var blogEntity = _mapper.Map<BlogsDTO, Blog>(dto);
+                    var blogEntity = _mapper.Map<Blog>(dto);
                     await _baseRepository.AddAsync(blogEntity);
                     await _baseRepository.SaveChangesAsync();
-                    await transaction.CommitAsync();
-                    var createdDto = _mapper.Map<Blog, BlogsDTO>(blogEntity);
-
-           
-                  
-                        response.Data = dto;
-                        response.statusCode = HttpStatusCode.Created;
-                        response.Errormessge = "Create Successful";
-                    return response;
+                    var createdDto = _mapper.Map<BlogsDTO>(blogEntity);
+                    response.Data = createdDto;
+                    response.statusCode = HttpStatusCode.Created;
+                    response.Errormessge = "Create Successful";
+                    transaction.Commit();
                 }
                 catch (Exception ex)
                 {
+                    transaction.Rollback();
                     response.statusCode = HttpStatusCode.InternalServerError;
                     response.Errormessge = $"Error: {ex.Message}";
-                    return response;
                 }
-
+                return response;
             }
-               
+
         }
 
-        public async Task<StatusResponse<BlogsDTO>> DeleteBlogAsync(int id)
+        public async Task<StatusResponse<bool>> DeleteBlogAsync(int id)
         {
-            var response = new StatusResponse<BlogsDTO>();
-            using (var transaction = _context.Database.BeginTransaction())
+            var response = new StatusResponse<bool>();
             try
             {
                 var blogEntity = await _baseRepository.GetById(id);
-
                 if (blogEntity == null)
                 {
-
-                        response.Data = null;
-                        response.statusCode = HttpStatusCode.NotFound;
-                        response.Errormessge = "Blog not found";
-                        return response;
-                    } 
-
+                    response.Data = false;
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Blog not found";
+                    return response;
+                }
                 _baseRepository.Delete(blogEntity);
                 await _baseRepository.SaveChangesAsync();
-                    await transaction.CommitAsync();
-
-                    var responseDTO = new BlogsDTO
-                    {
-                        Id = blogEntity.Id,
-                        Title = blogEntity.Title,
-                        Content = blogEntity.content,
-                        ImageUrl = blogEntity.ImageUrl,
-
-                    };
-                    response.Data = responseDTO;
-                    response.statusCode = HttpStatusCode.OK;
-                    response.Errormessge = null;
-                    return response;
-                }
-                catch (Exception ex)
-                {
-                    response.statusCode = HttpStatusCode.InternalServerError;
-                    response.Errormessge = ex.Message;
-                    response.Data = null;
-                    return response;
-                }
+                response.Data = true;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Delete Succesful!";
+            }
+            catch (Exception ex)
+            {
+                response.Data = false;
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
         }
 
         public async Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync(int? size, int? page)
@@ -108,7 +88,7 @@ namespace SWP391_BL3W.Services
             var response = new StatusResponse<BlogsResponseDTO>();
             try
             {
-                int pageSize = size ?? 10;
+                int pageSize = size ?? 15;
                 int pageNumber = page ?? 1;
                 List<Blog> allBlogs = await _context.Blogs.ToListAsync();
                 int totalItems = allBlogs.Count;
@@ -121,12 +101,14 @@ namespace SWP391_BL3W.Services
                 {
                     Id = p.Id,
                     Title = p.Title,
-                    Content = p.content,
                     ImageUrl = p.ImageUrl,
-                    
+                    UserId = p.UserId,
+                    CategoryBlogID = p.CategoryBlogID
                 }).ToList();
+
                 var responseDTO = new BlogsResponseDTO
                 {
+                    Blogs = blogsForPage,
                     TotalPages = totalPages,
                     CurrentPage = pageNumber,
                     PageSize = pageSize,
@@ -135,41 +117,14 @@ namespace SWP391_BL3W.Services
                 response.Data = responseDTO;
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Get all Blogs with pagination successfully.";
-               
+
             }
             catch (Exception ex)
             {
                 response.statusCode = HttpStatusCode.InternalServerError;
                 response.Errormessge = ex.Message;
-                response.Data = null;
                 return response;
             }
-            return response;
-        }
-
-        public async Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync()
-        {
-            var response = new StatusResponse<BlogsResponseDTO>();
-            try
-            {
-                List<Blog> allBlogs = await _context.Blogs.ToListAsync();
-
-                var blogsDtoList = allBlogs.Select(blog => _mapper.Map<Blog, BlogsDTO>(blog)).ToList();
-
-                response.Data = new BlogsResponseDTO
-                {
-                    Blogs = blogsDtoList,
-                    TotalItems = blogsDtoList.Count
-                };
-                response.statusCode = HttpStatusCode.OK;
-                response.Errormessge = "Get all blogs successfully.";
-            }
-            catch (Exception ex)
-            {
-                response.statusCode = HttpStatusCode.InternalServerError;
-                response.Errormessge = $"Error: {ex.Message}";
-            }
-
             return response;
         }
 
@@ -178,12 +133,11 @@ namespace SWP391_BL3W.Services
             var response = new StatusResponse<BlogDetailsResponseDTO>();
             try
             {
-                var product = await _context.Blogs
-                    .Include(p => p.User)
+                var blog = await _context.Blogs
                     .Include(p => p.CategoryBlog)
                     .FirstOrDefaultAsync(p => p.Id == id);
 
-                if (product == null)
+                if (blog == null)
                 {
                     response.statusCode = HttpStatusCode.NotFound;
                     response.Errormessge = "Blogs not found.";
@@ -193,31 +147,17 @@ namespace SWP391_BL3W.Services
                 {
                     Blog = new BlogsDTO
                     {
-                        Id = product.Id,
-                        Title = product.Title,
-                        Content = product.content,
-                        CategoryBlogID = product.CategoryBlogID,
+                        Id = blog.Id,
+                        Title = blog.Title,
+                        Content = blog.content,
+                        CategoryBlogID = blog.CategoryBlogID,
                     },
                     Category = new CategoryBlogDTO
                     {
-                        Id = product.CategoryBlog.Id,
-                        Name = product.CategoryBlog.Name,
-                 
+                        Id = blog.CategoryBlog.Id,
+                        Name = blog.CategoryBlog.Name,
+
                     },
-                    User = new UserDTO
-                    {
-                        Id = product.User.Id,
-                        Name= product.User.Name,
-                        AvatarUrl = product.User.AvatarUrl,
-                        DateOfBirth = product.User.DateOfBirth,
-                        Email = product.User.Email,
-                        Gender = product.User.Gender,
-                        phone = product.User.phone,
-                        status = product.User.status,
-                       
-                        
-                    },
-          
                 };
 
                 response.Data = BlogsResponseDTO;
@@ -228,36 +168,38 @@ namespace SWP391_BL3W.Services
             {
                 response.statusCode = HttpStatusCode.BadRequest;
                 response.Errormessge = ex.Message;
-                response.Data = null;
             }
-
             return response;
         }
-
-        public async Task<StatusResponse<BlogsResponseDTO>> UpdateBlogAsync(int id, UpdateBlogDTO dto)
+        public async Task<StatusResponse<BlogsResponseDTO>> UpdateBlogAsync(UpdateBlogDTO dto)
         {
             var response = new StatusResponse<BlogsResponseDTO>();
             var existedBlogs = await _baseRepository.GetById(dto.Id);
-            if (existedBlogs != null)
+            try
             {
-                existedBlogs.Title = dto.Title;
-                existedBlogs.content = dto.Content;
-                existedBlogs.ImageUrl = dto.ImageUrl;
-                existedBlogs.UserId = dto.UserId;
-                
-                _baseRepository.Update(existedBlogs);
-                await _baseRepository.SaveChangesAsync();
-              
+                if (existedBlogs != null)
+                {
+                    existedBlogs.Title = dto.Title;
+                    existedBlogs.content = dto.Content;
+                    existedBlogs.ImageUrl = dto.ImageUrl;
+                    existedBlogs.UserId = dto.UserId;
+
+                    _baseRepository.Update(existedBlogs);
+                    await _baseRepository.SaveChangesAsync();
+                }
+                var mapper = _mapper.Map<BlogsResponseDTO>(existedBlogs);
+                response.Data = mapper;
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Update Successful";
-                return response;
             }
-            else
+            catch (Exception ex)
             {
-                response.statusCode = HttpStatusCode.NotFound;
-                response.Errormessge = "Not Found user";
-                return response;
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
             }
+            return response;
+
         }
     }
 }
+

@@ -6,10 +6,10 @@ namespace SWP391_BL3W.Services.Interface
 {
     public interface IBlogService
     {
-        Task<StatusResponse<BlogsDTO>> CreateBlogAsync(BlogsDTO dto);
-        Task<StatusResponse<BlogsDTO>> DeleteBlogAsync(int id);
-        Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync();
-        Task<StatusResponse<BlogsResponseDTO>> UpdateBlogAsync(int id, UpdateBlogDTO dto);
+        Task<StatusResponse<BlogsDTO>> CreateBlogAsync(BlogRequestDTO dto);
+        Task<StatusResponse<bool>> DeleteBlogAsync(int id);
+        Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync(int? size, int? page);
+        Task<StatusResponse<BlogsResponseDTO>> UpdateBlogAsync(UpdateBlogDTO dto);
         Task<StatusResponse<BlogDetailsResponseDTO>> GetBlogByIdAsync(int id);
     }
 }
