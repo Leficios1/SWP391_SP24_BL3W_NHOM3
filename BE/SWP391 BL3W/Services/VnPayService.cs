@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SWP391_BL3W.Database;
 using SWP391_BL3W.DTO.ModelPaymentOnline;
+using SWP391_BL3W.DTO.Request;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System;
@@ -27,13 +28,13 @@ namespace SWP391_BL3W.Services
             _productRepository = productRepo;
         }
 
-        public async Task<ResponsePayment> GetInformationPayment(int userId, string urlResponse)
+        public async Task<ResponsePayment> GetInformationPayment(VNPayRequestDTO dto)
         {
 
 
             string vnp_HashSecret = "GCLECYOCZYQLDTIUGHGWZAWPNALXPLOJ";
 
-            var vnpayData = urlResponse.Split("?")[1];
+            var vnpayData = dto.urlResponse.Split("?")[1];
             VnPayLibrary vnpay = new VnPayLibrary();
 
             foreach (string s in vnpayData.Split("&"))
@@ -107,7 +108,7 @@ namespace SWP391_BL3W.Services
                 TransactionStatus = transactionStatus,
                 OrderId = Int32.Parse(orderId),
                 TxnRef = txnRef,
-                UserId = userId
+                UserId = dto.userId
             };
             await _onlineTransaction.AddAsync(newTransaction);
             await _onlineTransaction.SaveChangesAsync();
@@ -130,10 +131,13 @@ namespace SWP391_BL3W.Services
                 switch (WhoAreYou)
                 {
                     case 1:
-                        vnp_ReturnUrl = "https://localhost:3000";
+                        vnp_ReturnUrl = "https://electric-store-khoii.vercel.app";
                         break;
                     case 2:
                         vnp_ReturnUrl = "https://localhost:7156/index.html";
+                        break;
+                    case 3:
+                        vnp_ReturnUrl = "http://locahost:3000";
                         break;
                     default:
                         vnp_ReturnUrl = "";

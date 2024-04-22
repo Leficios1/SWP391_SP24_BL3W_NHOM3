@@ -528,7 +528,7 @@ namespace SWP391_BL3W.Database
                     price = 312000,
                     WarrantyPeriod = 180,
                     CategoryID = 1,
-
+                    status = 1,
                 },
                  new Product
                  {
@@ -545,7 +545,7 @@ namespace SWP391_BL3W.Database
                      price = 80000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -560,7 +560,7 @@ namespace SWP391_BL3W.Database
                      price = 195000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -575,7 +575,7 @@ namespace SWP391_BL3W.Database
                      price = 200000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -590,7 +590,7 @@ namespace SWP391_BL3W.Database
                      price = 200000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -606,7 +606,7 @@ namespace SWP391_BL3W.Database
                      price = 299000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -621,7 +621,7 @@ namespace SWP391_BL3W.Database
                      price = 340000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -633,7 +633,7 @@ namespace SWP391_BL3W.Database
                      price = 490000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -645,7 +645,7 @@ namespace SWP391_BL3W.Database
                      price = 350000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -657,7 +657,7 @@ namespace SWP391_BL3W.Database
                      price = 315000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -669,7 +669,7 @@ namespace SWP391_BL3W.Database
                      price = 550000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -681,7 +681,7 @@ namespace SWP391_BL3W.Database
                      price = 425000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
 
                  new Product
@@ -694,7 +694,7 @@ namespace SWP391_BL3W.Database
                      price = 355000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -706,7 +706,7 @@ namespace SWP391_BL3W.Database
                      price = 510000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -718,7 +718,7 @@ namespace SWP391_BL3W.Database
                      price = 535000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -730,7 +730,7 @@ namespace SWP391_BL3W.Database
                      price = 499000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -742,7 +742,7 @@ namespace SWP391_BL3W.Database
                      price = 1115000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -754,7 +754,7 @@ namespace SWP391_BL3W.Database
                      price = 449000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -766,7 +766,7 @@ namespace SWP391_BL3W.Database
                      price = 320000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -778,7 +778,7 @@ namespace SWP391_BL3W.Database
                      price = 849000,
                      WarrantyPeriod = 180,
                      CategoryID = 1,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -790,7 +790,7 @@ namespace SWP391_BL3W.Database
                      price = 4990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -802,7 +802,7 @@ namespace SWP391_BL3W.Database
                      price = 8990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -814,7 +814,7 @@ namespace SWP391_BL3W.Database
                      price = 10900000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -826,7 +826,7 @@ namespace SWP391_BL3W.Database
                      price = 6890000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -838,7 +838,7 @@ namespace SWP391_BL3W.Database
                      price = 900000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -850,7 +850,7 @@ namespace SWP391_BL3W.Database
                      price = 29990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -862,7 +862,7 @@ namespace SWP391_BL3W.Database
                      price = 7490000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -874,7 +874,7 @@ namespace SWP391_BL3W.Database
                      price = 890000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -886,7 +886,7 @@ namespace SWP391_BL3W.Database
                      price = 990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -898,7 +898,7 @@ namespace SWP391_BL3W.Database
                      price = 7990000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -910,7 +910,7 @@ namespace SWP391_BL3W.Database
                      price = 1390000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -922,7 +922,7 @@ namespace SWP391_BL3W.Database
                      price = 790000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -934,7 +934,7 @@ namespace SWP391_BL3W.Database
                      price = 12390000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -946,7 +946,7 @@ namespace SWP391_BL3W.Database
                      price = 44790000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -958,7 +958,7 @@ namespace SWP391_BL3W.Database
                      price = 11689000,
                      WarrantyPeriod = 720,
                      CategoryID = 2,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -970,7 +970,7 @@ namespace SWP391_BL3W.Database
                      price = 10400000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -982,7 +982,7 @@ namespace SWP391_BL3W.Database
                      price = 11990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -994,7 +994,7 @@ namespace SWP391_BL3W.Database
                      price = 11690000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1006,7 +1006,7 @@ namespace SWP391_BL3W.Database
                      price = 13490000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1018,7 +1018,7 @@ namespace SWP391_BL3W.Database
                      price = 6990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1030,7 +1030,7 @@ namespace SWP391_BL3W.Database
                      price = 14550000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1042,7 +1042,7 @@ namespace SWP391_BL3W.Database
                      price = 13400000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1054,7 +1054,7 @@ namespace SWP391_BL3W.Database
                      price = 13990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1066,7 +1066,7 @@ namespace SWP391_BL3W.Database
                      price = 5890000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1078,7 +1078,7 @@ namespace SWP391_BL3W.Database
                      price = 17800000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1090,7 +1090,7 @@ namespace SWP391_BL3W.Database
                      price = 11090000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1102,7 +1102,7 @@ namespace SWP391_BL3W.Database
                      price = 3990000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1114,7 +1114,7 @@ namespace SWP391_BL3W.Database
                      price = 21090000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1126,7 +1126,7 @@ namespace SWP391_BL3W.Database
                      price = 7350000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1138,7 +1138,7 @@ namespace SWP391_BL3W.Database
                      price = 14490000,
                      WarrantyPeriod = 720,
                      CategoryID = 3,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1150,7 +1150,7 @@ namespace SWP391_BL3W.Database
                      price = 5990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1162,7 +1162,7 @@ namespace SWP391_BL3W.Database
                      price = 6890000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1174,7 +1174,7 @@ namespace SWP391_BL3W.Database
                      price = 4590000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1186,7 +1186,7 @@ namespace SWP391_BL3W.Database
                      price = 5090000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1198,7 +1198,7 @@ namespace SWP391_BL3W.Database
                      price = 4990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1210,7 +1210,7 @@ namespace SWP391_BL3W.Database
                      price = 6790000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1222,7 +1222,7 @@ namespace SWP391_BL3W.Database
                      price = 5590000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1234,7 +1234,7 @@ namespace SWP391_BL3W.Database
                      price = 14390000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1246,7 +1246,7 @@ namespace SWP391_BL3W.Database
                      price = 6290000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1258,7 +1258,7 @@ namespace SWP391_BL3W.Database
                      price = 9290000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1270,7 +1270,7 @@ namespace SWP391_BL3W.Database
                      price = 14990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1282,7 +1282,7 @@ namespace SWP391_BL3W.Database
                      price = 14990000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1294,7 +1294,7 @@ namespace SWP391_BL3W.Database
                      price = 11490000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1306,7 +1306,7 @@ namespace SWP391_BL3W.Database
                      price = 9290000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                  new Product
                  {
@@ -1318,7 +1318,7 @@ namespace SWP391_BL3W.Database
                      price = 7690000,
                      WarrantyPeriod = 720,
                      CategoryID = 4,
-
+                     status = 1,
                  },
                   new Product
                   {
@@ -1330,7 +1330,7 @@ namespace SWP391_BL3W.Database
                       price = 3690000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1342,7 +1342,7 @@ namespace SWP391_BL3W.Database
                       price = 6490000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1354,7 +1354,7 @@ namespace SWP391_BL3W.Database
                       price = 10690000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1366,7 +1366,7 @@ namespace SWP391_BL3W.Database
                       price = 4990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1378,7 +1378,7 @@ namespace SWP391_BL3W.Database
                       price = 3990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1390,7 +1390,7 @@ namespace SWP391_BL3W.Database
                       price = 8990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1402,7 +1402,7 @@ namespace SWP391_BL3W.Database
                       price = 12090000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1414,7 +1414,7 @@ namespace SWP391_BL3W.Database
                       price = 5990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1426,7 +1426,7 @@ namespace SWP391_BL3W.Database
                       price = 10090000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1438,7 +1438,7 @@ namespace SWP391_BL3W.Database
                       price = 7990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1450,7 +1450,7 @@ namespace SWP391_BL3W.Database
                       price = 6990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1462,7 +1462,7 @@ namespace SWP391_BL3W.Database
                       price = 5990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1474,7 +1474,7 @@ namespace SWP391_BL3W.Database
                       price = 9490000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1486,7 +1486,7 @@ namespace SWP391_BL3W.Database
                       price = 3990000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1498,7 +1498,7 @@ namespace SWP391_BL3W.Database
                       price = 7690000,
                       WarrantyPeriod = 720,
                       CategoryID = 5,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1510,7 +1510,7 @@ namespace SWP391_BL3W.Database
                       price = 1890000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1522,7 +1522,7 @@ namespace SWP391_BL3W.Database
                       price = 990000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1534,7 +1534,7 @@ namespace SWP391_BL3W.Database
                       price = 1440000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1546,7 +1546,7 @@ namespace SWP391_BL3W.Database
                       price = 400000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1558,7 +1558,7 @@ namespace SWP391_BL3W.Database
                       price = 700000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1570,7 +1570,7 @@ namespace SWP391_BL3W.Database
                       price = 490000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1582,7 +1582,7 @@ namespace SWP391_BL3W.Database
                       price = 349000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1594,7 +1594,7 @@ namespace SWP391_BL3W.Database
                       price = 540000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1606,7 +1606,7 @@ namespace SWP391_BL3W.Database
                       price = 430000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1618,7 +1618,7 @@ namespace SWP391_BL3W.Database
                       price = 550000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1630,7 +1630,7 @@ namespace SWP391_BL3W.Database
                       price = 490000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1642,7 +1642,7 @@ namespace SWP391_BL3W.Database
                       price = 2890000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1654,7 +1654,7 @@ namespace SWP391_BL3W.Database
                       price = 650000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1666,7 +1666,7 @@ namespace SWP391_BL3W.Database
                       price = 1290000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                   new Product
                   {
@@ -1678,7 +1678,7 @@ namespace SWP391_BL3W.Database
                       price = 2290000,
                       WarrantyPeriod = 720,
                       CategoryID = 6,
-
+                      status = 1,
                   },
                    new Product
                    {
@@ -1690,7 +1690,7 @@ namespace SWP391_BL3W.Database
                        price = 7690000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1702,7 +1702,7 @@ namespace SWP391_BL3W.Database
                        price = 3770000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1714,7 +1714,7 @@ namespace SWP391_BL3W.Database
                        price = 7890000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1726,7 +1726,7 @@ namespace SWP391_BL3W.Database
                        price = 1440000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1738,7 +1738,7 @@ namespace SWP391_BL3W.Database
                        price = 5160000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1750,7 +1750,7 @@ namespace SWP391_BL3W.Database
                        price = 9590000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1762,7 +1762,7 @@ namespace SWP391_BL3W.Database
                        price = 5390000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1774,7 +1774,7 @@ namespace SWP391_BL3W.Database
                        price = 9350000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1786,7 +1786,7 @@ namespace SWP391_BL3W.Database
                        price = 16790000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1798,7 +1798,7 @@ namespace SWP391_BL3W.Database
                        price = 4510000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1810,7 +1810,7 @@ namespace SWP391_BL3W.Database
                        price = 5500000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1822,7 +1822,7 @@ namespace SWP391_BL3W.Database
                        price = 11490000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1834,7 +1834,7 @@ namespace SWP391_BL3W.Database
                        price = 7790000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1846,7 +1846,7 @@ namespace SWP391_BL3W.Database
                        price = 10390000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1858,7 +1858,7 @@ namespace SWP391_BL3W.Database
                        price = 3470000,
                        WarrantyPeriod = 720,
                        CategoryID = 7,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1870,7 +1870,7 @@ namespace SWP391_BL3W.Database
                        price = 3990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1882,7 +1882,7 @@ namespace SWP391_BL3W.Database
                        price = 3990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1894,7 +1894,7 @@ namespace SWP391_BL3W.Database
                        price = 2690000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1906,7 +1906,7 @@ namespace SWP391_BL3W.Database
                        price = 2990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1918,7 +1918,7 @@ namespace SWP391_BL3W.Database
                        price = 1990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1930,7 +1930,7 @@ namespace SWP391_BL3W.Database
                        price = 2390000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1942,7 +1942,7 @@ namespace SWP391_BL3W.Database
                        price = 1590000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1954,7 +1954,7 @@ namespace SWP391_BL3W.Database
                        price = 3590000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1966,7 +1966,7 @@ namespace SWP391_BL3W.Database
                        price = 3990000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1978,7 +1978,7 @@ namespace SWP391_BL3W.Database
                        price = 3470000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -1990,7 +1990,7 @@ namespace SWP391_BL3W.Database
                        price = 3550000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2002,7 +2002,7 @@ namespace SWP391_BL3W.Database
                        price = 4250000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2014,7 +2014,7 @@ namespace SWP391_BL3W.Database
                        price = 4290000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2026,7 +2026,7 @@ namespace SWP391_BL3W.Database
                        price = 4590000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2038,7 +2038,7 @@ namespace SWP391_BL3W.Database
                        price = 2750000,
                        WarrantyPeriod = 720,
                        CategoryID = 8,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2050,7 +2050,7 @@ namespace SWP391_BL3W.Database
                        price = 1190000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2062,7 +2062,7 @@ namespace SWP391_BL3W.Database
                        price = 1490000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2074,7 +2074,7 @@ namespace SWP391_BL3W.Database
                        price = 1290000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2086,7 +2086,7 @@ namespace SWP391_BL3W.Database
                        price = 1290000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2098,7 +2098,7 @@ namespace SWP391_BL3W.Database
                        price = 990000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2110,7 +2110,7 @@ namespace SWP391_BL3W.Database
                        price = 1790000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2122,7 +2122,7 @@ namespace SWP391_BL3W.Database
                        price = 1390000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2134,7 +2134,7 @@ namespace SWP391_BL3W.Database
                        price = 1490000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2146,7 +2146,7 @@ namespace SWP391_BL3W.Database
                        price = 2390000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2158,7 +2158,7 @@ namespace SWP391_BL3W.Database
                        price = 1290000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2170,7 +2170,7 @@ namespace SWP391_BL3W.Database
                        price = 1990000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2182,7 +2182,7 @@ namespace SWP391_BL3W.Database
                        price = 2690000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2194,7 +2194,7 @@ namespace SWP391_BL3W.Database
                        price = 990000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2206,7 +2206,7 @@ namespace SWP391_BL3W.Database
                        price = 1490000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2218,7 +2218,7 @@ namespace SWP391_BL3W.Database
                        price = 2690000,
                        WarrantyPeriod = 720,
                        CategoryID = 9,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2230,7 +2230,7 @@ namespace SWP391_BL3W.Database
                        price = 3690000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2242,7 +2242,7 @@ namespace SWP391_BL3W.Database
                        price = 2770000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2254,7 +2254,7 @@ namespace SWP391_BL3W.Database
                        price = 570000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2266,7 +2266,7 @@ namespace SWP391_BL3W.Database
                        price = 470000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2278,7 +2278,7 @@ namespace SWP391_BL3W.Database
                        price = 1470000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2290,7 +2290,7 @@ namespace SWP391_BL3W.Database
                        price = 990000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2302,7 +2302,7 @@ namespace SWP391_BL3W.Database
                        price = 4390000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2314,7 +2314,7 @@ namespace SWP391_BL3W.Database
                        price = 490000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2326,7 +2326,7 @@ namespace SWP391_BL3W.Database
                        price = 590000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2338,7 +2338,7 @@ namespace SWP391_BL3W.Database
                        price = 490000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2350,7 +2350,7 @@ namespace SWP391_BL3W.Database
                        price = 790000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2362,7 +2362,7 @@ namespace SWP391_BL3W.Database
                        price = 690000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2374,7 +2374,7 @@ namespace SWP391_BL3W.Database
                        price = 350000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2386,7 +2386,7 @@ namespace SWP391_BL3W.Database
                        price = 499000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2398,7 +2398,7 @@ namespace SWP391_BL3W.Database
                        price = 550000,
                        WarrantyPeriod = 720,
                        CategoryID = 10,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2410,7 +2410,7 @@ namespace SWP391_BL3W.Database
                        price = 4390000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2422,7 +2422,7 @@ namespace SWP391_BL3W.Database
                        price = 4800000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2434,7 +2434,7 @@ namespace SWP391_BL3W.Database
                        price = 4700000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2446,7 +2446,7 @@ namespace SWP391_BL3W.Database
                        price = 4990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2458,7 +2458,7 @@ namespace SWP391_BL3W.Database
                        price = 9890000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2470,7 +2470,7 @@ namespace SWP391_BL3W.Database
                        price = 5690000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2482,7 +2482,7 @@ namespace SWP391_BL3W.Database
                        price = 7990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2494,7 +2494,7 @@ namespace SWP391_BL3W.Database
                        price = 21990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2506,7 +2506,7 @@ namespace SWP391_BL3W.Database
                        price = 10490000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2518,7 +2518,7 @@ namespace SWP391_BL3W.Database
                        price = 17990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2530,7 +2530,7 @@ namespace SWP391_BL3W.Database
                        price = 20970000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2542,7 +2542,7 @@ namespace SWP391_BL3W.Database
                        price = 10990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2554,7 +2554,7 @@ namespace SWP391_BL3W.Database
                        price = 9900000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2566,7 +2566,7 @@ namespace SWP391_BL3W.Database
                        price = 6990000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2578,7 +2578,7 @@ namespace SWP391_BL3W.Database
                        price = 7190000,
                        WarrantyPeriod = 720,
                        CategoryID = 11,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2590,7 +2590,7 @@ namespace SWP391_BL3W.Database
                        price = 2390000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2602,7 +2602,7 @@ namespace SWP391_BL3W.Database
                        price = 2365000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2614,7 +2614,7 @@ namespace SWP391_BL3W.Database
                        price = 1890000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2626,7 +2626,7 @@ namespace SWP391_BL3W.Database
                        price = 3590000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2638,7 +2638,7 @@ namespace SWP391_BL3W.Database
                        price = 2799000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2650,7 +2650,7 @@ namespace SWP391_BL3W.Database
                        price = 3070000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2662,7 +2662,7 @@ namespace SWP391_BL3W.Database
                        price = 2870000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2674,7 +2674,7 @@ namespace SWP391_BL3W.Database
                        price = 1849000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2686,7 +2686,7 @@ namespace SWP391_BL3W.Database
                        price = 4740000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2698,7 +2698,7 @@ namespace SWP391_BL3W.Database
                        price = 1690000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2710,7 +2710,7 @@ namespace SWP391_BL3W.Database
                        price = 1590000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2722,7 +2722,7 @@ namespace SWP391_BL3W.Database
                        price = 1670000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2734,7 +2734,7 @@ namespace SWP391_BL3W.Database
                        price = 1990000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2746,7 +2746,7 @@ namespace SWP391_BL3W.Database
                        price = 1890000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    },
                    new Product
                    {
@@ -2758,7 +2758,7 @@ namespace SWP391_BL3W.Database
                        price = 2490000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
-
+                       status = 1,
                    }
                 );
             modelBuilder.Entity<ProductsDetail>().HasData(
@@ -6846,6 +6846,170 @@ namespace SWP391_BL3W.Database
                     Id = 555,
                     Url = "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777978286125.jpg",
                     ProductId = 185,
+
+                }
+                );
+            modelBuilder.Entity<CategoryBlog>().HasData(
+                    new CategoryBlog
+                    {
+                        Id=1,
+                        Name= "Tủ lạnh",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 2,
+                        Name = "Máy giặt",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 3,
+                        Name = "Máy điều hòa",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 4,
+                        Name = "Ti vi",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 5,
+                        Name = "Đồ gia dụng nhà bếp",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 6,
+                        Name = "Máy lọc không khí",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 7,
+                        Name = "Máy sấy quần áo",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 8,
+                        Name = "Máy rửa chén",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 9,
+                        Name = "Máy xay sinh tố",
+
+                    },
+                    new CategoryBlog
+                    {
+                        Id = 10,
+                        Name = "Nồi chiên Không dầu",
+
+                    }
+                );
+            modelBuilder.Entity<Blog>().HasData(
+                new Blog
+                {
+                    Id= 1,
+                    Title= "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content= "<p>\r\n    Chào mừng bạn đến với bài viết này, nơi chúng tôi sẽ giới thiệu về loạt tủ lạnh tiết kiệm năng lượng hàng đầu từ ELICTRICITY STORE. Khám phá sức mạnh của công nghệ tiên tiến kết hợp với hiệu suất vượt trội, mang lại sự tiện ích và tiết kiệm năng lượng không ngờ tới.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/400.webp 400w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/480.webp 480w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/500.webp 500w\" type=\"image/webp\" sizes=\"(max-width: 500px) 100vw, 500px\"><img class=\"image_resized\" style=\"width:50.85%;\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/500.png\" data-ckbox-resource-id=\"ip64EguHXw0W\" width=\"500\" height=\"500\"></picture>\r\n</p>\r\n<p>\r\n    Đa dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Tủ lạnh của ELICTRICITY STORE không chỉ đơn thuần là một thiết bị lưu trữ thực phẩm, mà còn là biểu tượng của sự hiện đại và tiện nghi trong không gian bếp của bạn. Với một loạt các loại tủ lạnh từ các thương hiệu hàng đầu thế giới, bạn có thể dễ dàng tìm thấy lựa chọn phù hợp với nhu cầu và phong cách của gia đình bạn.\r\n</p>\r\n<p>\r\n    Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường\r\n</p>\r\n<p>\r\n    Với mục tiêu hướng tới sự bền vững và tiết kiệm năng lượng, các dòng tủ lạnh từ ELICTRICITY STORE được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ điện năng mà vẫn đảm bảo hiệu suất hoạt động tối ưu. Bằng cách chọn một chiếc tủ lạnh tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí hoạt động mà còn đóng góp tích cực vào việc bảo vệ môi trường.\r\n</p>\r\n<p>\r\n    Tính Tiện Lợi và Thân Thiện Người Dùng\r\n</p>\r\n<p>\r\n    Điện Máy Xanh cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc tủ lạnh hoàn hảo nhất cho gia đình và không gian sống của mình.\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới đa dạng và phong phú của các dòng tủ lạnh hàng đầu từ các thương hiệu uy tín trên thị trường. Hãy để chúng tôi cùng bạn tạo nên một không gian bếp hoàn hảo, tiện nghi và thân thiện với môi trường. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc tủ lạnh!\r\n</p>\r\n<p>\r\n    &nbsp;\r\n</p>",
+                    ImageUrl = "https://tse1.mm.bing.net/th?id=OIP.iLUXbVbhpa2l7FNsrjpgBwHaE7&pid=Api&P=0&h=220",
+                    UserId= 1,
+                    CategoryBlogID= 1,
+
+                },
+                new Blog
+                {
+                    Id = 2,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới của ELICTRICITY STORE - nơi bạn có thể khám phá và trải nghiệm sự tiện nghi và hiệu suất vượt trội của các dòng máy giặt hàng đầu. Với cam kết mang đến những giải pháp giặt đồ hiện đại, tiết kiệm năng lượng và thuận tiện nhất, Điện Máy Xanh là địa chỉ tin cậy cho mọi gia đình.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/400.webp 400w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/480.webp 480w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/560.webp 560w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/571.webp 571w\" sizes=\"(max-width: 571px) 100vw, 571px\" type=\"image/webp\"><img data-ckbox-resource-id=\"rBzobdxkhIDw\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/571.png\" width=\"571\" height=\"529\"></picture>\r\n</p>\r\n<p>\r\n    **Đa dạng và Phong Phú**\r\n</p>\r\n<p>\r\n    Từ các máy giặt công nghệ cao đến những dòng máy giặt tiết kiệm nước và năng lượng,ELICTRICITY STORE &nbsp;cung cấp một loạt các lựa chọn đa dạng để đáp ứng mọi nhu cầu và phong cách sử dụng. Dù bạn cần một máy giặt nhỏ gọn cho căn hộ nhỏ hoặc một chiếc máy giặt lớn để phục vụ cho gia đình đông thành viên, chúng tôi đều có sản phẩm phù hợp.\r\n</p>\r\n<p>\r\n    **Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường**\r\n</p>\r\n<p>\r\n    Với nhận thức về vai trò của việc bảo vệ môi trường, các dòng máy giặt từ ELICTRICITY STORE &nbsp;được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ nước và điện năng mà vẫn đảm bảo hiệu suất giặt tối ưu. Bằng cách chọn một máy giặt tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí hoạt động mà còn góp phần tích cực vào việc bảo vệ môi trường.\r\n</p>\r\n<p>\r\n    **Tính Tiện Lợi và Thân Thiện Người Dùng**\r\n</p>\r\n<p>\r\n    ELICTRICITY STORE &nbsp;cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc máy giặt hoàn hảo nhất cho gia đình và cuộc sống hàng ngày.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE &nbsp;và khám phá thế giới của các dòng máy giặt hiện đại và tiết kiệm năng lượng. Hãy để chúng tôi cùng bạn tạo nên một không gian giặt đồ tiện nghi và thân thiện với môi trường. Đến ELICTRICITY STORE &nbsp;- nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc máy giặt!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này giúp bạn hiểu rõ hơn về sự tiện nghi và hiệu suất của máy giặt từ ELICTRICITY STORE !\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl= "https://www.shutterstock.com/shutterstock/photos/2288129115/display_1500/stock-photo-basket-with-dirty-clothes-near-washing-machines-in-laundry-room-2288129115.jpg",
+                    UserId = 21,
+                    CategoryBlogID = 2,
+
+                },
+                new Blog
+                {
+                    Id = 3,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới của ELICTRICITY STORE - nơi bạn có thể khám phá và trải nghiệm sự thoải mái và hiệu quả của các dòng máy điều hòa hàng đầu. Với cam kết mang lại không gian sống mát mẻ và thoải mái nhất, ELICTRICITY STORE là địa chỉ tin cậy cho mọi gia đình.<br>\r\n    .\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/372.webp 372w\" sizes=\"(max-width: 372px) 100vw, 372px\" type=\"image/webp\"><img data-ckbox-resource-id=\"jHr_xG2LU6OM\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/372.png\" width=\"372\" height=\"213\"></picture>\r\n</p>\r\n<p>\r\n    Đa Dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Từ máy điều hòa treo tường cho căn hộ nhỏ đến máy điều hòa dàn nóng dàn lạnh cho không gian lớn, ELICTRICITY STORE cung cấp một loạt các lựa chọn đa dạng để đáp ứng mọi nhu cầu và kích thước không gian. Bạn có thể dễ dàng tìm thấy máy điều hòa phù hợp với phòng ngủ, phòng khách, hoặc văn phòng làm việc của bạn.\r\n</p>\r\n<p>\r\n    Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường\r\n</p>\r\n<p>\r\n    Với nhận thức về vai trò của việc bảo vệ môi trường, các dòng máy điều hòa từ ELICTRICITY STORE được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ điện năng mà vẫn đảm bảo hiệu suất làm lạnh tối ưu. Bằng cách chọn một máy điều hòa tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí điện mà còn giảm thiểu tác động tiêu cực lên môi trường.\r\n</p>\r\n<p>\r\n    Tính Tiện Lợi và Thân Thiện Người Dùng\r\n</p>\r\n<p>\r\n    ELICTRICITY STORE cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc máy điều hòa hoàn hảo nhất cho gia đình và không gian sống của mình.\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới của các dòng máy điều hòa hiện đại và tiết kiệm năng lượng. Hãy để chúng tôi cùng bạn tạo nên một không gian sống mát mẻ và thoải mái. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc máy điều hòa!<br>\r\n    &nbsp;\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl= "https://banhangtaikho.com.vn/Images/Upload/download/2018-6/1-ZHZH6L.jpg",
+                    UserId = 22,
+                    CategoryBlogID = 3,
+
+                },
+                new Blog
+                {
+                    Id = 4,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới giải trí tuyệt vời từ ELICTRICITY STORE - nơi bạn có thể khám phá và trải nghiệm sự phong phú và tiện ích của các dòng ti vi hàng đầu. Với cam kết mang lại trải nghiệm giải trí hoàn hảo nhất, ELICTRICITY STORE là địa chỉ đáng tin cậy cho mọi gia đình.<br>\r\n    .\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/519EvNyfRK7N/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/519EvNyfRK7N/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/519EvNyfRK7N/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/519EvNyfRK7N/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/519EvNyfRK7N/images/357.webp 357w\" sizes=\"(max-width: 357px) 100vw, 357px\" type=\"image/webp\"><img data-ckbox-resource-id=\"519EvNyfRK7N\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/519EvNyfRK7N/images/357.png\" width=\"357\" height=\"235\"></picture>\r\n</p>\r\n<p>\r\n    Đa Dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Từ các dòng ti vi LED mỏng nhẹ cho phòng khách đến các dòng ti vi thông minh với công nghệ hiện đại, ELICTRICITY STORE cung cấp một loạt các lựa chọn đa dạng để đáp ứng mọi nhu cầu và phong cách sử dụng. Với độ phân giải cao, âm thanh sống động và thiết kế tinh tế, bạn có thể tận hưởng trải nghiệm giải trí tốt nhất trong không gian sống của mình.\r\n</p>\r\n<p>\r\n    Công Nghệ Tiên Tiến và Tiện Ích\r\n</p>\r\n<p>\r\n    Các dòng ti vi từ ELICTRICITY STORE được trang bị công nghệ tiên tiến như hệ điều hành thông minh, kết nối internet và tích hợp các ứng dụng giải trí phong phú như Netflix, YouTube, và Spotify. Bạn có thể dễ dàng truy cập và tận hưởng hàng ngàn nội dung giải trí phong phú chỉ bằng một cú nhấn nút từ chiếc ti vi của mình.\r\n</p>\r\n<p>\r\n    Thiết Kế Tinh Tế và Sang Trọng\r\n</p>\r\n<p>\r\n    Không chỉ là thiết bị điện tử, mỗi chiếc ti vi từ ELICTRICITY STORE còn là một tác phẩm nghệ thuật với thiết kế tinh tế và sang trọng. Với các lựa chọn kích thước màn hình và kiểu dáng đa dạng, bạn có thể dễ dàng lựa chọn chiếc ti vi phù hợp với không gian và phong cách trang trí của bạn.\r\n</p>\r\n<p>\r\n    Dịch Vụ Hậu Mãi Chuyên Nghiệp\r\n</p>\r\n<p>\r\n    ELICTRICITY STORE cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến lắp đặt và bảo dưỡng, chúng tôi luôn đồng hành cùng bạn để đảm bảo bạn có được trải nghiệm mua sắm và sử dụng tốt nhất từ sản phẩm của chúng tôi.\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới của các dòng ti vi hiện đại và tiện ích. Hãy để chúng tôi cùng bạn tạo nên một không gian giải trí tuyệt vời và đẳng cấp trong gia đình của bạn. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự phong phú và tiện ích trong từng chiếc ti vi!<br>\r\n    <br>\r\n    &nbsp;\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://samnec.com.vn/uploads/images/2017/tivi-samsung-co-tot-khong-1.jpg",
+                    UserId = 23,
+                    CategoryBlogID = 4,
+
+                },
+                new Blog
+                {
+                    Id = 5,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới của ELICTRICITY STORE - nơi bạn có thể tìm thấy những giải pháp độc đáo và hiện đại để nâng cao tiện ích và sự tiện lợi trong không gian bếp của mình. Với một loạt các sản phẩm đồ gia dụng nhà bếp hàng đầu, ELICTRICITY STORE cam kết mang lại trải nghiệm mua sắm đáng tin cậy và đầy đủ cho mọi gia đình.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/3_2AZE2_OJUA/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/3_2AZE2_OJUA/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/3_2AZE2_OJUA/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/3_2AZE2_OJUA/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/3_2AZE2_OJUA/images/371.webp 371w\" sizes=\"(max-width: 371px) 100vw, 371px\" type=\"image/webp\"><img data-ckbox-resource-id=\"3_2AZE2_OJUA\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/3_2AZE2_OJUA/images/371.png\" width=\"371\" height=\"177\"></picture>\r\n</p>\r\n<p>\r\n    Đa Dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Từ các loại máy xay thực phẩm đa năng đến máy làm bánh và nồi cơm điện tự động, ELICTRICITY STORE cung cấp một loạt các sản phẩm đồ gia dụng nhà bếp để đáp ứng mọi nhu cầu và phong cách sử dụng. Với công nghệ tiên tiến và thiết kế thông minh, các sản phẩm này giúp bạn tiết kiệm thời gian và công sức trong việc chuẩn bị và nấu nướng.\r\n</p>\r\n<p>\r\n    Tiết Kiệm Năng Lượng và Tiện Ích\r\n</p>\r\n<p>\r\n    Các dòng sản phẩm đồ gia dụng nhà bếp từ ELICTRICITY STORE được thiết kế với mục tiêu tiết kiệm năng lượng và tối ưu hóa tiện ích. Từ máy làm bánh thông minh đến máy xay thực phẩm tiện lợi, bạn có thể dễ dàng tận hưởng những công cụ hiện đại giúp bạn tạo ra các món ăn ngon và đa dạng một cách nhanh chóng và tiện lợi.\r\n</p>\r\n<p>\r\n    Thiết Kế Sang Trọng và Tiện Dụng\r\n</p>\r\n<p>\r\n    Không chỉ là các sản phẩm chức năng, mỗi sản phẩm đồ gia dụng nhà bếp từ ELICTRICITY STORE còn được thiết kế với phong cách sang trọng và tiện dụng. Với các lựa chọn kiểu dáng và màu sắc đa dạng, bạn có thể dễ dàng lựa chọn sản phẩm phù hợp với không gian và phong cách trang trí của bếp nhà bạn.\r\n</p>\r\n<p>\r\n    Dịch Vụ Hậu Mãi Chuyên Nghiệp\r\n</p>\r\n<p>\r\n    ELICTRICITY STORE cam kết mang lại dịch vụ hậu mãi chuyên nghi\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới của các sản phẩm đồ gia dụng nhà bếp hiện đại và tiện ích. Hãy để chúng tôi cùng bạn tạo nên một không gian bếp hoàn hảo, tiện nghi và đẳng cấp trong gia đình của bạn. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự phong phú và tiện ích trong từng sản phẩm!<br>\r\n    <br>\r\n    <br>\r\n    &nbsp;\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://tse3.mm.bing.net/th?id=OIP.-2O6YwzFwTDh9qot5ixybgHaCl&pid=Api&P=0&h=220",
+                    UserId = 24,
+                    CategoryBlogID = 5,
+
+                },
+                new Blog
+                {
+                    Id = 6,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới của Electricity Store - nơi bạn có thể tìm thấy những giải pháp hiện đại và hiệu quả nhất để cải thiện chất lượng không khí trong nhà. Với mục tiêu mang lại không gian sống khỏe mạnh và sạch sẽ cho gia đình bạn, máy lọc không khí từ Electricity Store là lựa chọn lý tưởng.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/8QkQJQgo3nFp/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/8QkQJQgo3nFp/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/8QkQJQgo3nFp/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/8QkQJQgo3nFp/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/8QkQJQgo3nFp/images/370.webp 370w\" sizes=\"(max-width: 370px) 100vw, 370px\" type=\"image/webp\"><img data-ckbox-resource-id=\"8QkQJQgo3nFp\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/8QkQJQgo3nFp/images/370.png\" width=\"370\" height=\"205\"></picture>\r\n</p>\r\n<p>\r\n    **Chất Lượng Không Khí Tốt Nhất cho Gia Đình Bạn**\r\n</p>\r\n<p>\r\n    Máy lọc không khí của Electricity Store được thiết kế để loại bỏ các hạt bụi, vi khuẩn, virus, phấn hoa và các chất gây hại khác từ không khí. Với các bộ lọc hiệu quả, máy lọc không khí giúp cải thiện chất lượng không khí trong nhà, giúp bạn và gia đình có một môi trường sống sạch sẽ và thoải mái.\r\n</p>\r\n<p>\r\n    **Thiết Kế Tiện Lợi và Hiện Đại**\r\n</p>\r\n<p>\r\n    Máy lọc không khí của Electricity Store có thiết kế nhỏ gọn và hiện đại, phù hợp với mọi không gian trong nhà. Với các tính năng tiện ích như điều khiển từ xa, chế độ tự động và đèn hiển thị chất lượng không khí, bạn có thể dễ dàng điều chỉnh và kiểm soát máy lọc không khí một cách thuận tiện.\r\n</p>\r\n<p>\r\n    **Tiết Kiệm Năng Lượng và Bền Bỉ**\r\n</p>\r\n<p>\r\n    Máy lọc không khí từ Electricity Store được thiết kế để tiết kiệm năng lượng, giúp giảm thiểu chi phí điện hàng tháng. Với công nghệ tiên tiến và bộ lọc lâu dài, máy lọc không khí có tuổi thọ cao và hoạt động ổn định trong thời gian dài, mang lại giá trị lâu dài cho gia đình bạn.\r\n</p>\r\n<p>\r\n    **Dịch Vụ Hậu Mãi Chuyên Nghiệp**\r\n</p>\r\n<p>\r\n    Electricity Store cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến lắp đặt và hướng dẫn sử dụng, chúng tôi luôn đồng hành cùng bạn để đảm bảo bạn có được trải nghiệm mua sắm và sử dụng tốt nhất từ sản phẩm của chúng tôi.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với Electricity Store và khám phá thế giới của các dòng máy lọc không khí hiện đại và hiệu quả. Hãy để chúng tôi cùng bạn tạo nên một không gian sống khỏe mạnh và sạch sẽ cho gia đình của bạn. Đến Electricity Store - nơi bạn tìm thấy sự chất lượng và tiện ích trong từng sản phẩm!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này giúp bạn hiểu rõ hơn về sự hiện đại và hiệu quả của máy lọc không khí từ Electricity Store!\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://cdn.tgdd.vn/Files/2018/01/25/1061757/may-loc-khong-khi-va-may-lanh-co-gi-giong-va-khac-nhau--3.jpg",
+                    UserId = 25,
+                    CategoryBlogID = 6,
+
+                },
+                new Blog
+                {
+                    Id = 7,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với Electricity Store - nơi bạn có thể tìm thấy những giải pháp hiện đại và tiện lợi nhất để giữ cho quần áo của bạn luôn khô ráo và sạch sẽ. Với mục tiêu mang lại sự thoải mái và tiện ích cho gia đình của bạn, máy sấy quần áo từ Electricity Store là lựa chọn lý tưởng.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/pY_HT7GoKiVQ/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/pY_HT7GoKiVQ/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/pY_HT7GoKiVQ/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/pY_HT7GoKiVQ/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/pY_HT7GoKiVQ/images/378.webp 378w\" sizes=\"(max-width: 378px) 100vw, 378px\" type=\"image/webp\"><img data-ckbox-resource-id=\"pY_HT7GoKiVQ\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/pY_HT7GoKiVQ/images/378.png\" width=\"378\" height=\"205\"></picture>\r\n</p>\r\n<p>\r\n    **Hiệu Suất và Tiết Kiệm Thời Gian**\r\n</p>\r\n<p>\r\n    Máy sấy quần áo của Electricity Store được thiết kế để cung cấp hiệu suất sấy khô nhanh chóng và hiệu quả. Với các chế độ sấy đa dạng và công nghệ tiên tiến, máy sấy quần áo giúp bạn tiết kiệm thời gian và công sức trong việc làm khô quần áo, để bạn có thêm thời gian cho những việc khác trong ngày.\r\n</p>\r\n<p>\r\n    **Bảo Vệ và Bảo Dưỡng Quần Áo**\r\n</p>\r\n<p>\r\n    Máy sấy quần áo từ Electricity Store không chỉ giúp làm khô quần áo mà còn bảo vệ và duy trì chất lượng của chúng. Các chế độ sấy nhẹ nhàng và cài đặt nhiệt độ thấp giúp giảm thiểu tổn hại cho sợi vải và màu sắc, giữ cho quần áo của bạn luôn mới và bền đẹp.\r\n</p>\r\n<p>\r\n    **Thiết Kế Tiện Lợi và Thân Thiện Người Dùng**\r\n</p>\r\n<p>\r\n    Máy sấy quần áo từ Electricity Store có thiết kế thông minh và tiện ích, phù hợp với mọi không gian trong nhà. Với các tính năng như bộ lọc bụi, chế độ làm mềm và đèn hiển thị trạng thái sấy, bạn có thể dễ dàng điều chỉnh và kiểm soát quá trình sấy quần áo một cách thuận tiện.\r\n</p>\r\n<p>\r\n    **Dịch Vụ Hậu Mãi Chuyên Nghiệp**\r\n</p>\r\n<p>\r\n    Electricity Store cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến lắp đặt và hướng dẫn sử dụng, chúng tôi luôn đồng hành cùng bạn để đảm bảo bạn có được trải nghiệm mua sắm và sử dụng tốt nhất từ sản phẩm của chúng tôi.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với Electricity Store và khám phá thế giới của các dòng máy sấy quần áo hiện đại và tiện lợi. Hãy để chúng tôi cùng bạn tạo nên một không gian sống thoải mái và tiện lợi cho gia đình của bạn. Đến Electricity Store - nơi bạn tìm thấy sự chất lượng và tiện ích trong từng sản phẩm!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này giúp bạn hiểu rõ hơn về sự hiện đại và tiện lợi của máy sấy quần áo từ Electricity Store!\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://toplist.vn/images/800px/may-say-quan-ao-aqua-718939.jpg",
+                    UserId = 26,
+                    CategoryBlogID = 7,
+
+                },
+                new Blog
+                {
+                    Id = 8,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với Electricity Store - nơi bạn có thể tìm thấy những giải pháp hiện đại và tiện ích nhất để giữ cho nhà bếp của bạn luôn sạch sẽ và tiện nghi. Máy rửa chén từ Electricity Store không chỉ là một thiết bị gia dụng thông thường mà còn là một đồng minh đáng tin cậy, giúp giảm bớt công việc vặt và mang lại sự thuận tiện cho cuộc sống hàng ngày của bạn.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/374.webp 374w\" sizes=\"(max-width: 374px) 100vw, 374px\" type=\"image/webp\"><img data-ckbox-resource-id=\"3ThnJSm4D-dS\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/374.png\"></picture>\r\n</p>\r\n<p>\r\n    **Hiệu Suất Vượt Trội và Tiết Kiệm Nước**\r\n</p>\r\n<p>\r\n    Máy rửa chén của Electricity Store được thiết kế với công nghệ tiên tiến nhằm cung cấp hiệu suất vượt trội và tiết kiệm nước. Với các chế độ rửa đa dạng và các cảm biến thông minh, máy rửa chén tự động điều chỉnh lượng nước và thời gian rửa phù hợp, giúp bạn tiết kiệm nước và năng lượng mỗi lần sử dụng.\r\n</p>\r\n<p>\r\n    **Chất Lượng Rửa Tốt Nhất cho Chén Đĩa và Đồ Dùng Bếp Khác**\r\n</p>\r\n<p>\r\n    Máy rửa chén của Electricity Store mang lại chất lượng rửa tốt nhất cho chén đĩa và đồ dùng bếp khác của bạn. Với các cánh phun nước đa chiều và các bộ lọc hiệu quả, máy rửa chén loại bỏ mọi vết bẩn và mảnh vỡ, để lại chén đĩa sáng bóng và sạch sẽ mỗi lần rửa.\r\n</p>\r\n<p>\r\n    **Thiết Kế Tiện Lợi và Hiện Đại**\r\n</p>\r\n<p>\r\n    Máy rửa chén của Electricity Store có thiết kế thông minh và hiện đại, phù hợp với mọi không gian nhà bếp. Với các tính năng như chế độ tiết kiệm năng lượng, bảng điều khiển dễ sử dụng và khoang chứa linh hoạt, máy rửa chén giúp bạn dễ dàng quản lý và tối ưu hóa quá trình rửa chén.\r\n</p>\r\n<p>\r\n    **Dịch Vụ Hậu Mãi Chuyên Nghiệp**\r\n</p>\r\n<p>\r\n    Electricity Store cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến lắp đặt và hướng dẫn sử dụng, chúng tôi luôn đồng hành cùng bạn để đảm bảo bạn có được trải nghiệm mua sắm và sử dụng tốt nhất từ sản phẩm của chúng tôi.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với Electricity Store và khám phá thế giới của các dòng máy rửa chén hiện đại và tiện lợi. Hãy để chúng tôi cùng bạn tạo nên một không gian nhà bếp sạch sẽ và tiện nghi cho gia đình của bạn. Đến Electricity Store - nơi bạn tìm thấy sự chất lượng và tiện ích trong từng sản phẩm!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này sẽ giúp bạn hiểu rõ hơn về máy rửa chén từ Electricity Store và lợi ích mà nó mang lại cho gia đình bạn!\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://phongreviews.com/wp-content/uploads/2020/12/may-rua-bat-loai-nao-tot-10.jpg",  
+                    UserId = 27,
+                    CategoryBlogID = 8,
+
+                },
+                new Blog
+                {
+                    Id = 9,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới của Electricity Store - nơi bạn có thể tìm thấy những giải pháp hiện đại và tiện lợi nhất để tạo ra những thức uống sinh tố tươi ngon và bổ dưỡng ngay tại nhà. Với mục tiêu mang lại sự tiện ích và sức khỏe cho gia đình bạn, máy xay sinh tố từ Electricity Store là lựa chọn hoàn hảo.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/sm8UPvGVKfef/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/sm8UPvGVKfef/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/sm8UPvGVKfef/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/sm8UPvGVKfef/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/sm8UPvGVKfef/images/371.webp 371w\" sizes=\"(max-width: 371px) 100vw, 371px\" type=\"image/webp\"><img data-ckbox-resource-id=\"sm8UPvGVKfef\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/sm8UPvGVKfef/images/371.png\"></picture>\r\n</p>\r\n<p>\r\n    **Tạo Ra Sinh Tố Ngon và Bổ Dưỡng Mỗi Ngày**\r\n</p>\r\n<p>\r\n    Máy xay sinh tố của Electricity Store được thiết kế để giúp bạn tạo ra những thức uống sinh tố tươi ngon và bổ dưỡng mỗi ngày, từ trái cây, rau củ đến hạt giống và các loại ngũ cốc. Với lưỡi dao sắc bén và động cơ mạnh mẽ, máy xay sinh tố đảm bảo bạn có được một ly sinh tố mịn màng và ngon miệng trong tích tắc.\r\n</p>\r\n<p>\r\n    **Thiết Kế Tiện Lợi và Đa Năng**\r\n</p>\r\n<p>\r\n    Máy xay sinh tố của Electricity Store có thiết kế nhỏ gọn và đa năng, phù hợp với mọi không gian bếp của bạn. Với nhiều chế độ xay khác nhau và dung tích đa dạng, bạn có thể dễ dàng chế biến các loại sinh tố, nước ép và món pha chế khác một cách linh hoạt và tiện lợi.\r\n</p>\r\n<p>\r\n    **Sức Khỏe và Sự An Toàn Được Đảm Bảo**\r\n</p>\r\n<p>\r\n    Electricity Store luôn chú trọng đến sức khỏe và sự an toàn của người tiêu dùng. Vì vậy, máy xay sinh tố được chế tạo từ các vật liệu an toàn cho thực phẩm và không chứa BPA, đảm bảo bạn có được những thức uống an toàn và bổ dưỡng cho cả gia đình.\r\n</p>\r\n<p>\r\n    **Dịch Vụ Hậu Mãi Chuyên Nghiệp**\r\n</p>\r\n<p>\r\n    Electricity Store cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến hướng dẫn sử dụng và bảo trì, chúng tôi luôn ở đây để hỗ trợ bạn mọi lúc, mọi nơi.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với Electricity Store và khám phá thế giới của các dòng máy xay sinh tố hiện đại và tiện lợi. Hãy để chúng tôi giúp bạn tạo ra những thức uống tươi ngon và bổ dưỡng mỗi ngày, đồng hành cùng bạn trên hành trình sức khỏe và dinh dưỡng.\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này sẽ giúp bạn hiểu rõ hơn về sự tiện lợi và sức khỏe mà máy xay sinh tố từ Electricity Store mang lại!\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://img.websosanh.vn/v2/users/dclimg/images/2jrpiqpns04d5.jpg?compress=85",
+                    UserId = 28,
+                    CategoryBlogID = 9,
+
+                },
+                new Blog
+                {
+                    Id = 10,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với thế giới của Electricity Store - nơi bạn có thể khám phá những giải pháp tiên tiến nhất cho việc nấu ăn, đặc biệt là nồi chiên không dầu. Với mục tiêu tạo ra những bữa ăn sạch sẽ và lành mạnh cho gia đình của bạn, nồi chiên không dầu từ Electricity Store là sự lựa chọn sáng suốt.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/R4zerl1BZ-uV/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/R4zerl1BZ-uV/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/R4zerl1BZ-uV/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/R4zerl1BZ-uV/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/R4zerl1BZ-uV/images/370.webp 370w\" sizes=\"(max-width: 370px) 100vw, 370px\" type=\"image/webp\"><img data-ckbox-resource-id=\"R4zerl1BZ-uV\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/R4zerl1BZ-uV/images/370.png\"></picture>\r\n</p>\r\n<p>\r\n    **Sức Khỏe và Sự An Toàn Được Đảm Bảo**\r\n</p>\r\n<p>\r\n    Nồi chiên không dầu từ Electricity Store được thiết kế để nấu ăn một cách an toàn và lành mạnh nhất cho gia đình bạn. Với công nghệ nấu không dầu, nồi chiên giúp giảm lượng dầu mỡ sử dụng trong món ăn, giữ cho thực phẩm được nấu giữ lại độ tươi ngon và dinh dưỡng mà không tăng cường lượng chất béo và cholesterol.\r\n</p>\r\n<p>\r\n    **Thiết Kế Tiện Lợi và Hiện Đại**\r\n</p>\r\n<p>\r\n    Nồi chiên không dầu từ Electricity Store có thiết kế thông minh và tiện ích, phù hợp với mọi không gian bếp của bạn. Với các tính năng như màn hình điều khiển cảm ứng, các chế độ nấu tự động và khả năng điều chỉnh nhiệt độ linh hoạt, bạn có thể dễ dàng nấu ăn một cách hiệu quả và tiện lợi.\r\n</p>\r\n<p>\r\n    **Tiết Kiệm Thời Gian và Năng Lượng**\r\n</p>\r\n<p>\r\n    Nồi chiên không dầu không chỉ giúp bạn tiết kiệm dầu mỡ mà còn giảm thiểu thời gian nấu ăn và tiêu tốn năng lượng. Với công nghệ nấu nhanh và hiệu quả, bạn có thể chuẩn bị các món ăn ngon lành trong thời gian ngắn mà không cần phải lo lắng về việc mất thời gian hay lượng năng lượng tiêu hao.\r\n</p>\r\n<p>\r\n    **Dịch Vụ Hậu Mãi Chuyên Nghiệp**\r\n</p>\r\n<p>\r\n    Electricity Store cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến hướng dẫn sử dụng và bảo dưỡng, chúng tôi luôn ở đây để hỗ trợ bạn và đảm bảo bạn có được trải nghiệm mua sắm tốt nhất.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với Electricity Store và khám phá thế giới của nồi chiên không dầu hiện đại và tiện lợi. Hãy để chúng tôi cùng bạn tạo ra những bữa ăn ngon lành và đầy dinh dưỡng cho gia đình của bạn. Đến Electricity Store - nơi bạn tìm thấy sự chất lượng và tiện ích trong từng sản phẩm!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này sẽ giúp bạn hiểu rõ hơn về sự tiện ích và hiệu quả của nồi chiên không dầu từ Electricity Store!\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
+                    ImageUrl = "https://tse2.mm.bing.net/th?id=OIP.qIxntG-jeZ3f4jTJSFXVjAHaE7&pid=Api&P=0&h=220",
+                    UserId = 29,
+                    CategoryBlogID = 10,
 
                 }
                 );

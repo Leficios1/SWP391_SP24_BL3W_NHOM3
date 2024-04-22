@@ -6,6 +6,7 @@ using SWP391_BL3W.DTO.Response;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
 using System.Xml;
@@ -22,15 +23,18 @@ namespace SWP391_BL3W.Services
             _configuration = configuration;
         }
 
-        public async Task<TokenResponse> LoginAccount(AuthRequestDTO dto)
+        public async Task<StatusResponse<TokenResponse>> LoginAccount(AuthRequestDTO dto)
         {
+            var response = new StatusResponse<TokenResponse>();
             try
             {
                 var checkUser = await _userRepo.Get().Include(x => x.Role).Where(x => x.Password == dto.Password && x.Email.ToLower().Trim() == dto.Email.ToLower().Trim()).FirstOrDefaultAsync();
 
                 if (checkUser == null)
                 {
-                    throw new UnauthorizedAccessException("The email/password is wrong.");
+                    response.statusCode = HttpStatusCode.Unauthorized;
+                    response.Errormessge = "Thông tin đăng nhập không đúng!!!";
+                    return response;
                 }
                 else
                 {
@@ -41,13 +45,17 @@ namespace SWP391_BL3W.Services
                         TokenString = new JwtSecurityTokenHandler().WriteToken(token),
                         Expiration = token.ValidTo
                     };
-                    return returnedToken;
+                    response.Data = returnedToken;
+                    response.statusCode = HttpStatusCode.OK;
+                    response.Errormessge = "Login Successful!";
+                    return response;
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception($"{ex}");
-
+                response.statusCode=HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+                return response;
             }
         }
 

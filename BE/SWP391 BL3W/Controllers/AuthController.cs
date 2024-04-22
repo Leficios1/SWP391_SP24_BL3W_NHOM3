@@ -19,8 +19,8 @@ namespace SWP391_BL3W.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(AuthRequestDTO dto)
         {
-            var result = await _authService.LoginAccount(dto);
-            return Ok(result);
+            var response = await _authService.LoginAccount(dto);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
         [HttpGet("login/get-user-by-token/{token}")]
         public async Task<IActionResult> GetUserByToken([FromRoute] string token)

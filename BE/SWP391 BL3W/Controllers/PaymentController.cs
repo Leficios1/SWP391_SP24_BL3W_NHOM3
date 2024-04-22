@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SWP391_BL3W.DTO.Request;
 using SWP391_BL3W.Services.Interface;
 
 namespace SWP391_BL3W.Controllers
@@ -23,10 +24,10 @@ namespace SWP391_BL3W.Controllers
         }
 
         [Authorize]
-        [HttpGet("vn-pay/check-payment")]
-        public async Task<IActionResult> Check([FromQuery] string url, [FromQuery] int userId)
+        [HttpPost("vn-pay/check-payment")]
+        public async Task<IActionResult> Check(VNPayRequestDTO dto)
         {
-            var result = await _vnPayService.GetInformationPayment(userId, url);
+            var result = await _vnPayService.GetInformationPayment(dto);
             return Ok(result);
         }
     }

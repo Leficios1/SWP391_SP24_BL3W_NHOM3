@@ -5,7 +5,7 @@ namespace SWP391_BL3W.Services.Interface
 {
     public interface IAuthService
     {
-        public Task<TokenResponse> LoginAccount(AuthRequestDTO dto);
+        public Task<StatusResponse<TokenResponse>> LoginAccount(AuthRequestDTO dto);
         public Task<UserByTokenResponse> GetUserByToken(string token);
     }
 }

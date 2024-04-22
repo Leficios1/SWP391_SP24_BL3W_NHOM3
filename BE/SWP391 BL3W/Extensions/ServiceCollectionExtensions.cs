@@ -24,6 +24,7 @@ namespace SWP391_BL3W.Extensions
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IPaymentOnlineService, VnPayService>();
+            services.AddScoped<IReviewService, ReviewService>();
             return services;
         }
     }

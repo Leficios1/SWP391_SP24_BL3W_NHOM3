@@ -16,10 +16,8 @@ namespace SWP391_BL3W.DTO.Request
         [Url(ErrorMessage = "Invalid URL format.")]
         public string ImageUrl { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = "Invalid user ID.")]
         public int UserId { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = "Invalid category ID.")]
         public int CategoryId { get; set; }
     }
 }
