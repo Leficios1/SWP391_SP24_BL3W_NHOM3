@@ -31,7 +31,7 @@ const Order: React.FC<OrderProps> = (props) => {
         const transactionNo = Number(urlParams.get("vnp_TransactionNo"));
 
         if (transactionNo != 0) {
-            dispatch(checkpayment({ urlpayment: window.location.href, userId: accountId }))
+            dispatch(checkpayment({ urlResponse: window.location.href, userId: accountId }))
             dispatch(deleteAllProductInCart(accountId))
             toast.success("Cảm ơn bạn đã thanh toán thành công")
             // them api vnpay checkpayment vao day nua la xong cook

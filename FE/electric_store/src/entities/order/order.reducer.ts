@@ -15,7 +15,7 @@ interface FormPaymentVnPayProps {
 }
 
 interface CheckPaymentProps {
-    urlpayment: string,
+    urlResponse: string,
     userId: number | string
 }
 
@@ -52,8 +52,8 @@ export const getPaymentVnpay = createAsyncThunk("order/submitpayment", async (fo
 })
 
 
-export const checkpayment = createAsyncThunk("order/checkpayment", async ({ urlpayment, userId }: CheckPaymentProps) => {
-    const requestUrl = await axios.get(`${url}/Payment/vn-pay/check-payment?url=${encodeURIComponent(urlpayment)}&userId=${userId}`)
+export const checkpayment = createAsyncThunk("order/checkpayment", async (paymentinfo: CheckPaymentProps) => {
+    const requestUrl = await axios.post(`${url}/Payment/vn-pay/check-payment`, paymentinfo);
     return requestUrl
 })
 

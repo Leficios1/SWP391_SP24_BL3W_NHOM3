@@ -131,7 +131,7 @@ namespace SWP391_BL3W.Services
                 switch (WhoAreYou)
                 {
                     case 1:
-                        vnp_ReturnUrl = "http://locahost:3000";
+                        vnp_ReturnUrl = "http://localhost:3000/thanh-toan";
                         break;
                     case 2:
                         vnp_ReturnUrl = "https://localhost:7156/index.html";
