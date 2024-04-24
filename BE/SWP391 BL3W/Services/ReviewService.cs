@@ -6,6 +6,7 @@ using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System.Net;
 
+
 namespace SWP391_BL3W.Services
 {
     public class ReviewService : IReviewService
@@ -13,6 +14,8 @@ namespace SWP391_BL3W.Services
         private readonly IBaseRepository<Review> _reviewRepository;
         private readonly IBaseRepository<User> _userRepository;
         private readonly IBaseRepository<Product> _productRepository;
+
+
         private readonly IMapper _mapper;
 
         public ReviewService(IBaseRepository<Review> reviewRepository, IBaseRepository<User> userRepository, IBaseRepository<Product> productRepository, IMapper mapper)
@@ -36,6 +39,7 @@ namespace SWP391_BL3W.Services
                     return response;
                 }
                 var product = await _productRepository.GetById(dto.ProductId);
+
                 if(product == null)
                 {
                     response.statusCode = HttpStatusCode.NotFound;

@@ -13,24 +13,13 @@ namespace SWP391_BL3W.DTO.Response
     }
     public class BlogsDTO
     {
-        /*public int Id { get; set; }
-        [Required, MinLength(2), MaxLength(500), DataType(DataType.Text)]
-        public string Title { get; set; }
-        [Required, MinLength(2), MaxLength(1000), DataType(DataType.Text)]
-        public string Content { get; set; }
-        [Required, MinLength(2), MaxLength(1000), DataType(DataType.Text), Url]
-        public string ImageUrl { get; set; }
-        [Range(1, 1000)]
-        public int UserId { get; set; }
-        [Range(1, 1000)]
-        public int CategoryBlogID { get; set; }*/
         public int Id { get; set; }
 
-        public string Title { get; set; }
+        public string Title { get; set; } = null!;
 
-        public string Content { get; set; }
+        public string Content { get; set; } = null!;
 
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = null!;
 
         public int UserId { get; set; }
 

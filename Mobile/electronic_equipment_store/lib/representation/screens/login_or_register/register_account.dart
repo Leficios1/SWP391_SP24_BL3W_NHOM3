@@ -1,5 +1,8 @@
+// ignore_for_file: use_build_context_synchronously, duplicate_ignore
+
 import 'package:electronic_equipment_store/core/constants/my_textformfield.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
+import 'package:electronic_equipment_store/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../core/constants/color_constants.dart';
@@ -17,6 +20,7 @@ class RegisterAccount extends StatefulWidget {
 
 class _RegisterAccountState extends State<RegisterAccount> {
   TextEditingController nameController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
@@ -31,6 +35,10 @@ class _RegisterAccountState extends State<RegisterAccount> {
       showCustomDialog(context, 'Lỗi', 'Vui lòng nhập "Email".', true);
     } else if (validateEmail(emailController.text) != null) {
       showCustomDialog(context, 'Lỗi', 'Email không hợp lệ', true);
+      } else if (phoneController.text.isEmpty) {
+      showCustomDialog(context, 'Lỗi', 'Vui lòng nhập "Số điện thoại".', true);
+    } else if (validatePhone(phoneController.text) != null) {
+      showCustomDialog(context, 'Lỗi', 'Số điện thoại không hợp lệ', true);
     } else if (passwordController.text.isEmpty) {
       showCustomDialog(context, 'Lỗi', 'Bạn chưa điền "Mật khẩu".', true);
     } else if (validatePassword(passwordController.text) != null) {
@@ -52,7 +60,32 @@ class _RegisterAccountState extends State<RegisterAccount> {
           );
         },
       );
-      // TODO Create Function
+      try {
+        int response = await ApiService.createAccount(
+            nameController.text,
+            phoneController.text,
+            emailController.text,           
+            passwordController.text,
+          );
+        // ignore: use_build_context_synchronously
+        Navigator.pop(context);
+
+        if (response != 0) {
+          if (response == 2) {
+            showCustomDialog(context, 'Lỗi',
+                'Email hoặc SĐT này đã tồn tại. Vui lòng sử dụng một email hoặc SĐT khác.', true);
+          } 
+          if(response ==1) {
+            showCustomDialog(context, 'Thành công',
+                'Bạn đã đăng ký tài khoản thành công.', true);
+          }
+        } else {
+          showCustomDialog(context, 'Lỗi',
+              'Xin lỗi! Đăng ký tài khoản không thành công', true);
+        }
+      } catch (e) {
+        showCustomDialog(context, 'Error', e.toString(), true);
+      }
     }
   }
 
@@ -78,6 +111,21 @@ class _RegisterAccountState extends State<RegisterAccount> {
 
     if (!regex.hasMatch(email)) {
       return 'Email không hợp lệ';
+    }
+
+    return null;
+  }
+
+  String? validatePhone(String? email) {
+    if (email == null || email.isEmpty) {
+      return 'Vui lòng nhập Số điện thoại';
+    }
+
+    String phonePattern =r'^(?:[+0]9)?[0-9]{10}$';
+    RegExp regex = RegExp(phonePattern);
+
+    if (!regex.hasMatch(email)) {
+      return 'Số điện không hợp lệ';
     }
 
     return null;
@@ -129,10 +177,21 @@ class _RegisterAccountState extends State<RegisterAccount> {
                 controller: nameController,
                 hintText: 'Họ và tên',
                 obscureText: false,
-                validator: validateEmail,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 prefixIcon: const Icon(
                   FontAwesomeIcons.solidUser,
+                  size: kDefaultIconSize18,
+                ),
+              ),
+              const SizedBox(height: 10),
+              MyTextFormField(
+                controller: phoneController,
+                hintText: 'Số điện thoại',
+                obscureText: false,
+                validator: validatePhone,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                prefixIcon: const Icon(
+                  FontAwesomeIcons.phone,
                   size: kDefaultIconSize18,
                 ),
               ),

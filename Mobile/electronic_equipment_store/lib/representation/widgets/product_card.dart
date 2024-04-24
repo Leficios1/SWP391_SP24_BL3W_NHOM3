@@ -47,7 +47,7 @@ class _ProductCardState extends State<ProductCard> {
                   child: Image.network(widget.product.productImage!,
                       fit: BoxFit.cover),
                 ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
@@ -63,7 +63,7 @@ class _ProductCardState extends State<ProductCard> {
                       style: TextStyles.h5.bold,
                     ),
                   ),
-                  const SizedBox(height: 18),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       Expanded(
@@ -73,15 +73,15 @@ class _ProductCardState extends State<ProductCard> {
                             group: autoSizeGroup,
                             minFontSize: 14,
                             overflow: TextOverflow.ellipsis,
-                            maxLines: 1,
+                            maxLines: 3,
                             TextSpan(
                               children: [
                                 TextSpan(
-                                    text: 'Thương hiệu: ',
+                                    text: 'Mô tả: ',
                                     style: TextStyles.defaultStyle.bold),
-                                const TextSpan(
-                                  text:'N/A',
-                                  //TODO thương hiệu
+                                 TextSpan(
+                                  text: widget.product.productDecription,
+                                  
                                 )
                               ],
                             ),
@@ -90,7 +90,7 @@ class _ProductCardState extends State<ProductCard> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 6),
                   //Price
                     SizedBox(
                       width: 160,
@@ -99,9 +99,9 @@ class _ProductCardState extends State<ProductCard> {
                         maxLines: 2,
                         TextSpan(
                           children: [
-                            TextSpan(
+                            const TextSpan(
                                 text: 'Giá: ',
-                                style: TextStyles.defaultStyle.bold),
+                                style: TextStyle(fontWeight: FontWeight.bold)),
                             TextSpan(
                               text:
                                   NumberFormat.currency(locale: 'vi_VN', symbol: 'vnđ').format(widget.product.price),
@@ -111,21 +111,12 @@ class _ProductCardState extends State<ProductCard> {
                         ),
                       ),
                     ),
-                  const SizedBox(height: 4),
-                  if(widget.product.quantity > 0)
-                    Text(
-                      "CÓ SẴN",
-                      style: TextStyles.h5.bold.setColor(Colors.green),
-                    ),
-                  if(widget.product.quantity == 0)
-                  Text(
-                      "HÊT HÀNG",
-                      style: TextStyles.h5.bold.setColor(Colors.orange),
-                    ),
                 ],
               ),
             ),
+            const SizedBox(height: 10)
           ],
+          
         ),
       ),
     );

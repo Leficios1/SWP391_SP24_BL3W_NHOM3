@@ -24,70 +24,44 @@ namespace SWP391_BL3W.Controllers
             _mapper = mapper;
         }
 
-
-        // GET: api/Blog
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<BlogsResponseDTO>>> GetBlog()
+        [HttpGet("getAll")]
+        public async Task<IActionResult> getAll(int? size, int? page)
         {
-            var blogs = await _blogService.GetAllBlogsAsync();
-            return Ok(blogs);
+            var response = await _blogService.GetAllBlogsAsync(size, page);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+
         }
 
-        // GET: api/Blog/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Blog>> GetBlogPost(int id)
+        public async Task<ActionResult<Blog>> GetBlogById(int id)
         {
-            var blogPost = await _blogService.GetBlogByIdAsync(id);
+            var response = await _blogService.GetBlogByIdAsync(id);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
 
-            if (blogPost == null)
-            {
-                return NotFound();
-            }
-
-            var blogResponseDTO = blogPost.Data;
-            return Ok(blogResponseDTO);
         }
 
-        // POST: api/Blog
         [HttpPost]
-        public async Task<ActionResult<BlogsDTO>> CreateBlog(BlogsDTO blogsRequestDTO)
+        public async Task<ActionResult<BlogsDTO>> CreateBlog(BlogRequestDTO dto)
         {
-            var blog = _mapper.Map<Blog>(blogsRequestDTO);
-            blog.Id = 0;
-            await _blogService.CreateBlogAsync(blogsRequestDTO);
-            var blogResponseDTO = _mapper.Map<BlogsDTO>(blog);
-            return CreatedAtAction(nameof(GetBlog), new { id = blogsRequestDTO.Id }, blogResponseDTO);
+            var response = await _blogService.CreateBlogAsync(dto);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+
         }
 
-        // PUT: api/Blog/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateBlogAsync(int id, UpdateBlogDTO dto)
+        public async Task<IActionResult> UpdateBlogAsync(UpdateBlogDTO dto)
         {
-            var existingBlog = await _blogService.GetBlogByIdAsync(id);
-            if (existingBlog == null)
-            {
-                return NotFound();
-            }
+            var response = await _blogService.UpdateBlogAsync(dto);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
 
-            _mapper.Map(dto, existingBlog.Data);
-            await _blogService.UpdateBlogAsync(id, dto);
-
-            return NoContent();
         }
 
-        // DELETE: api/Blog/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBlogAsync(int id)
         {
-            var existingBlog = await _blogService.GetBlogByIdAsync(id);
-            if (existingBlog == null)
-            {
-                return NotFound();
-            }
+            var response = await _blogService.DeleteBlogAsync(id);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
 
-            await _blogService.DeleteBlogAsync(id);
-
-            return NoContent();
         }
 
     }

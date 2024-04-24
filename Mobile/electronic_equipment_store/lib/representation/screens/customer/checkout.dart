@@ -3,6 +3,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:electronic_equipment_store/core/constants/color_constants.dart';
 import 'package:electronic_equipment_store/core/constants/dismension_constants.dart';
+import 'package:electronic_equipment_store/models/product_model.dart';
 import 'package:electronic_equipment_store/representation/screens/customer/customer_main_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
@@ -17,8 +18,11 @@ import '../../../core/constants/textstyle_constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Checkout extends StatefulWidget {
-  const Checkout({super.key});
-
+  final ProductModel? productModel;
+  const Checkout({
+    super.key,
+    this.productModel,
+  });
   @override
   State<Checkout> createState() => _CheckoutState();
 }
@@ -36,7 +40,11 @@ class _CheckoutState extends State<Checkout> {
   @override
   Widget build(BuildContext context) {
     final cartProvider = Provider.of<CartProvider>(context);
-    final cartItemsToDisplay = cartProvider.cartItems;
+    List<ProductModel> cartItemsToDisplay = cartProvider.cartItems;
+    if(widget.productModel != null){
+      cartItemsToDisplay = [widget.productModel!];
+    }
+    
 
     double calculateTotalPayment() {
       return cartItemsToDisplay.fold<double>(
@@ -51,7 +59,7 @@ class _CheckoutState extends State<Checkout> {
         backgroundColor: ColorPalette.backgroundScaffoldColor,
         centerTitle: true,
         title: Text(
-          'Thanh toán',
+          'Đặt Hàng',
           style: TextStyles.defaultStyle.bold.setTextSize(19),
         ),
       ),
@@ -377,7 +385,7 @@ class _CheckoutState extends State<Checkout> {
                 ),
                 const SizedBox(height: 10),
                 ButtonWidget(
-                  title: 'Thanh toán',
+                  title: 'Đặt Hàng',
                   size: 22,
                   height: 70,
                   onTap: () async {
@@ -402,7 +410,7 @@ class _CheckoutState extends State<Checkout> {
                         //Chuyển trang
                         // ignore: use_build_context_synchronously
                         showCustomDialog(context, 'Thành công',
-                            "Bạn đã thanh toán thành công!", false);
+                            "Bạn đã đặt hàng thành công!", false);
                         await Future.delayed(Duration(seconds: 5));
                         // ignore: use_build_context_synchronously
                         Provider.of<CartProvider>(context, listen: false)

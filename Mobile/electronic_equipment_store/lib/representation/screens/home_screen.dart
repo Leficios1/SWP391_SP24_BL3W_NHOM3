@@ -40,13 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               selectedCategory!.categoryID);
         }
       case 2:
-        //TODO get all product On available
-      case 3:
-        //TODO get product notAvailable
-        return null;
-      case 4:
-        return await ApiService.getAllProductByProductName(
-            searchTerm);
+        return await ApiService.getAllProductByProductName(searchTerm);
     }
     return null;
   }
@@ -90,11 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
     if (result != null && result is String) {
       setState(() {
         searchTerm = result;
-        selectedProduct = 4;
+        selectedProduct = 2;
       });
     }
   }
-
 
   void _openShowModalBottomSheet() {
     showModalBottomSheet(
@@ -196,48 +189,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                selectedProduct = 2;
-                              });
-                              Navigator.pop(context);
-                            },
-                            child: Container(
-                              margin: const EdgeInsets.only(right: 10),
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15, vertical: 10),
-                              decoration: BoxDecoration(
-                                  color: ColorPalette.primaryColor,
-                                  borderRadius:
-                                      BorderRadius.circular(kDefaultCircle14)),
-                              child: Text(
-                                'Có sẵn',
-                                style: TextStyles.defaultStyle.whiteTextColor,
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                selectedProduct = 3;
-                              });
-                              Navigator.pop(context);
-                            },
-                            child: Container(
-                              margin: const EdgeInsets.only(right: 10),
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15, vertical: 10),
-                              decoration: BoxDecoration(
-                                  color: ColorPalette.primaryColor,
-                                  borderRadius:
-                                      BorderRadius.circular(kDefaultCircle14)),
-                              child: Text(
-                                'Hết hàng',
-                                style: TextStyles.defaultStyle.whiteTextColor,
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                       const SizedBox(height: 10),
@@ -255,143 +206,160 @@ class _HomeScreenState extends State<HomeScreen> {
     return AppBarMain(
       leading: ImageHelper.loadFromAsset(AssetHelper.imageLogo),
       titleAppbar: "ELECTRICITY STORE",
-        child: Scaffold(
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
-                children: [
-                  //search
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          controller: TextEditingController(text: searchTerm),
-                          focusNode: _focusNode,
-                          onTap: _handleSearchTap,
-                          decoration: InputDecoration(
-                            hintText: 'Bạn muốn tìm tên sản phẩm gì?',
-                            hintStyle: TextStyles.defaultStyle,
-                            prefixIcon: const Padding(
-                              padding: EdgeInsets.all(kTopPadding8),
-                              child: Icon(
-                                FontAwesomeIcons.magnifyingGlass,
-                                color: ColorPalette.primaryColor,
-                                size: kDefaultIconSize18,
-                              ),
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Column(
+              children: [
+                //search
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: TextEditingController(text: searchTerm),
+                        focusNode: _focusNode,
+                        onTap: _handleSearchTap,
+                        decoration: InputDecoration(
+                          hintText: 'Bạn muốn tìm tên sản phẩm gì?',
+                          hintStyle: TextStyles.defaultStyle,
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.all(kTopPadding8),
+                            child: Icon(
+                              FontAwesomeIcons.magnifyingGlass,
+                              color: ColorPalette.primaryColor,
+                              size: kDefaultIconSize18,
                             ),
-                            filled: true,
-                            fillColor: ColorPalette.hideColor,
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                  color: ColorPalette.primaryColor),
-                              borderRadius:
-                                  BorderRadius.circular(kDefaultCircle14),
-                            ),
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius:
-                                  BorderRadius.circular(kDefaultCircle14),
-                            ),
-                            contentPadding: const EdgeInsets.symmetric(
-                                horizontal: kItemPadding10),
                           ),
+                          filled: true,
+                          fillColor: ColorPalette.hideColor,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                                color: ColorPalette.primaryColor),
+                            borderRadius:
+                                BorderRadius.circular(kDefaultCircle14),
+                          ),
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius:
+                                BorderRadius.circular(kDefaultCircle14),
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: kItemPadding10),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                    ),
+                    const SizedBox(width: 10),
 
-                      // filter category
-                      GestureDetector(
-                        onTap: _openShowModalBottomSheet,
-                        child: const Icon(
-                          FontAwesomeIcons.sliders,
-                        ),
+                    // filter category
+                    GestureDetector(
+                      onTap: _openShowModalBottomSheet,
+                      child: const Icon(
+                        FontAwesomeIcons.sliders,
                       ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      Text(
-                        'Sản phẩm',
-                        style: TextStyles.h5.bold,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  FutureBuilder<List<ProductModel>?>(
-                    future: fetchProducts(),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator());
-                      } else if (snapshot.hasError) {
-                        return Text('Lỗi: ${snapshot.error}');
-                      } else if (snapshot.hasData) {
-                        List<ProductModel> products = snapshot.data ?? [];
-                        if (products.isEmpty) {
-                          return const Center(child: Text('Không có sản phẩm'));
-                        } else {
-                          return GridView.builder(
-                            physics: const ScrollPhysics(),
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              mainAxisExtent: 280,
-                              mainAxisSpacing: 20,
-                              crossAxisSpacing: 10,
-                            ),
-                            shrinkWrap: true,
-                            itemCount: products.length,
-                            itemBuilder: ((context, index) {
-                              return Transform.translate(
-                                offset: Offset(0, index.isOdd ? 0.0 : 0.0),
-                                child: GestureDetector(
-                                  onTap: () async {
-                                    ProductModel productModel =
-                                        await ApiService.getProductByID(
-                                            products[index].productID);
-                                    List<ProductDetailModel> productDetail =
-                                        await ApiService.getListProductDetailByProductByID(
-                                            products[index].productID);         
-                                    List<FeedbackModel> feedbackProduct =
-                                        await ApiService.getFeedbackByProductID(
-                                            products[index].productID);
-                                    List<ProductImageModel> productImages =
-                                        await ApiService
-                                            .getAllProductImgByProductID(
-                                                products[index].productID);
-
-                                    // ignore: use_build_context_synchronously
-                                    await Navigator.of(context).push(
-                                      CupertinoPageRoute(
-                                        builder: (context) => ProductDetail(
-                                          productImageModel: productImages,
-                                          productModel: productModel,
-                                          productDetails: productDetail,
-                                          feedbackList: feedbackProduct,
-                                        ),
-                                      ),
-                                    );
-                                    setState(() {});
-                                  },
-                                  child: ProductCard(
-                                    product: products[index],
-                                  ),
-                                ),
-                              );
-                            }),
-                          );
-                        }
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Text(
+                      'Sản phẩm',
+                      style: TextStyles.h5.bold,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                FutureBuilder<List<ProductModel>?>(
+                  future: fetchProducts(),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    } else if (snapshot.hasError) {
+                      return Text('Lỗi: ${snapshot.error}');
+                    } else if (snapshot.hasData) {
+                      List<ProductModel> products = snapshot.data ?? [];
+                      if (products.isEmpty) {
+                        return const Center(child: Text('Không có sản phẩm'));
                       } else {
-                        return const Text('Không có dữ liệu sản phẩm');
+                        return GridView.builder(
+                          physics: const ScrollPhysics(),
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisExtent: 300,
+                            mainAxisSpacing: 20,
+                            crossAxisSpacing: 10,
+                          ),
+                          shrinkWrap: true,
+                          itemCount: products.length,
+                          itemBuilder: ((context, index) {
+                            return Transform.translate(
+                              offset: Offset(0, index.isOdd ? 0.0 : 0.0),
+                              child: GestureDetector(
+                                onTap: () async {
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return const Center(
+                                        child: CircularProgressIndicator(
+                                          color: ColorPalette.primaryColor,
+                                        ),
+                                      );
+                                    },
+                                  );
+
+                                  ProductModel productModel =
+                                      await ApiService.getProductByID(
+                                          products[index].productID);
+                                  List<ProductDetailModel> productDetail =
+                                      await ApiService
+                                          .getListProductDetailByProductByID(
+                                              products[index].productID);
+                                  List<FeedbackModel> feedbackProduct =
+                                      await ApiService.getFeedbackByProductID(
+                                          products[index].productID);
+                                  List<ProductImageModel> productImages =
+                                      await ApiService
+                                          .getAllProductImgByProductID(
+                                              products[index].productID);
+                                  CategoryModel categoryModel =
+                                      await ApiService.getCategoryNameByID(
+                                          productModel.categoryID!);
+                                  // ignore: use_build_context_synchronously
+                                  Navigator.pop(context);
+                                  // ignore: use_build_context_synchronously
+                                  await Navigator.of(context).push(
+                                    CupertinoPageRoute(
+                                      builder: (context) => ProductDetail(
+                                        productImageModel: productImages,
+                                        productModel: productModel,
+                                        productDetails: productDetail,
+                                        feedbackList: feedbackProduct,
+                                        categoryModel: categoryModel,
+                                      ),
+                                    ),
+                                  );
+                                  setState(() {});
+                                },
+                                child: ProductCard(
+                                  product: products[index],
+                                ),
+                              ),
+                            );
+                          }),
+                        );
                       }
-                    },
-                  ),
-                ],
-              ),
+                    } else {
+                      return const Text('Không có dữ liệu sản phẩm');
+                    }
+                  },
+                ),
+              ],
             ),
           ),
         ),
+      ),
     );
   }
 }
