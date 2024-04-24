@@ -20,13 +20,19 @@ export const getAllBlog = createAsyncThunk("blog/getallblog", async () => {
 })
 
 
+export const getBlogDetail = createAsyncThunk("blog/getblogdetail", async (blogid: string | number) => {
+    const requestUrl = await axios.get(`${BLOG.CUSTOMER.GETBLOGDETAIL}/${blogid}`)
+    return requestUrl
+})
+
+
 export const BlogSlice = createSlice({
     name: "blog",
     initialState: initialState as BlogState,
     reducers: {},
     extraReducers(builder) {
         builder
-            .addMatcher(isPending(getAllBlog), (state, action) => {
+            .addMatcher(isPending(getAllBlog, getBlogDetail), (state, action) => {
                 return {
                     ...state,
                     loading: true
@@ -37,6 +43,13 @@ export const BlogSlice = createSlice({
                     ...state,
                     loading: false,
                     data: action.payload.data
+                }
+            })
+            .addMatcher(isFulfilled(getBlogDetail), (state, action) => {
+                return {
+                    ...state,
+                    loading: false,
+                    dataDetail: action.payload.data
                 }
             })
     },

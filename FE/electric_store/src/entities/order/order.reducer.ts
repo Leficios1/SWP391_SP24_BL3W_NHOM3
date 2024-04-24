@@ -44,6 +44,11 @@ export const getHistoryOrder = createAsyncThunk("order/getorderbyid", async (use
 })
 
 
+export const getOrderDetail = createAsyncThunk("order/orderdetail", async (orderId: string | number) => {
+    const requestUrl = await axios.get(`${ORDER.CUSTOMER.GETORDERDETAILBYUSERID}/${orderId}`);
+    return requestUrl
+})
+
 //payment
 
 export const getPaymentVnpay = createAsyncThunk("order/submitpayment", async (form: FormPaymentVnPayProps) => {
@@ -56,6 +61,7 @@ export const checkpayment = createAsyncThunk("order/checkpayment", async (paymen
     const requestUrl = await axios.post(`${url}/Payment/vn-pay/check-payment`, paymentinfo);
     return requestUrl
 })
+
 
 
 
@@ -87,7 +93,7 @@ export const OrderSLice = createSlice({
             })
 
 
-            .addMatcher(isPending(getPaymentVnpay, checkpayment, getHistoryOrder), (state, action) => {
+            .addMatcher(isPending(getPaymentVnpay, checkpayment, getHistoryOrder, getOrderDetail), (state, action) => {
                 return {
                     ...state,
                     loading: true,
@@ -101,6 +107,13 @@ export const OrderSLice = createSlice({
                     ...state,
                     loading: false,
                     data: action.payload.data
+                }
+            })
+            .addMatcher(isFulfilled(getOrderDetail), (state, action) => {
+                return {
+                    ...state,
+                    loading: false,
+                    dataDetail: action.payload.data
                 }
             })
             .addMatcher(isFulfilled(getPaymentVnpay), (state, action) => {

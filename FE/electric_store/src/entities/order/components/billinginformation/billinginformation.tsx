@@ -89,6 +89,7 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
             status: 2,
             paymentName: paymentMethod,
             userId: account.id,
+            orderDate: dayjs()
         }
 
         switch (paymentMethod) {
@@ -151,7 +152,7 @@ const BillingInformation: React.FC<BillingInformationProps> = (props) => {
         >
             <div className="billingform">
                 <div style={{ textAlign: "center", paddingTop: "10px" }}>
-                    <h2>Hoá đơn</h2>
+                    <h2>Thông tin thanh toán</h2>
                 </div>
                 <Divider dashed type="horizontal" />
                 <div className="customerinformation">

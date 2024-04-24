@@ -6,6 +6,9 @@ import { IAllProductProps, IProductProps } from "../../shared/models"
 import Meta from "antd/es/card/Meta"
 import { getAllproduct, getProductsBySearch, reset } from "./product.reducer"
 import { formatCurrencyVN } from "../../shared/utils/formatCurrency"
+import { toast } from "react-toastify"
+import { createProductToCart } from "../cart/cart.reducer"
+import Cookies from "universal-cookie"
 export const Product: React.FC = () => {
 
     const navigate = useNavigate()
@@ -27,6 +30,10 @@ export const Product: React.FC = () => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const nameSearch = urlParams.get("name");
+
+
+    const cookie = new Cookies()
+    const account = cookie.get("account")
 
 
     const descriptionStyle: React.CSSProperties = {
@@ -91,6 +98,24 @@ export const Product: React.FC = () => {
         setProducer(value)
     }
 
+
+    const addProductToCart = (productid: number | string) => {
+        if (account == null) {
+            navigate("/login")
+            toast("Vui lòng đăng nhập để mua hàng")
+        } else {
+            const data = {
+                productId: productid,
+                quantity: 1,
+                userId: account.id
+            }
+            toast.success("Thêm vào giỏ hàng thành công")
+            dispatch(createProductToCart(data))
+        }
+
+
+    }
+
     return (
         <Row style={{ marginTop: "50px" }} gutter={[50, 50]}>
             <Col md={5}>
@@ -147,19 +172,37 @@ export const Product: React.FC = () => {
                         products != null ?
                             products.data?.products?.map((product) => {
                                 return (
-                                    <Col key={product.id} md={8} onClick={() => toDetailProductPage(product.id!)}>
-                                        <Card
-                                            hoverable
-                                            style={{ width: "100%" }}
-                                            cover={<img style={{ objectFit: "contain" }} height={"200px"} alt="example" src={product.imageUrl} />}
-                                        >
-                                            <Meta title={product.name}
-                                                description={<div style={descriptionStyle}>
-                                                    {product.description}
+                                    <>
+
+                                        <Col key={product.id} md={8} >
+                                            <Row>
+                                                <Card
+                                                    onClick={() => toDetailProductPage(product.id!)}
+                                                    hoverable
+                                                    style={{ width: "100%" }}
+                                                    cover={<img style={{ objectFit: "contain" }} height={"200px"} alt="example" src={product.imageUrl} />}
+                                                >
+                                                    <Meta title={product.name}
+                                                        description={
+                                                            <>
+                                                                <div style={descriptionStyle}>
+                                                                    {product.description}
+                                                                </div>
+                                                                <div style={{ textAlign: "center" }}>
+                                                                    <h3 style={{ color: "red" }}>{formatCurrencyVN(product.price)}</h3>
+                                                                </div>
+
+                                                            </>
+                                                        } />
+                                                </Card>
+                                            </Row>
+                                            <Row>
+                                                <div onClick={() => addProductToCart(product.id)} style={{ width: "100%", cursor: "pointer", padding: 8, background: "orange", textAlign: "center" }}>
+                                                    <p>Thêm vào giỏ hàng</p>
                                                 </div>
-                                                } />
-                                        </Card>
-                                    </Col>
+                                            </Row>
+                                        </Col>
+                                    </>
                                 )
                             })
                             : <></>

@@ -17,6 +17,7 @@ import Order from "../entities/order/Order"
 import { Product } from "../entities/product/product"
 import Profile from "../entities/profile/Profile"
 import Blog from "../entities/blogs/Blog"
+import BlogDetail from "../entities/blogs/BlogDetail"
 
 const AppRoutes = () => {
     const cookie = new Cookies();
@@ -44,7 +45,10 @@ const AppRoutes = () => {
                     <Route path="/" >
                         <Route index element={<Home />} />
                         <Route path="/do-gia-dung" element={<Product />} />
-                        <Route path="/bai-viet" element={<Blog />} />
+                        <Route path="/bai-viet">
+                            <Route index element={<Blog />} />
+                            <Route path="chitiet/:id" element={<BlogDetail />} />
+                        </Route>
                         <Route path="/ho-so" element={<Profile />} />
                         <Route path="/chi-tiet-san-pham/:id" element={<ProductDetail />} />
                         <Route path="/thanh-toan" element={<Order accountId={account?.id} />} />

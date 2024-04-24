@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 import EditorContent from "../../shared/ckeditor/components/Editor";
 import axios from "axios";
@@ -14,6 +14,7 @@ import { IAddingCartProps } from "../../shared/models/cart";
 import Cookies from "universal-cookie";
 import { IAccountProps } from "../../shared/reducer/authentication.reducer";
 import { createProductToCart } from "../cart/cart.reducer";
+import { toast } from "react-toastify";
 
 interface DataType {
     key: string;
@@ -32,6 +33,8 @@ const ProductDetail: React.FC = () => {
     const [quantity, setQuantity] = useState<number>(1);
     const cookie = new Cookies();
     const account = cookie.get("account") as IAccountProps;
+
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -75,13 +78,36 @@ const ProductDetail: React.FC = () => {
     })
 
     const onClickBuy = () => {
-        const product_add_to_cart = {
-            productId: productdetail.data.products.id,
-            quantity: quantity,
-            userId: account.id
+        if (account == null) {
+            navigate("/login")
+            toast("Vui lòng đăng nhập để mua hàng")
+        } else {
+            const product_add_to_cart = {
+                productId: productdetail.data.products.id,
+                quantity: quantity,
+                userId: account.id
+            }
+            toast.success("Thêm vào giỏ hàng thành công")
+            dispatch(createProductToCart(product_add_to_cart))
         }
 
-        dispatch(createProductToCart(product_add_to_cart))
+    }
+
+
+    const addProductToCart = (productid: number | string) => {
+        if (account == null) {
+            navigate("/login")
+            toast("Vui lòng đăng nhập để mua hàng")
+        } else {
+            const data = {
+                productId: productid,
+                quantity: 1,
+                userId: account.id
+            }
+            toast.success("Thêm vào giỏ hàng thành công")
+            dispatch(createProductToCart(data))
+        }
+
 
     }
 

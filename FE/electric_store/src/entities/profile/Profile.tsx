@@ -1,4 +1,4 @@
-import { Button, Col, DatePicker, Form, Image, Input, List, Row, Select, Skeleton, Tabs, TabsProps, Tag } from "antd"
+import { Button, Col, DatePicker, Divider, Form, Image, Input, List, Modal, Row, Select, Skeleton, Tabs, TabsProps, Tag } from "antd"
 import React, { useEffect, useState } from "react"
 import Cookies from "universal-cookie"
 import { IAccountProps } from "../../shared/reducer/authentication.reducer";
@@ -6,10 +6,11 @@ import dayjs from "dayjs";
 import { useAppDispatch, useAppSelector } from "../../config/store";
 import { getProfile, reset, updateProfile } from "./profile.reducer";
 import { toast } from "react-toastify";
-import { getHistoryOrder } from "../order/order.reducer";
+import { getHistoryOrder, getOrderDetail } from "../order/order.reducer";
 import { formatCurrencyVN } from "../../shared/utils/formatCurrency";
 import 'dayjs/locale/vi';
 import "./profile.scss"
+import { formatDate } from "../../shared/utils/date/formatDate";
 
 export interface UpdateProfileProps {
     id: number | string,
@@ -32,11 +33,15 @@ const Profile: React.FC = () => {
 
 
     const dataDetail = useAppSelector(state => state.profile.dataDetail);
+    const orderDetail = useAppSelector(state => state.order.dataDetail);
     const dataAccount = dataDetail?.data! as IAccountProps
 
 
     const dataOrder = useAppSelector(state => state.order.data)
     const orders = dataOrder?.data
+
+
+    const [ispopup, setIsPopup] = useState<boolean>(false)
 
 
 
@@ -55,6 +60,13 @@ const Profile: React.FC = () => {
         dispatch(getHistoryOrder(account.id))
         dispatch(getProfile(account.id))
     }, [])
+
+    const getorderdetail = (orderId: string | number) => {
+        dispatch(getOrderDetail(orderId))
+        setIsPopup(true)
+    }
+
+    console.log(orderDetail);
 
 
 
@@ -158,7 +170,7 @@ const Profile: React.FC = () => {
                 bordered
                 dataSource={orders}
                 renderItem={(item: any, index: number) =>
-                    <div className="listItem" style={index % 2 == 0 ? { backgroundColor: "rgba(0,0,0,0.04)" } : { backgroundColor: "white" }}>
+                    <div onClick={() => getorderdetail(item.orderId)} className="listItem" style={index % 2 == 0 ? { backgroundColor: "rgba(0,0,0,0.04)" } : { backgroundColor: "white" }}>
                         <List.Item style={{ cursor: "pointer" }}>
                             <Row >
                                 <Col span={24} style={{ textAlign: "right" }}>
@@ -170,7 +182,8 @@ const Profile: React.FC = () => {
                                             Mã đơn hàng: {item.orderId}
                                         </Col>
                                         <Col span={12}>
-                                            {dayjs(item.orderDate).locale('vi').format('dddd, DD/MM/YYYY HH:mm:ss').toLocaleUpperCase()}
+                                            {item.orderDate}
+                                            {/* {dayjs(item.orderDate).locale('vi').format('dddd, DD/MM/YYYY HH:mm:ss').toLocaleUpperCase()} */}
                                         </Col>
 
                                     </Row>
@@ -203,16 +216,44 @@ const Profile: React.FC = () => {
 
 
     return (
-        <Row style={{ margin: "50px" }}>
-            <Col md={24}>
-                <Tabs
-                    defaultActiveKey="2"
-                    size="large"
-                    tabPosition={"left"}
-                    items={item}
-                />
-            </Col>
-        </Row>
+
+        <>
+            <Modal footer={<></>} width={900} title="Chi tiết đơn hàng" open={ispopup} onCancel={() => setIsPopup(!ispopup)}>
+                <Row gutter={[20,0]}>
+                    {orderDetail != null ?
+                        orderDetail.data.map((product: any) => {
+                            return (
+                                <>
+                                    <Col span={7}>
+                                        {product.product.name}
+                                    </Col>
+                                    <Col span={5}>
+                                        Số lượng: {product.quantity}
+                                    </Col>
+                                    <Col span={5}>
+                                        Giá tiền: {formatCurrencyVN(product.price)}
+                                    </Col>
+                                    <Col span={7}>
+                                        Thời gian bảo hành: {formatDate(product.expiredWarranty)}
+                                    </Col>
+                                    <Divider type="horizontal" style={{ borderColor: "black" }} />
+                                </>
+                            )
+                        })
+                        : <></>}
+                </Row>
+            </Modal>
+            <Row style={{ margin: "50px" }}>
+                <Col md={24}>
+                    <Tabs
+                        defaultActiveKey="2"
+                        size="large"
+                        tabPosition={"left"}
+                        items={item}
+                    />
+                </Col>
+            </Row>
+        </>
 
     )
 }

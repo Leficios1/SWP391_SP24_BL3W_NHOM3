@@ -5,6 +5,7 @@ import cart from "../../entities/cart/cart.reducer";
 import order from "../../entities/order/order.reducer";
 import profile from "../../entities/profile/profile.reducer";
 import blog from "../../entities/blogs/blog.reducer";
+import category from "../../entities/category/category.reducer";
 
 const rootReducer: ReducersMapObject = {
     authentication,
@@ -12,7 +13,8 @@ const rootReducer: ReducersMapObject = {
     cart,
     order,
     profile,
-    blog
+    blog,
+    category
 }
 
 

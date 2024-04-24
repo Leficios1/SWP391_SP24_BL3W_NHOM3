@@ -23,7 +23,15 @@ export interface CartProps {
 export const Cart: React.FC<CartProps> = (props) => {
     const { dataCart, isLoading, accountId } = props
 
-    
+    const calculateTotalPrice = () => {
+        let total = 0;
+
+        dataCart.data?.map((product) => {
+            total += (product.price * product.quantity)
+        })
+
+        return total
+    }
 
     return (
         dataCart?.data ?
@@ -37,6 +45,11 @@ export const Cart: React.FC<CartProps> = (props) => {
                         <CartDetail accountId={accountId} detail={item} isLoading={isLoading} />
                     )}
                 />
+
+                <div style={{ textAlign: "right" }}>
+                    <h3 style={{ marginRight: "30px" }}>Tổng tiền {formatCurrencyVN(Number(calculateTotalPrice()))}</h3>
+                </div>
+
                 <Row style={{ margin: "30px" }}>
                     <Col span={24} style={{ display: "flex", justifyContent: "center", }}>
                         <Button size="large" style={{ width: "100%" }}>

@@ -4,12 +4,14 @@ import { useAppDispatch, useAppSelector } from "../../config/store"
 import { getAllBlog } from "./blog.reducer"
 import HTMLReactParser from "html-react-parser"
 import Meta from "antd/es/card/Meta"
+import { useNavigate } from "react-router-dom"
 
 const Blog: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const loading = useAppSelector(state => state.blog.loading);
     const data = useAppSelector(state => state.blog.data);
+    const navigate = useNavigate()
 
     useEffect(() => {
         dispatch(getAllBlog())
@@ -33,6 +35,13 @@ const Blog: React.FC = () => {
         height: "100px",
         WebkitLineClamp: 4,
         WebkitBoxOrient: "vertical",
+
+
+    }
+
+
+    const navigateBlogDetail = (blogid: string | number) => {
+        navigate(`/bai-viet/chitiet/${blogid}`)
     }
 
 
@@ -44,6 +53,7 @@ const Blog: React.FC = () => {
                         return (
                             <Col span={8}>
                                 <Card
+                                    onClick={() => navigateBlogDetail(blog.id)}
                                     hoverable
                                     style={{ width: "100%" }}
                                     cover={

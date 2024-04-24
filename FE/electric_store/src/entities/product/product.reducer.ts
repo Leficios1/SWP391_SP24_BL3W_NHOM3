@@ -3,6 +3,7 @@ import { IAllProductProps, IProductProps, IProductSearch } from "../../shared/mo
 import { EntityState, IQueryParams } from "../../shared/utils/reducer.utils";
 import { PRODUCT } from "./product.api";
 import axios from "axios";
+import { getProductByCategoryId } from "../category/category.reducer";
 
 
 export const initialState: EntityState<any> = {
@@ -69,7 +70,7 @@ export const ProductSlice = createSlice({
                 }
 
             })
-            .addMatcher(isFulfilled(getAllproduct), (state, action) => {
+            .addMatcher(isFulfilled(getAllproduct, getProductByCategoryId), (state, action) => {
                 const { data } = action.payload
                 return {
                     ...state,
