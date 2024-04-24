@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
     const items: MenuProps['items'] = [
         {
-            label: <span>Profile</span>,
+            label: <span>Hồ sơ</span>,
             icon: "",
             key: '0',
             onClick: () => {
@@ -62,14 +62,14 @@ const Header: React.FC = () => {
             }
         },
         {
-            label: <span>Change password</span>,
+            label: <span>Đổi mật khẩu</span>,
             key: '1',
         },
         {
             type: 'divider',
         },
         {
-            label: 'Log out',
+            label: 'Đăng xuất',
             key: '3',
             onClick: () => {
                 logout()

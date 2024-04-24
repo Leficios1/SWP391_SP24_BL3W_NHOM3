@@ -171,8 +171,8 @@ const Profile: React.FC = () => {
                 dataSource={orders}
                 renderItem={(item: any, index: number) =>
                     <div onClick={() => getorderdetail(item.orderId)} className="listItem" style={index % 2 == 0 ? { backgroundColor: "rgba(0,0,0,0.04)" } : { backgroundColor: "white" }}>
-                        <List.Item style={{ cursor: "pointer" }}>
-                            <Row >
+                        <List.Item style={{ cursor: "pointer", display: "block" }}>
+                            <Row>
                                 <Col span={24} style={{ textAlign: "right" }}>
                                     {item.status == 1 ? <Tag color="blue">Thành công</Tag> : <Tag color="yellow">Đang xử lý</Tag>}
                                 </Col>
@@ -182,7 +182,7 @@ const Profile: React.FC = () => {
                                             Mã đơn hàng: {item.orderId}
                                         </Col>
                                         <Col span={12}>
-                                            {item.orderDate}
+                                            {formatDate(item.orderDate)}
                                             {/* {dayjs(item.orderDate).locale('vi').format('dddd, DD/MM/YYYY HH:mm:ss').toLocaleUpperCase()} */}
                                         </Col>
 
@@ -219,7 +219,7 @@ const Profile: React.FC = () => {
 
         <>
             <Modal footer={<></>} width={900} title="Chi tiết đơn hàng" open={ispopup} onCancel={() => setIsPopup(!ispopup)}>
-                <Row gutter={[20,0]}>
+                <Row gutter={[20, 0]}>
                     {orderDetail != null ?
                         orderDetail.data.map((product: any) => {
                             return (
