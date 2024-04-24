@@ -1,17 +1,21 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_controller.dart';
+import 'package:electronic_equipment_store/models/category_model.dart';
 import 'package:electronic_equipment_store/models/feedback_model.dart';
 import 'package:electronic_equipment_store/models/product_detail_model.dart';
 import 'package:electronic_equipment_store/models/product_image_model.dart';
 import 'package:electronic_equipment_store/models/product_model.dart';
+import 'package:electronic_equipment_store/representation/screens/customer/checkout.dart';
 import 'package:electronic_equipment_store/representation/screens/product_detail/widgets/image_slider.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/app_bar_main.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/representation/widgets/indicator_widget.dart';
+import 'package:electronic_equipment_store/services/api_service.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
 import 'package:electronic_equipment_store/services/cart_provider.dart';
 import 'package:electronic_equipment_store/utils/asset_helper.dart';
 import 'package:expandable_text/expandable_text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -26,12 +30,14 @@ class ProductDetail extends StatefulWidget {
   final List<ProductDetailModel> productDetails;
   final List<ProductImageModel> productImageModel;
   final List<FeedbackModel> feedbackList;
+  final CategoryModel categoryModel;
   const ProductDetail({
     super.key,
     required this.productModel,
     required this.productDetails,
     required this.productImageModel,
     required this.feedbackList,
+    required this.categoryModel,
   });
   static const String routeName = '/product_detail';
   @override
@@ -42,9 +48,11 @@ class _ProductDetailState extends State<ProductDetail> {
   final CarouselController _controller = CarouselController();
   final TextEditingController _quantityController =
       TextEditingController(text: '1');
+  final TextEditingController _feedbackController = TextEditingController();
 
   int _currentImage = 0;
   int quantityUserWantBy = 1;
+  double rating = 5;
 
   @override
   void initState() {
@@ -93,12 +101,10 @@ class _ProductDetailState extends State<ProductDetail> {
         ],
       );
     } else {
-      return ListView.builder(
-        shrinkWrap: true,
-        itemCount: widget.feedbackList.length,
-        itemBuilder: (context, index) {
-          return buildFeedbackItem(widget.feedbackList[index]);
-        },
+      return Column(
+        children: widget.feedbackList.map((feedback) {
+          return buildFeedbackItem(feedback);
+        }).toList(),
       );
     }
   }
@@ -123,18 +129,14 @@ class _ProductDetailState extends State<ProductDetail> {
                     CircleAvatar(
                       radius: 10,
                       backgroundImage: NetworkImage(
-                          feedback.userModel.avatarUrl ??
-                              AssetHelper.imageAvatarDefault),
+                          feedback.imgUrl ?? AssetHelper.imageAvatarDefault),
                     ),
                     const SizedBox(width: 10),
                     Text(
-                      feedback.userModel.name,
+                      feedback.nameUser!,
                       style: TextStyles.defaultStyle.bold,
                     ),
                   ],
-                ),
-                Text(
-                  DateFormat.yMd().format(feedback.createdDate),
                 ),
               ],
             ),
@@ -181,6 +183,107 @@ class _ProductDetailState extends State<ProductDetail> {
     );
   }
 
+  Widget buildFeedBackInput(ProductModel productModel) {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: Colors.grey[300]!),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 10,
+                      backgroundImage:
+                          NetworkImage(AuthProvider.userModel!.avatarUrl ?? ''),
+                    ),
+                    const SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          AuthProvider.userModel!.name,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 5),
+                        RatingBar(
+                          itemSize: 18,
+                          initialRating: rating,
+                          minRating: 1,
+                          direction: Axis.horizontal,
+                          allowHalfRating: false,
+                          itemCount: 5,
+                          itemPadding:
+                              const EdgeInsets.symmetric(horizontal: 2.0),
+                          ratingWidget: RatingWidget(
+                            full: const Icon(
+                              FontAwesomeIcons.solidStar,
+                              color: Colors.amber,
+                            ),
+                            half: const Icon(FontAwesomeIcons.solidStar),
+                            empty: const Icon(
+                              FontAwesomeIcons.star,
+                              color: Colors.amber,
+                            ),
+                          ),
+                          onRatingUpdate: (value) {
+                            setState(() {
+                              rating = value;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    _saveFeedback(productModel);
+                  },
+                  child: const Text('Lưu'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            TextFormField(
+              controller: _feedbackController,
+              decoration: const InputDecoration(
+                labelText: 'Nhập phản hồi của bạn',
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+              ),
+              maxLines: 3,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _saveFeedback(ProductModel productModel) {
+    FeedbackModel newFeedback = FeedbackModel(
+        userID: AuthProvider.userModel!.userID,
+        productId: productModel.productID,
+        description: _feedbackController.text,
+        ratingPoint: rating.toInt(),
+        nameUser: AuthProvider.userModel!.name);
+    ApiService.saveFeedBack(newFeedback);
+
+    setState(() {
+      widget.feedbackList.add(newFeedback);
+    });
+
+    _feedbackController.clear();
+  }
+
   double calculateAverageRating(List<FeedbackModel> feedbacks) {
     if (feedbacks.isEmpty) {
       return 0.0;
@@ -202,6 +305,7 @@ class _ProductDetailState extends State<ProductDetail> {
     final ProductModel productModel = widget.productModel;
     final List<ProductDetailModel> productDetails = widget.productDetails;
     final List<ProductImageModel> productImages = widget.productImageModel;
+    final categoryModel = widget.categoryModel;
     Size size = MediaQuery.of(context).size;
 
     return AppBarMain(
@@ -297,12 +401,12 @@ class _ProductDetailState extends State<ProductDetail> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Thương hiệu',
+                                      'Thời hạn bảo hành',
                                       style: TextStyles.h5.bold,
                                     ),
                                     const SizedBox(height: 5),
-                                    const Text(
-                                      'Chưa có',
+                                    Text(
+                                      '${productModel.warrantyPeriod ?? productModel.warrantyPeriod.toString()} Tháng',
                                     )
                                   ],
                                 ),
@@ -320,7 +424,7 @@ class _ProductDetailState extends State<ProductDetail> {
                                             MainAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'từ từ rồi làm',
+                                            categoryModel.categoryName,
                                             style: TextStyles.h5,
                                           ),
                                           const SizedBox(height: 5),
@@ -386,6 +490,20 @@ class _ProductDetailState extends State<ProductDetail> {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    if (AuthProvider.userModel != null)
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(kDefaultCircle14),
+                            color: ColorPalette.hideColor),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            buildFeedBackInput(productModel),
+                          ],
+                        ),
+                      ),
                   ],
                 ),
               ),
@@ -536,8 +654,10 @@ class _ProductDetailState extends State<ProductDetail> {
                                                 productModel.productID);
                                         if (productModel.quantity > 0) {
                                           if (productAlreadyInCart) {
-                                            cartProvider.addQuantityProductInCart(productModel,
-                                                quantityUserWantBy);
+                                            cartProvider
+                                                .addQuantityProductInCart(
+                                                    productModel,
+                                                    quantityUserWantBy);
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(
                                               const SnackBar(
@@ -581,7 +701,27 @@ class _ProductDetailState extends State<ProductDetail> {
                                   ButtonWidget(
                                     title: 'Mua Ngay',
                                     onTap: () {
-                                      //TODO Function Buy Now
+                                    if (authProvider.isLoggedIn){
+                                      ProductModel newProduct = ProductModel(
+                                          productID: productModel.productID,
+                                          productName: productModel.productName,
+                                          quantity: productModel.quantity,
+                                          price: productModel.price,
+                                          productImage: productModel.productImage,
+                                          quantityUserWantBuy: quantityUserWantBy,
+                                          );
+                                      Navigator.of(context).push(
+                                          CupertinoPageRoute(
+                                              builder: ((context) => Checkout(
+                                                  productModel: newProduct))));}else{
+                                                    ScaffoldMessenger.of(context)
+                                            .showSnackBar(const SnackBar(
+                                          backgroundColor: Colors.red,
+                                          content: Text(
+                                            'vui lòng đăng nhập để mua hàng.',
+                                          ),
+                                        ));
+                                                  }
                                     },
                                     color: Colors.orange,
                                     height: 70,

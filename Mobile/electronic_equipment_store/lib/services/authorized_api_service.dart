@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:electronic_equipment_store/core/constants/config_constans.dart';
 import 'package:electronic_equipment_store/models/product_model.dart';
+import 'package:electronic_equipment_store/models/order_model.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart' as http;
@@ -126,7 +127,7 @@ class AuthorizedApiService {
       body: jsonEncode({
         'orderDetails' : listProduct.map((product) => product.toJsonCreateOrder()).toList(),
         'orderDate' : DateTime.now().toIso8601String(),
-        'status' : 0,
+        'status' : 2,
         'statusMessage': 'Waiting',
         'paymentName' : paymentMethod,
         'nameCustomer' : name,
@@ -154,6 +155,77 @@ class AuthorizedApiService {
     );
     if (response.statusCode == 200) {
       return response.body;
+    }
+}
+static Future<List<OrderBuyModel>?> getAllOrderBuyByCustomerIDAndStaus(
+      int customerID, int status) async {
+        final url = Uri.parse('$apiLink/api/Order/GetByUserId/${AuthProvider.userModel!.userID}?status=$status');
+
+    try {
+      final response = await http.get(url,headers: {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        "Authorization": "Bearer ${getToken()}",
+      },
+      );
+
+      if (response.statusCode == 200) {
+        final List<dynamic> jsonList = json.decode(response.body)['data'];
+        if (jsonList.isEmpty) {
+          return null;
+        } else {
+          return jsonList.map((json) => OrderBuyModel.fromJson(json)).toList();
+        }
+      } else {
+        throw Exception('Lấy danh sách order thất bại.');
+      }
+    } catch (e) {
+      throw Exception('Lỗi: $e');
+    }
+  }
+
+  static Future<List<ProductModel>?> getAllOrderBuyDetailByOrderBuyID(
+      int orderID) async {
+    final url = Uri.parse('$apiLink/api/Order/getorderdetailsbyorderid/$orderID');
+
+    try {
+      final response = await http.get(url
+      ,headers: {
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        "Authorization": "Bearer ${getToken()}",
+      },);
+
+      if (response.statusCode == 200) {
+        final List<dynamic> jsonList = json.decode(response.body)['data'];
+        if (jsonList.isEmpty) {
+          return null;
+        } else {
+          return jsonList
+              .map((json) => ProductModel.fromJsonGetOrderID(json))
+              .toList();
+        }
+      } else {
+        throw Exception('Lấy chi tiết đơn hàng thất bại.');
+      }
+    } catch (e) {
+      throw Exception('Lỗi: $e');
+    }
+  }
+
+  
+  static Future<void> updateStatusOrder(int orderID, int status) async {
+  final String apiUrl = '$apiLink/api/Order/updateStatus/$orderID/$status';
+    final http.Response response = await http.put(
+      Uri.parse(apiUrl),
+      headers: <String, String>{
+        'accept': '*/*',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ${getToken()}',
+      },
+    );
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
     }
 }
 }

@@ -11,6 +11,7 @@ class ProductModel {
   int? categoryID;
 
   int? quantityUserWantBuy;
+  DateTime? expiredWarranty;
 
   ProductModel(
       {required this.productID,
@@ -21,7 +22,8 @@ class ProductModel {
       required this.price,
       this.warrantyPeriod,
       this.categoryID,
-      this.quantityUserWantBuy});
+      this.quantityUserWantBuy,
+      this.expiredWarranty});
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
@@ -39,6 +41,7 @@ class ProductModel {
         productName: json['name'],
         productDecription: json['description'],
         quantity: json['quantity'],
+        productImage: json['imageUrl'],
         price: json['price'],
         warrantyPeriod: json['warrantyPeriod'],
         categoryID: json['categoryID']);
@@ -51,6 +54,18 @@ class ProductModel {
       productImage: json['imageUrl'],
       quantityUserWantBuy: json['quantity'],
       price: json['price'],
+      quantity: 10000,
+    );
+  }
+
+  factory ProductModel.fromJsonGetOrderID(Map<String, dynamic> json) {
+    return ProductModel(
+      productID: json['product']['id'],
+      productName: json['product']['name'],
+      productImage: json['product']['imageUrl'],
+      quantityUserWantBuy: json['quantity'],
+      price: json['price'],
+      expiredWarranty: DateTime.parse(json['expiredWarranty']),
       quantity: 10000,
     );
   }

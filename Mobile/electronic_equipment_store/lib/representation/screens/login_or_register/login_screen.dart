@@ -62,9 +62,9 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pop(context);
           if (response != null) {
             final responseToken =
-                await ApiService.getUserByToken(response['tokenString']);
+                await ApiService.getUserByToken(response['data']['tokenString']);
                 var tokenBox = Hive.box('tokenBox');
-                tokenBox.put('token',response['tokenString']);
+                tokenBox.put('token',response['data']['tokenString']);
             if (responseToken != null) {
               final userModel = UserModel.fromJson(responseToken);
               var userBox = Hive.box('userBox');
@@ -76,10 +76,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 // ignore: use_build_context_synchronously
                 final cartProvider = Provider.of<CartProvider>(context, listen: false);
                 cartProvider.fetchCart();
-               if (userModel.roleId == 2) {
+              //  if (userModel.roleId == 2) {
                   // ignore: use_build_context_synchronously
                   Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
-                }              
+                // }              
             }               
           } else {
             // ignore: use_build_context_synchronously

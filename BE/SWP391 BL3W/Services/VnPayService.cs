@@ -134,7 +134,7 @@ namespace SWP391_BL3W.Services
                         vnp_ReturnUrl = "https://electric-store-khoii.vercel.app";
                         break;
                     case 2:
-                        vnp_ReturnUrl = "https://localhost:7156/index.html";
+                        vnp_ReturnUrl = "https://myapp.flutter.com";
                         break;
                     case 3:
                         vnp_ReturnUrl = "http://locahost:3000";

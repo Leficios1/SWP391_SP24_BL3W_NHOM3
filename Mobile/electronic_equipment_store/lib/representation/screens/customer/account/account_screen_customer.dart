@@ -1,5 +1,6 @@
 import 'package:electronic_equipment_store/core/constants/dismension_constants.dart';
 import 'package:electronic_equipment_store/representation/screens/customer/account/account_tile.dart';
+import 'package:electronic_equipment_store/representation/screens/customer/account/orderHistory/order_history_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/app_bar_main.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
 import 'package:flutter/material.dart';
@@ -117,7 +118,6 @@ class _AccountScreenTrueState extends State<AccountScreenTrue> {
                     ],
                   ),
                 const SizedBox(height: 10),
-                // Quản lý đơn hàng thuê
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(kDefaultCircle14),
@@ -130,10 +130,11 @@ class _AccountScreenTrueState extends State<AccountScreenTrue> {
                     itemBuilder: (context, index) {
                       return AccountTile(
                         onTap: () {
-                          // if (index == 0) {
-                          //   Navigator.of(context)
-                          //       .pushNamed(MainOrderHistoryScreen.routeName);
-                          // } else if (index == 1) {
+                          if (index == 0) {
+                            Navigator.of(context)
+                                .pushNamed(OrderHistoryScreen.routeName);
+                          } else 
+                          //if (index == 1) {
                           //   Navigator.of(context)
                           //       .pushNamed(CustomerProfileScreen.routeName);
                           // } else 

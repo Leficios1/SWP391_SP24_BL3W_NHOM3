@@ -1,31 +1,28 @@
-import 'package:electronic_equipment_store/models/user_model.dart';
 
 class FeedbackModel {
-  int feedBackID;
+  String? imgUrl;
+  int productId;
+  int? userID;
   int ratingPoint;
   String description;
-  DateTime createdDate;
-  UserModel userModel;
+  String? nameUser;
 
   FeedbackModel({
-    required this.feedBackID,
+    required this.productId,
+    this.userID,
     required this.ratingPoint,
     required this.description,
-    required this.createdDate,
-    required this.userModel,
+    this.nameUser,
+    this.imgUrl
   });
 
   factory FeedbackModel.fromJson(Map<String, dynamic> json) {
     return FeedbackModel(
-      feedBackID: json['feedBackID'],
-      ratingPoint: json['ratingPoint'],
-      description: json['description'],
-      createdDate: DateTime(
-        json['createdtDate'][0],
-        json['createdtDate'][1],
-        json['createdtDate'][2],
-      ),
-      userModel: UserModel.fromJson(json['user']),
+      nameUser: json['nameUser'],
+      imgUrl: json['imageUrl'],
+      productId: json['productId'],
+      description: json['comment'],
+      ratingPoint: json['rating'],
     );
   }
 }
