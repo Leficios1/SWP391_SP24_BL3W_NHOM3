@@ -1,25 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './shared/layout/header/header';
+import Footer from './shared/layout/footer';
+import Home from './modules/home/home';
+import AppRoutes from './routers/routes';
+import Login from './modules/login/login';
+import ErrorPage from './shared/error/error';
+import { useAppSelector } from './config/store';
+import { useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FloatButton, Popover } from 'antd';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import { Cart } from './entities/cart/Cart';
+import axios from 'axios';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <ToastContainer position="top-right" autoClose={1500} closeButton={true} limit={3} newestOnTop />
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='*' element={<AppRoutes />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
