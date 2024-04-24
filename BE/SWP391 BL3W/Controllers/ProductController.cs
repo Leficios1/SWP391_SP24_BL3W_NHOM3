@@ -23,7 +23,6 @@ namespace SWP391_BL3W.Controllers
             _productService = productService;
             _mapper = mapper;
         }
-
         [HttpGet("getAll")]
         public async Task<IActionResult> getAll(int? size, int? page)
         {

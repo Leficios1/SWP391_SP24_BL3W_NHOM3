@@ -131,13 +131,17 @@ namespace SWP391_BL3W.Services
                 switch (WhoAreYou)
                 {
                     case 1:
-                        vnp_ReturnUrl = "https://electric-store-khoii.vercel.app";
+
+                        vnp_ReturnUrl = "http://localhost:3000/thanh-toan";
                         break;
                     case 2:
                         vnp_ReturnUrl = "https://myapp.flutter.com";
                         break;
                     case 3:
                         vnp_ReturnUrl = "http://locahost:3000";
+                        break;
+                    case 3:
+                        vnp_ReturnUrl = "https://electric-store-khoii.vercel.app";
                         break;
                     default:
                         vnp_ReturnUrl = "";
@@ -233,6 +237,11 @@ namespace SWP391_BL3W.Services
         public async Task GetInformationByReturnUrl(string url)
         {
 
+        }
+
+        public Task<string> CallAPIPayByUserId(int userId, string returnUrl, int orderId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
