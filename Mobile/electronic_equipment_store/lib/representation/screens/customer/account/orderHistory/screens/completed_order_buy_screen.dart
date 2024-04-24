@@ -35,190 +35,173 @@ class _CompletedOrderBuyScreenState extends State<CompletedOrderBuyScreen> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: FutureBuilder(
-                future: AuthorizedApiService.getAllOrderBuyByCustomerIDAndStaus(
-                    AuthProvider.userModel!.userID, 1),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Center(child: CircularProgressIndicator());
-                  } else if (snapshot.hasError) {
-                    return Text('Error: ${snapshot.error}');
-                  } else {
-                    List<OrderBuyModel>? orders = snapshot.data;
-                    if (orders == null) {
-                      return Center(
-                          child: Text('Không có đơn hàng nào.',
-                              style: TextStyles.h5.bold));
-                    } else if (orders.isEmpty) {
-                      return Center(
-                          child: Text('Không có đơn hàng nào.',
-                              style: TextStyles.h5.bold));
-                    } else {
-                      return ListView.builder(
-                          itemCount: orders.length,
-                          itemBuilder: (context, index) {
-                            return GestureDetector(
-                              onTap: () {
-                                _navigateToInformationScreen(orders[index]);
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.all(5),
-                                margin: const EdgeInsets.only(bottom: 20),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.circular(kDefaultCircle14),
-                                ),
-                                child: Column(
+          future: AuthorizedApiService.getAllOrderBuyByCustomerIDAndStaus(
+              AuthProvider.userModel!.userID,1),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            } else if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            } else {
+              List<OrderBuyModel>? orders = snapshot.data;
+              if (orders == null) {
+                return Center(
+                    child: Text('Không có đơn hàng nào.',
+                        style: TextStyles.h5.bold));
+              } else if (orders.isEmpty) {
+                return Center(
+                    child: Text('Không có đơn hàng nào.',
+                        style: TextStyles.h5.bold));
+              } else {
+                return ListView.builder(
+                    itemCount: orders.length,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                        onTap: () {
+                          _navigateToInformationScreen(orders[index]);
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(5),
+                          margin: const EdgeInsets.only(bottom: 20),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius:
+                                BorderRadius.circular(kDefaultCircle14),
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    //productOwnerName
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            orders[index].status == 1
-                                                ? "Hoàn thành"
-                                                : "",
-                                            style: TextStyles.h5.bold,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    const Divider(
-                                      thickness: 0.5,
-                                      color: ColorPalette.textHide,
-                                    ),
-                                    FutureBuilder(
-                                      future: AuthorizedApiService
-                                          .getAllOrderBuyDetailByOrderBuyID(
-                                              orders[index].orderBuyID),
-                                      builder: ((context, snapshot) {
-                                        if (snapshot.connectionState ==
-                                            ConnectionState.waiting) {
-                                          return const Center(
-                                              child:
-                                                  CircularProgressIndicator());
-                                        } else if (snapshot.hasError) {
-                                          return Text(
-                                              'Error: ${snapshot.error}');
-                                        } else {
-                                          List<ProductModel>?
-                                              orderDetails = snapshot.data;
-                                          return Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children:
-                                                orderDetails!.map((detail) {
-                                              return Container(
-                                                margin:
-                                                    const EdgeInsets.only(top: 10),
-                                                height: 110,
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: ColorPalette
-                                                          .textHide),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          kDefaultCircle14),
-                                                ),
-                                                child: Row(
-                                                  children: [
-                                                    const SizedBox(width: 10),
-                                                    ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              kDefaultCircle14),
-                                                      child: Image.network(
-                                                        cacheHeight: 80,
-                                                        cacheWidth: 80,
-                                                        detail.productImage!,
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    ),
-                                                    const SizedBox(width: 10),
-                                                    // productName, price
-                                                    Padding(
-                                                      padding: const EdgeInsets
-                                                          .symmetric(
-                                                              vertical: 20),
-                                                      child: Column(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          SizedBox(
-                                                            width: 230,
-                                                            child:
-                                                                AutoSizeText(
-                                                              detail
-                                                                  
-                                                                  .productName,
-                                                              minFontSize: 16,
-                                                              style:
-                                                                  TextStyles
-                                                                      .h5
-                                                                      .bold,
-                                                              maxLines: 1,
-                                                              overflow:
-                                                                  TextOverflow
-                                                                      .ellipsis,
-                                                            ),
-                                                          ),
-                                                          Text(
-                                                            NumberFormat.currency(locale: 'vi_VN', symbol: 'vnđ').format(
-                                                              detail
-                                                                  
-                                                                  .price,
-                                                            ),
-                                                            style: TextStyles
-                                                                .defaultStyle
-                                                                .bold,
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              );
-                                            }).toList(),
-                                          );
-                                        }
-                                      }),
-                                    ),
-                                    const SizedBox(height: 10),
-                                    const Divider(
-                                      thickness: 0.5,
-                                      color: ColorPalette.textHide,
-                                    ),
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          const Text('Thành tiền'),
-                                          Text(
-                                            NumberFormat.currency(locale: 'vi_VN', symbol: 'vnđ').format(orders[index].total),
-                                          ),
-                                        ],
-                                      ),
+                                    Text(
+                                      orders[index].status == 1
+                                          ? "Thành công" : "",
+                                      style: TextStyles.h5.bold,
                                     ),
                                   ],
                                 ),
                               ),
-                            );
-                          });
-                    }
-                  }
-                },
-              ),
+                              const Divider(
+                                thickness: 0.5,
+                                color: ColorPalette.textHide,
+                              ),
+                              FutureBuilder(
+                                future: AuthorizedApiService
+                                    .getAllOrderBuyDetailByOrderBuyID(
+                                        orders[index].orderBuyID),
+                                builder: ((context, snapshot) {
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return const Center(
+                                        child: CircularProgressIndicator());
+                                  } else if (snapshot.hasError) {
+                                    return Text('Error: ${snapshot.error}');
+                                  } else {
+                                    List<ProductModel>? orderDetails =
+                                        snapshot.data;
+                                    return Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: orderDetails!.map((detail) {
+                                        return Container(
+                                          margin:
+                                              const EdgeInsets.only(top: 10),
+                                          height: 110,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: ColorPalette.textHide),
+                                            borderRadius:
+                                                BorderRadius.circular(
+                                                    kDefaultCircle14),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              const SizedBox(width: 10),
+                                              ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        kDefaultCircle14),
+                                                child: Image.network(
+                                                  cacheHeight: 80,
+                                                  cacheWidth: 80,
+                                                  detail.productImage!,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                              const SizedBox(width: 10),
+                                              // productName, price
+                                              Padding(
+                                                padding: const EdgeInsets
+                                                    .symmetric(vertical: 20),
+                                                child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment
+                                                          .start,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    SizedBox(
+                                                      width: 200,
+                                                      child: AutoSizeText(
+                                                        detail
+                                                            .productName,
+                                                        minFontSize: 16,
+                                                        style: TextStyles
+                                                            .h5.bold,
+                                                        maxLines: 2,
+                                                        overflow: TextOverflow
+                                                            .ellipsis,
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      'Số lượng ${detail.quantityUserWantBuy}',
+                                                      style: TextStyles
+                                                          .defaultStyle.bold,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                      }).toList(),
+                                    );
+                                  }
+                                }),
+                              ),
+                              const SizedBox (
+                                height: 10,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text('Thành tiền'),
+                                    Text(
+                                      NumberFormat.currency(
+                                              locale: 'vi_VN', symbol: 'vnđ')
+                                          .format(orders[index].total),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    });
+              }
+            }
+          },
+        ),
       ),
     );
   }
