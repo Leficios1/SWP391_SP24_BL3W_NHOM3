@@ -25,6 +25,7 @@ namespace SWP391_BL3W.Mapping
             CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
             CreateMap<BlogsDTO, Blog>().ReverseMap();
             CreateMap<BlogsResponseDTO, Blog>().ReverseMap();
+            CreateMap<BlogRequestDTO, Blog>().ReverseMap();
             CreateMap<UpdateBlogDTO, BlogDetailsResponseDTO>().ReverseMap();
             CreateMap<IEnumerable<BlogsDTO>, IEnumerable<BlogsResponseDTO>>();
             CreateMap<OrderResponseDTO, Order>().ReverseMap();
@@ -37,6 +38,7 @@ namespace SWP391_BL3W.Mapping
             CreateMap<OrderResponseDTO, Order>().ReverseMap();
             CreateMap<ReviewUserRequestDTO, Review>().ReverseMap();
             CreateMap<ReviewUserResponseDTO, Review>().ReverseMap();
+            CreateMap<CategoryBlogResponseDTO, CategoryBlog>().ReverseMap();
 
         }
     }

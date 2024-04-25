@@ -131,7 +131,7 @@ namespace SWP391_BL3W.Services
                 switch (WhoAreYou)
                 {
                     case 1:
-                        vnp_ReturnUrl = "https://electric-store-khoii.vercel.app";
+                        vnp_ReturnUrl = "https://my-electric-store-kvdd.vercel.app/thanh-toan";
                         break;
                     case 2:
                         vnp_ReturnUrl = "https://localhost:7156/index.html";

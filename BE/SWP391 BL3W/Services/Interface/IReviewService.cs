@@ -7,6 +7,7 @@ namespace SWP391_BL3W.Services.Interface
     {
         public Task<StatusResponse<getAllReviewResponseDTO>> GetAll(int? size, int? page);
         public Task<StatusResponse<ReviewUserResponseDTO>> create(ReviewUserRequestDTO dto);
+        public Task<StatusResponse<List<ReviewUserResponseDTO>>> getReviewByProductId(int productId);
         public Task<StatusResponse<bool>> deleted(int id);
     }
 }

@@ -21,9 +21,9 @@ namespace SWP391_BL3W.DTO.Response
 
         public string ImageUrl { get; set; } = null!;
 
-        public int UserId { get; set; }
+        public string NameUser { get; set; } = null!;
 
-        public int CategoryBlogID { get; set; }
+        public string CategoryBlogName { get; set; }
 
     }
 

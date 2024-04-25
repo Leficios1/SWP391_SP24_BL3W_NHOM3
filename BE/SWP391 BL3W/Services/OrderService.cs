@@ -55,6 +55,7 @@ namespace SWP391_BL3W.Services
                                 response.Errormessge = $"Product with ID {orderDetailDto.ProductId} not found!";
                                 return response;
                             }
+                            orderDetailDto.Price = product.price;
                             orderDetailDto.ExpiredWarranty = DateTime.Now.AddMonths(product.WarrantyPeriod);
                         }
                         var order = _mapper.Map<Order>(dto);
@@ -121,7 +122,7 @@ namespace SWP391_BL3W.Services
                 int pageSize = size ?? 15;
                 int pageNumber = page ?? 1;
 
-                List<Order> allOrders = await _context.Orders
+                List<Order> allOrders = await _context.Orders.OrderByDescending(x => x.OrderId)
                     .Skip((pageNumber - 1) * pageSize)
                     .Take(pageSize)
                     .ToListAsync();
@@ -231,15 +232,24 @@ namespace SWP391_BL3W.Services
         }
 
 
-        public async Task<StatusResponse<List<OrderResponseDTO>>> getOrderbyUserId(int userId)
+        public async Task<StatusResponse<List<OrderResponseDTO>>> getOrderbyUserId(int userId, int? status)
         {
             var response = new StatusResponse<List<OrderResponseDTO>>();
             try
             {
-                var orders = await _context.Orders
-                    .Where(o => o.UserId == userId)
-                    .ToListAsync();
-
+                List<Order> orders;
+                if (status == null)
+                {
+                    orders = await _context.Orders.OrderByDescending(x => x.OrderId)
+                        .Where(o => o.UserId == userId)
+                        .ToListAsync();
+                }
+                else
+                {
+                    orders = await _context.Orders.OrderByDescending(x => x.OrderId)
+                        .Where(o => o.UserId == userId && o.status == status)
+                        .ToListAsync();
+                }
                 var orderResponseDTOs = _mapper.Map<List<Order>, List<OrderResponseDTO>>(orders);
                 response.Data = orderResponseDTOs;
                 response.statusCode = HttpStatusCode.OK;
@@ -330,7 +340,7 @@ namespace SWP391_BL3W.Services
                             .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date)
                             .SumAsync(o => o.TotalPrice);
                         break;
-                    case 3: 
+                    case 3:
                         DateTime monthStartDate = new DateTime(orderDate.Year, orderDate.Month, 1);
                         DateTime monthEndDate = monthStartDate.AddMonths(1).AddDays(-1);
                         totalOrder = await _context.Orders
@@ -380,11 +390,13 @@ namespace SWP391_BL3W.Services
                 }
                 existOrder.status = status;
                 _baseRepository.Update(existOrder);
+                await _baseRepository.SaveChangesAsync();
                 response.Data = true;
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Successful";
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 response.statusCode = HttpStatusCode.InternalServerError;
                 response.Errormessge = ex.Message;

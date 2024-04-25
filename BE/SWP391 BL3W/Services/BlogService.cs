@@ -19,13 +19,17 @@ namespace SWP391_BL3W.Services
     {
         private readonly IMapper _mapper;
         private readonly IBaseRepository<Blog> _baseRepository;
+        private readonly IBaseRepository<CategoryBlog> _categoryRepository;
+        private readonly IBaseRepository<User> _userRepository;
         private readonly SWPContext _context;
 
-        public BlogService(IMapper mapper, SWPContext context, IBaseRepository<Blog> baseRepository)
+        public BlogService(IMapper mapper, SWPContext context, IBaseRepository<Blog> baseRepository, IBaseRepository<CategoryBlog> categoryRepository, IBaseRepository<User> userRepository)
         {
             _mapper = mapper;
             _baseRepository = baseRepository;
             _context = context;
+            _categoryRepository = categoryRepository;
+            _userRepository = userRepository;
         }
 
         public async Task<StatusResponse<BlogsDTO>> CreateBlogAsync(BlogRequestDTO dto)
@@ -94,21 +98,24 @@ namespace SWP391_BL3W.Services
                 int totalItems = allBlogs.Count;
                 int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
-                var blogsForPage = allBlogs
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .Select(p => new BlogsDTO
+                var blogsForPage = new List<BlogsDTO>();
+                foreach (var blog in allBlogs.Skip((pageNumber - 1) * pageSize).Take(pageSize))
                 {
-                    Id = p.Id,
-                    Title = p.Title,
-                    ImageUrl = p.ImageUrl,
-                    UserId = p.UserId,
-                    CategoryBlogID = p.CategoryBlogID
-                }).ToList();
+                    var blogDto = new BlogsDTO
+                    {
+                        Id = blog.Id,
+                        Title = blog.Title,
+                        Content = blog.content,
+                        ImageUrl = blog.ImageUrl,
+                        NameUser = (await _userRepository.GetById(blog.UserId)).Name,
+                        CategoryBlogName = (await _categoryRepository.GetById(blog.CategoryBlogID)).Name
+                    };
+                    blogsForPage.Add(blogDto);
+                }
 
                 var responseDTO = new BlogsResponseDTO
                 {
-                    Blogs = blogsForPage,
+                    Blogs = blogsForPage.ToList(),
                     TotalPages = totalPages,
                     CurrentPage = pageNumber,
                     PageSize = pageSize,
@@ -124,6 +131,32 @@ namespace SWP391_BL3W.Services
                 response.statusCode = HttpStatusCode.InternalServerError;
                 response.Errormessge = ex.Message;
                 return response;
+            }
+            return response;
+        }
+
+        public async Task<StatusResponse<List<CategoryBlogResponseDTO>>> GetAllCategoriesAsync()
+        {
+            var response = new StatusResponse<List<CategoryBlogResponseDTO>>();
+            try
+            {
+                var categoryBlog = await _categoryRepository.Get().ToListAsync();
+                if (categoryBlog == null)
+                {
+                    response.statusCode = HttpStatusCode.BadRequest;
+                    response.Errormessge = "Lỗi DB";
+                    return response;
+                }
+                var categoryBlogEntities = _mapper.Map<List<CategoryBlogResponseDTO>>(categoryBlog);
+                response.Data = categoryBlogEntities;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful";
+
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
             }
             return response;
         }
@@ -150,7 +183,9 @@ namespace SWP391_BL3W.Services
                         Id = blog.Id,
                         Title = blog.Title,
                         Content = blog.content,
-                        CategoryBlogID = blog.CategoryBlogID,
+                        ImageUrl = blog.ImageUrl,
+                        NameUser = (await _userRepository.GetById(blog.UserId)).Name,
+                        CategoryBlogName = (await _categoryRepository.GetById(blog.CategoryBlogID)).Name,
                     },
                     Category = new CategoryBlogDTO
                     {
@@ -171,6 +206,33 @@ namespace SWP391_BL3W.Services
             }
             return response;
         }
+
+        public async Task<StatusResponse<CategoryBlogResponseDTO>> getNameCategoryBlogById(int id)
+        {
+            var response = new StatusResponse<CategoryBlogResponseDTO>();
+            try
+            {
+                var categoryName = await _categoryRepository.GetById(id);
+                if (categoryName == null)
+                {
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Not Found Category";
+                    return response;
+                }
+                var map = _mapper.Map<CategoryBlogResponseDTO>(categoryName);
+                response.Data = map;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful!";
+
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
+
         public async Task<StatusResponse<BlogsResponseDTO>> UpdateBlogAsync(UpdateBlogDTO dto)
         {
             var response = new StatusResponse<BlogsResponseDTO>();

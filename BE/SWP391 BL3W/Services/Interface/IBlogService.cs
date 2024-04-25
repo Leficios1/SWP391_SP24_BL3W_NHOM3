@@ -11,5 +11,7 @@ namespace SWP391_BL3W.Services.Interface
         Task<StatusResponse<BlogsResponseDTO>> GetAllBlogsAsync(int? size, int? page);
         Task<StatusResponse<BlogsResponseDTO>> UpdateBlogAsync(UpdateBlogDTO dto);
         Task<StatusResponse<BlogDetailsResponseDTO>> GetBlogByIdAsync(int id);
+        Task<StatusResponse<CategoryBlogResponseDTO>> getNameCategoryBlogById(int id);
+        Task<StatusResponse<List<CategoryBlogResponseDTO>>> GetAllCategoriesAsync();
     }
 }

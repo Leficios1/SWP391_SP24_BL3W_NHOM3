@@ -1,4 +1,5 @@
 ﻿using SWP391_BL3W.Database;
+using System.ComponentModel.DataAnnotations;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace SWP391_BL3W.DTO.Response
@@ -17,6 +18,8 @@ namespace SWP391_BL3W.DTO.Response
         public string Name { get; set; }
         public string Description { get; set; }
         public int Quantity { get; set; }
+        [Url]
+        public string ImageUrl { get; set; } = null!;
         public decimal Price { get; set; }
         public int WarrantyPeriod { get; set; }
         public int CategoryID { get; set; }

@@ -32,8 +32,8 @@ namespace SWP391_BL3W.Controllers
         [Authorize(Roles = "1")]
         public async Task<ActionResult<IEnumerable<UserResponseDto>>> GetUsers(int? pageNumber, int? pageSize)
         {
-            var users = await _userService.GetUsers(pageNumber, pageSize);
-            return Ok(users);
+            var response = await _userService.GetUsers(pageNumber, pageSize);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
         [HttpPost("create")]

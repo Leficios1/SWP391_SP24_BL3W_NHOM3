@@ -32,10 +32,10 @@ namespace SWP391_BL3W.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetById/{id}")]
-        public async Task<IActionResult> getOrderById([FromRoute] int id)
+        [HttpGet("GetByUserId/{id}")]
+        public async Task<IActionResult> getOrderById([FromRoute] int id, int? status)
         {
-            var response = await _orderService.getOrderbyUserId(id);
+            var response = await _orderService.getOrderbyUserId(id, status);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
@@ -53,7 +53,7 @@ namespace SWP391_BL3W.Controllers
             var response = await _orderService.getBestSellerProductByCategory();
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
-        [Authorize(Roles = "1")]
+        [Authorize]
         [HttpGet("getorderdetailsbyorderid/{id}")]
         public async Task<IActionResult> getOrderDetailsByOrderId([FromRoute]int id)
         {
@@ -68,7 +68,7 @@ namespace SWP391_BL3W.Controllers
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
-        [Authorize(Roles = "1 , 3")]
+        [Authorize]
         [HttpPut("updateStatus/{id}/{status}")]
         public async Task<IActionResult> updateStatusOrder([FromRoute] int id,[FromRoute] int status)
         {

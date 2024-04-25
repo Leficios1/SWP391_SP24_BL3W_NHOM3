@@ -45,7 +45,8 @@ namespace SWP391_BL3W.Services
                 response.statusCode = HttpStatusCode.OK;
                 response.Errormessge = "Successful";
                 return response;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -100,31 +101,63 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
-        public async Task<IEnumerable<UserResponseDto>> GetUsers(int? pageNumber, int? pageSize)
+        public async Task<StatusResponse<GetAllUserResponseDTO>> GetUsers(int? pageNumber, int? pageSize)
         {
-            if(pageNumber == null)
+            var response = new StatusResponse<GetAllUserResponseDTO>();
+            try
             {
-                pageNumber = 1;
-            }
-            if(pageSize == null)
-            {
-                pageSize = 15;
-            }
-            IQueryable<User> query = _baseRepository.Get()
-                .Include(x => x.Role)
-                .AsNoTracking();
-            if (pageNumber.HasValue && pageSize.HasValue)
-            {
+                pageNumber ??= 1;
+                pageSize ??= 15;
+
                 if (pageNumber <= 0 || pageSize <= 0)
                 {
-                    throw new ArgumentException("Invalid page and page size number!");
+                    response.statusCode = HttpStatusCode.BadRequest;
+                    response.Errormessge = "Page not found!";
+                    return response;
                 }
+                var totalUsers = await _baseRepository.Get().CountAsync();
+                var totalPages = (int)Math.Ceiling((double)totalUsers / pageSize.Value);
 
-                query = query.Skip((pageNumber.Value - 1) * pageSize.Value)
-                             .Take(pageSize.Value);
+                var users = await _baseRepository.Get()
+                    .Include(x => x.Role)
+                    .OrderBy(u => u.Id)
+                    .Skip((pageNumber.Value - 1) * pageSize.Value)
+                    .Take(pageSize.Value)
+                    .AsNoTracking()
+                    .ToListAsync();
+
+                var userDtos = users.Select(u => new UserResponseDto
+                {
+                    Id = u.Id,
+                    Name = u.Name,
+                    Email = u.Email,
+                    phone = u.phone,
+                    DateOfBirth = u.DateOfBirth,
+                    AvatarUrl = u.AvatarUrl,
+                    Gender = u.Gender,
+                    status = u.status,
+                    RoleId = u.RoleId
+                }).ToList();
+
+                var responseDTO = new GetAllUserResponseDTO
+                {
+                    Result = userDtos,
+                    TotalPages = totalPages,
+                    CurrentPage = pageNumber.Value,
+                    PageSize = pageSize.Value,
+                    TotalItems = totalUsers
+                };
+
+                response.Data = responseDTO;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successfully fetched users.";
             }
-            var users = await query.ToListAsync();
-            return _mapper.Map<IEnumerable<UserResponseDto>>(users);
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
         }
 
         public async Task<StatusResponse<UserResponseDto>> UpdateUser(UpdateUserDTO user)

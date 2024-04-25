@@ -18,6 +18,7 @@ namespace SWP391_BL3W.DTO.Request
         [Required(ErrorMessage = "Giá là bắt buộc.")]
         [Range(0, double.MaxValue, ErrorMessage = "Giá sản phẩm phải lớn hơn hoặc bằng 0.")]
         public decimal price { get; set; }
+        public int WarrantyPeriod { get; set; }
 
         [Required(ErrorMessage = "ID danh mục là bắt buộc.")]
         public int CategoryID { get; set; }

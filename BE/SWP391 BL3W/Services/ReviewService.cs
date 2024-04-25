@@ -139,5 +139,45 @@ namespace SWP391_BL3W.Services
             }
             return response;
         }
+
+        public async Task<StatusResponse<List<ReviewUserResponseDTO>>> getReviewByProductId(int productId)
+        {
+            var response = new StatusResponse<List<ReviewUserResponseDTO>>();
+            try
+            {
+                var reviews = await _reviewRepository.Get().Where(x => x.ProductId == productId).ToListAsync();
+                if (reviews == null)
+                {
+                    response.statusCode = HttpStatusCode.OK;
+                    response.Errormessge = "This product has no reviews.";
+                    return response;
+                }
+
+                var reviewDTOs = new List<ReviewUserResponseDTO>();
+                foreach (var review in reviews)
+                {
+                    var user = await _userRepository.GetById(review.UserId);
+                    var reviewDto = new ReviewUserResponseDTO
+                    {
+                        NameUser = user.Name,
+                        ImageUrl = user.AvatarUrl,
+                        ProductId = review.ProductId,
+                        Rating = review.Rating,
+                        Comment = review.Comment
+                    };
+                    reviewDTOs.Add(reviewDto);
+                }
+                response.Data = reviewDTOs;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful!";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
+
     }
 }

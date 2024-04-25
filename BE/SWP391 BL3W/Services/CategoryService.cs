@@ -42,6 +42,30 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
+        public async Task<StatusResponse<Category>> getCategoryNameByCategoryId(int categoryId)
+        {
+            var response = new StatusResponse<Category>();
+            try
+            {
+                var category = await _categoryRepository.GetById(categoryId);
+                if (category == null)
+                {
+                    response.statusCode = HttpStatusCode.NotFound;
+                    response.Errormessge = "Not Found Category";
+                    return response;
+                }
+                response.Data = category;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful!";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
+
         public async Task<StatusResponse<ProductsResponseDTO>> SearchProductsByCategory(int? size, int? page, int categoryId)
         {
             var response = new StatusResponse<ProductsResponseDTO>();

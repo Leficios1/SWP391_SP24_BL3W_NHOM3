@@ -31,5 +31,11 @@ namespace SWP391_BL3W.Controllers
             var response = await _categoryService.SearchProductsByCategory(size, page, id);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
+        [HttpGet("getNameById/{id}")]
+        public async Task<IActionResult> getCategoryNameByID([FromRoute] int id)
+        {
+            var response = await _categoryService.getCategoryNameByCategoryId(id);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
     }
 }
