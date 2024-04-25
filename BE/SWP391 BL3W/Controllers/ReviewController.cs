@@ -15,7 +15,6 @@ namespace SWP391_BL3W.Controllers
         {
             _reviewService = reviewService;
         }
-
         [HttpGet("getAll")]
         public async Task<IActionResult> getAll(int? size, int? page)
         {

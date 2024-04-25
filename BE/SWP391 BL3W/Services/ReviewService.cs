@@ -6,7 +6,7 @@ using SWP391_BL3W.DTO.Response;
 using SWP391_BL3W.Repository.Interface;
 using SWP391_BL3W.Services.Interface;
 using System.Net;
-using System.Text.RegularExpressions;
+
 
 namespace SWP391_BL3W.Services
 {
@@ -16,10 +16,10 @@ namespace SWP391_BL3W.Services
         private readonly IBaseRepository<User> _userRepository;
         private readonly IBaseRepository<Product> _productRepository;
         private readonly SWPContext _context;
+
         private readonly IMapper _mapper;
 
-        public ReviewService(IBaseRepository<Review> reviewRepository, IBaseRepository<User> userRepository,
-            IBaseRepository<Product> productRepository, IMapper mapper, SWPContext context)
+        public ReviewService(IBaseRepository<Review> reviewRepository, IBaseRepository<User> userRepository, IBaseRepository<Product> productRepository, IMapper mapper, SWPContext context)
         {
             _reviewRepository = reviewRepository;
             _userRepository = userRepository;
@@ -41,7 +41,8 @@ namespace SWP391_BL3W.Services
                     return response;
                 }
                 var product = await _productRepository.GetById(dto.ProductId);
-                if (product == null)
+
+                if(product == null)
                 {
                     response.statusCode = HttpStatusCode.NotFound;
                     response.Errormessge = "Not Found Product!!!";
@@ -178,6 +179,5 @@ namespace SWP391_BL3W.Services
             }
             return response;
         }
-
     }
 }
