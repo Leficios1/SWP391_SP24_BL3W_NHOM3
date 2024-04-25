@@ -11,7 +11,7 @@ namespace SWP391_BL3W.DTO.Request
         public string? ImageUrl { get; set; }
         public int? quantity {  get; set; }
         public decimal? price { get; set; }
-        public DateTime? WarrantyPeriod { get; set; }
+        public int WarrantyPeriod { get; set; }
 
     }
 }

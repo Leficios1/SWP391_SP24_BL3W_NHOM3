@@ -97,7 +97,7 @@ namespace SWP391_BL3W.Services
                 int totalItems = allProducts.Count;
                 int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
 
-                var productsForPage = allProducts
+                var productsForPage = allProducts.OrderByDescending(x => x.Id)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .Select(p => new ProductDTO
@@ -107,7 +107,8 @@ namespace SWP391_BL3W.Services
                     Description = p.Description,
                     ImageUrl = p.ImageUrl,
                     Quantity = p.quantity,
-                    Price = p.price
+                    Price = p.price,
+                    CategoryID = p.CategoryID
                 }).ToList();
                 var responseDTO = new ProductsResponseDTO
                 {
@@ -156,6 +157,7 @@ namespace SWP391_BL3W.Services
                         Name = product.Name,
                         Description = product.Description,
                         Quantity = product.quantity,
+                        ImageUrl = product.ImageUrl,
                         Price = product.price,
                         WarrantyPeriod = product.WarrantyPeriod,
                         CategoryID = product.CategoryID

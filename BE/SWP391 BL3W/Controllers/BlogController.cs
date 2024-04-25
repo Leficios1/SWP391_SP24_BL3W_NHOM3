@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,20 @@ namespace SWP391_BL3W.Controllers
             var response = await _blogService.GetBlogByIdAsync(id);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
 
+        }
+
+        [HttpGet("getCategoryBlogById/{id}")]
+        public async Task<IActionResult> getCategoryBlogById([FromRoute] int id)
+        {
+            var response = await _blogService.getNameCategoryBlogById(id);
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
+        [HttpGet("getAllCategoryBlog")]
+        public async Task<IActionResult> getAllCategoryBlog()
+        {
+            var response = await _blogService.GetAllCategoriesAsync();
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
 
         [HttpPost]

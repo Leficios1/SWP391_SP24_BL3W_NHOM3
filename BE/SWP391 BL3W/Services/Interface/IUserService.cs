@@ -9,7 +9,7 @@ namespace SWP391_BL3W.Services.Interface
         Task<IActionResult> EditAvater(string link, int userId);
         Task<StatusResponse<UserResponseDto>> CreateUser(CreateUserDTO user);
 
-        Task<IEnumerable<UserResponseDto>> GetUsers(int? pageNumber, int? pageSize);
+        Task<StatusResponse<GetAllUserResponseDTO>> GetUsers(int? pageNumber, int? pageSize);
 
         Task<StatusResponse<UserResponseDto>> GetUser(int id);
 
