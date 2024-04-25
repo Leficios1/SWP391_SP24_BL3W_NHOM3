@@ -73,7 +73,7 @@ const Header: React.FC = () => {
             key: '3',
             onClick: () => {
                 logout()
-                window.document.location.reload()
+                navigate("/")
             }
 
         },
