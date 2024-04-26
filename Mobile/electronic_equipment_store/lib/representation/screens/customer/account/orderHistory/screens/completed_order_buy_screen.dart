@@ -82,6 +82,7 @@ class _CompletedOrderBuyScreenState extends State<CompletedOrderBuyScreen> {
                                           ? "Thành công" : "",
                                       style: TextStyles.h5.bold,
                                     ),
+                                    Text(DateFormat('dd/MM/yyyy HH:mm', 'vi').format(orders[index].dateOrder))
                                   ],
                                 ),
                               ),

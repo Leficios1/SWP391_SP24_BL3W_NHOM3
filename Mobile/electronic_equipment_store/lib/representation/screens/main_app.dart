@@ -8,9 +8,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class MainApp extends StatefulWidget {
-  const MainApp({super.key});
+  final int? currentIndex;
+  const MainApp({
+    super.key,
+    this.currentIndex,
+  });
+
 
   static const String routeName = '/main_app';
+
 
   @override
   State<MainApp> createState() => _MainAppState();
@@ -26,6 +32,9 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
+    if(widget.currentIndex!= null){
+      _currentIndex = widget.currentIndex!;
+    }
     return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
@@ -52,6 +61,7 @@ class _MainAppState extends State<MainApp> {
             icon: const Icon(
               FontAwesomeIcons.house,
               size: kDefaultIconSize18,
+              
             ),
           ),
           SalomonBottomBarItem(

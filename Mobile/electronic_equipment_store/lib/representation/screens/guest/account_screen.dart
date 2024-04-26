@@ -1,5 +1,6 @@
 import 'package:electronic_equipment_store/representation/screens/login_or_register/login_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/login_or_register/register_account.dart';
+import 'package:electronic_equipment_store/representation/screens/product_detail/product_detail.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/app_bar_main.dart';
 import 'package:flutter/material.dart';
 import '../../../core/constants/color_constants.dart';
@@ -9,7 +10,8 @@ import '../../../utils/asset_helper.dart';
 import '../../../utils/image_helper.dart';
 
 class AccountScreen extends StatefulWidget {
-  const AccountScreen({super.key});
+  final ProductDetail? productDetail;
+  const AccountScreen({super.key, this.productDetail});
 
   static const String routeName = '/account_screen';
   @override
@@ -82,6 +84,7 @@ class _AccountScreenState extends State<AccountScreen>
                     onTap: () {
                       _tabController.index = 1;
                     },
+                    productDetail: widget.productDetail
                   ),
                   RegisterAccount(
                     onTap: () {

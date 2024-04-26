@@ -6,6 +6,7 @@ import 'package:electronic_equipment_store/models/product_detail_model.dart';
 import 'package:electronic_equipment_store/models/product_image_model.dart';
 import 'package:electronic_equipment_store/models/product_model.dart';
 import 'package:electronic_equipment_store/representation/screens/customer/checkout.dart';
+import 'package:electronic_equipment_store/representation/screens/guest/account_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/product_detail/widgets/image_slider.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/app_bar_main.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
@@ -686,13 +687,22 @@ class _ProductDetailState extends State<ProductDetail> {
                                           ));
                                         }
                                       } else {
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(const SnackBar(
-                                          backgroundColor: Colors.red,
-                                          content: Text(
-                                            'Đăng nhập để sử dụng giỏ hàng.',
-                                          ),
-                                        ));
+                                        Navigator.of(context).push(
+                                            CupertinoPageRoute(
+                                                builder: ((context) => AccountScreen(productDetail: ProductDetail(
+                                        productImageModel: productImages,
+                                        productModel: productModel,
+                                        productDetails: widget.productDetails,
+                                        feedbackList: widget.feedbackList,
+                                        categoryModel: categoryModel,
+                                      ),))));
+                                      //   ScaffoldMessenger.of(context)
+                                      //       .showSnackBar(const SnackBar(
+                                      //     backgroundColor: Colors.red,
+                                      //     content: Text(
+                                      //       'Đăng nhập để sử dụng giỏ hàng.',
+                                      //     ),
+                                      //   ));
                                       }
                                     },
                                     height: 70,
@@ -701,27 +711,41 @@ class _ProductDetailState extends State<ProductDetail> {
                                   ButtonWidget(
                                     title: 'Mua Ngay',
                                     onTap: () {
-                                    if (authProvider.isLoggedIn){
-                                      ProductModel newProduct = ProductModel(
+                                      if (authProvider.isLoggedIn) {
+                                        ProductModel newProduct = ProductModel(
                                           productID: productModel.productID,
                                           productName: productModel.productName,
                                           quantity: productModel.quantity,
                                           price: productModel.price,
-                                          productImage: productModel.productImage,
-                                          quantityUserWantBuy: quantityUserWantBy,
-                                          );
-                                      Navigator.of(context).push(
-                                          CupertinoPageRoute(
-                                              builder: ((context) => Checkout(
-                                                  productModel: newProduct))));}else{
-                                                    ScaffoldMessenger.of(context)
-                                            .showSnackBar(const SnackBar(
-                                          backgroundColor: Colors.red,
-                                          content: Text(
-                                            'vui lòng đăng nhập để mua hàng.',
-                                          ),
-                                        ));
-                                                  }
+                                          productImage:
+                                              productModel.productImage,
+                                          quantityUserWantBuy:
+                                              quantityUserWantBy,
+                                        );
+                                        Navigator.of(context).push(
+                                            CupertinoPageRoute(
+                                                builder: ((context) => Checkout(
+                                                    productModel:
+                                                        newProduct))));
+                                      } else {
+                                        Navigator.of(context).push(
+                                            CupertinoPageRoute(
+                                                builder: ((context) => AccountScreen(productDetail: ProductDetail(
+                                        productImageModel: productImages,
+                                        productModel: productModel,
+                                        productDetails: widget.productDetails,
+                                        feedbackList: widget.feedbackList,
+                                        categoryModel: categoryModel,
+                                      ),))));
+
+                                        // ScaffoldMessenger.of(context)
+                                        //     .showSnackBar(const SnackBar(
+                                        //   backgroundColor: Colors.red,
+                                        //   content: Text(
+                                        //     'vui lòng đăng nhập để mua hàng.',
+                                        //   ),
+                                        // ));
+                                      }
                                     },
                                     color: Colors.orange,
                                     height: 70,

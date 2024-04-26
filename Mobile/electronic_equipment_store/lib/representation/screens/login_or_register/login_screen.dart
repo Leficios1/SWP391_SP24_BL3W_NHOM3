@@ -4,6 +4,7 @@ import 'package:electronic_equipment_store/core/constants/my_textformfield.dart'
 import 'package:electronic_equipment_store/models/user_model.dart';
 import 'package:electronic_equipment_store/representation/screens/customer/customer_main_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/login_or_register/forgot_password_screen.dart';
+import 'package:electronic_equipment_store/representation/screens/product_detail/product_detail.dart';
 import 'package:electronic_equipment_store/representation/screens/widgets/button_widget.dart';
 import 'package:electronic_equipment_store/services/api_service.dart';
 import 'package:electronic_equipment_store/services/auth_provider.dart';
@@ -18,8 +19,9 @@ import '../../../core/constants/dismension_constants.dart';
 import '../../../core/constants/textstyle_constants.dart';
 
 class LoginScreen extends StatefulWidget {
+  final ProductDetail? productDetail;
   final Function()? onTap;
-  const LoginScreen({super.key, required this.onTap});
+  const LoginScreen({super.key, required this.onTap, this.productDetail});
 
   static const String routeName = '/login_screen';
 
@@ -61,26 +63,33 @@ class _LoginScreenState extends State<LoginScreen> {
           // ignore: use_build_context_synchronously
           Navigator.pop(context);
           if (response != null) {
-            final responseToken =
-                await ApiService.getUserByToken(response['data']['tokenString']);
-                var tokenBox = Hive.box('tokenBox');
-                tokenBox.put('token',response['data']['tokenString']);
+            final responseToken = await ApiService.getUserByToken(
+                response['data']['tokenString']);
+            var tokenBox = Hive.box('tokenBox');
+            tokenBox.put('token', response['data']['tokenString']);
             if (responseToken != null) {
               final userModel = UserModel.fromJson(responseToken);
               var userBox = Hive.box('userBox');
               userBox.put('user', json.encode(userModel.toJson()));
               final authProvider =
-                    // ignore: use_build_context_synchronously
-                    Provider.of<AuthProvider>(context, listen: false);
-                authProvider.setUser(userModel);
-                // ignore: use_build_context_synchronously
-                final cartProvider = Provider.of<CartProvider>(context, listen: false);
-                cartProvider.fetchCart();
-              //  if (userModel.roleId == 2) {
                   // ignore: use_build_context_synchronously
-                  Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
-                // }              
-            }               
+                  Provider.of<AuthProvider>(context, listen: false);
+              authProvider.setUser(userModel);
+              // ignore: use_build_context_synchronously
+              final cartProvider =
+                  Provider.of<CartProvider>(context, listen: false);
+              cartProvider.fetchCart();
+              //  if (userModel.roleId == 2) {
+              // ignore: use_build_context_synchronously
+              if (widget.productDetail == null) {
+                Navigator.of(context).pushNamed(CustomerMainScreen.routeName);
+              } else {
+                Navigator.pushReplacement(
+                 context,
+                MaterialPageRoute(builder: (context) => CustomerMainScreen(productDetail: widget.productDetail,)));
+              }
+              // }
+            }
           } else {
             // ignore: use_build_context_synchronously
             showCustomDialog(context, 'Lỗi', 'Đăng nhập thất bại.', true);

@@ -81,6 +81,7 @@ class _CanceledOrderBuyScreenState extends State<CanceledOrderBuyScreen> {
                                           ? "Đã hủy" : "",
                                       style: TextStyles.h5.bold,
                                     ),
+                                    Text(DateFormat('dd/MM/yyyy HH:mm', 'vi').format(orders[index].dateOrder))
                                   ],
                                 ),
                               ),

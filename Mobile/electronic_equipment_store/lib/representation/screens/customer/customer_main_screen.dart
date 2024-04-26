@@ -1,15 +1,17 @@
 import 'package:electronic_equipment_store/representation/screens/cart_screen.dart';
 import 'package:electronic_equipment_store/representation/screens/customer/account/account_screen_customer.dart';
 import 'package:electronic_equipment_store/representation/screens/home_screen.dart';
+import 'package:electronic_equipment_store/representation/screens/product_detail/product_detail.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import '../../../core/constants/color_constants.dart';
 import '../../../core/constants/dismension_constants.dart';
 
-
 class CustomerMainScreen extends StatefulWidget {
-  const CustomerMainScreen({super.key});
+  final ProductDetail? productDetail;
+  const CustomerMainScreen({super.key, this.productDetail});
 
   static const String routeName = '/customer_main_screen';
 
@@ -23,12 +25,20 @@ class _CustomerMainScreen extends State<CustomerMainScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+    if (widget.productDetail != null) {
+      Navigator.of(context).push(
+        CupertinoPageRoute(
+          builder: (context) => widget.productDetail!,
+        ),
+      );
+    }
+  });
   }
 
   @override
   Widget build(BuildContext context) {
-    return 
-    Scaffold(
+    return Scaffold(
       body: IndexedStack(
         index: _currentIndex,
         children: const [

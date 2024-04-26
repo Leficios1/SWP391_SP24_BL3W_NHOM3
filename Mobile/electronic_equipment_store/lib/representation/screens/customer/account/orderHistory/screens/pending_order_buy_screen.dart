@@ -94,6 +94,7 @@ class _PendingOrderScreenState extends State<PendingOrderScreen> {
                                           : "Thành Công",
                                       style: TextStyles.h5.bold,
                                     ),
+                                    Text(DateFormat('dd/MM/yyyy HH:mm', 'vi').format(orders[index].dateOrder))
                                   ],
                                 ),
                               ),
@@ -225,7 +226,7 @@ class _PendingOrderScreenState extends State<PendingOrderScreen> {
                                       }
                                     },
                                     title: 'Hủy đơn hàng',
-                                    size: 18,
+                                    size: 15,
                                     width: 150,
                                   ),
                                 ],

@@ -116,6 +116,12 @@ class AuthorizedApiService {
 }
 
   static Future<int> createOrder(String name, String phone, String address, String paymentMethod, List<ProductModel> listProduct) async {
+    if (paymentMethod == 'Tiền mặt') {
+      paymentMethod = 'tienmat';
+    }
+    if(paymentMethod == 'VnPAY'){
+      paymentMethod = 'vnpay';
+    }
     final url = Uri.parse('$apiLink/api/Order/create');
      final response = await http.post(
       url,

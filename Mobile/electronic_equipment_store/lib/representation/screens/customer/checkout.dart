@@ -10,6 +10,7 @@ import 'package:electronic_equipment_store/services/auth_provider.dart';
 import 'package:electronic_equipment_store/services/authorized_api_service.dart';
 import 'package:electronic_equipment_store/services/cart_provider.dart';
 import 'package:electronic_equipment_store/utils/dialog_helper.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
@@ -41,10 +42,9 @@ class _CheckoutState extends State<Checkout> {
   Widget build(BuildContext context) {
     final cartProvider = Provider.of<CartProvider>(context);
     List<ProductModel> cartItemsToDisplay = cartProvider.cartItems;
-    if(widget.productModel != null){
+    if (widget.productModel != null) {
       cartItemsToDisplay = [widget.productModel!];
     }
-    
 
     double calculateTotalPayment() {
       return cartItemsToDisplay.fold<double>(
@@ -278,9 +278,13 @@ class _CheckoutState extends State<Checkout> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  const Row(
+                                  Row(
                                     children: [
-                                      Text('Tổng số tiền'),
+                                      Text(
+                                        'Tổng số tiền',
+                                        style: TextStyles.defaultStyle.bold
+                                            .setColor(Colors.red),
+                                      ),
                                     ],
                                   ),
                                   Text(
@@ -288,6 +292,8 @@ class _CheckoutState extends State<Checkout> {
                                             locale: 'vi_VN', symbol: 'vnđ')
                                         .format(cartItem.quantityUserWantBuy! *
                                             cartItem.price),
+                                    style: TextStyles.defaultStyle.bold
+                                        .setColor(Colors.red),
                                   ),
                                 ],
                               ),
@@ -321,6 +327,12 @@ class _CheckoutState extends State<Checkout> {
                           style: TextStyles.h5.bold,
                         ),
                         ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                ColorPalette.primaryColor),
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                          ),
                           onPressed: () {
                             showModalBottomSheet(
                               context: context,
@@ -333,15 +345,6 @@ class _CheckoutState extends State<Checkout> {
                                       onTap: () {
                                         setState(() {
                                           paymentMethod = 'Tiền mặt';
-                                        });
-                                        Navigator.pop(context);
-                                      },
-                                    ),
-                                    ListTile(
-                                      title: const Text('Chuyển Khoản'),
-                                      onTap: () {
-                                        setState(() {
-                                          paymentMethod = 'Chuyển Khoản';
                                         });
                                         Navigator.pop(context);
                                       },
@@ -399,12 +402,17 @@ class _CheckoutState extends State<Checkout> {
                       showCustomDialog(context, "Làm ơn thêm địa chỉ",
                           'Bạn chưa có địa chỉ nhận hàng', true);
                     } else {
+                      List<ProductModel> listProduct = cartProvider.cartItems;
+                      if(widget.productModel != null){
+                        listProduct = [widget.productModel!];
+                      }
+
                       int orderId = await AuthorizedApiService.createOrder(
                           nameController.text.trim(),
                           phoneController.text.trim(),
                           addressController.text.trim(),
-                          paymentMethod,
-                          cartProvider.cartItems);
+                          paymentMethod, listProduct
+                          );
                       if (paymentMethod == 'Tiền mặt') {
                         AuthorizedApiService.deleteCart();
                         //Chuyển trang
@@ -416,8 +424,11 @@ class _CheckoutState extends State<Checkout> {
                         Provider.of<CartProvider>(context, listen: false)
                             .clearCart();
                         // ignore: use_build_context_synchronously
-                        Navigator.popUntil(context,
-                            ModalRoute.withName(CustomerMainScreen.routeName));
+                        Navigator.of(context).push(
+                          CupertinoPageRoute(
+                            builder: (context) => CustomerMainScreen(),
+                          ),
+                        );
                       } else if (paymentMethod == 'VnPAY') {
                         String urlCheckOutByVnPay =
                             await AuthorizedApiService.checkOutByVnPay(orderId);
@@ -425,7 +436,11 @@ class _CheckoutState extends State<Checkout> {
                           await launchUrl(Uri.parse(urlCheckOutByVnPay));
                         } else {
                           // ignore: use_build_context_synchronously
-                          showCustomDialog(context, 'Lỗi', 'Không thể mở Url thanh toán VNPay : $urlCheckOutByVnPay', true);
+                          showCustomDialog(
+                              context,
+                              'Lỗi',
+                              'Không thể mở Url thanh toán VNPay : $urlCheckOutByVnPay',
+                              true);
                         }
                       }
                     }
