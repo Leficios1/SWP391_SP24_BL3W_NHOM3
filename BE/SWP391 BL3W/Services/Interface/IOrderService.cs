@@ -12,5 +12,6 @@ namespace SWP391_BL3W.Services.Interface
         Task<StatusResponse<bool>> updateOrderAsync(int orderId, int status);
         Task<StatusResponse<DashBoardOrderResponeDTO>> getTotalPriceByOrderDate(DateTime oderdate, int type);
         Task<StatusResponse<List<BestSellerReponseDTO>>> getBestSellerProductByCategory();
+        Task<StatusResponse<List<LMFE>>> GetFiveWeekRevenue();
     }
 }

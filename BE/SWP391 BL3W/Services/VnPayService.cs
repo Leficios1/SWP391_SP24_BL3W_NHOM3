@@ -137,7 +137,7 @@ namespace SWP391_BL3W.Services
                         vnp_ReturnUrl = "https://myapp.flutter.com";
                         break;
                     case 3:
-                        vnp_ReturnUrl = "http://locahost:3000";
+                        vnp_ReturnUrl = "http://localhost:3000";
                         break;
                     default:
                         vnp_ReturnUrl = "";
@@ -175,7 +175,7 @@ namespace SWP391_BL3W.Services
                 vnpay.AddRequestData("vnp_Command", "pay");
                 vnpay.AddRequestData("vnp_TmnCode", vnp_TmnCode);
                 vnpay.AddRequestData("vnp_Amount", vnp_Amount);
-                vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
+                vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.AddMinutes(-20).ToString("yyyyMMddHHmmss"));
                 vnpay.AddRequestData("vnp_CurrCode", "VND");
                 vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress());
                 vnpay.AddRequestData("vnp_Locale", "vn");
@@ -183,7 +183,7 @@ namespace SWP391_BL3W.Services
                 vnpay.AddRequestData("vnp_OrderType", "order");
                 vnpay.AddRequestData("vnp_ReturnUrl", vnp_ReturnUrl);
                 vnpay.AddRequestData("vnp_TxnRef", vnp_TxnRef);
-                vnpay.AddRequestData("vnp_ExpireDate", DateTime.Now.AddMinutes(20).ToString("yyyyMMddHHmmss"));
+                vnpay.AddRequestData("vnp_ExpireDate", DateTime.Now.AddDays(2).ToString("yyyyMMddHHmmss"));
 
 
                 string paymentUrl = vnpay.CreateRequestUrl(vnp_Url, vnp_HashSecret);

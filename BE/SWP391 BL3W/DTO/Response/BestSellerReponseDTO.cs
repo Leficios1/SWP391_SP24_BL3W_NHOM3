@@ -4,5 +4,6 @@
     {
         public string categoryName { get; set; }
         public int productBestSeller {  get; set; }
+        public string image { get; set; }
     }
 }

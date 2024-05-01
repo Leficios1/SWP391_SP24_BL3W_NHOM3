@@ -215,6 +215,7 @@ namespace SWP391_BL3W.Services
                         {
                             categoryName = category.CategoryName,
                             productBestSeller = kv.Value
+
                         });
                     }
                 }
@@ -231,6 +232,41 @@ namespace SWP391_BL3W.Services
             return response;
         }
 
+        public async Task<StatusResponse<List<LMFE>>> GetFiveWeekRevenue()
+        {
+            var response = new StatusResponse<List<LMFE>>();
+            try
+            {
+                var revenues = new List<LMFE>();
+                var orderDate = DateTime.Now.AddDays(-35);
+
+                for (int i = 0; i < 5; i++)
+                {
+                    var weekStart = orderDate.AddDays(i * 7);
+                    var weekEnd = weekStart.AddDays(7);
+
+                    var weekRevenue = await _baseRepository.Get()
+                        .Where(r => r.OrderDate >= weekStart && r.OrderDate < weekEnd)
+                        .ToListAsync();
+
+                    revenues.Add(new LMFE
+                    {
+                        Week = i + 1,
+                        totalInWeek = weekRevenue.Count
+                    });
+                }
+
+                response.Data = revenues;
+                response.statusCode = HttpStatusCode.OK;
+                response.Errormessge = "Successful!";
+            }
+            catch (Exception ex)
+            {
+                response.statusCode = HttpStatusCode.InternalServerError;
+                response.Errormessge = ex.Message;
+            }
+            return response;
+        }
 
         public async Task<StatusResponse<List<OrderResponseDTO>>> getOrderbyUserId(int userId, int? status)
         {
@@ -324,30 +360,32 @@ namespace SWP391_BL3W.Services
                 switch (type)
                 {
                     case 1:
+                        orderDate = DateTime.Now;
                         totalOrder = await _context.Orders
-                            .Where(o => o.OrderDate.Date == orderDate.Date)
+                            .Where(o => o.OrderDate.Date == orderDate.Date && o.status != 3)
                             .CountAsync();
                         totalPrice = await _context.Orders
-                            .Where(o => o.OrderDate.Date == orderDate.Date)
+                            .Where(o => o.OrderDate.Date == orderDate.Date && o.status != 3)
                             .SumAsync(o => o.TotalPrice);
                         break;
                     case 2:
                         DateTime weekStartDate = orderDate.Date.AddDays(-7);
                         totalOrder = await _context.Orders
-                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date)
+                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date && o.status != 3)
                             .CountAsync();
                         totalPrice = await _context.Orders
-                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date)
+                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date && o.status != 3)
                             .SumAsync(o => o.TotalPrice);
                         break;
                     case 3:
+                        orderDate = DateTime.Now;
                         DateTime monthStartDate = new DateTime(orderDate.Year, orderDate.Month, 1);
                         DateTime monthEndDate = monthStartDate.AddMonths(1).AddDays(-1);
                         totalOrder = await _context.Orders
-                            .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate)
+                            .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate && o.status != 3)
                             .CountAsync();
                         totalPrice = await _context.Orders
-                            .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate)
+                            .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate && o.status != 3)
                             .SumAsync(o => o.TotalPrice);
                         break;
                     default:
@@ -389,6 +427,19 @@ namespace SWP391_BL3W.Services
                     return response;
                 }
                 existOrder.status = status;
+                if (existOrder.status == 3)
+                {
+                    var orderDetails = await _orderDetailRepository.Get().Where(od => od.OrderID == orderId).ToListAsync();
+                    foreach(var orderDetail in orderDetails)
+                    {
+                        var product = await _productsRepository.GetById(orderDetail.ProductId);
+                        if(product != null)
+                        {
+                            product.quantity += orderDetail.Quantity;
+                            _productsRepository.Update(product);
+                        }
+                    }
+                }
                 _baseRepository.Update(existOrder);
                 await _baseRepository.SaveChangesAsync();
                 response.Data = true;
