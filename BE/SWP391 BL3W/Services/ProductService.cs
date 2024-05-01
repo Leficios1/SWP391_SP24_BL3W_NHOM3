@@ -371,16 +371,66 @@ namespace SWP391_BL3W.Services
         public async Task<StatusResponse<UpdateProductsDTO>> updateProduct(UpdateProductsDTO dto)
         {
             var response = new StatusResponse<UpdateProductsDTO>();
+
             try
             {
-                var existingProduct = await _context.Products.Where(x => x.Id == dto.Id).FirstOrDefaultAsync();
+                var existingProduct = await _context.Products
+                    .Include(p => p.Details)
+                    .Include(p => p.Images)
+                    .Where(x => x.Id == dto.Id)
+                    .FirstOrDefaultAsync();
+
                 if (existingProduct == null)
                 {
                     response.statusCode = HttpStatusCode.NotFound;
                     response.Errormessge = "Not Found Products!!";
                     return response;
                 }
-                _mapper.Map(dto, existingProduct);
+                existingProduct.Name = dto.Name ?? existingProduct.Name;
+                existingProduct.Description = dto.Description ?? existingProduct.Description;
+                existingProduct.ImageUrl = dto.ImageUrl ?? existingProduct.ImageUrl;
+                existingProduct.quantity = dto.quantity ?? existingProduct.quantity;
+                existingProduct.price = dto.price ?? existingProduct.price;
+                existingProduct.WarrantyPeriod = dto.WarrantyPeriod;
+
+                existingProduct.Details = existingProduct.Details.Where(d => dto.Details.Any(x => x.Id == d.Id)).ToList();
+
+                foreach (var detail in dto.Details)
+                {
+                    var existingDetail = existingProduct.Details.FirstOrDefault(d => d.Id == detail.Id);
+                    if (existingDetail != null)
+                    {
+                        existingDetail.Name = detail.Name;
+                        existingDetail.Value = detail.Value;
+                    }
+                    else
+                    {
+                        var newDetail = new ProductsDetail
+                        {
+                            Name = detail.Name,
+                            Value = detail.Value
+                        };
+                        existingProduct.Details.Add(newDetail);
+                    }
+                }
+
+                existingProduct.Images = existingProduct.Images.Where(d => dto.ImageDTOs.Any(x => x.Id == d.Id)).ToList();
+                foreach (var image in dto.ImageDTOs)
+                {
+                    var existingImage = existingProduct.Images.FirstOrDefault(i => i.Id == image.Id);
+                    if (existingImage != null)
+                    {
+                        existingImage.Url = image.Url;
+                    }
+                    else
+                    {
+                        var newImage = new Images
+                        {
+                            Url = image.Url,
+                        };
+                        existingProduct.Images.Add(newImage);
+                    }
+                }
                 await _context.SaveChangesAsync();
                 response.Data = dto;
                 response.statusCode = HttpStatusCode.OK;
@@ -391,6 +441,7 @@ namespace SWP391_BL3W.Services
                 response.statusCode = HttpStatusCode.InternalServerError;
                 response.Errormessge = ex.Message;
             }
+
             return response;
         }
     }

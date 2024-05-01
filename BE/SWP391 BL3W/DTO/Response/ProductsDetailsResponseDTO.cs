@@ -27,14 +27,14 @@ namespace SWP391_BL3W.DTO.Response
 
     public class ProductsDetailDTO
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
     }
 
     public class ImageDTOs
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string Url { get; set; }
     }
 

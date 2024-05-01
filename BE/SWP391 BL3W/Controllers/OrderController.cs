@@ -60,6 +60,15 @@ namespace SWP391_BL3W.Controllers
             var response = await _orderService.getOrderdetailByOrderId(id);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
         }
+        
+        [Authorize]
+        [HttpGet("getfiveweek")]
+        public async Task<IActionResult> getFiveWeek()
+        {
+            var response = await _orderService.GetFiveWeekRevenue();
+            return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
+        }
+
         [Authorize]
         [HttpPost("create")]
         public async Task<IActionResult> create(OrderResquestDTO dto)

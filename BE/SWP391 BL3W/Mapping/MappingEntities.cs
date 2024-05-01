@@ -16,7 +16,8 @@ namespace SWP391_BL3W.Mapping
             .ForMember(dest => dest.CategoryID, opt => opt.MapFrom(src => src.CategoryID))
             .ForMember(dest => dest.Category, opt => opt.Ignore())
             .ForMember(dest => dest.Details, opt => opt.MapFrom(src => src.Details));
-            CreateMap<ProductDetailDTO, ProductsDetail>();
+            CreateMap<ProductsDetailDTO, ProductsDetail>().ReverseMap();
+            CreateMap<ImageDTOs, Images>().ReverseMap();
 
             CreateMap<UpdateProductsDTO,Product>().ReverseMap();
             CreateMap<ProductDTO, Product>().ReverseMap();
