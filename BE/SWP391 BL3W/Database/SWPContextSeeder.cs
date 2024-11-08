@@ -2643,11 +2643,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 176,
-                       Name = "Panasonic 25 lít NN-SM33NBYUE",
-                       Description = "Lò vi sóng Panasonic NN-SM33NBYUE với dung tích 25 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/303491/303491-min-600x600.jpg",
+                       Name = "Mũ Lưỡi Trai Dáng Thể Thao",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2024/ogototton2_86.jpg",
                        quantity = 1000,
-                       price = 3070000,
+                       price = 144000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2655,11 +2655,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 177,
-                       Name = "Panasonic 20 lít NN-ST25JWYUE",
-                       Description = "Lò vi sóng Panasonic NN-ST25JWYUE có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/197818/panasonic-nn-st25jwyue-310723-025041-600x600.jpg",
+                       Name = "Quần shorts 6 inch Racquet Sports",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(8).jpg",
                        quantity = 1000,
-                       price = 2870000,
+                       price = 189000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2667,11 +2667,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 178,
-                       Name = "BlueStone 20 lít MOB-7708B",
-                       Description = "Lò vi sóng BlueStone MOB-7708B với dung tích 20 lít, công suất 700W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/242766/bluestone-mob-7708b-20-lit-260723-103853-600x600.jpg",
+                       Name = "Wristband thể thao",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_4981_67.jpg",
                        quantity = 1000,
-                       price = 1849000,
+                       price = 59000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2679,11 +2679,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 179,
-                       Name = "Electrolux 30 lít EMG30D22BM",
-                       Description = "Lò vi sóng Electrolux EMG30D22BM có dung tích lớn 30 lít, công suất 1000W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/305855/lo-vi-song-electrolux-emg30d22bm-30-lit-240423-095632-600x600.jpg",
+                       Name = "Headband thể thao",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_4978.jpg",
                        quantity = 1000,
-                       price = 4740000,
+                       price = 79000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2691,11 +2691,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 180,
-                       Name = "Samsung 23 lít MS23K3513AS/SV-N",
-                       Description = "Lò vi sóng Samsung MS23K3513AS/SV-N với dung tích 23 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là lựa chọn phù hợp cho mọi gia đình.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/203059/lo-vi-song-samsung-ms23k3513as-sv-n-23-lit-310723-031206-600x600.jpg",
+                       Name = "Tất cổ trung cầu lông",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.19.jpg",
                        quantity = 1000,
-                       price = 1690000,
+                       price = 60000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2703,11 +2703,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 181,
-                       Name = "Sharp 20 lít R-205VN(S)",
-                       Description = "Lò vi sóng Sharp R-205VN(S) với dung tích 20 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/69080/sharp-r-205vn-s-20-lit-020223-111427-600x600.jpg",
+                       Name = "Quần Lót Nam Long Leg",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/LL001.5_12.jpg",
                        quantity = 1000,
-                       price = 1590000,
+                       price = 80000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2715,11 +2715,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 182,
-                       Name = "Sharp 20 lít R-209VN-SK",
-                       Description = "Lò vi sóng Sharp R-209VN-SK có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và đẳng cấp, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/235256/235256%20(1)-600x600.jpg",
+                       Name = "Combo 2 Quần Lót Nam Boxer Brief Lenzing Modal",
+                       Description = "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/mix2.jpg",
                        quantity = 1000,
-                       price = 1670000,
+                       price = 167000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2727,11 +2727,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 183,
-                       Name = "Electrolux 20 lít EMG20K38GWP",
-                       Description = " Lò vi sóng Electrolux EMG20K38GWP với dung tích 20 lít, công suất 800W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/203563/lo-vi-song-electrolux-emg20k38gwp-310723-031401-600x600.jpg",
+                       Name = "Áo phao nhẹ Ultrawarm",
+                       Description = "Chất liệu vải: 100% Polyamide, Form dáng: Regular, Cấu trúc vải nylon có khả năng chống gió, Bên trong vải được nhồi bông tăng khả năng giữ ấm, Túi 2 bên chắc chắn thoải mái, đựng các vật dụng quan trọng.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.KM006_-_NAVY_1.jpg",
                        quantity = 1000,
-                       price = 1990000,
+                       price = 699000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2739,11 +2739,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 184,
-                       Name = "Sharp 21 lít R-211TV-BK",
-                       Description = " Lò vi sóng Sharp R-211TV-BK với dung tích 21 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/316809/lo-vi-song-sharp-r-211tv-bk-21-lit-0-600x600.jpg",
+                       Name = "Áo Singlet Chạy Bộ Graphic Dot",
+                       Description = "Chất liệu 100% Polyester, Form dáng: Regular fit, Công nghệ ExDry thấm hút tốt, nhanh khô, thoáng khí, Kiểu dệt Mini Square tạo các lỗ nhỏ trên vải giúp thoáng khí hơn, Sản phẩm được đánh giá phù hợp với hoạt động chạy bộ bởi các Runner.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_1.JPG",
                        quantity = 1000,
-                       price = 1890000,
+                       price = 189000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -2751,11 +2751,11 @@ namespace SWP391_BL3W.Database
                    new Product
                    {
                        Id = 185,
-                       Name = "Electrolux 23 lít EMG23D22B",
-                       Description = " Lò vi sóng Electrolux EMG23D22B có dung tích lớn 23 lít, công suất 800W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.",
-                       ImageUrl = "https://cdn.tgdd.vn/Products/Images/1987/299618/299618-600x600-1.jpg",
+                       Name = "Áo giữ nhiệt Essential Brush Poly cổ thấp",
+                       Description = "Thành phần vải: 90% Polyester 10% Spandex, Form dáng: Slimfit ôm nhẹ vào cơ thể, Chất liệu mềm mại và khả năng giữ ấm tốt, Phù hợp: Mặc trong hoặc mặc ở nhà, Tự hào sản xuất tại Việt Nam.",
+                       ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.DT001_-_XAM_1.jpg",
                        quantity = 1000,
-                       price = 2490000,
+                       price = 149000,
                        WarrantyPeriod = 720,
                        CategoryID = 12,
                        status = 1,
@@ -6644,207 +6644,207 @@ namespace SWP391_BL3W.Database
                 new Images
                 {
                     Id = 526,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082498421640.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2024/24CMCW.MU003.22z_30.jpg",
                     ProductId = 176,
 
                 },
                 new Images
                 {
                     Id = 527,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082497591644.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/March2024/g24CMCW.MU001.3.jpg",
                     ProductId = 176,
 
                 },
                 new Images
                 {
                     Id = 528,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082496741625.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/March2024/g24CMCW.MU001.2.jpg",
                     ProductId = 176,
 
                 },
                 new Images
                 {
                     Id = 529,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/2-min.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(7).jpg",
                     ProductId = 177,
 
                 },
                 new Images
                 {
                     Id = 530,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/3.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(3).jpg",
                     ProductId = 177,
 
                 },
                 new Images
                 {
                     Id = 531,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/4.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(1)-2.jpg",
                     ProductId = 177,
 
                 },
                 new Images
                 {
                     Id = 532,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882448995926.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6564.jpg",
                     ProductId = 178,
 
                 },
                 new Images
                 {
                     Id = 533,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882450315945.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6605.jpg",
                     ProductId = 178,
 
                 },
                 new Images
                 {
                     Id = 534,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882451896008.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_4978.jpg",
                     ProductId = 178,
 
                 },
                 new Images
                 {
                     Id = 535,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053426432333.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6562.jpg",
                     ProductId = 179,
 
                 },
                 new Images
                 {
                     Id = 536,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053425522315.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6564.jpg",
                     ProductId = 179,
 
                 },
                 new Images
                 {
                     Id = 537,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053424072423.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6605.jpg",
                     ProductId = 179,
 
                 },
                 new Images
                 {
                     Id = 538,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/2.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.2.jpg",
                     ProductId = 180,
 
                 },
                 new Images
                 {
                     Id = 539,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/3.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.4.jpg",
                     ProductId = 180,
 
                 },
                 new Images
                 {
                     Id = 540,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/4.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.14.jpg",
                     ProductId = 180,
 
                 },
                 new Images
                 {
                     Id = 541,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-1102501.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/23CMHU.LL002.3_90_39.jpg",
                     ProductId = 181,
 
                 },
                 new Images
                 {
                     Id = 542,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-1102512.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/LL001.4_38.jpg",
                     ProductId = 181,
 
                 },
                 new Images
                 {
                     Id = 543,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-0653220.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/23CMHU.LL002.4_41_8.jpg",
                     ProductId = 181,
 
                 },
                 new Images
                 {
                     Id = 544,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642354.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/d_52.JPG",
                     ProductId = 182,
 
                 },
                 new Images
                 {
                     Id = 545,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642396.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/b_49.JPG",
                     ProductId = 182,
 
                 },
                 new Images
                 {
                     Id = 546,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642322.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/24CMHU.BB002.3_68.JPG",
                     ProductId = 182,
 
                 },
                 new Images
                 {
                     Id = 547,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742187747662.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMCW.KM006_-_NAVY_8.JPG",
                     ProductId = 183,
 
                 },
                 new Images
                 {
                     Id = 548,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742188627552.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMCW.KM006_-_NAVY_4.JPG",
                     ProductId = 183,
 
                 },
                 new Images
                 {
                     Id = 549,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742189537562.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMCW.KM006_-_NAVY_7.JPG",
                     ProductId = 183,
 
                 },
                 new Images
                 {
                     Id = 550,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333812797881.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_8.JPG",
                     ProductId = 184,
                 },
                 new Images
                 {
                     Id = 551,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333811900019.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_3.JPG",
                     ProductId = 184,
                 },
                 new Images
                 {
                     Id = 552,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333810992534.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_7.JPG",
                     ProductId = 184,
                 },
                 new Images
                 {
                     Id = 553,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777980886164.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.DT001_-_XAM_1.jpg",
                     ProductId = 185,
 
                 },
                 new Images
                 {
                     Id = 554,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777979636127.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.DT003_-_Den_1.JPG",
                     ProductId = 185,
 
                 },
                 new Images
                 {
                     Id = 555,
-                    Url = "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777978286125.jpg",
+                    Url = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.DT001_-_XAM_1.jpg",
                     ProductId = 185,
 
                 }
