@@ -74,7 +74,7 @@ namespace SWP391_BL3W.Services
                 int pageSize = size ?? 15;
                 int pageNumber = page ?? 1;
 
-                var query = _productRepository.Get().Where(x => x.CategoryID == categoryId);
+                var query = _productRepository.Get().Where(x => x.CategoryID == categoryId).OrderByDescending(x => x.Id);
 
                 int totalItems = await query.CountAsync();
 

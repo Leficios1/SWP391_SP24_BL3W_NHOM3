@@ -59,7 +59,16 @@ namespace SWP391_BL3W.Services
                     productEntity.Category = existingCategory;
                     await _baseRepository.AddAsync(productEntity);
                     await _baseRepository.SaveChangesAsync();
-
+                    foreach(var detailDTO in dto.Details)
+                    {
+                        var details = new ProductsDetail
+                        {
+                            Name = detailDTO.Name,
+                            Value = detailDTO.Value,
+                            ProductId = productEntity.Id
+                        };
+                        await _productsDetailRepository.AddAsync(details);
+                    }
                     foreach (var imageDTO in dto.ImageDTOs)
                     {
                         var image = new Images
@@ -73,6 +82,7 @@ namespace SWP391_BL3W.Services
                     response.Data = dto;
                     response.statusCode = HttpStatusCode.Created;
                     response.Errormessge = "Create Successful";
+                    transaction.Commit();
                 }
                 catch (Exception ex)
                 {
@@ -81,7 +91,6 @@ namespace SWP391_BL3W.Services
                     response.Errormessge = $"Error: {ex.Message}";
                     return response;
                 }
-                transaction.Commit();
                 return response;
             }
         }

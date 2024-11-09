@@ -21,8 +21,8 @@ namespace SWP391_BL3W.Controllers
             _mapper = mapper;
         }
         [Authorize]
-        [HttpGet("getById")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("getById/{id}")]
+        public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var response = await _userService.GetUser(id);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });

@@ -28,8 +28,8 @@ namespace SWP391_BL3W
 
             builder.Services.AddCors(o => o.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
             builder.Services.AddDbContext<SWPContext>(options => {
-                options.UseSqlServer("data source=35.186.148.127;initial catalog=electronicDb;user id=sa;password=yourStrong1@Password;trustservercertificate=true;multipleactiveresultsets=true;");
-                //options.UseSqlServer(builder.Configuration.GetConnectionString("ElectricStore"));
+                //options.UseSqlServer("data source=pacific1.database.windows.net;initial catalog=epplus;user id=sa1;password=be12345@;trustservercertificate=true;multipleactiveresultsets=true;");
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ElectricStore"));
             });
             builder.Services.AddAutoMapper(typeof(Program));
 

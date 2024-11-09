@@ -10,7 +10,7 @@ namespace SWP391_BL3W.Services.Interface
         Task<StatusResponse<List<OrderDetailResponseDTO>>> getOrderdetailByOrderId(int orderId);
         Task<StatusResponse<OrderGetAllRespnseDTO>> getAllOrderAsync(int? page, int? size);
         Task<StatusResponse<bool>> updateOrderAsync(int orderId, int status);
-        Task<StatusResponse<DashBoardOrderResponeDTO>> getTotalPriceByOrderDate(DateTime oderdate, int type);
+        Task<StatusResponse<DashBoardOrderResponeDTO>> getTotalPriceByOrderDate(DateTime? oderdate, int type);
         Task<StatusResponse<List<BestSellerReponseDTO>>> getBestSellerProductByCategory();
         Task<StatusResponse<List<LMFE>>> GetFiveWeekRevenue();
     }

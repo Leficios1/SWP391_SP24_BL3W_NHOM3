@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SWP391_BL3W.Migrations
 {
-    public partial class UpdateDB : Migration
+    public partial class UpdateSeedDatav3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -310,10 +310,10 @@ namespace SWP391_BL3W.Migrations
                 columns: new[] { "CategoryID", "CategoryName" },
                 values: new object[,]
                 {
-                    { 1, "Ấm siêu tốc" },
-                    { 2, "Bếp điện từ" },
-                    { 3, "Tivi" },
-                    { 4, "Tủ Lạnh" },
+                    { 1, "Watch" },
+                    { 2, "Shoes" },
+                    { 3, "Glasses" },
+                    { 4, "Perfume" },
                     { 5, "Máy Giặt" },
                     { 6, "Nồi Cơm Điện" },
                     { 7, "Loa" },
@@ -559,16 +559,30 @@ namespace SWP391_BL3W.Migrations
                     { 173, 12, "Lò vi sóng Electrolux EMM20K22W với dung tích 20 lít, công suất 700W, và các tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế trang nhã và hiện đại, phù hợp với mọi không gian bếp.", "https://cdn.tgdd.vn/Products/Images/1987/299616/299616-600x600.jpg", "Electrolux 20 lít EMM20K22W", 720, 1890000m, 1000, 1 },
                     { 174, 12, "Lò vi sóng Panasonic NN-ST34NBYUE với dung tích 25 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình có nhu cầu sử dụng thường xuyên.", "https://cdn.tgdd.vn/Products/Images/1987/303492/303492-min-600x600.jpg", "Panasonic 25 lít NN-ST34NBYUE", 720, 3590000m, 1000, 1 },
                     { 175, 12, "Lò vi sóng BlueStone MOB-7733 có dung tích 25 lít, công suất 900W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.", "https://cdn.tgdd.vn/Products/Images/1987/242774/bluestone-mob-7733-25-lit-0-600x600.jpg", "BlueStone 25 lít MOB-7733", 720, 2799000m, 1000, 1 },
-                    { 176, 12, "Lò vi sóng Panasonic NN-SM33NBYUE với dung tích 25 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.", "https://cdn.tgdd.vn/Products/Images/1987/303491/303491-min-600x600.jpg", "Panasonic 25 lít NN-SM33NBYUE", 720, 3070000m, 1000, 1 },
-                    { 177, 12, "Lò vi sóng Panasonic NN-ST25JWYUE có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và bền bỉ, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.", "https://cdn.tgdd.vn/Products/Images/1987/197818/panasonic-nn-st25jwyue-310723-025041-600x600.jpg", "Panasonic 20 lít NN-ST25JWYUE", 720, 2870000m, 1000, 1 },
-                    { 178, 12, "Lò vi sóng BlueStone MOB-7708B với dung tích 20 lít, công suất 700W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.", "https://cdn.tgdd.vn/Products/Images/1987/242766/bluestone-mob-7708b-20-lit-260723-103853-600x600.jpg", "BlueStone 20 lít MOB-7708B", 720, 1849000m, 1000, 1 },
-                    { 179, 12, "Lò vi sóng Electrolux EMG30D22BM có dung tích lớn 30 lít, công suất 1000W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.", "https://cdn.tgdd.vn/Products/Images/1987/305855/lo-vi-song-electrolux-emg30d22bm-30-lit-240423-095632-600x600.jpg", "Electrolux 30 lít EMG30D22BM", 720, 4740000m, 1000, 1 },
-                    { 180, 12, "Lò vi sóng Samsung MS23K3513AS/SV-N với dung tích 23 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là lựa chọn phù hợp cho mọi gia đình.", "https://cdn.tgdd.vn/Products/Images/1987/203059/lo-vi-song-samsung-ms23k3513as-sv-n-23-lit-310723-031206-600x600.jpg", "Samsung 23 lít MS23K3513AS/SV-N", 720, 1690000m, 1000, 1 },
-                    { 181, 12, "Lò vi sóng Sharp R-205VN(S) với dung tích 20 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách dễ dàng và tiện lợi. Thiết kế hiện đại và bền bỉ, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.", "https://cdn.tgdd.vn/Products/Images/1987/69080/sharp-r-205vn-s-20-lit-020223-111427-600x600.jpg", "Sharp 20 lít R-205VN(S)", 720, 1590000m, 1000, 1 },
-                    { 182, 12, "Lò vi sóng Sharp R-209VN-SK có dung tích 20 lít, công suất 800W, và nhiều chức năng nấu nướng đa dạng. Thiết kế tiện lợi và đẳng cấp, sản phẩm này là lựa chọn lý tưởng cho các gia đình cần một chiếc lò vi sóng đáng tin cậy.", "https://cdn.tgdd.vn/Products/Images/1987/235256/235256%20(1)-600x600.jpg", "Sharp 20 lít R-209VN-SK", 720, 1670000m, 1000, 1 },
-                    { 183, 12, " Lò vi sóng Electrolux EMG20K38GWP với dung tích 20 lít, công suất 800W, và các tính năng tiện ích giúp bạn nấu nướng một cách dễ dàng và nhanh chóng. Thiết kế hiện đại và tiết kiệm không gian, sản phẩm này là sự lựa chọn phù hợp cho mọi gia đình.", "https://cdn.tgdd.vn/Products/Images/1987/203563/lo-vi-song-electrolux-emg20k38gwp-310723-031401-600x600.jpg", "Electrolux 20 lít EMG20K38GWP", 720, 1990000m, 1000, 1 },
-                    { 184, 12, " Lò vi sóng Sharp R-211TV-BK với dung tích 21 lít, công suất 800W, và nhiều tính năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.", "https://cdn.tgdd.vn/Products/Images/1987/316809/lo-vi-song-sharp-r-211tv-bk-21-lit-0-600x600.jpg", "Sharp 21 lít R-211TV-BK", 720, 1890000m, 1000, 1 },
-                    { 185, 12, " Lò vi sóng Electrolux EMG23D22B có dung tích lớn 23 lít, công suất 800W, và nhiều chức năng thông minh giúp bạn nấu nướng một cách linh hoạt và tiện lợi. Thiết kế sang trọng và đẳng cấp, sản phẩm này phản ánh sự chuyên nghiệp và hiện đại trong không gian bếp của bạn.", "https://cdn.tgdd.vn/Products/Images/1987/299618/299618-600x600-1.jpg", "Electrolux 23 lít EMG23D22B", 720, 2490000m, 1000, 1 }
+                    { 176, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2024/ogototton2_86.jpg", "Mũ Lưỡi Trai Dáng Thể Thao", 720, 144000m, 1000, 1 },
+                    { 177, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(8).jpg", "Quần shorts 6 inch Racquet Sports", 720, 189000m, 1000, 2 },
+                    { 178, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_4981_67.jpg", "Wristband thể thao", 720, 59000m, 1000, 2 },
+                    { 179, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_4978.jpg", "Headband thể thao", 720, 79000m, 1000, 2 },
+                    { 180, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.19.jpg", "Tất cổ trung cầu lông", 720, 60000m, 1000, 2 },
+                    { 181, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/LL001.5_12.jpg", "Quần Lót Nam Long Leg", 720, 80000m, 1000, 2 },
+                    { 182, 2, "91% Lenzing Modal 9% Spandex, Kiểu dệt: Knit - Jersey, Khả năng hút ẩm tốt và mát tự nhiên, Thân thiện với da và môi trường, Co giãn tốt, chống nhăn, Có độ bền tốt, hạn chế xù lông, bai dão.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/mix2.jpg", "Combo 2 Quần Lót Nam Boxer Brief Lenzing Modal", 720, 167000m, 1000, 2 },
+                    { 183, 2, "Chất liệu vải: 100% Polyamide, Form dáng: Regular, Cấu trúc vải nylon có khả năng chống gió, Bên trong vải được nhồi bông tăng khả năng giữ ấm, Túi 2 bên chắc chắn thoải mái, đựng các vật dụng quan trọng.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.KM006_-_NAVY_1.jpg", "Áo phao nhẹ Ultrawarm", 720, 699000m, 1000, 2 },
+                    { 184, 2, "Chất liệu 100% Polyester, Form dáng: Regular fit, Công nghệ ExDry thấm hút tốt, nhanh khô, thoáng khí, Kiểu dệt Mini Square tạo các lỗ nhỏ trên vải giúp thoáng khí hơn, Sản phẩm được đánh giá phù hợp với hoạt động chạy bộ bởi các Runner.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_1.JPG", "Áo Singlet Chạy Bộ Graphic Dot", 720, 189000m, 1000, 2 },
+                    { 185, 2, "Thành phần vải: 90% Polyester 10% Spandex, Form dáng: Slimfit ôm nhẹ vào cơ thể, Chất liệu mềm mại và khả năng giữ ấm tốt, Phù hợp: Mặc trong hoặc mặc ở nhà, Tự hào sản xuất tại Việt Nam.", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.DT001_-_XAM_1.jpg", "Áo giữ nhiệt Essential Brush Poly cổ thấp", 720, 149000m, 1000, 2 },
+                    { 186, 1, "Đồng hồ Casio dây da chính hãng, mặt số trắng, kim cả dạ quang, chống nước 50m", "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png", "Đồng Hồ Casio MTP-V005L-1BUDF", 365, 499000m, 500, 1 },
+                    { 187, 1, "Đồng hồ Citizen dây da, mặt số trắng, kim dạ quang, chống nước 50m", "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png", "Đồng Hồ Citizen BI5058-02A", 365, 1999000m, 300, 1 },
+                    { 188, 1, "Đồng hồ Seiko dây kim loại, mặt số đen, chống nước 200m", "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png", "Đồng Hồ Seiko SKX007K1", 365, 5999000m, 200, 1 },
+                    { 189, 1, "Đồng hồ Timex dây vải, mặt số đen, chống nước 30m", "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png", "Đồng Hồ Timex Weekender TW2P91300", 365, 799000m, 600, 1 },
+                    { 190, 3, "Kính mát nam khung vuông, chất liệu kim loại, tròng kính chống UV400", "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg", "Kính Mát Nam AEVOGUE AE0526", 180, 599000m, 300, 1 },
+                    { 191, 3, "Kính mát nam kiểu dáng Wayfarer, chất liệu nhựa, tròng kính phân cực chống loá", "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg", "Kính Mát Nam POLARIZED CLASSIC PO3025S", 180, 999000m, 400, 1 },
+                    { 192, 3, "Kính mát nam kiểu dáng Aviator, chất liệu nhựa, tròng kính chống UV400", "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg", "Kính Mát Nam OAKLEY HOLBROOK OO9102", 180, 2499000m, 250, 1 },
+                    { 193, 3, "Kính mát nam kiểu dáng Clubmaster, chất liệu kim loại và nhựa, tròng kính chống UV400", "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg", "Kính Mát Nam RAYBAN RB4293CH", 180, 3299000m, 180, 1 },
+                    { 194, 3, "Kính mát nam kiểu dáng Wayfarer, chất liệu nhựa acetate, tròng kính chống UV400", "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg", "Kính Mát Nam PERSOL PO3251S", 180, 4799000m, 220, 1 },
+                    { 195, 4, "Nước hoa nam Dior Sauvage, hương thơm gỗ ấm áp và quyến rũ", "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png", "NƯỚC HOA NAM DIOR SAUVAGE EAU DE TOILETTE", 730, 2499000m, 150, 1 },
+                    { 196, 4, "Nước hoa nam Bleu de Chanel, hương thơm gỗ và hương hoa cỏ sang trọng", "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png", "NƯỚC HOA NAM BLEU DE CHANEL EAU DE PARFUM", 730, 2999000m, 0, 1 },
+                    { 197, 4, "Nước hoa nam Acqua di Gio Profumo, hương thơm biển và gỗ mạnh mẽ", "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png", "NƯỚC HOA NAM ACQUA DI GIO PROFUMO", 730, 2799000m, 100, 1 },
+                    { 198, 4, "Nước hoa nam Dior Homme Sport, hương thơm tươi mát và sảng khoái", "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/dior-homme-sport.jpg", "NƯỚC HOA NAM DIOR HOMME SPORT", 730, 2199000m, 80, 1 },
+                    { 505, 4, "Nước hoa nam Creed Aventus, hương thơm trái cây và gỗ sang trọng", "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png", "NƯỚC HOA NAM CREED AVENTUS", 730, 5699000m, 60, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -576,7 +590,7 @@ namespace SWP391_BL3W.Migrations
                 columns: new[] { "Id", "Address", "AvatarUrl", "DateOfBirth", "Email", "Gender", "Name", "Password", "RoleId", "phone", "status" },
                 values: new object[,]
                 {
-                    { 1, "HCM", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2024, 4, 21, 15, 20, 26, 450, DateTimeKind.Local).AddTicks(3500), "admin@gmail.com", "Male", "admin", "12345", 1, "0321456789", true },
+                    { 1, "HCM", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2024, 11, 9, 11, 37, 29, 676, DateTimeKind.Local).AddTicks(3409), "admin@gmail.com", "Male", "admin", "12345", 1, "0321456789", true },
                     { 2, "HCM", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2002, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "customer@gmail.com", "Male", "Custommer", "12345", 2, "0501255079", true },
                     { 3, "Ho Chi Minh City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1999, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "jennifer.nguyen@gmail.com", "Female", "Jennifer Nguyen", "12345", 2, "0987654321", true },
                     { 4, "HCMC, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1995, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "david.tran@gmail.com", "Male", "David Tran", "12345", 2, "0901234567", true },
@@ -586,7 +600,14 @@ namespace SWP391_BL3W.Migrations
                     { 8, "District 1, HCM", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1985, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "alex.nguyen@gmail.com", "Male", "Alex Nguyen", "12345", 2, "0987654321", true },
                     { 9, "Khanh Hoa, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2003, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "nkhuong038424@gmail.com", "Male", "David Khương", "12345", 2, "0905022946", true },
                     { 10, "Quang Ngai, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2003, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "khoatony3705@gmail.com", "Male", "Tony Khoa", "12345", 2, "0987657456", true },
-                    { 11, "Binh Thanh District, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1997, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "michelle.pham@gmail.com", "Female", "Michelle Pham", "12345", 2, "0965432187", true },
+                    { 11, "Binh Thanh District, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1997, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "michelle.pham@gmail.com", "Female", "Michelle Pham", "12345", 2, "0965432187", true }
+                });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "Id", "Address", "AvatarUrl", "DateOfBirth", "Email", "Gender", "Name", "Password", "RoleId", "phone", "status" },
+                values: new object[,]
+                {
                     { 12, "Da nang City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1983, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "jason.hoang@gmail.com", "Male", "Jason Hoang", "12345", 2, "0934567890", true },
                     { 13, "Tan Phu District, HCMC", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1991, 8, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "stephanie.truong@gmail.com", "Female", "Stephanie Truong", "12345", 2, "0908765432", true },
                     { 14, "Vinh City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1997, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "bray.nguyen@gmail.com", "Male", "Bray Nguyen", "12345", 2, "0976543210", true },
@@ -600,14 +621,7 @@ namespace SWP391_BL3W.Migrations
                     { 22, "Binh Duong, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2003, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.khoa@gmail.com", "Male", "Admin Khoa", "12345", 1, "0953354430", true },
                     { 23, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2002, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.khoi@gmail.com", "Male", "Admin Khoi", "12345", 1, "0953353409", true },
                     { 24, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(1993, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.Truong@gmail.com", "Male", "Staff Truong", "12345", 3, "0501370820", true },
-                    { 25, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2002, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.quynh@gmail.com", "Female", "Staff Quynh", "12345", 3, "0502360820", true }
-                });
-
-            migrationBuilder.InsertData(
-                table: "User",
-                columns: new[] { "Id", "Address", "AvatarUrl", "DateOfBirth", "Email", "Gender", "Name", "Password", "RoleId", "phone", "status" },
-                values: new object[,]
-                {
+                    { 25, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2002, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.quynh@gmail.com", "Female", "Staff Quynh", "12345", 3, "0502360820", true },
                     { 26, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2002, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.anh@gmail.com", "Female", "Staff Anh", "12345", 3, "0502360730", true },
                     { 27, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2002, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.duc@gmail.com", "Male", "Staff Duc", "12345", 3, "0502366423", true },
                     { 28, "HCM City, Vietnam", "https://inkythuatso.com/uploads/thumbnails/800/2023/03/9-anh-dai-dien-trang-inkythuatso-03-15-27-03.jpg", new DateTime(2003, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin.Dang@gmail.com", "Male", "Staff Dang", "12345", 3, "0502360830", true },
@@ -1246,17 +1260,17 @@ namespace SWP391_BL3W.Migrations
                     { 523, 175, "https://cdn.tgdd.vn/Products/Images/1987/242774/Slider/bluestone-mob-7733-25-lit637688001563014937.jpg" },
                     { 524, 175, "https://cdn.tgdd.vn/Products/Images/1987/242774/Slider/3-1020x570.jpg" },
                     { 525, 175, "https://cdn.tgdd.vn/Products/Images/1987/242774/Slider/4-1020x570.jpg" },
-                    { 526, 176, "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082498421640.jpg" },
-                    { 527, 176, "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082497591644.jpg" },
-                    { 528, 176, "https://cdn.tgdd.vn/Products/Images/1987/303491/Slider/lo-vi-song-panasonic-nn-sm33nbyue-25-lit638193082496741625.jpg" },
-                    { 529, 177, "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/2-min.jpg" },
-                    { 530, 177, "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/3.jpg" },
-                    { 531, 177, "https://cdn.tgdd.vn/Products/Images/1987/197818/Slider/4.jpg" },
-                    { 532, 178, "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882448995926.jpg" },
-                    { 533, 178, "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882450315945.jpg" },
-                    { 534, 178, "https://cdn.tgdd.vn/Products/Images/1987/242766/Slider/bluestone-mob-7708b-20-lit637704882451896008.jpg" },
-                    { 535, 179, "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053426432333.jpg" },
-                    { 536, 179, "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053425522315.jpg" }
+                    { 526, 176, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/April2024/24CMCW.MU003.22z_30.jpg" },
+                    { 527, 176, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/March2024/g24CMCW.MU001.3.jpg" },
+                    { 528, 176, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/March2024/g24CMCW.MU001.2.jpg" },
+                    { 529, 177, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(7).jpg" },
+                    { 530, 177, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(3).jpg" },
+                    { 531, 177, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/quan_cau_long_(1)-2.jpg" },
+                    { 532, 178, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6564.jpg" },
+                    { 533, 178, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6605.jpg" },
+                    { 534, 178, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_4978.jpg" },
+                    { 535, 179, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6562.jpg" },
+                    { 536, 179, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6564.jpg" }
                 });
 
             migrationBuilder.InsertData(
@@ -1264,25 +1278,25 @@ namespace SWP391_BL3W.Migrations
                 columns: new[] { "Id", "ProductId", "Url" },
                 values: new object[,]
                 {
-                    { 537, 179, "https://cdn.tgdd.vn/Products/Images/1987/305855/Slider/lo-vi-song-electrolux-emg30d22bm-30-lit638200053424072423.jpg" },
-                    { 538, 180, "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/2.jpg" },
-                    { 539, 180, "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/3.jpg" },
-                    { 540, 180, "https://cdn.tgdd.vn/Products/Images/1987/203059/Slider/4.jpg" },
-                    { 541, 181, "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-1102501.jpg" },
-                    { 542, 181, "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-1102512.jpg" },
-                    { 543, 181, "https://cdn.tgdd.vn/Products/Images/1987/69080/Slider/251021-0653220.jpg" },
-                    { 544, 182, "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642354.jpg" },
-                    { 545, 182, "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642396.jpg" },
-                    { 546, 182, "https://cdn.tgdd.vn/Products/Images/1987/235256/Slider/150321-0642322.jpg" },
-                    { 547, 183, "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742187747662.jpg" },
-                    { 548, 183, "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742188627552.jpg" },
-                    { 549, 183, "https://cdn.tgdd.vn/Products/Images/1987/203563/Slider/lo-vi-song-electrolux-emg20k38gwp637696742189537562.jpg" },
-                    { 550, 184, "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333812797881.jpg" },
-                    { 551, 184, "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333811900019.jpg" },
-                    { 552, 184, "https://cdn.tgdd.vn/Products/Images/1987/316809/Slider/lo-vi-song-sharp-r-211tv-bk-21-lit638363333810992534.jpg" },
-                    { 553, 185, "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777980886164.jpg" },
-                    { 554, 185, "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777979636127.jpg" },
-                    { 555, 185, "https://cdn.tgdd.vn/Products/Images/1987/299618/Slider/lo-vi-song-co-nuong-electrolux-emg23d22b-23-lit638131777978286125.jpg" }
+                    { 537, 179, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2024/PHUKIENCAULONG_IMG_6605.jpg" },
+                    { 538, 180, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.2.jpg" },
+                    { 539, 180, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.4.jpg" },
+                    { 540, 180, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2024/24CMAW.TA004.14.jpg" },
+                    { 541, 181, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/23CMHU.LL002.3_90_39.jpg" },
+                    { 542, 181, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/LL001.4_38.jpg" },
+                    { 543, 181, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/23CMHU.LL002.4_41_8.jpg" },
+                    { 544, 182, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/d_52.JPG" },
+                    { 545, 182, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/b_49.JPG" },
+                    { 546, 182, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2024/24CMHU.BB002.3_68.JPG" },
+                    { 547, 183, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMCW.KM006_-_NAVY_8.JPG" },
+                    { 548, 183, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMCW.KM006_-_NAVY_4.JPG" },
+                    { 549, 183, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMCW.KM006_-_NAVY_7.JPG" },
+                    { 550, 184, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_8.JPG" },
+                    { 551, 184, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_3.JPG" },
+                    { 552, 184, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.TT015_-_Do_7.JPG" },
+                    { 553, 185, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.DT001_-_XAM_1.jpg" },
+                    { 554, 185, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2024/24CMAW.DT003_-_Den_1.JPG" },
+                    { 555, 185, "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/24CMCW.DT001_-_XAM_1.jpg" }
                 });
 
             migrationBuilder.InsertData(

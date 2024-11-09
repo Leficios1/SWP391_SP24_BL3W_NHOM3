@@ -33,12 +33,12 @@ namespace SWP391_BL3W.Services
                 var cart = await _cartRepo.Get().Where(x => x.UserId == dto.UserId && x.ProductId == dto.ProductId).FirstOrDefaultAsync();
                 if (cart == null)
                 {
-                    //if (!(await CheckQuantity(1, dto.ProductId)))
-                    //{
-                    //    response.statusCode = HttpStatusCode.BadRequest;
-                    //    response.Errormessge = "Quanity is not enough to add to cart.";
-                    //    return response;
-                    //}
+                    if (!(await CheckQuantity(1, dto.ProductId)))
+                    {
+                        response.statusCode = HttpStatusCode.BadRequest;
+                        response.Errormessge = "Quanity is not enough to add to cart.";
+                        return response;
+                    }
                     await _cartRepo.AddAsync(new Cart()
                     {
                         ProductId = dto.ProductId,
@@ -48,12 +48,12 @@ namespace SWP391_BL3W.Services
                 }
                 else
                 {
-                    //if (!(await CheckQuantity(cart.Quantity + 1, dto.ProductId)))
-                    //{
-                    //    response.statusCode = HttpStatusCode.BadRequest;
-                    //    response.Errormessge = "Quanity is not enough to add to cart.";
-                    //    return response;
-                    //}
+                    if (!(await CheckQuantity(cart.Quantity + 1, dto.ProductId)))
+                    {
+                        response.statusCode = HttpStatusCode.BadRequest;
+                        response.Errormessge = "Quanity is not enough to add to cart.";
+                        return response;
+                    }
                     cart.Quantity += dto.Quantity;
                     _cartRepo.Update(cart);
                 }

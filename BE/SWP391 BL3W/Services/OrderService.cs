@@ -175,12 +175,12 @@ namespace SWP391_BL3W.Services
                 var ordersWithinYear = await _baseRepository.Get()
                     .Include(o => o.OrdersDetail)
                     .ThenInclude(od => od.Product)
-                    .Where(o => o.OrderDate >= startDate)
+                    .Where(o => o.OrderDate >= startDate && o.status != 3)
                     .ToListAsync();
 
                 if (ordersWithinYear == null || !ordersWithinYear.Any())
                 {
-                    response.statusCode = HttpStatusCode.BadRequest;
+                    response.statusCode = HttpStatusCode.OK;
                     response.Errormessge = "No orders found within the past year.";
                     return response;
                 }
@@ -246,7 +246,7 @@ namespace SWP391_BL3W.Services
                     var weekEnd = weekStart.AddDays(7);
 
                     var weekRevenue = await _baseRepository.Get()
-                        .Where(r => r.OrderDate >= weekStart && r.OrderDate < weekEnd)
+                        .Where(r => r.OrderDate >= weekStart && r.OrderDate < weekEnd  && r.status != 3)
                         .ToListAsync();
 
                     revenues.Add(new LMFE
@@ -349,7 +349,7 @@ namespace SWP391_BL3W.Services
         }
 
 
-        public async Task<StatusResponse<DashBoardOrderResponeDTO>> getTotalPriceByOrderDate(DateTime orderDate, int type)
+        public async Task<StatusResponse<DashBoardOrderResponeDTO>> getTotalPriceByOrderDate(DateTime? orderDate, int type)
         {
             var response = new StatusResponse<DashBoardOrderResponeDTO>();
             try
@@ -362,24 +362,28 @@ namespace SWP391_BL3W.Services
                     case 1:
                         orderDate = DateTime.Now;
                         totalOrder = await _context.Orders
-                            .Where(o => o.OrderDate.Date == orderDate.Date && o.status != 3)
+                            .Where(o => o.OrderDate.Date == orderDate.Value.Date && o.status != 3)
                             .CountAsync();
                         totalPrice = await _context.Orders
-                            .Where(o => o.OrderDate.Date == orderDate.Date && o.status != 3)
+                            .Where(o => o.OrderDate.Date == orderDate.Value.Date && o.status != 3)
                             .SumAsync(o => o.TotalPrice);
                         break;
                     case 2:
-                        DateTime weekStartDate = orderDate.Date.AddDays(-7);
+                        if(orderDate == null)
+                        {
+                            orderDate = DateTime.Now;
+                        }
+                        DateTime weekStartDate = orderDate.Value.Date.AddDays(-7);
                         totalOrder = await _context.Orders
-                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date && o.status != 3)
+                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Value.Date && o.status != 3)
                             .CountAsync();
                         totalPrice = await _context.Orders
-                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Date && o.status != 3)
+                            .Where(o => o.OrderDate.Date >= weekStartDate && o.OrderDate.Date <= orderDate.Value.Date && o.status != 3)
                             .SumAsync(o => o.TotalPrice);
                         break;
                     case 3:
                         orderDate = DateTime.Now;
-                        DateTime monthStartDate = new DateTime(orderDate.Year, orderDate.Month, 1);
+                        DateTime monthStartDate = new DateTime(orderDate.Value.Year, orderDate.Value.Month, 1);
                         DateTime monthEndDate = monthStartDate.AddMonths(1).AddDays(-1);
                         totalOrder = await _context.Orders
                             .Where(o => o.OrderDate.Date >= monthStartDate && o.OrderDate.Date <= monthEndDate && o.status != 3)

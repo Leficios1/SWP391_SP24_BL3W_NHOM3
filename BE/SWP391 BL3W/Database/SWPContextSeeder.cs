@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using static System.Net.WebRequestMethods;
 
 namespace SWP391_BL3W.Database
 {
@@ -28,22 +29,22 @@ namespace SWP391_BL3W.Database
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Ấm siêu tốc"
+                    CategoryName = "Watch"
                 },
                 new Category
                 {
                     CategoryID = 2,
-                    CategoryName = "Bếp điện từ"
+                    CategoryName = "Shoes"
                 },
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Tivi"
+                    CategoryName = "Glasses"
                 },
                 new Category
                 {
                     CategoryID = 4,
-                    CategoryName = "Tủ Lạnh"
+                    CategoryName = "Perfume"
                 },
                 new Category
                 {
@@ -2649,7 +2650,7 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 144000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
+                       CategoryID = 2,
                        status = 1,
                    },
                    new Product
@@ -2661,8 +2662,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 189000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2673,8 +2674,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 59000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2685,8 +2686,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 79000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2697,8 +2698,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 60000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2709,8 +2710,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 80000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2721,8 +2722,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 167000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2733,8 +2734,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 699000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2745,8 +2746,8 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 189000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
+                       CategoryID = 2,
+                       status = 2,
                    },
                    new Product
                    {
@@ -2757,9 +2758,190 @@ namespace SWP391_BL3W.Database
                        quantity = 1000,
                        price = 149000,
                        WarrantyPeriod = 720,
-                       CategoryID = 12,
-                       status = 1,
-                   }
+                       CategoryID = 2,
+                       status = 2,
+                   },
+                   new Product
+                   {
+                       Id = 186,
+                       Name = "Đồng Hồ Casio MTP-V005L-1BUDF",
+                       Description = "Đồng hồ Casio dây da chính hãng, mặt số trắng, kim cả dạ quang, chống nước 50m",
+                       ImageUrl = "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png",
+                       quantity = 500,
+                       price = 499000,
+                       WarrantyPeriod = 365,
+                       CategoryID = 1,
+                       status = 1
+                   },
+
+                   new Product
+                   {
+                       Id = 187,
+                       Name = "Đồng Hồ Citizen BI5058-02A",
+                       Description = "Đồng hồ Citizen dây da, mặt số trắng, kim dạ quang, chống nước 50m",
+                       ImageUrl = "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png",
+                       quantity = 300,
+                       price = 1999000,
+                       WarrantyPeriod = 365,
+                       CategoryID = 1,
+                       status = 1
+                   },
+new Product
+{
+    Id = 188,
+    Name = "Đồng Hồ Seiko SKX007K1",
+    Description = "Đồng hồ Seiko dây kim loại, mặt số đen, chống nước 200m",
+    ImageUrl = "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png",
+    quantity = 200,
+    price = 5999000,
+    WarrantyPeriod = 365,
+    CategoryID = 1,
+    status = 1
+},
+
+new Product
+{
+    Id = 189,
+    Name = "Đồng Hồ Timex Weekender TW2P91300",
+    Description = "Đồng hồ Timex dây vải, mặt số đen, chống nước 30m",
+    ImageUrl = "https://cdn.pnj.io/images/detailed/174/sp-wca00000211-ga-700mmc-1adrdong-ho-casio-nam-ga-700mmc-1adr-day-cao-su-55-mm-1.png",
+    quantity = 600,
+    price = 799000,
+    WarrantyPeriod = 365,
+    CategoryID = 1,
+    status = 1
+},
+
+// Mắt kính nam
+new Product
+{
+    Id = 190,
+    Name = "Kính Mát Nam AEVOGUE AE0526",
+    Description = "Kính mát nam khung vuông, chất liệu kim loại, tròng kính chống UV400",
+    ImageUrl = "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg",
+    quantity = 300,
+    price = 599000,
+    WarrantyPeriod = 180,
+    CategoryID = 3,
+    status = 1
+},
+
+new Product
+{
+    Id = 191,
+    Name = "Kính Mát Nam POLARIZED CLASSIC PO3025S",
+    Description = "Kính mát nam kiểu dáng Wayfarer, chất liệu nhựa, tròng kính phân cực chống loá",
+    ImageUrl = "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg",
+    quantity = 400,
+    price = 999000,
+    WarrantyPeriod = 180,
+    CategoryID = 3,
+    status = 1
+},
+
+new Product
+{
+    Id = 192,
+    Name = "Kính Mát Nam OAKLEY HOLBROOK OO9102",
+    Description = "Kính mát nam kiểu dáng Aviator, chất liệu nhựa, tròng kính chống UV400",
+    ImageUrl = "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg",
+    quantity = 250,
+    price = 2499000,
+    WarrantyPeriod = 180,
+    CategoryID = 3,
+    status = 1
+},
+
+new Product
+{
+    Id = 193,
+    Name = "Kính Mát Nam RAYBAN RB4293CH",
+    Description = "Kính mát nam kiểu dáng Clubmaster, chất liệu kim loại và nhựa, tròng kính chống UV400",
+    ImageUrl = "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg",
+    quantity = 180,
+    price = 3299000,
+    WarrantyPeriod = 180,
+    CategoryID = 3,
+    status = 1
+},
+
+new Product
+{
+    Id = 194,
+    Name = "Kính Mát Nam PERSOL PO3251S",
+    Description = "Kính mát nam kiểu dáng Wayfarer, chất liệu nhựa acetate, tròng kính chống UV400",
+    ImageUrl = "https://product.hstatic.net/1000269337/product/z4183143349263_83523b0af8288a6113ed5155fb920475_85c899f0674340c58e74f2ee91edc6bf_master.jpg",
+    quantity = 220,
+    price = 4799000,
+    WarrantyPeriod = 180,
+    CategoryID = 3,
+    status = 1
+},
+
+// Nước hoa nam
+new Product
+{
+    Id = 195,
+    Name = "NƯỚC HOA NAM DIOR SAUVAGE EAU DE TOILETTE",
+    Description = "Nước hoa nam Dior Sauvage, hương thơm gỗ ấm áp và quyến rũ",
+    ImageUrl = "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png",
+    quantity = 150,
+    price = 2499000,
+    WarrantyPeriod = 730,
+    CategoryID = 4,
+    status = 1
+},
+
+new Product
+{
+    Id = 196,
+    Name = "NƯỚC HOA NAM BLEU DE CHANEL EAU DE PARFUM",
+    Description = "Nước hoa nam Bleu de Chanel, hương thơm gỗ và hương hoa cỏ sang trọng",
+    ImageUrl = "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png",
+    price = 2999000,
+    WarrantyPeriod = 730,
+    CategoryID = 4,
+    status = 1
+},
+
+new Product
+{
+    Id = 197,
+    Name = "NƯỚC HOA NAM ACQUA DI GIO PROFUMO",
+    Description = "Nước hoa nam Acqua di Gio Profumo, hương thơm biển và gỗ mạnh mẽ",
+    ImageUrl = "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png",
+    quantity = 100,
+    price = 2799000,
+    WarrantyPeriod = 730,
+    CategoryID = 4,
+    status = 1
+},
+
+new Product
+{
+    Id = 198,
+    Name = "NƯỚC HOA NAM DIOR HOMME SPORT",
+    Description = "Nước hoa nam Dior Homme Sport, hương thơm tươi mát và sảng khoái",
+    ImageUrl = "https://media3.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/November2024/dior-homme-sport.jpg",
+    quantity = 80,
+    price = 2199000,
+    WarrantyPeriod = 730,
+    CategoryID = 4,
+    status = 1
+},
+
+new Product
+{
+    Id = 505,
+    Name = "NƯỚC HOA NAM CREED AVENTUS",
+    Description = "Nước hoa nam Creed Aventus, hương thơm trái cây và gỗ sang trọng",
+    ImageUrl = "https://product.hstatic.net/1000025647/product/nuoc-hoa-bleu-de-chanel-parfum-spray_1024x1024.png",
+    quantity = 60,
+    price = 5699000,
+    WarrantyPeriod = 730,
+    CategoryID = 4,
+    status = 1
+}
                 );
             modelBuilder.Entity<ProductsDetail>().HasData(
                 new ProductsDetail
@@ -2976,7 +3158,7 @@ namespace SWP391_BL3W.Database
             modelBuilder.Entity<Images>().HasData(
                 new Images
                 {
-                   Id = 1,
+                    Id = 1,
                     Url = "https://cdn.tgdd.vn/Products/Images/1989/73312/Slider/vi-vn-1.jpg",
                     ProductId = 1,
                 },
@@ -4229,7 +4411,7 @@ namespace SWP391_BL3W.Database
                 {
                     Id = 181,
                     Url = "https://cdn.tgdd.vn/Products/Images/1943/307871/Slider/lg-gr-b256jds638216667257173349.jpg",
-                    ProductId =61,
+                    ProductId = 61,
 
                 },
                 new Images
@@ -5044,7 +5226,7 @@ namespace SWP391_BL3W.Database
                     ProductId = 99,
 
                 },
-                
+
                 new Images
                 {
                     Id = 298,
@@ -6852,8 +7034,8 @@ namespace SWP391_BL3W.Database
             modelBuilder.Entity<CategoryBlog>().HasData(
                     new CategoryBlog
                     {
-                        Id=1,
-                        Name= "Tủ lạnh",
+                        Id = 1,
+                        Name = "Tủ lạnh",
 
                     },
                     new CategoryBlog
@@ -6914,12 +7096,12 @@ namespace SWP391_BL3W.Database
             modelBuilder.Entity<Blog>().HasData(
                 new Blog
                 {
-                    Id= 1,
-                    Title= "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
-                    content= "<p>\r\n    Chào mừng bạn đến với bài viết này, nơi chúng tôi sẽ giới thiệu về loạt tủ lạnh tiết kiệm năng lượng hàng đầu từ ELICTRICITY STORE. Khám phá sức mạnh của công nghệ tiên tiến kết hợp với hiệu suất vượt trội, mang lại sự tiện ích và tiết kiệm năng lượng không ngờ tới.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/400.webp 400w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/480.webp 480w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/500.webp 500w\" type=\"image/webp\" sizes=\"(max-width: 500px) 100vw, 500px\"><img class=\"image_resized\" style=\"width:50.85%;\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/500.png\" data-ckbox-resource-id=\"ip64EguHXw0W\" width=\"500\" height=\"500\"></picture>\r\n</p>\r\n<p>\r\n    Đa dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Tủ lạnh của ELICTRICITY STORE không chỉ đơn thuần là một thiết bị lưu trữ thực phẩm, mà còn là biểu tượng của sự hiện đại và tiện nghi trong không gian bếp của bạn. Với một loạt các loại tủ lạnh từ các thương hiệu hàng đầu thế giới, bạn có thể dễ dàng tìm thấy lựa chọn phù hợp với nhu cầu và phong cách của gia đình bạn.\r\n</p>\r\n<p>\r\n    Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường\r\n</p>\r\n<p>\r\n    Với mục tiêu hướng tới sự bền vững và tiết kiệm năng lượng, các dòng tủ lạnh từ ELICTRICITY STORE được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ điện năng mà vẫn đảm bảo hiệu suất hoạt động tối ưu. Bằng cách chọn một chiếc tủ lạnh tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí hoạt động mà còn đóng góp tích cực vào việc bảo vệ môi trường.\r\n</p>\r\n<p>\r\n    Tính Tiện Lợi và Thân Thiện Người Dùng\r\n</p>\r\n<p>\r\n    Điện Máy Xanh cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc tủ lạnh hoàn hảo nhất cho gia đình và không gian sống của mình.\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới đa dạng và phong phú của các dòng tủ lạnh hàng đầu từ các thương hiệu uy tín trên thị trường. Hãy để chúng tôi cùng bạn tạo nên một không gian bếp hoàn hảo, tiện nghi và thân thiện với môi trường. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc tủ lạnh!\r\n</p>\r\n<p>\r\n    &nbsp;\r\n</p>",
+                    Id = 1,
+                    Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
+                    content = "<p>\r\n    Chào mừng bạn đến với bài viết này, nơi chúng tôi sẽ giới thiệu về loạt tủ lạnh tiết kiệm năng lượng hàng đầu từ ELICTRICITY STORE. Khám phá sức mạnh của công nghệ tiên tiến kết hợp với hiệu suất vượt trội, mang lại sự tiện ích và tiết kiệm năng lượng không ngờ tới.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/400.webp 400w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/480.webp 480w,https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/500.webp 500w\" type=\"image/webp\" sizes=\"(max-width: 500px) 100vw, 500px\"><img class=\"image_resized\" style=\"width:50.85%;\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/ip64EguHXw0W/images/500.png\" data-ckbox-resource-id=\"ip64EguHXw0W\" width=\"500\" height=\"500\"></picture>\r\n</p>\r\n<p>\r\n    Đa dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Tủ lạnh của ELICTRICITY STORE không chỉ đơn thuần là một thiết bị lưu trữ thực phẩm, mà còn là biểu tượng của sự hiện đại và tiện nghi trong không gian bếp của bạn. Với một loạt các loại tủ lạnh từ các thương hiệu hàng đầu thế giới, bạn có thể dễ dàng tìm thấy lựa chọn phù hợp với nhu cầu và phong cách của gia đình bạn.\r\n</p>\r\n<p>\r\n    Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường\r\n</p>\r\n<p>\r\n    Với mục tiêu hướng tới sự bền vững và tiết kiệm năng lượng, các dòng tủ lạnh từ ELICTRICITY STORE được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ điện năng mà vẫn đảm bảo hiệu suất hoạt động tối ưu. Bằng cách chọn một chiếc tủ lạnh tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí hoạt động mà còn đóng góp tích cực vào việc bảo vệ môi trường.\r\n</p>\r\n<p>\r\n    Tính Tiện Lợi và Thân Thiện Người Dùng\r\n</p>\r\n<p>\r\n    Điện Máy Xanh cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc tủ lạnh hoàn hảo nhất cho gia đình và không gian sống của mình.\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới đa dạng và phong phú của các dòng tủ lạnh hàng đầu từ các thương hiệu uy tín trên thị trường. Hãy để chúng tôi cùng bạn tạo nên một không gian bếp hoàn hảo, tiện nghi và thân thiện với môi trường. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc tủ lạnh!\r\n</p>\r\n<p>\r\n    &nbsp;\r\n</p>",
                     ImageUrl = "https://tse1.mm.bing.net/th?id=OIP.iLUXbVbhpa2l7FNsrjpgBwHaE7&pid=Api&P=0&h=220",
-                    UserId= 1,
-                    CategoryBlogID= 1,
+                    UserId = 1,
+                    CategoryBlogID = 1,
 
                 },
                 new Blog
@@ -6927,7 +7109,7 @@ namespace SWP391_BL3W.Database
                     Id = 2,
                     Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
                     content = "<p>\r\n    Chào mừng bạn đến với thế giới của ELICTRICITY STORE - nơi bạn có thể khám phá và trải nghiệm sự tiện nghi và hiệu suất vượt trội của các dòng máy giặt hàng đầu. Với cam kết mang đến những giải pháp giặt đồ hiện đại, tiết kiệm năng lượng và thuận tiện nhất, Điện Máy Xanh là địa chỉ tin cậy cho mọi gia đình.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/400.webp 400w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/480.webp 480w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/560.webp 560w,https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/571.webp 571w\" sizes=\"(max-width: 571px) 100vw, 571px\" type=\"image/webp\"><img data-ckbox-resource-id=\"rBzobdxkhIDw\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/rBzobdxkhIDw/images/571.png\" width=\"571\" height=\"529\"></picture>\r\n</p>\r\n<p>\r\n    **Đa dạng và Phong Phú**\r\n</p>\r\n<p>\r\n    Từ các máy giặt công nghệ cao đến những dòng máy giặt tiết kiệm nước và năng lượng,ELICTRICITY STORE &nbsp;cung cấp một loạt các lựa chọn đa dạng để đáp ứng mọi nhu cầu và phong cách sử dụng. Dù bạn cần một máy giặt nhỏ gọn cho căn hộ nhỏ hoặc một chiếc máy giặt lớn để phục vụ cho gia đình đông thành viên, chúng tôi đều có sản phẩm phù hợp.\r\n</p>\r\n<p>\r\n    **Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường**\r\n</p>\r\n<p>\r\n    Với nhận thức về vai trò của việc bảo vệ môi trường, các dòng máy giặt từ ELICTRICITY STORE &nbsp;được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ nước và điện năng mà vẫn đảm bảo hiệu suất giặt tối ưu. Bằng cách chọn một máy giặt tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí hoạt động mà còn góp phần tích cực vào việc bảo vệ môi trường.\r\n</p>\r\n<p>\r\n    **Tính Tiện Lợi và Thân Thiện Người Dùng**\r\n</p>\r\n<p>\r\n    ELICTRICITY STORE &nbsp;cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc máy giặt hoàn hảo nhất cho gia đình và cuộc sống hàng ngày.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE &nbsp;và khám phá thế giới của các dòng máy giặt hiện đại và tiết kiệm năng lượng. Hãy để chúng tôi cùng bạn tạo nên một không gian giặt đồ tiện nghi và thân thiện với môi trường. Đến ELICTRICITY STORE &nbsp;- nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc máy giặt!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này giúp bạn hiểu rõ hơn về sự tiện nghi và hiệu suất của máy giặt từ ELICTRICITY STORE !\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
-                    ImageUrl= "https://www.shutterstock.com/shutterstock/photos/2288129115/display_1500/stock-photo-basket-with-dirty-clothes-near-washing-machines-in-laundry-room-2288129115.jpg",
+                    ImageUrl = "https://www.shutterstock.com/shutterstock/photos/2288129115/display_1500/stock-photo-basket-with-dirty-clothes-near-washing-machines-in-laundry-room-2288129115.jpg",
                     UserId = 21,
                     CategoryBlogID = 2,
 
@@ -6937,7 +7119,7 @@ namespace SWP391_BL3W.Database
                     Id = 3,
                     Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
                     content = "<p>\r\n    Chào mừng bạn đến với thế giới của ELICTRICITY STORE - nơi bạn có thể khám phá và trải nghiệm sự thoải mái và hiệu quả của các dòng máy điều hòa hàng đầu. Với cam kết mang lại không gian sống mát mẻ và thoải mái nhất, ELICTRICITY STORE là địa chỉ tin cậy cho mọi gia đình.<br>\r\n    .\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/372.webp 372w\" sizes=\"(max-width: 372px) 100vw, 372px\" type=\"image/webp\"><img data-ckbox-resource-id=\"jHr_xG2LU6OM\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/jHr_xG2LU6OM/images/372.png\" width=\"372\" height=\"213\"></picture>\r\n</p>\r\n<p>\r\n    Đa Dạng và Phong Phú\r\n</p>\r\n<p>\r\n    Từ máy điều hòa treo tường cho căn hộ nhỏ đến máy điều hòa dàn nóng dàn lạnh cho không gian lớn, ELICTRICITY STORE cung cấp một loạt các lựa chọn đa dạng để đáp ứng mọi nhu cầu và kích thước không gian. Bạn có thể dễ dàng tìm thấy máy điều hòa phù hợp với phòng ngủ, phòng khách, hoặc văn phòng làm việc của bạn.\r\n</p>\r\n<p>\r\n    Tiết Kiệm Năng Lượng - Bảo Vệ Môi Trường\r\n</p>\r\n<p>\r\n    Với nhận thức về vai trò của việc bảo vệ môi trường, các dòng máy điều hòa từ ELICTRICITY STORE được thiết kế với công nghệ tiên tiến nhằm giảm thiểu tiêu thụ điện năng mà vẫn đảm bảo hiệu suất làm lạnh tối ưu. Bằng cách chọn một máy điều hòa tiết kiệm năng lượng, bạn không chỉ giúp giảm chi phí điện mà còn giảm thiểu tác động tiêu cực lên môi trường.\r\n</p>\r\n<p>\r\n    Tính Tiện Lợi và Thân Thiện Người Dùng\r\n</p>\r\n<p>\r\n    ELICTRICITY STORE cam kết mang lại trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Từ quá trình tư vấn chuyên nghiệp đến dịch vụ giao hàng nhanh chóng và hậu mãi chăm sóc khách hàng đáng tin cậy, chúng tôi luôn lắng nghe và đáp ứng mọi nhu cầu của bạn, giúp bạn có được chiếc máy điều hòa hoàn hảo nhất cho gia đình và không gian sống của mình.\r\n</p>\r\n<p>\r\n    Khám Phá Sự Khác Biệt Ngay Hôm Nay\r\n</p>\r\n<p>\r\n    Hãy đến với ELICTRICITY STORE và khám phá thế giới của các dòng máy điều hòa hiện đại và tiết kiệm năng lượng. Hãy để chúng tôi cùng bạn tạo nên một không gian sống mát mẻ và thoải mái. Đến ELICTRICITY STORE - nơi bạn tìm thấy sự hiện đại và tiết kiệm năng lượng trong từng chiếc máy điều hòa!<br>\r\n    &nbsp;\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
-                    ImageUrl= "https://banhangtaikho.com.vn/Images/Upload/download/2018-6/1-ZHZH6L.jpg",
+                    ImageUrl = "https://banhangtaikho.com.vn/Images/Upload/download/2018-6/1-ZHZH6L.jpg",
                     UserId = 22,
                     CategoryBlogID = 3,
 
@@ -6987,7 +7169,7 @@ namespace SWP391_BL3W.Database
                     Id = 8,
                     Title = "<h2>\r\n    Chào Mừng Bạn Đến với ELICTRICITY STORE.\r\n</h2>",
                     content = "<p>\r\n    Chào mừng bạn đến với Electricity Store - nơi bạn có thể tìm thấy những giải pháp hiện đại và tiện ích nhất để giữ cho nhà bếp của bạn luôn sạch sẽ và tiện nghi. Máy rửa chén từ Electricity Store không chỉ là một thiết bị gia dụng thông thường mà còn là một đồng minh đáng tin cậy, giúp giảm bớt công việc vặt và mang lại sự thuận tiện cho cuộc sống hàng ngày của bạn.\r\n</p>\r\n<p>\r\n    <picture><source srcset=\"https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/80.webp 80w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/160.webp 160w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/240.webp 240w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/320.webp 320w,https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/374.webp 374w\" sizes=\"(max-width: 374px) 100vw, 374px\" type=\"image/webp\"><img data-ckbox-resource-id=\"3ThnJSm4D-dS\" src=\"https://ckbox.cloud/83b9804952ef428d9155/assets/3ThnJSm4D-dS/images/374.png\"></picture>\r\n</p>\r\n<p>\r\n    **Hiệu Suất Vượt Trội và Tiết Kiệm Nước**\r\n</p>\r\n<p>\r\n    Máy rửa chén của Electricity Store được thiết kế với công nghệ tiên tiến nhằm cung cấp hiệu suất vượt trội và tiết kiệm nước. Với các chế độ rửa đa dạng và các cảm biến thông minh, máy rửa chén tự động điều chỉnh lượng nước và thời gian rửa phù hợp, giúp bạn tiết kiệm nước và năng lượng mỗi lần sử dụng.\r\n</p>\r\n<p>\r\n    **Chất Lượng Rửa Tốt Nhất cho Chén Đĩa và Đồ Dùng Bếp Khác**\r\n</p>\r\n<p>\r\n    Máy rửa chén của Electricity Store mang lại chất lượng rửa tốt nhất cho chén đĩa và đồ dùng bếp khác của bạn. Với các cánh phun nước đa chiều và các bộ lọc hiệu quả, máy rửa chén loại bỏ mọi vết bẩn và mảnh vỡ, để lại chén đĩa sáng bóng và sạch sẽ mỗi lần rửa.\r\n</p>\r\n<p>\r\n    **Thiết Kế Tiện Lợi và Hiện Đại**\r\n</p>\r\n<p>\r\n    Máy rửa chén của Electricity Store có thiết kế thông minh và hiện đại, phù hợp với mọi không gian nhà bếp. Với các tính năng như chế độ tiết kiệm năng lượng, bảng điều khiển dễ sử dụng và khoang chứa linh hoạt, máy rửa chén giúp bạn dễ dàng quản lý và tối ưu hóa quá trình rửa chén.\r\n</p>\r\n<p>\r\n    **Dịch Vụ Hậu Mãi Chuyên Nghiệp**\r\n</p>\r\n<p>\r\n    Electricity Store cam kết mang lại dịch vụ hậu mãi chuyên nghiệp và đáng tin cậy. Từ quá trình mua sắm, giao hàng đến lắp đặt và hướng dẫn sử dụng, chúng tôi luôn đồng hành cùng bạn để đảm bảo bạn có được trải nghiệm mua sắm và sử dụng tốt nhất từ sản phẩm của chúng tôi.\r\n</p>\r\n<p>\r\n    **Khám Phá Sự Khác Biệt Ngay Hôm Nay**\r\n</p>\r\n<p>\r\n    Hãy đến với Electricity Store và khám phá thế giới của các dòng máy rửa chén hiện đại và tiện lợi. Hãy để chúng tôi cùng bạn tạo nên một không gian nhà bếp sạch sẽ và tiện nghi cho gia đình của bạn. Đến Electricity Store - nơi bạn tìm thấy sự chất lượng và tiện ích trong từng sản phẩm!\r\n</p>\r\n<p>\r\n    ---\r\n</p>\r\n<p>\r\n    Hy vọng bài viết này sẽ giúp bạn hiểu rõ hơn về máy rửa chén từ Electricity Store và lợi ích mà nó mang lại cho gia đình bạn!\r\n</p>\r\n<figure class=\"image\">\r\n    <img>\r\n</figure>",
-                    ImageUrl = "https://phongreviews.com/wp-content/uploads/2020/12/may-rua-bat-loai-nao-tot-10.jpg",  
+                    ImageUrl = "https://phongreviews.com/wp-content/uploads/2020/12/may-rua-bat-loai-nao-tot-10.jpg",
                     UserId = 27,
                     CategoryBlogID = 8,
 

@@ -41,7 +41,7 @@ namespace SWP391_BL3W.Controllers
 
         [Authorize(Roles = "1")]
         [HttpGet("Totalprice")]
-        public async Task<IActionResult> totalPriceByOderDate(DateTime ordertime, int type)
+        public async Task<IActionResult> totalPriceByOderDate(DateTime? ordertime, int type)
         {
             var response = await _orderService.getTotalPriceByOrderDate(ordertime, type);
             return StatusCode((int)response.statusCode, new { data = response.Data, message = response.Errormessge });
